@@ -4,8 +4,16 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 
-export default function Collection({ handleClick }) {
+export default function Collection({ signedIn, handleClick }) {
+  document.title = 'Pocket Pros - Collection';
+
   let navigate = useNavigate();
+
+  useEffect(()=>{
+    if (signedIn==false){
+      navigate('/');
+    }
+  },[])
   return (
     <React.Fragment>
       <div id="video-overlay"></div>
@@ -31,7 +39,7 @@ export default function Collection({ handleClick }) {
           <div className="char tukey"></div>
           <div className="slot-item-3">
             <h3>Back</h3>
-            <p>Looking for a specific card? Check out the market for offers from other users.</p>
+            <p></p>
           </div>
         </div>
       </div>

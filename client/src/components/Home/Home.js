@@ -5,6 +5,8 @@ import axios from 'axios';
 
 
 export default function Home({ handleClick }) {
+  document.title = 'Pocket Pros - Home';
+
   let navigate = useNavigate();
 
   return (
@@ -46,7 +48,7 @@ export default function Home({ handleClick }) {
             <p>Learn more about Pocket Programmers and the programmer behind it.</p>
       </div>
     </div>
-        <div className="menu__slot">
+        <div className="menu__slot" onClick={() => { navigate('/profile ') }}>
           <div className="blackscreen"></div>
           <div className="char larry"></div>
             <div className="slot-item-5">
