@@ -7,13 +7,20 @@ import Home from '../Home/Home'
 import Collection from '../Collection/Collection'
 import Auth from '../Auth/Auth';
 import LogIn from '../Auth/LogIn/LogIn';
+import SignUp from '../Auth/SignUp/SignUp';
 import Profile from '../Profile/Profile';
 
 export default function App() {
 
+  //Sign Up
+  const [signUpFirstName, setSignUpFirstName] = useState("");
+  const [signUpLastName, setSignUpLastName] = useState("");
+  const [signUpPasswordConfirmation, setSignUpPasswordConfirmation] = useState("");
+
   // Log In:
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
 
 
   const [user,setUser]= useState(null)
@@ -37,6 +44,35 @@ export default function App() {
   function handleClick() {
     navigate("/");
   }
+
+  function handleSignUpSubmit(e) {
+    e.preventDefault();
+    const signUpDetails = {
+      "first_name": signUpFirstName,
+      "last_name": signUpLastName,
+      username,
+      password,
+      "password_confirmation": signUpPasswordConfirmation,
+      credits: '25'
+    }
+    axios.post("/signup", signUpDetails)
+      .then(r => {
+        // setSignedIn(true)
+        navigate('/login')
+      })
+      .catch(function (error) {
+        if (error.response) {
+          console.log(error.response.data.errors);
+          alert(error.response.data.errors)
+        } else if (error.request) {
+          console.log(error.request);
+        } else {
+          console.log('Error', error.message);
+        }
+      });
+
+  }
+
 
   function handleLogInSubmit(e) {
     e.preventDefault();
@@ -67,22 +103,49 @@ export default function App() {
     axios.delete('/logout')
       .then(r => {
         setSignedIn(false);
-        setUser(null);
-        navigate.push('/');
+        navigate('/');
         window.location.reload();
+        setUser(null);
       })
+      .catch(function (error) {
+        if (error.response) {
+          console.log(error.response.data.errors);
+          alert(error.response.data.errors)
+        } else if (error.request) {
+          console.log(error.request);
+        } else {
+          console.log('Error', error.message);
+        }
+      });
+
   }
 
+  function handleBackClick(){
+    navigate(-1);
+  }
 
   return (
     <React.Fragment>
       {/* <div>APP</div> */}
       <Routes>
         <Route exact path="/" element={signedIn?<Home />:<Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
-        <Route path="/collection" element={<Collection handleClick={handleClick} signedIn={signedIn} />} />
+        <Route path="/collection" element={<Collection handleClick={handleClick} signedIn={signedIn} handleBackClick={handleBackClick} />} />
         <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
-        <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit}/>} />
-        <Route path="/profile" element={<Profile handleLogOut={handleLogOut} signedIn={signedIn} setSignedIn={setSignedIn}/>} />
+        <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick}/>} />
+        <Route path="/signup" element={<SignUp 
+            setSignedIn={setSignedIn} 
+            signedIn={signedIn} 
+            username={username} 
+            setUsername={setUsername} 
+            password={password} 
+            setPassword={setPassword}              
+            signUpFirstName={signUpFirstName}
+            setSignUpFirstName={setSignUpFirstName}
+            signUpLastName={signUpLastName}
+            setSignUpLastName={setSignUpLastName}
+            handleSignUpSubmit={handleSignUpSubmit} 
+            handleBackClick={handleBackClick}/>} />
+        <Route path="/profile" element={<Profile handleLogOut={handleLogOut} signedIn={signedIn} setSignedIn={setSignedIn} handleBackClick={handleBackClick}/>} />
         <Route path="/*" element={signedIn?<Home />:<Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
       </Routes>
     </React.Fragment>

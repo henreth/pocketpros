@@ -17,9 +17,13 @@ export default function Auth({signedIn,setSignedIn}) {
   // navigate('/login')
 
   function handleLogInClick(){
-    setSignedIn(true)
     navigate('/login')
   }
+
+  function handleSignUpClick(){
+    navigate('/signup')
+  }
+
   return (
     <React.Fragment>
       <div id="video-overlay"></div>
@@ -32,9 +36,9 @@ export default function Auth({signedIn,setSignedIn}) {
             <p></p>
           </div>
         </div>
-        <div className="menu__slot">
+        <div className="menu__slot" onClick={handleSignUpClick}>
           <div className="blackscreen"></div>
-          <div className="char hopper"></div>
+          <div className="char hamilton"></div>
           <div className="slot-item-2">
             <h3>Sign Up</h3>
             <p></p>

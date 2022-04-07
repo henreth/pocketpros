@@ -1,0 +1,83 @@
+.login__slot {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  position: relative;
+  overflow: hidden;
+  // cursor: pointer;
+  background-color: whitesmoke;
+  background: linear-gradient(140deg, rgb(96, 39, 187), white, gray);
+  display: flex;
+  flex-direction: column;
+
+}
+
+  
+.slot-item-1 {
+  margin-top: 45vh;
+}
+
+
+
+.login__slot h3 {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  color: #45758C;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 3.6% 5%;
+  font-size: 2em;
+  font-weight: 300;
+  z-index: 1;
+  background-image: url('./led-grid.png');
+  background-size: cover;
+}
+
+.login__slot > div > h3 {
+  font-size: 2.45em;
+  font-weight: bold;
+  min-width: 80%;
+  max-width: 80%;
+  text-align: left;
+  color: #79D9FF;
+}
+
+
+.login-input {
+	background-color: rgb(53, 51, 51);
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+  z-index: 100;
+  color: #fff
+}
+
+.login-button {
+	border-radius: 20px;
+	border: 1px solid transparent;
+	background-color: rgb(53, 51, 51);
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	cursor: pointer;
+}
+
+.login-button:hover{
+	border: 1px solid transparent;
+	background-color: rgb(247, 184, 91)
+}
+
+
+.login-button:active {
+	transform: scale(0.95);
+}
+
+.login-button:focus {
+	outline: none;
+}

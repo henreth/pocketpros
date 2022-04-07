@@ -4,7 +4,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 
-export default function Profile({signedIn,setSignedIn,handleLogOut}) {
+export default function Profile({signedIn,setSignedIn,handleLogOut,handleBackClick}) {
   document.title = 'Pocket Pros - Profile';
 
   let navigate = useNavigate();
