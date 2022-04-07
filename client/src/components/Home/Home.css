@@ -209,6 +209,13 @@
   background-position: 40% -50px;
 }
 
+.menu__slot:hover .reddy {
+  background-image: url("./reddy.png");
+  background-position: 40% -50px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
 .char {
   height: 100%;
   width: 100%;

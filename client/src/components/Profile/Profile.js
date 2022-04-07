@@ -33,7 +33,7 @@ export default function Profile({signedIn,setSignedIn,handleLogOut,handleBackCli
         </div>
         <div className="menu__slot" onClick={handleLogOut}>
           <div className="blackscreen"></div>
-          <div className="char borg"></div>
+          <div className="char tukey"></div>
           <div className="slot-item-2">
             <h3>Log Out</h3>
             <p></p>
