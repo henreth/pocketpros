@@ -1,0 +1,46 @@
+.login__slot {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  position: relative;
+  overflow: hidden;
+  background-color: whitesmoke;
+  background: linear-gradient(140deg, #6027bb, white, gray);
+  display: flex;
+  flex-direction: column;
+}
+
+.slot-item-1 {
+  margin-top: 45vh;
+}
+
+.login__slot h3 {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  color: #45758C;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 3.6% 5%;
+  font-size: 2em;
+  font-weight: 300;
+  z-index: 1;
+  background-image: url("./led-grid.png");
+  background-size: cover;
+}
+
+.login__slot > div > h3 {
+  font-size: 2.45em;
+  font-weight: bold;
+  min-width: 80%;
+  max-width: 80%;
+  text-align: left;
+  color: #79D9FF;
+}
+/*# sourceMappingURL=LogIn.css.map */
