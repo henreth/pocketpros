@@ -14,10 +14,18 @@ export default function LogIn({ username, setUsername, password, setPassword, si
     }
   }, [])
 
-  function handleLogInClick() {
-    setSignedIn(true)
-    navigate('/')
+  function handleSignUpClick(){
+    setUsername('');
+    setPassword('');
+    navigate('/signup')
   }
+
+  function handleAuthClick(){
+    setUsername('');
+    setPassword('');
+    navigate('/auth')
+  }
+
 
   return (
     <React.Fragment>
@@ -35,14 +43,23 @@ export default function LogIn({ username, setUsername, password, setPassword, si
             <button className='login-button' onClick={handleLogInSubmit}>Sign In</button>
           </div>
         </div>
-        <div className="menu__slot" onClick={handleBackClick}>
+        <div className="menu__slot" onClick={handleSignUpClick}>
+            <div className="blackscreen"></div>
+            <div className="char hamilton"></div>
+            <div className="slot-item-3">
+              <h3>Sign Up</h3>
+              <p></p>
+            </div>
+          </div>
+          <div className="menu__slot" onClick={handleAuthClick}>
             <div className="blackscreen"></div>
             <div className="char turing"></div>
-            <div className="slot-item-3">
+            <div className="slot-item-4">
               <h3>Back</h3>
               <p></p>
             </div>
           </div>
+
 
       </div>
     </React.Fragment>

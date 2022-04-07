@@ -55,7 +55,6 @@
 }
 
 .signup-button {
-	border-radius: 20px;
 	border: 1px solid transparent;
 	background-color: rgb(53, 51, 51);
 	color: #FFFFFF;
@@ -70,7 +69,7 @@
 
 .signup-button:hover{
 	border: 1px solid transparent;
-	background-color: rgb(247, 184, 91)
+  background-color: #45758C;
 }
 
 
@@ -100,5 +99,5 @@
 .signup-input-name:nth-child(1) {
   // margin-left: .75%;
   margin-right: .5%;
-  margin-right: 1.925%;
+  margin-right: .95%;
 }
