@@ -24,7 +24,7 @@ export default function SignUp({ username, setUsername, password, setPassword, s
     setSignUpFirstName('');
     setSignUpLastName('');
     navigate('/auth')
-  }
+  } 
 
   return (
     <React.Fragment>
@@ -44,7 +44,7 @@ export default function SignUp({ username, setUsername, password, setPassword, s
           <div className="log-in-title">
             <h3>Sign Up</h3>
           </div>
-          <div className="log-in-container">
+          <form className="log-in-container">
             <div className='signup-input-fullname'>
               <input className='signup-input-name' type="text" placeholder="First Name" value={signUpFirstName} onChange={(e) => { setSignUpFirstName(e.target.value) }} />
               <input className='signup-input-name last' type="text" placeholder="Last Name" value={signUpLastName} onChange={(e) => { setSignUpLastName(e.target.value) }} />
@@ -52,16 +52,17 @@ export default function SignUp({ username, setUsername, password, setPassword, s
             <input className='signup-input' type="text" placeholder="Email" value={username} onChange={(e) => setUsername(e.target.value)} />
             <input className='signup-input' type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
             <input className='signup-input' type="password" placeholder="Password Confirmation" value={signUpPasswordConfirmation} onChange={(e) => setSignUpPasswordConfirmation(e.target.value)} />
-            <button className='signup-button' onClick={handleSignUpSubmit} >Sign Up</button>            </div>
+            <button className='signup-button' onClick={handleSignUpSubmit} >Sign Up</button>
+          </form>
         </div>
         <div className="menu__slot" onClick={handleAuthClick}>
-            <div className="blackscreen"></div>
-            <div className="char turing"></div>
-            <div className="slot-item-4">
-              <h3>Back</h3>
-              <p></p>
-            </div>
+          <div className="blackscreen"></div>
+          <div className="char turing"></div>
+          <div className="slot-item-4">
+            <h3>Back</h3>
+            <p></p>
           </div>
+        </div>
       </div>
     </React.Fragment>
   );

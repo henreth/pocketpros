@@ -58,7 +58,11 @@ export default function App() {
     console.log(signUpDetails)
     axios.post("/signup", signUpDetails)
       .then(r => {
-        // setSignedIn(true)
+        setUsername('');
+        setPassword('');
+        setSignUpPasswordConfirmation('');
+        setSignUpFirstName('');
+        setSignUpLastName('');
         navigate('/login')
       })
       .catch(function (error) {

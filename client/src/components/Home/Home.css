@@ -163,6 +163,52 @@
           filter: grayscale(100%);
 }
 
+.menu__slot:hover .borg {
+  background-image: url("./borg.png");
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .vitalik {
+  background-image: url("./vitalik.png");
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .lamarr {
+  background-image: url("./lamarr.png");
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .jobs {
+  background-image: url("./jobs.png");
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .vanrossum {
+  background-image: url("./vanrossum.png");
+  background-position: 50% 0px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.menu__slot:hover .matsumoto {
+  background-image: url("./matsumoto.png");
+  background-position: 45% -70px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.menu__slot:hover .vanrossum {
+  background-image: url("./vanrossum.png");
+  background-position: 50% 0px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.menu__slot:hover .kjohnson {
+  background-image: url("./kjohnson.png");
+  background-position: 40% -50px;
+}
+
 .char {
   height: 100%;
   width: 100%;

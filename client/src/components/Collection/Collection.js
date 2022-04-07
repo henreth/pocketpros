@@ -9,18 +9,18 @@ export default function Collection({ signedIn, handleClick,handleBackClick }) {
 
   let navigate = useNavigate();
 
-  // useEffect(()=>{
-  //   if (signedIn==false){
-  //     navigate('/');
-  //   }
-  // },[])
+  useEffect(()=>{
+    if (signedIn==false){
+      navigate('/');
+    }
+  },[])
   return (
     <React.Fragment>
       <div id="video-overlay"></div>
       <div id="menu">
         <div className="menu__slot">
           <div className="blackscreen"></div>
-          <div className="char larry"></div>
+          <div className="char lamarr"></div>
           <div className="slot-item-1">
             <h3>Your Cards</h3>
             <p>View your current collection and open any unused packs.</p>
@@ -28,7 +28,7 @@ export default function Collection({ signedIn, handleClick,handleBackClick }) {
         </div>
         <div className="menu__slot">
           <div className="blackscreen"></div>
-          <div className="char hopper"></div>
+          <div className="char vanrossum"></div>
           <div className="slot-item-2">
             <h3>Open Packs</h3>
             <p>Use credits in order to buy more card packs.</p>
@@ -36,7 +36,7 @@ export default function Collection({ signedIn, handleClick,handleBackClick }) {
         </div>
         <div className="menu__slot" onClick={handleBackClick}>
           <div className="blackscreen"></div>
-          <div className="char tukey"></div>
+          <div className="char larry"></div>
           <div className="slot-item-3">
             <h3>Back</h3>
             <p></p>

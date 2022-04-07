@@ -25,7 +25,7 @@ export default function Profile({signedIn,setSignedIn,handleLogOut,handleBackCli
       <div id="menu">
         <div className="menu__slot">
           <div className="blackscreen"></div>
-          <div className="char zuckerberg"></div>
+          <div className="char matsumoto"></div>
           <div className="slot-item-1">
             <h3>Edit Account</h3>
             <p></p>
@@ -33,7 +33,7 @@ export default function Profile({signedIn,setSignedIn,handleLogOut,handleBackCli
         </div>
         <div className="menu__slot" onClick={handleLogOut}>
           <div className="blackscreen"></div>
-          <div className="char hopper"></div>
+          <div className="char borg"></div>
           <div className="slot-item-2">
             <h3>Log Out</h3>
             <p></p>
@@ -41,7 +41,7 @@ export default function Profile({signedIn,setSignedIn,handleLogOut,handleBackCli
         </div>
         <div className="menu__slot" onClick={handleBackClick}>
           <div className="blackscreen"></div>
-          <div className="char turing"></div>
+          <div className="char larry"></div>
           <div className="slot-item-3">
             <h3>Back</h3>
             <p></p>

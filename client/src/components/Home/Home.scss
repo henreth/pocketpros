@@ -131,7 +131,6 @@
 .menu__slot:hover .hamilton {
   background-image: url('./hamilton.png');
   background-position: 50% 50px;
-  // background-size: 500%;
 }
 
 .menu__slot:hover .tukey {
@@ -143,6 +142,49 @@
   background-image: url('./zuckerberg.png');
   background-position: 60% -10px;
   filter: grayscale(100%);
+}
+
+.menu__slot:hover .borg {
+  background-image: url('./borg.png');
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .vitalik {
+  background-image: url('./vitalik.png');
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .lamarr {
+  background-image: url('./lamarr.png');
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .jobs {
+  background-image: url('./jobs.png');
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .vanrossum {
+  background-image: url('./vanrossum.png');
+  background-position: 50% 0px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .matsumoto {
+  background-image: url('./matsumoto.png');
+  background-position: 45% -70px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .vanrossum {
+  background-image: url('./vanrossum.png');
+  background-position: 50% 0px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .kjohnson {
+  background-image: url('./kjohnson.png');
+  background-position: 40% -50px;
 }
 
 .char {
