@@ -55,7 +55,6 @@
 }
 
 .login-button {
-  border-radius: 20px;
   border: 1px solid transparent;
   background-color: #353333;
   color: #FFFFFF;
@@ -73,7 +72,7 @@
 
 .login-button:hover {
   border: 1px solid transparent;
-  background-color: #f7b85b;
+  background-color: #45758C;
 }
 
 .login-button:active {

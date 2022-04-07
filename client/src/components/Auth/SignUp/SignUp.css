@@ -55,7 +55,7 @@
 }
 
 .signup-button {
-  border-radius: 20px;
+  /* border-radius: 20px; */
   border: 1px solid transparent;
   background-color: #353333;
   color: #FFFFFF;
@@ -73,7 +73,7 @@
 
 .signup-button:hover {
   border: 1px solid transparent;
-  background-color: #f7b85b;
+  background-color: #45758C;
 }
 
 .signup-button:active {

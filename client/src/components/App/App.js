@@ -123,6 +123,11 @@ export default function App() {
 
   function handleBackClick(){
     navigate(-1);
+    setUsername('');
+    setPassword('');
+    setSignUpPasswordConfirmation('');
+    setSignUpFirstName('');
+    setSignUpLastName('');
   }
 
   return (
