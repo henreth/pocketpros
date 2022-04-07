@@ -5,6 +5,8 @@ import axios from 'axios';
 
 
 export default function Collection({ signedIn, handleClick }) {
+  document.title = 'Pocket Pros - Collection';
+
   let navigate = useNavigate();
 
   useEffect(()=>{

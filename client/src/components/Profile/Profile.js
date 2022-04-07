@@ -5,6 +5,8 @@ import axios from 'axios';
 
 
 export default function Profile({signedIn,setSignedIn}) {
+  document.title = 'Pocket Pros - Profile';
+
   let navigate = useNavigate();
 
   function handleLogOutClick(){

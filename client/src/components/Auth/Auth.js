@@ -5,6 +5,7 @@ import axios from 'axios';
 
 
 export default function Auth({signedIn,setSignedIn}) {
+  document.title = 'Pocket Pros - Authorization Required';
   let navigate = useNavigate();
   return (
     <React.Fragment>
