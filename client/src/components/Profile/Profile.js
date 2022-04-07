@@ -18,8 +18,6 @@ export default function Profile({signedIn,setSignedIn}) {
     navigate('/');
   }
 
-
-
   useEffect(()=>{
     if (signedIn==false){
       navigate('/');

@@ -8,11 +8,17 @@ export default function Auth({signedIn,setSignedIn}) {
   document.title = 'Pocket Pros - Authorization Required';
   let navigate = useNavigate();
 
-  navigate('/login')
+  useEffect(()=>{
+    if (signedIn===true){
+      navigate('/');
+    }
+  },[])
+
+  // navigate('/login')
 
   function handleLogInClick(){
     setSignedIn(true)
-    navigate('/')
+    navigate('/login')
   }
   return (
     <React.Fragment>
