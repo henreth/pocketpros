@@ -10,10 +10,15 @@ export default function Profile({signedIn,setSignedIn}) {
   let navigate = useNavigate();
 
   function handleLogOutClick(){
-    console.log('working')
     setSignedIn(false);
     navigate('/');
   }
+
+  function handleBackClick(){
+    navigate('/');
+  }
+
+
 
   useEffect(()=>{
     if (signedIn==false){
@@ -25,9 +30,9 @@ export default function Profile({signedIn,setSignedIn}) {
     <React.Fragment>
       <div id="video-overlay"></div>
       <div id="menu">
-        <div className="menu__slot" onClick={() => {setSignedIn(true)}}>
+        <div className="menu__slot">
           <div className="blackscreen"></div>
-          <div className="char larry"></div>
+          <div className="char zuckerberg"></div>
           <div className="slot-item-1">
             <h3>Edit Account</h3>
             <p></p>
@@ -41,6 +46,15 @@ export default function Profile({signedIn,setSignedIn}) {
             <p></p>
           </div>
         </div>
+        <div className="menu__slot" onClick={handleBackClick}>
+          <div className="blackscreen"></div>
+          <div className="char turing"></div>
+          <div className="slot-item-3">
+            <h3>Back</h3>
+            <p></p>
+          </div>
+        </div>
+
       </div>
     </React.Fragment>
   );

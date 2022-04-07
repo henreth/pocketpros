@@ -155,6 +155,13 @@
   background-position: 40% -50px;
 }
 
+.menu__slot:hover .zuckerberg {
+  background-image: url("./zuckerberg.png");
+  background-position: 60% -10px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
 .char {
   height: 100%;
   width: 100%;
@@ -215,4 +222,4 @@
     opacity: 1;
   }
 }
-/*# sourceMappingURL=Sandbox.css.map */
+/*# sourceMappingURL=Home.css.map */

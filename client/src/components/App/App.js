@@ -8,9 +8,6 @@ import Collection from '../Collection/Collection'
 import Auth from '../Auth/Auth';
 import Profile from '../Profile/Profile';
 
-
-
-
 export default function App() {
   const [signedIn,setSignedIn] = useState(false)
 
@@ -18,7 +15,6 @@ export default function App() {
   function handleClick() {
     navigate("/");
   }
-
 
 
   return (

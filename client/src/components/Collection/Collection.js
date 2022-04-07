@@ -18,7 +18,7 @@ export default function Collection({ signedIn, handleClick }) {
     <React.Fragment>
       <div id="video-overlay"></div>
       <div id="menu">
-        <div className="menu__slot" onClick={() => { navigate('/') }}>
+        <div className="menu__slot">
           <div className="blackscreen"></div>
           <div className="char larry"></div>
           <div className="slot-item-1">

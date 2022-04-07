@@ -7,11 +7,18 @@ import axios from 'axios';
 export default function Auth({signedIn,setSignedIn}) {
   document.title = 'Pocket Pros - Authorization Required';
   let navigate = useNavigate();
+
+  navigate('/login')
+
+  function handleLogInClick(){
+    setSignedIn(true)
+    navigate('/')
+  }
   return (
     <React.Fragment>
       <div id="video-overlay"></div>
       <div id="menu">
-        <div className="menu__slot" onClick={() => {setSignedIn(true)}}>
+        <div className="menu__slot" onClick={handleLogInClick}>
           <div className="blackscreen"></div>
           <div className="char larry"></div>
           <div className="slot-item-1">

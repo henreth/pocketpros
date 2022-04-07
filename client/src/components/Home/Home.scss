@@ -139,6 +139,12 @@
     background-image: url('./tukey.png');
     background-position: 40% -50px;
   }
+
+  .menu__slot:hover .zuckerberg {
+    background-image: url('./zuckerberg.png');
+    background-position: 60% -10px;
+    filter: grayscale(100%);
+  }
   
   .char {
     height: 100%;
