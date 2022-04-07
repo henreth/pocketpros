@@ -8,16 +8,19 @@ export default function SignUp({username, setUsername, password, setPassword, si
   document.title = 'Pocket Pros - Log In Required';
   let navigate = useNavigate();
 
+  function clickLogIn(){
+    navigate('/login')
+  }
 
   return (
     <React.Fragment>
       <div id="video-overlay"></div>
       <div id="menu">
-      <div className="menu__slot" onClick={handleBackClick}>
+      <div className="menu__slot" onClick={clickLogIn}>
             <div className="blackscreen"></div>
-            <div className="char turing"></div>
+            <div className="char larry"></div>
             <div className="slot-item-3">
-              <h3>Back</h3>
+              <h3>Log In</h3>
               <p></p>
             </div>
           </div>
