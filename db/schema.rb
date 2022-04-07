@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2022_04_06_180611) do
   create_table "cards", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "character_id", null: false
-    t.string "rarity"
+    t.integer "rarity"
     t.boolean "for_sale"
     t.integer "value"
     t.datetime "created_at", precision: 6, null: false
