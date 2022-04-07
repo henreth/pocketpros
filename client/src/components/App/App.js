@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import Home from '../Home/Home'
 import Collection from '../Collection/Collection'
+import Auth from '../Auth/Auth';
 
 
 
@@ -21,6 +22,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collection handleClick={handleClick} />} />
+        <Route path="/login" element={<Auth />} />
       </Routes>
     </React.Fragment>
   );
