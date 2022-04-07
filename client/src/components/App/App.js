@@ -10,11 +10,67 @@ import LogIn from '../Auth/LogIn/LogIn';
 import Profile from '../Profile/Profile';
 
 export default function App() {
+
+  // Log In:
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+
+  const [user,setUser]= useState(null)
   const [signedIn,setSignedIn] = useState(false)
+
+  useEffect(() => {
+    fetch("/me")
+      .then((r) => {
+        if (r.ok) {
+          r.json().then((user) => {
+            setUser(user)
+            setSignedIn(true)
+          })}
+        else {
+          navigate("/");
+        }
+      })
+    },[])
 
   let navigate = useNavigate();
   function handleClick() {
     navigate("/");
+  }
+
+  function handleLogInSubmit(e) {
+    e.preventDefault();
+    const logInDetails = {
+      username,
+      password
+    }
+
+    axios.post("/login", logInDetails)
+      .then((r) => {
+        setSignedIn(true);
+        setUser(r.data);
+        navigate('/');
+      })
+      .catch(function (error) {
+        if (error.response) {
+          console.log(error.response.data.errors);
+          alert(error.response.data.errors)
+        } else if (error.request) {
+          console.log(error.request);
+        } else {
+          console.log('Error', error.message);
+        }
+      });
+  }
+
+  function handleLogOut() {
+    axios.delete('/logout')
+      .then(r => {
+        setSignedIn(false);
+        setUser(null);
+        navigate.push('/');
+        window.location.reload();
+      })
   }
 
 
@@ -25,8 +81,8 @@ export default function App() {
         <Route exact path="/" element={signedIn?<Home />:<Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
         <Route path="/collection" element={<Collection handleClick={handleClick} signedIn={signedIn} />} />
         <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
-        <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} />} />
-        <Route path="/profile" element={<Profile signedIn={signedIn} setSignedIn={setSignedIn}/>} />
+        <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit}/>} />
+        <Route path="/profile" element={<Profile handleLogOut={handleLogOut} signedIn={signedIn} setSignedIn={setSignedIn}/>} />
         <Route path="/*" element={signedIn?<Home />:<Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
       </Routes>
     </React.Fragment>

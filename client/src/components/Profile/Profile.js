@@ -4,25 +4,20 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 
-export default function Profile({signedIn,setSignedIn}) {
+export default function Profile({signedIn,setSignedIn,handleLogOut}) {
   document.title = 'Pocket Pros - Profile';
 
   let navigate = useNavigate();
-
-  function handleLogOutClick(){
-    setSignedIn(false);
-    navigate('/');
-  }
 
   function handleBackClick(){
     navigate('/');
   }
 
-  useEffect(()=>{
-    if (signedIn==false){
-      navigate('/');
-    }
-  },[])
+  // useEffect(()=>{
+  //   if (signedIn==false){
+  //     navigate('/');
+  //   }
+  // },[])
 
   return (
     <React.Fragment>
@@ -36,7 +31,7 @@ export default function Profile({signedIn,setSignedIn}) {
             <p></p>
           </div>
         </div>
-        <div className="menu__slot" onClick={handleLogOutClick}>
+        <div className="menu__slot" onClick={handleLogOut}>
           <div className="blackscreen"></div>
           <div className="char hopper"></div>
           <div className="slot-item-2">

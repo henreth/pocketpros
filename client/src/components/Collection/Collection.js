@@ -9,11 +9,11 @@ export default function Collection({ signedIn, handleClick }) {
 
   let navigate = useNavigate();
 
-  useEffect(()=>{
-    if (signedIn==false){
-      navigate('/');
-    }
-  },[])
+  // useEffect(()=>{
+  //   if (signedIn==false){
+  //     navigate('/');
+  //   }
+  // },[])
   return (
     <React.Fragment>
       <div id="video-overlay"></div>
