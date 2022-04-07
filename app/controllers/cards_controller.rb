@@ -10,4 +10,9 @@ class CardsController < ApplicationController
         render json: @card
     end
 
+
+    def booster_pack
+        
+    end
+
 end
