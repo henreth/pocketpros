@@ -104,7 +104,8 @@
   animation: fadeOut .5s ease-in reverse;
 }
 
-.menu__slot:hover, .menu__slot:hover div[class^="slot-item-"] {
+.menu__slot:hover,
+.menu__slot:hover div[class^="slot-item-"] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

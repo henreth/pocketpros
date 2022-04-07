@@ -1,201 +1,200 @@
+#bg-video {
+  position: fixed;
+  overflow: hidden;
+  height: auto;
+  z-index: -2;
+}
 
-  
-  #bg-video {
-   position: fixed;
-   overflow: hidden;
-   height: auto;
-   z-index: -2;
-  }
-  
-  #video-overlay {
-    position: fixed;
-    overflow: hidden;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-color: rgba(45, 51, 61, 0.5);
-    background-image: url('./gridiron.png');
-    background-size: cover;
-  }
-  
-  #menu {
-    width: 93%;
-    height: 100vh;
-    overflow-y: hidden;
-    display: flex;
-    margin: 0 auto;
-  }
-  
-  .blackscreen {
-    position: absolute;
-    z-index: 2;
-    background-color: rgb(43, 43, 43);
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+#video-overlay {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(45, 51, 61, 0.5);
+  background-image: url('./gridiron.png');
+  background-size: cover;
+}
+
+#menu {
+  width: 93%;
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  margin: 0 auto;
+}
+
+.blackscreen {
+  position: absolute;
+  z-index: 2;
+  background-color: rgb(43, 43, 43);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.menu__slot {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 28%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.menu__slot:hover {
+  background-color: whitesmoke;
+}
+
+.menu__slot:nth-child(1):hover {
+  background: linear-gradient(140deg, rgb(96, 39, 187), white, gray);
+}
+
+.menu__slot:nth-child(2):hover {
+  background: linear-gradient(140deg, #d33, beige, green);
+}
+
+.menu__slot:nth-child(3):hover {
+  background: linear-gradient(140deg, hotpink, lightblue, orange);
+}
+
+.menu__slot:nth-child(4):hover {
+  background: linear-gradient(140deg, gold, lightyellow, lightskyblue);
+}
+
+.menu__slot:nth-child(5):hover {
+  background: linear-gradient(140deg, forestgreen, lightblue, firebrick);
+}
+
+.slot-item-1 {
+  margin-top: 45vh;
+}
+
+.slot-item-2 {
+  margin-top: 25vh;
+}
+
+.slot-item-3 {
+  margin-top: 42vh;
+}
+
+.slot-item-4 {
+  margin-top: 60vh;
+}
+
+.slot-item-5 {
+  margin-top: 42vh;
+}
+
+.menu__slot:hover div.blackscreen {
+  animation: fadeOut .5s ease-in reverse;
+}
+
+.menu__slot:hover,
+.menu__slot:hover div[class^="slot-item-"] {
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 18vh;
+  flex-basis: 37vw;
+  justify-content: center;
+  transition: flex-basis 100ms ease-in-out;
+}
+
+.menu__slot:hover div.char {
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.5);
+  transition: transform 10s ease-in;
+}
+
+.menu__slot:hover .turing {
+  background-image: url('./turing.png');
+  background-position: 40% -100px;
+}
+
+.menu__slot:hover .hopper {
+  background-image: url('./hopper.png');
+  background-position: 50% 20px;
+}
+
+.menu__slot:hover .larry {
+  background-image: url('./larry.png');
+  background-position: 40% 10px;
+}
+
+.menu__slot:hover .hamilton {
+  background-image: url('./hamilton.png');
+  background-position: 50% 50px;
+  // background-size: 500%;
+}
+
+.menu__slot:hover .tukey {
+  background-image: url('./tukey.png');
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .zuckerberg {
+  background-image: url('./zuckerberg.png');
+  background-position: 60% -10px;
+  filter: grayscale(100%);
+}
+
+.char {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+
+.menu__slot h3 {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  color: #45758C;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 3.6% 5%;
+  font-size: 2em;
+  font-weight: 300;
+  z-index: 1;
+  background-image: url('./led-grid.png');
+  background-size: cover;
+}
+
+.menu__slot:hover>div>h3 {
+  font-size: 2.45em;
+  font-weight: bold;
+  min-width: 80%;
+  max-width: 80%;
+  text-align: left;
+  color: #79D9FF;
+}
+
+.menu__slot p {
+  opacity: 0;
+  position: relative;
+  z-index: 1;
+  line-height: 1.5em;
+  color: #fff;
+}
+
+.menu__slot:hover>div>p {
+  opacity: 1;
+  padding: 0 8% 0 8%;
+}
+
+@keyframes fadeOut {
+  from {
     opacity: 0;
   }
-  
-  .menu__slot {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-basis: 28%;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  
-  .menu__slot:hover {
-    background-color: whitesmoke;
-  }
-  
-  .menu__slot:nth-child(1):hover {
-    background: linear-gradient(140deg, rgb(96, 39, 187), white, gray);
-  }
-  
-  .menu__slot:nth-child(2):hover {
-    background: linear-gradient(140deg, #d33, beige, green);
-  }
-  
-  .menu__slot:nth-child(3):hover {
-    background: linear-gradient(140deg, hotpink, lightblue, orange);
-  }
-  
-  .menu__slot:nth-child(4):hover {
-    background: linear-gradient(140deg, gold, lightyellow, lightskyblue);
-  }
-  
-  .menu__slot:nth-child(5):hover {
-    background: linear-gradient(140deg, forestgreen, lightblue, firebrick);
-  }
-  
-  .slot-item-1 {
-    margin-top: 45vh;
-  }
-  
-  .slot-item-2 {
-    margin-top: 25vh;
-  }
-  
-  .slot-item-3 {
-    margin-top: 42vh;
-  }
-  
-  .slot-item-4 {
-    margin-top: 60vh;
-  }
-  
-  .slot-item-5 {
-    margin-top: 42vh;
-  }
-  
-  .menu__slot:hover div.blackscreen {
-    animation: fadeOut .5s ease-in reverse;
-  }
-  
-  .menu__slot:hover, .menu__slot:hover div[class^="slot-item-"] {
-    justify-content: center;
-    margin-top: 0;
-    padding-top: 18vh;
-    flex-basis: 37vw;
-    justify-content: center; 
-    transition: flex-basis 100ms ease-in-out;
-  }
-  
-  .menu__slot:hover div.char {
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: scale(1.5);
-    transition: transform 10s ease-in;
-  }
-  
-  .menu__slot:hover  .turing {
-    background-image: url('./turing.png');
-    background-position: 40% -100px;
-  }
-  
-  .menu__slot:hover  .hopper {
-    background-image: url('./hopper.png');
-    background-position: 50% 20px ;
-  }
-  
-  .menu__slot:hover  .larry {
-    background-image: url('./larry.png');
-    background-position: 40% 10px;
-  }
-  
-  .menu__slot:hover .hamilton {
-    background-image: url('./hamilton.png');    
-    background-position: 50% 50px;
-    // background-size: 500%;
-  }
-  
-  .menu__slot:hover .tukey {
-    background-image: url('./tukey.png');
-    background-position: 40% -50px;
-  }
 
-  .menu__slot:hover .zuckerberg {
-    background-image: url('./zuckerberg.png');
-    background-position: 60% -10px;
-    filter: grayscale(100%);
-  }
-  
-  .char {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 0;
-  }
-  
-  
-  .menu__slot h3 {
-    text-transform: uppercase;
-    position: relative;
-    text-align: center;
-    color: #45758C;
-    background-color: rgba(45, 51, 61, 0.8);
-    padding: 3.6% 5%;
-    font-size: 2em;
-    font-weight: 300;
-    z-index: 1;
-    background-image: url('./led-grid.png');
-    background-size: cover;
-  }
-  
-  .menu__slot:hover > div > h3 {
-    font-size: 2.45em;
-    font-weight: bold;
-    min-width: 80%;
-    max-width: 80%;
-    text-align: left;
-    color: #79D9FF;
-  }
-  
-  .menu__slot p {
-    opacity: 0;
-    position: relative;
-    z-index: 1;
-    line-height: 1.5em;
-    color: #fff;
-  }
-  
-  .menu__slot:hover > div > p {
+  to {
     opacity: 1;
-    padding: 0 8% 0 8%;
   }
-  
-  @keyframes fadeOut {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
+}

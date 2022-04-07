@@ -1,4 +1,4 @@
-.login__slot {
+.signup__slot {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
   overflow: hidden;
   // cursor: pointer;
   background-color: whitesmoke;
-  background: linear-gradient(140deg, rgb(96, 39, 187), white, gray);
+  background: linear-gradient(140deg, #d33, beige, green);
   display: flex;
   flex-direction: column;
 
@@ -20,7 +20,7 @@
 
 
 
-.login__slot h3 {
+.signup__slot h3 {
   text-transform: uppercase;
   position: relative;
   text-align: center;
@@ -34,7 +34,7 @@
   background-size: cover;
 }
 
-.login__slot > div > h3 {
+.signup__slot > div > h3 {
   font-size: 2.45em;
   font-weight: bold;
   min-width: 80%;
@@ -44,7 +44,7 @@
 }
 
 
-.login-input {
+.signup-input {
 	background-color: rgb(53, 51, 51);
 	border: none;
 	padding: 12px 15px;
@@ -54,8 +54,7 @@
   color: #fff
 }
 
-.login-button {
-	// border-radius: 20px;
+.signup-button {
 	border: 1px solid transparent;
 	background-color: rgb(53, 51, 51);
 	color: #FFFFFF;
@@ -68,16 +67,37 @@
 	cursor: pointer;
 }
 
-.login-button:hover{
+.signup-button:hover{
 	border: 1px solid transparent;
   background-color: #45758C;
 }
 
 
-.login-button:active {
+.signup-button:active {
 	transform: scale(0.95);
 }
 
-.login-button:focus {
+.signup-button:focus {
 	outline: none;
+}
+
+.signup-input-fullname{
+	flex-direction: row;
+	justify-content: center;
+}
+
+.signup-input-name {
+	background-color: rgb(53, 51, 51);
+	border: none;
+	padding: 12px 15px;
+	// margin: 8px 4px;
+	/* margin-right: 2.5%; */
+	width: 45%;
+  color: #fff
+}
+
+.signup-input-name:nth-child(1) {
+  // margin-left: .75%;
+  margin-right: .5%;
+  margin-right: .95%;
 }
