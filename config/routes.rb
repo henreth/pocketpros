@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
+  # Cards
+  get "/booster", to: "cards#booster_pack"
 
 
 end
