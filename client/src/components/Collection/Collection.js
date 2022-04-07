@@ -7,13 +7,15 @@ import axios from 'axios';
 export default function Collection({ signedIn, handleClick,handleBackClick }) {
   document.title = 'Pocket Pros - Collection';
 
-  let navigate = useNavigate();
+  let history = useNavigate();
 
   useEffect(()=>{
     if (signedIn==false){
-      navigate('/');
+      history.push('/');
     }
   },[])
+
+
   return (
     <React.Fragment>
       <div id="video-overlay"></div>

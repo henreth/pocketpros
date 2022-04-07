@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :transactions
-  resources :characters
-  resources :cards
+  resources :characters, only: [:index, :show]
+  resources :cards, only: [:index, :show]
   resources :users
 
   # Authorization

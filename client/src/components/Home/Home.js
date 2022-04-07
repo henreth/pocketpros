@@ -34,7 +34,7 @@ export default function Home({ handleClick }) {
         </div>
         <div className="menu__slot">
           <div className="blackscreen"></div>
-          <div className="char tukey"></div>
+          <div className="char reddy"></div>
           <div className="slot-item-3">
             <h3>Marketplace</h3>
             <p>Looking for a specific card? Check out the market for offers from other users.</p>
