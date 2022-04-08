@@ -116,4 +116,36 @@ class CardsController < ApplicationController
     render json: cards
     end
 
+    def max_pack
+        cards = []
+        len = 6
+
+        # Holo
+        rand_holo = rand() * 100
+        if rand_holo < 5
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:3)
+        end
+
+        # Gold 
+        rand_gold1 = rand() * 100
+        if rand_gold1 < 15
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
+        end
+
+        rand_gold2 = rand() * 100
+        if rand_gold2 < 55
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
+        end
+
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
+
+        # Silver
+        newLength = len - cards.length;
+
+        newLength.times {|i| 
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
+    }
+    render json: cards
+    end
+
 end     
