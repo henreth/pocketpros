@@ -1,5 +1,7 @@
 puts 'Removing Previous Data'
 User.destroy_all
+Character.destroy_all
+Card.destroy_all
 
 puts "Seeding Users..."
 User.create!([
