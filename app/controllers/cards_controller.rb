@@ -13,15 +13,66 @@ class CardsController < ApplicationController
 
     def booster_pack
         cards = [];
+        @user_id = @current_user.id
         # bronze
-        cards << Card.create!(user_id:1,character_id: Character.all.sample.id,rarity:0)
+        cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:0)
+        cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:0)
+        cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:0)
         # silver
-        cards << Card.create!(user_id:1,character_id: Character.all.sample.id,rarity:0)
+        cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:1)
+        cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:1)
         # gold
-        cards << Card.create!(user_id:1,character_id: Character.all.sample.id,rarity:0)
-        # holo
-        cards << Card.create!(user_id:1,character_id: Character.all.sample.id,rarity:3)
+        cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:2)
         render json: cards    
     end
 
-end
+    def regular_pack
+        cards = []
+        len = 12
+
+        @user_id = @current_user.id
+
+
+        # Holo
+        rand_holo = rand() * 100
+        if rand_holo < 5
+            cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:3)
+        end
+
+        # Gold 
+        rand_gold1 = rand() * 100
+        if rand_gold1 < 10
+            cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:2)
+        end
+
+        rand_gold2 = rand() * 100
+        if rand_gold2 < 10
+            cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:2)
+        end
+
+        # Silver
+        rand_silver1 = rand() * 100
+        if rand_silver1 < 30
+            cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:1)
+        end
+
+        rand_silver2 = rand() * 100
+        if rand_silver2 < 30
+            cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:1)
+        end
+
+        rand_silver3 = rand() * 100
+        if rand_silver3 < 10
+            cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:1)
+        end
+
+        # Bronze
+        newLength = len - cards.length;
+
+        newLength.times {|i| 
+        cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:0)
+    }
+    render json: cards
+    end
+
+end     
