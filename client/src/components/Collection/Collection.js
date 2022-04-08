@@ -4,7 +4,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 
-export default function Collection({ user, signedIn, handleClick, handleBackClick }) {
+export default function Collection({ user, signedIn, handleBackClick }) {
   document.title = 'Pocket Pros - Collection';
 
   let navigate = useNavigate();
@@ -15,12 +15,16 @@ export default function Collection({ user, signedIn, handleClick, handleBackClic
     }
   }, [])
 
+  function handleYourCardsClick(){
+    navigate('/cards');
+  }
+
 
   return (
     <React.Fragment>
       <div id="video-overlay"></div>
       <div id="menu">
-        <div className="menu__slot">
+        <div className="menu__slot" onClick={handleYourCardsClick}>
           <div className="blackscreen"></div>
           <div className="char lamarr"></div>
           <div className="slot-item-1">
