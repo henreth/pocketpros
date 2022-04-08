@@ -33,15 +33,9 @@ class CardsController < ApplicationController
         @user_id = @current_user.id
 
 
-        # Holo
-        rand_holo = rand() * 100
-        if rand_holo < 5
-            cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:3)
-        end
-
         # Gold 
         rand_gold1 = rand() * 100
-        if rand_gold1 < 10
+        if rand_gold1 < 15
             cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:2)
         end
 
