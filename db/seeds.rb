@@ -12,6 +12,7 @@ User.create!([
         password: "camelot",
         credits: "5000",
         packs: {
+            "total": 15,
             "booster":1,
             "regular":2,
             "pro":3,
@@ -26,6 +27,7 @@ User.create!([
         password: "giants",
         credits: "25",
         packs: {
+            "total": 1,
             "booster":1,
             "regular":0,
             "pro":0,
