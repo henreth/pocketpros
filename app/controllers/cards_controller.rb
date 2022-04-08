@@ -10,18 +10,17 @@ class CardsController < ApplicationController
         render json: @card
     end
 
-
     def booster_pack
         cards = [];
-        @current_user.id = @current_user.id
-        # bronze
+
+        # Bronze
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:0)
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:0)
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:0)
-        # silver
+        # Silver
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
-        # gold
+        # Gold
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
         render json: cards    
     end
@@ -61,9 +60,9 @@ class CardsController < ApplicationController
         newLength = len - cards.length;
 
         newLength.times {|i| 
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:0)
-    }
-    render json: cards
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:0)
+        }
+        render json: cards
     end
 
     def pro_pack
@@ -105,9 +104,9 @@ class CardsController < ApplicationController
         newLength = len - cards.length;
 
         newLength.times {|i| 
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:0)
-    }
-    render json: cards
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:0)
+        }
+        render json: cards
     end
 
     def max_pack
@@ -137,9 +136,9 @@ class CardsController < ApplicationController
         newLength = len - cards.length;
 
         newLength.times {|i| 
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
-    }
-    render json: cards
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
+        }
+        render json: cards
     end
 
 
@@ -171,9 +170,9 @@ class CardsController < ApplicationController
         newLength = len - cards.length;
 
         newLength.times {|i| 
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
-    }
-    render json: cards
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
+        }
+        render json: cards
     end
 
 
