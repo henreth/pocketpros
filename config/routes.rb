@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get "/regular", to: "cards#regular_pack"
   get "/pro", to: "cards#pro_pack"
   get "/max", to: "cards#max_pack"
+  get "/ultra", to: "cards#ultra_pack"
 
 
 end
