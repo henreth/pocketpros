@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     end
 
     def show
-        render json: @current_user
+        render json: @current_user,include: "cards.character", status: :ok
     end
 
     def destroy
