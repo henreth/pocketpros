@@ -134,7 +134,7 @@ export default function App() {
       {/* <div>APP</div> */}
       <Routes>
         <Route exact path="/" element={signedIn?<Home />:<Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
-        <Route path="/collection" element={<Collection handleClick={handleClick} signedIn={signedIn} handleBackClick={handleBackClick} />} />
+        <Route path="/collection" element={<Collection user={user} handleClick={handleClick} signedIn={signedIn} handleBackClick={handleBackClick} />} />
         <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
         <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick}/>} />
         <Route path="/signup" element={<SignUp 
