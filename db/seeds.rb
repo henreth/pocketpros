@@ -8,7 +8,7 @@ User.create!([
     {
         first_name: "King",
         last_name: "Arthur",
-        username: "Excalibur",
+        username: "excalibur",
         password: "camelot",
         credits: "5000",
         packs: {
