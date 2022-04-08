@@ -25,6 +25,7 @@ export default function App() {
 
 
   const [user,setUser]= useState(null)
+  const [userCards,setUserCards] = useState([]);
   const [signedIn,setSignedIn] = useState(false)
 
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function App() {
         if (r.ok) {
           r.json().then((user) => {
             setUser(user)
+            setUserCards(user.cards)
             setSignedIn(true)
           })}
         else {
@@ -132,11 +134,18 @@ export default function App() {
 
   return (
     <React.Fragment>
-      {/* <div>APP</div> */}
+      {user?<div className='user-identification'>👤{user.username} - 🎴{user.cards.length} - 🪙{user.credits}</div>:null}
       <Routes>
         <Route exact path="/" element={signedIn?<Home />:<Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
         <Route path="/collection" element={<Collection user={user} signedIn={signedIn} handleBackClick={handleBackClick} />} />
-        <Route path="/cards" element={<YourCards user={user} handleClick={handleClick} signedIn={signedIn} handleBackClick={handleBackClick} />} />
+        <Route path="/cards" element={<YourCards 
+          user={user} 
+          userCards={userCards}
+          setUserCards={setUserCards}
+          handleClick={handleClick} 
+          signedIn={signedIn} 
+          handleBackClick={handleBackClick}
+          />} />
         <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
         <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick}/>} />
         <Route path="/signup" element={<SignUp 

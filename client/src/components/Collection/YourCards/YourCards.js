@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 
-export default function YourCards({user,handleBackClick,signedIn}){
+export default function YourCards({user,userCards,setUserCards,handleBackClick,signedIn}){
     document.title = 'Pocket Pros - Your Cards';
 
     let navigate = useNavigate();
