@@ -1,12 +1,12 @@
 import './Card.css';
-import React from 'react';
+import React, {useRef} from 'react';
 
 
-export function Card(){
+export default function Card({char,setCardElements}){
 
     return(
-        <React.Fragment>
-            <div>TEST</div>
-        </React.Fragment>
+            <div id={char.id} className="card">
+                <div className="noImage">{char.rarity} {char.character.first_name} {char.character.last_name}</div>
+            </div>
     )
 }

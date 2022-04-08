@@ -3,7 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
+import Card from '../../Card/Card'
 
+// add ashnc await to the cards element query selector 
 
 export default function YourCards({ user, userCards, setUserCards, handleBackClick, signedIn }) {
   document.title = 'Pocket Pros - Your Cards';
@@ -17,79 +19,12 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   }, [])
 
 
-  // 
-  function map(val, minA, maxA, minB, maxB) {
-    return minB + ((val - minA) * (maxB - minB)) / (maxA - minA);
-  }
-
-  function Card3D(card, ev) {
-    let img = card.querySelector('img');
-    let imgRect = card.getBoundingClientRect();
-    let width = imgRect.width;
-    let height = imgRect.height;
-    let mouseX = ev.offsetX;
-    let mouseY = ev.offsetY;
-    let rotateY = map(mouseX, 0, 180, -25, 25);
-    let rotateX = map(mouseY, 0, 250, 25, -25);
-    let brightness = map(mouseY, 0, 250, 1.5, 0.5);
-
-    img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    img.style.filter = `brightness(${brightness})`;
-  }
-
-  let cards = document.querySelectorAll('.card3d');
-
-  cards.forEach((card) => {
-    card.addEventListener('mousemove', (ev) => {
-      Card3D(card, ev);
-    });
-
-    card.addEventListener('mouseleave', (ev) => {
-      let img = card.querySelector('img');
-
-      img.style.transform = 'rotateX(0deg) rotateY(0deg)';
-      img.style.filter = 'brightness(1)';
-    });
-  });
-
-  // --------------------------------
-
-  function map(val, minA, maxA, minB, maxB) {
-    return minB + ((val - minA) * (maxB - minB)) / (maxA - minA);
-  }
-
-  function Card3D(card, ev) {
-    let img = card.querySelector('div');
-    let mouseX = ev.offsetX;
-    let mouseY = ev.offsetY;
-    let rotateY = map(mouseX, 0, 180, -25, 25);
-    let rotateX = map(mouseY, 0, 250, 25, -25);
-    let brightness = map(mouseY, 0, 250, 1.5, 0.5);
-
-    img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    img.style.filter = `brightness(${brightness})`;
-  }
-
-  let cardElements = document.querySelectorAll('.card');
-
-  cardElements.forEach((card) => {
-    card.addEventListener('mousemove', (ev) => {
-      Card3D(card, ev);
-    });
-
-    card.addEventListener('mouseleave', (ev) => {
-      let img = card.querySelector('.noImage');
-
-      img.style.transform = 'rotateX(0deg) rotateY(0deg)';
-      img.style.filter = 'brightness(1)';
-    });
-  });      // 
-
 
   function displayCards(data) {
     return data.map(card => {
       return (
-        <div key={card.id} className="card"><div className="noImage">{card.rarity} {card.character.first_name} {card.character.last_name}</div></div>
+        // <div key={card.id} className="card"><div className="noImage">{card.rarity} {card.character.first_name} {card.character.last_name}</div></div>
+        <Card key={card.id} char={card}/>
       )
     })
   }

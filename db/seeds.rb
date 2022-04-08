@@ -8,10 +8,33 @@ User.create!([
     {
         first_name: "King",
         last_name: "Arthur",
-        username: "excalibur",
+        username: "Excalibur",
         password: "camelot",
-        credits: "50000"
-    }])
+        credits: "5000",
+        packs: {
+            "booster":1,
+            "regular":2,
+            "pro":3,
+            "max":4,
+            "ultra":5
+        }
+    },
+    {
+        first_name: "Sir",
+        last_name: "Gawain",
+        username: "greenknight",
+        password: "giants",
+        credits: "25",
+        packs: {
+            "booster":1,
+            "regular":0,
+            "pro":0,
+            "max":0,
+            "ultra":0
+        }
+    }
+
+])
 
 puts "Seeding Characters"
 
