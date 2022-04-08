@@ -75,4 +75,51 @@ class CardsController < ApplicationController
     render json: cards
     end
 
+    def pro_pack
+        cards = []
+        len = 8
+
+        @user_id = @current_user.id
+
+
+        # Holo
+        rand_holo = rand() * 100
+        if rand_holo < 5
+            cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:3)
+        end
+
+        # Gold 
+        rand_gold1 = rand() * 100
+        if rand_gold1 < 25
+            cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:2)
+        end
+
+        rand_gold2 = rand() * 100
+        if rand_gold2 < 20
+            cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:2)
+        end
+
+        # Silver
+        rand_silver1 = rand() * 100
+        if rand_silver1 < 55
+            cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:1)
+        end
+
+        rand_silver2 = rand() * 100
+        if rand_silver2 < 55
+            cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:1)
+        end
+
+        cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:1)
+        cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:1)
+
+        # Bronze
+        newLength = len - cards.length;
+
+        newLength.times {|i| 
+        cards << Card.create!(user_id:@user_id,character_id: Character.all.sample.id,rarity:0)
+    }
+    render json: cards
+    end
+
 end     

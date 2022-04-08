@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # Cards
   get "/booster", to: "cards#booster_pack"
   get "/regular", to: "cards#regular_pack"
+  get "/pro", to: "cards#pro_pack"
 
 
 end
