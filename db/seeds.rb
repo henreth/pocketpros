@@ -17,7 +17,8 @@ User.create!([
             "regular":2,
             "pro":3,
             "max":4,
-            "ultra":5
+            "ultra":5,
+            "studio":6
         }
     },
     {
@@ -32,7 +33,8 @@ User.create!([
             "regular":0,
             "pro":0,
             "max":0,
-            "ultra":0
+            "ultra":0,
+            "studio":0
         }
     }
 
