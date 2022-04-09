@@ -28,6 +28,16 @@ class UsersController < ApplicationController
         head :no_content
     end
 
+    def buy_pack 
+        @pack = params[:pack]
+        newpacks = @current_user.packs
+        newval = Integer(newpacks[@pack]) + 1
+        newpacks[@pack] = newval
+        @current_user.update!(packs: newpacks)
+        render json: @current_user, status: :ok
+    end
+
+
     private
     def set_user
       @user = User.find(params[:id])

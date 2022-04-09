@@ -11,6 +11,17 @@ class CardsController < ApplicationController
     end
 
     def booster_pack
+        if Integer(@current_user.packs["booster"]) < 1
+            cards = 'You have no booster packs left to open.'
+        else
+        
+
+        @pack = "booster"
+        newpacks = @current_user.packs
+        newval = Integer(newpacks[@pack]) - 1
+        newpacks[@pack] = newval
+        @current_user.update!(packs: newpacks)
+
         cards = [];
 
         # Bronze
@@ -22,10 +33,22 @@ class CardsController < ApplicationController
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
         # Gold
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
+        end
         render json: cards    
     end
 
     def regular_pack
+        if Integer(@current_user.packs["regular"]) < 1
+            cards = 'You have no regular packs left to open.'
+        else
+        
+
+        @pack = "regular"
+        newpacks = @current_user.packs
+        newval = Integer(newpacks[@pack]) - 1
+        newpacks[@pack] = newval
+        @current_user.update!(packs: newpacks)
+
         cards = []
         len = 12
 
@@ -62,6 +85,7 @@ class CardsController < ApplicationController
         newLength.times {|i| 
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:0)
         }
+    end
         render json: cards
     end
 
