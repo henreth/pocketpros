@@ -146,6 +146,16 @@ class CardsController < ApplicationController
     end
 
     def max_pack
+        if Integer(@current_user.packs["max"]) < 1
+            cards = 'You have no max packs left to open.'
+        else
+        
+        @pack = "max"
+        newpacks = @current_user.packs
+        newval = Integer(newpacks[@pack]) - 1
+        newpacks[@pack] = newval
+        @current_user.update!(packs: newpacks)
+
         cards = []
         len = 6
 
@@ -174,6 +184,7 @@ class CardsController < ApplicationController
         newLength.times {|i| 
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
         }
+    end
         render json: cards
     end
 
