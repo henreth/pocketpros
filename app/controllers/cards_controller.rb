@@ -12,7 +12,7 @@ class CardsController < ApplicationController
 
     def booster_pack
         if Integer(@current_user.packs["booster"]) < 1
-            cards = 'ERROR: You have no booster packs left to open.'
+            cards = 'ERROR: You have no Booster Packs left to open.'
         else
         
         # Update Booster Pack Count
@@ -27,7 +27,7 @@ class CardsController < ApplicationController
         newpacks["total"] = tot
         @current_user.update!(packs: newpacks)
 
-        
+
         cards = [];
 
         # Bronze
@@ -45,7 +45,7 @@ class CardsController < ApplicationController
 
     def regular_pack
         if Integer(@current_user.packs["regular"]) < 1
-            cards = 'ERROR: You have no regular packs left to open.'
+            cards = 'ERROR: You have no Regular Packs left to open.'
         else
         
         # Update Regular Pack Count
@@ -102,7 +102,7 @@ class CardsController < ApplicationController
 
     def pro_pack
         if Integer(@current_user.packs["pro"]) < 1
-            cards = 'ERROR: You have no pro packs left to open.'
+            cards = 'ERROR: You have no Pro Packs left to open.'
         else
         
         # Update Pro Pack Count
@@ -163,7 +163,7 @@ class CardsController < ApplicationController
 
     def max_pack
         if Integer(@current_user.packs["max"]) < 1
-            cards = 'ERROR: You have no max packs left to open.'
+            cards = 'ERROR: You have no Max Packs left to open.'
         else
         
         # Update Max Pack Count
@@ -212,7 +212,7 @@ class CardsController < ApplicationController
 
     def ultra_pack
         if Integer(@current_user.packs["ultra"]) < 1
-            cards = 'ERROR: You have no ultra packs left to open.'
+            cards = 'ERROR: You have no Ultra Packs left to open.'
         else
         
         # Update Ultra Pack Count
@@ -261,7 +261,7 @@ class CardsController < ApplicationController
 
     def studio_pack
         if Integer(@current_user.packs["studio"]) < 1
-            cards = 'ERROR: You have no studio packs left to open.'
+            cards = 'ERROR: You have no Studio Packs left to open.'
         else
         
         # Update Ultra Pack Count
