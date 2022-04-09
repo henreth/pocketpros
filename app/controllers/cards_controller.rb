@@ -103,15 +103,21 @@ class CardsController < ApplicationController
 
     def pro_pack
         if Integer(@current_user.packs["pro"]) < 1
-            cards = 'You have no pro packs left to open.'
+            cards = 'ERROR: You have no pro packs left to open.'
         else
         
-
+        # Update Pro Pack Count
         @pack = "pro"
         newpacks = @current_user.packs
         newval = Integer(newpacks[@pack]) - 1
         newpacks[@pack] = newval
         @current_user.update!(packs: newpacks)
+        # Update User Total Pack Count
+        tot = @current_user.pack_count
+        newpacks = @current_user.packs
+        newpacks["total"] = tot
+        @current_user.update!(packs: newpacks)
+        
 
         cards = []
         len = 8
