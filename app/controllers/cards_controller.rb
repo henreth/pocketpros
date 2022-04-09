@@ -263,5 +263,41 @@ class CardsController < ApplicationController
         render json: cards
     end
 
+    def studio_pack
+        if Integer(@current_user.packs["studio"]) < 1
+            cards = 'ERROR: You have no studio packs left to open.'
+        else
+        
+        # Update Ultra Pack Count
+        @pack = "studio"
+        newpacks = @current_user.packs
+        newval = Integer(newpacks[@pack]) - 1
+        newpacks[@pack] = newval
+        @current_user.update!(packs: newpacks)
+        # Update User Total Pack Count
+        tot = @current_user.pack_count
+        newpacks = @current_user.packs
+        newpacks["total"] = tot
+        @current_user.update!(packs: newpacks)
+
+        cards = []
+        len = 2
+
+        # Holo
+        rand_holo = rand() * 100
+        if rand_holo < 55
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:3)
+        end
+
+        # Gold
+        newLength = len - cards.length;
+
+        newLength.times {|i| 
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
+        }
+    end
+        render json: cards
+    end
+
 
 end     
