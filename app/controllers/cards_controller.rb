@@ -15,12 +15,18 @@ class CardsController < ApplicationController
             cards = 'You have no booster packs left to open.'
         else
         
-
+        # Update Booster Pack Count
         @pack = "booster"
         newpacks = @current_user.packs
         newval = Integer(newpacks[@pack]) - 1
         newpacks[@pack] = newval
         @current_user.update!(packs: newpacks)
+        # Update User Total Pack Count
+        tot = @current_user.pack_count
+        newpacks = @current_user.packs
+        newpacks["total"] = tot
+        @current_user.update!(packs: newpacks)
+
 
         cards = [];
 
