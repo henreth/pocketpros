@@ -6,7 +6,7 @@ import axios from 'axios';
 import Card from '../../Card/Card'
 
 
-export default function OpenPacks({ user }) {
+export default function OpenPacks({ user,signedIn }) {
   document.title = 'Pocket Pros - Open Packs';
 
   let navigate = useNavigate();
