@@ -37,6 +37,7 @@ class UsersController < ApplicationController
         render json: @current_user, status: :ok
     end
 
+
     private
     def set_user
       @user = User.find(params[:id])

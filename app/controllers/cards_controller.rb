@@ -15,6 +15,13 @@ class CardsController < ApplicationController
             cards = 'No booster packs avaiable to open'
         else
         
+
+        @pack = "booster"
+        newpacks = @current_user.packs
+        newval = Integer(newpacks[@pack]) - 1
+        newpacks[@pack] = newval
+        @current_user.update!(packs: newpacks)
+            
         cards = [];
 
         # Bronze
