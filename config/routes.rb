@@ -11,11 +11,12 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
 
   # Cards
-  get "/booster", to: "cards#booster_pack"
-  get "/regular", to: "cards#regular_pack"
-  get "/pro", to: "cards#pro_pack"
-  get "/max", to: "cards#max_pack"
-  get "/ultra", to: "cards#ultra_pack"
+  get "/booster_pack", to: "cards#booster_pack"
+  get "/regular_pack", to: "cards#regular_pack"
+  get "/pro_pack", to: "cards#pro_pack"
+  get "/max_pack", to: "cards#max_pack"
+  get "/ultra_pack", to: "cards#ultra_pack"
+  get "studio_pack", to: "cards#studio_pack"
 
 
   # User
