@@ -90,6 +90,17 @@ class CardsController < ApplicationController
     end
 
     def pro_pack
+        if Integer(@current_user.packs["pro"]) < 1
+            cards = 'You have no pro packs left to open.'
+        else
+        
+
+        @pack = "pro"
+        newpacks = @current_user.packs
+        newval = Integer(newpacks[@pack]) - 1
+        newpacks[@pack] = newval
+        @current_user.update!(packs: newpacks)
+
         cards = []
         len = 8
 
@@ -130,6 +141,7 @@ class CardsController < ApplicationController
         newLength.times {|i| 
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:0)
         }
+    end
         render json: cards
     end
 
