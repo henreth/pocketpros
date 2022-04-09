@@ -12,15 +12,21 @@ class CardsController < ApplicationController
 
     def booster_pack
         if Integer(@current_user.packs["booster"]) < 1
-            cards = 'You have no booster packs left to open.'
+            cards = 'ERROR: You have no Booster Packs left to open.'
         else
         
-
+        # Update Booster Pack Count
         @pack = "booster"
         newpacks = @current_user.packs
         newval = Integer(newpacks[@pack]) - 1
         newpacks[@pack] = newval
         @current_user.update!(packs: newpacks)
+        # Update User Total Pack Count
+        tot = @current_user.pack_count
+        newpacks = @current_user.packs
+        newpacks["total"] = tot
+        @current_user.update!(packs: newpacks)
+
 
         cards = [];
 
@@ -39,15 +45,21 @@ class CardsController < ApplicationController
 
     def regular_pack
         if Integer(@current_user.packs["regular"]) < 1
-            cards = 'You have no regular packs left to open.'
+            cards = 'ERROR: You have no Regular Packs left to open.'
         else
         
-
+        # Update Regular Pack Count
         @pack = "regular"
         newpacks = @current_user.packs
         newval = Integer(newpacks[@pack]) - 1
         newpacks[@pack] = newval
         @current_user.update!(packs: newpacks)
+        # Update User Total Pack Count
+        tot = @current_user.pack_count
+        newpacks = @current_user.packs
+        newpacks["total"] = tot
+        @current_user.update!(packs: newpacks)
+        
 
         cards = []
         len = 12
@@ -81,7 +93,6 @@ class CardsController < ApplicationController
 
         # Bronze
         newLength = len - cards.length;
-
         newLength.times {|i| 
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:0)
         }
@@ -90,6 +101,23 @@ class CardsController < ApplicationController
     end
 
     def pro_pack
+        if Integer(@current_user.packs["pro"]) < 1
+            cards = 'ERROR: You have no Pro Packs left to open.'
+        else
+        
+        # Update Pro Pack Count
+        @pack = "pro"
+        newpacks = @current_user.packs
+        newval = Integer(newpacks[@pack]) - 1
+        newpacks[@pack] = newval
+        @current_user.update!(packs: newpacks)
+        # Update User Total Pack Count
+        tot = @current_user.pack_count
+        newpacks = @current_user.packs
+        newpacks["total"] = tot
+        @current_user.update!(packs: newpacks)
+        
+
         cards = []
         len = 8
 
@@ -126,14 +154,30 @@ class CardsController < ApplicationController
 
         # Bronze
         newLength = len - cards.length;
-
         newLength.times {|i| 
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:0)
         }
+    end
         render json: cards
     end
 
     def max_pack
+        if Integer(@current_user.packs["max"]) < 1
+            cards = 'ERROR: You have no Max Packs left to open.'
+        else
+        
+        # Update Max Pack Count
+        @pack = "max"
+        newpacks = @current_user.packs
+        newval = Integer(newpacks[@pack]) - 1
+        newpacks[@pack] = newval
+        @current_user.update!(packs: newpacks)
+        # Update User Total Pack Count
+        tot = @current_user.pack_count
+        newpacks = @current_user.packs
+        newpacks["total"] = tot
+        @current_user.update!(packs: newpacks)
+
         cards = []
         len = 6
 
@@ -158,15 +202,31 @@ class CardsController < ApplicationController
 
         # Silver
         newLength = len - cards.length;
-
         newLength.times {|i| 
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
         }
+    end
         render json: cards
     end
 
 
     def ultra_pack
+        if Integer(@current_user.packs["ultra"]) < 1
+            cards = 'ERROR: You have no Ultra Packs left to open.'
+        else
+        
+        # Update Ultra Pack Count
+        @pack = "ultra"
+        newpacks = @current_user.packs
+        newval = Integer(newpacks[@pack]) - 1
+        newpacks[@pack] = newval
+        @current_user.update!(packs: newpacks)
+        # Update User Total Pack Count
+        tot = @current_user.pack_count
+        newpacks = @current_user.packs
+        newpacks["total"] = tot
+        @current_user.update!(packs: newpacks)
+
         cards = []
         len = 4
 
@@ -192,10 +252,51 @@ class CardsController < ApplicationController
 
         # Silver
         newLength = len - cards.length;
-
         newLength.times {|i| 
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
         }
+    end
+        render json: cards
+    end
+
+    def studio_pack
+        if Integer(@current_user.packs["studio"]) < 1
+            cards = 'ERROR: You have no Studio Packs left to open.'
+        else
+        
+        # Update Ultra Pack Count
+        @pack = "studio"
+        newpacks = @current_user.packs
+        newval = Integer(newpacks[@pack]) - 1
+        newpacks[@pack] = newval
+        @current_user.update!(packs: newpacks)
+        # Update User Total Pack Count
+        tot = @current_user.pack_count
+        newpacks = @current_user.packs
+        newpacks["total"] = tot
+        @current_user.update!(packs: newpacks)
+
+        cards = []
+        len = 2
+
+        # Holo
+        rand_holo = rand() * 100
+        if rand_holo < 25
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:3)
+        end
+
+        rand_holo = rand() * 100
+        if rand_holo < 1
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:3)
+        end
+
+        # Gold
+        newLength = len - cards.length;
+        newLength.times {|i| 
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
+        }
+
+    end
         render json: cards
     end
 
