@@ -18,4 +18,8 @@ Rails.application.routes.draw do
   get "/ultra", to: "cards#ultra_pack"
 
 
+  # User
+  post "/buypack", to: "users#buy_pack"
+
+
 end

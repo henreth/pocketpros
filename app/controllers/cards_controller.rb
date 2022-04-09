@@ -11,6 +11,10 @@ class CardsController < ApplicationController
     end
 
     def booster_pack
+        if Integer(@current_user.packs["booster"]) < 1
+            cards = 'No booster packs avaiable to open'
+        else
+        
         cards = [];
 
         # Bronze
@@ -22,6 +26,7 @@ class CardsController < ApplicationController
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
         # Gold
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
+        end
         render json: cards    
     end
 
