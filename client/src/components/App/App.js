@@ -7,6 +7,7 @@ import Home from '../Home/Home'
 import Collection from '../Collection/Collection'
 import YourCards from '../Collection/YourCards/YourCards'
 import OpenPacks from '../Collection/OpenPacks/OpenPacks'
+import BuyPacks from '../BuyPacks/BuyPacks'
 import Auth from '../Auth/Auth';
 import LogIn from '../Auth/LogIn/LogIn';
 import SignUp from '../Auth/SignUp/SignUp';
@@ -150,6 +151,7 @@ export default function App() {
           handleBackClick={handleBackClick}
           />} />
         <Route path="/openpacks" element={<OpenPacks user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} />
+        <Route path="/buypacks" element={<BuyPacks user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} />
         <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
         <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick}/>} />
         <Route path="/signup" element={<SignUp 

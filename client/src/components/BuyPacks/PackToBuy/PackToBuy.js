@@ -1,17 +1,39 @@
-import './PackToOpen.css';
+import './PackToBuy.css';
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import icon from './img/bwfloppy.png'
 
 
-export default function PackToOpen({packType, setUser, setUserCards, userPacks, setUserPacks }){
+export default function PackToBuy({user,packType, setUser, setUserCards, userPacks, setUserPacks }){
+
+    let packCost;
+    switch (packType){
+        case ('regular'):
+            packCost=5;
+            break
+        case ('pro'):
+            packCost=10;
+            break
+        case ('max'):
+            packCost=15;
+            break
+        case ('ultra'):
+            packCost=20;
+            break
+        case ('studio'):
+            packCost=25;
+            break
+    }
     
     function handlePackClick(e) {
-        if(userPacks[packType] == 0){
-            alert(`ERROR: You have no ${packType[0].toUpperCase()+packType.slice(1,packType.length)} Packs left!`)
+        if(user.credits < packCost){
+            alert(`ERROR: You do not have enough credits to purchase this pack.`)
         } else{
-            axios.get(`/${packType}_pack`)
+            let packToBuy = {
+                "pack": packType
+            }
+            axios.post('buy_pack',packToBuy)
             .then(r => {
                     console.log(r.data)
                     //update user information
@@ -39,7 +61,7 @@ export default function PackToOpen({packType, setUser, setUserCards, userPacks, 
         <div className='pack-info-container'>
             <img className='floppy' src={icon} />
             <div>{packType.toUpperCase()}</div>
-            <div>{userPacks[packType]}</div>
+            <div>{packCost}</div>
         </div>
     </div>
     )
