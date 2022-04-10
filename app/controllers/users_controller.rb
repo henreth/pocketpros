@@ -43,7 +43,8 @@ class UsersController < ApplicationController
         tot = @current_user.pack_count
         newpacks = @current_user.packs
         newpacks["total"] = tot
-        @current_user.update!(packs: newpacks)
+        newcredits = @current_user.credits-@cost
+        @current_user.update!(packs: newpacks, credits: newcredits)
         updatedUser = @current_user
         end
         render json: updatedUser, status: :ok
