@@ -1,1 +1,29 @@
-/* No CSS *//*# sourceMappingURL=OpenPacks.css.map */
+.pack {
+  margin: 4px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-perspective: 600px;
+          perspective: 600px;
+  cursor: pointer;
+  background-color: #171717;
+  width: 20vw;
+  height: 44vh;
+  border-radius: 5px;
+}
+
+.booster {
+  background-color: #6d6d6d;
+}
+
+.pack :hover {
+  z-index: 10;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.pack,
+.card .noImage {
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
+/*# sourceMappingURL=OpenPacks.css.map */

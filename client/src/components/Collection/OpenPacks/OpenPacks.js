@@ -6,26 +6,29 @@ import axios from 'axios';
 import Card from '../../Card/Card'
 
 
-export default function OpenPacks({ user,userPacks,setUserPacks,signedIn }) {
-  document.title = 'Pocket Pros - Open Packs';
+export default function OpenPacks({ user, userPacks, setUserPacks, signedIn }) {
+    document.title = 'Pocket Pros - Open Packs';
 
-  let navigate = useNavigate();
+    let navigate = useNavigate();
 
-  useEffect(() => {
-    if (signedIn == false) {
-      navigate('/');
+    useEffect(() => {
+        if (signedIn == false) {
+            navigate('/');
+        }
+    }, [])
+
+
+    function handleStudioClick(e){
+        axios.get(`/${e.target.textContent.toLowerCase()}_pack`)
+        .then(r=>console.log(r.data))
     }
-  }, [])
 
-  return (
-    <div className='yourCards-container'>
-      <div className="card"><div className="noImage">{userPacks["booster"]}</div></div>
-      <div className="card"><div className="noImage">{userPacks["regular"]}</div></div>
-      <div className="card"><div className="noImage">{userPacks["pro"]}</div></div>
-      <div className="card"><div className="noImage">{userPacks["max"]}</div></div>
-      <div className="card"><div className="noImage">{userPacks["ultra"]}</div></div>
-      <div className="card"><div className="noImage">{userPacks["studio"]}</div></div>
-      <div className="card"><div className="noImage">BUY MORE</div></div>
-    </div>
-  )
+    //{userPacks["booster"]}
+    return (
+        <div className='yourCards-container'>
+            <div value='studio' className="pack booster" onClick={handleStudioClick}>
+                STUDIO
+            </div>
+        </div>
+    )
 }

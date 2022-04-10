@@ -2,3 +2,13 @@
     color:aquamarine;
 }
 
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: aquamarine;
+    color: #fff;
+
+    height: 38vh;
+}
