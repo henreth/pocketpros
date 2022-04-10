@@ -36,8 +36,8 @@ export default function OpenPacks({ user, setUser, setUserCards, userPacks, setU
             {packsToDisplay}
             <div className='pack buy-more' onClick={handleBuyPackClick}>
                 <div className='pack-info-container'>
-                    <div>BUY MORE</div>
                     <img className='floppy' src={buyIcon} />
+                    <div>BUY MORE</div>
                     <div>+</div>
                 </div>
 

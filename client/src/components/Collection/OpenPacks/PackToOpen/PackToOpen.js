@@ -36,8 +36,8 @@ export default function PackToOpen({packType, setUser, setUserCards, userPacks, 
     return(
         <div className={packClass} onClick={handlePackClick}>
         <div className='pack-info-container'>
-            <div>{packType}</div>
             <img className='floppy' src={icon} />
+            <div>{packType.toUpperCase()}</div>
             <div>{userPacks[packType]}</div>
         </div>
     </div>
