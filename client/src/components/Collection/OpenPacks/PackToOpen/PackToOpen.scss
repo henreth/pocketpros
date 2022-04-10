@@ -1,0 +1,38 @@
+.pack {
+    margin: 4px;
+    transform: scale(1);
+    perspective: 600px;
+    cursor: pointer;
+    background-color: rgb(23, 23, 23);
+    width: 20vw;
+    height: 44vh;
+    border-radius: 5px;
+
+}
+
+.booster {
+    background-color: rgb(109, 109, 109);
+}
+
+// .pack :hover {
+//     z-index: 10;
+//     transform: scale(1.3);
+// }
+
+// .pack ,
+// .card .noImage {
+//     transition: all 250ms ease-out;
+// }
+
+.pack-info-container{ 
+display: flex;
+flex-direction: column;
+align-content: center;
+justify-content: center;
+align-items: center;
+}
+
+.floppy{
+    height: 30vh;
+    filter: grayscale(100%);
+}

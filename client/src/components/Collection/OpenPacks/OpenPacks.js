@@ -2,9 +2,10 @@ import './OpenPacks.css';
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
-import icon from './floppydisk3.png'
 
 import Card from '../../Card/Card'
+
+import Pack from './PackToOpen/PackToOpen';
 
 
 export default function OpenPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn }) {
@@ -19,40 +20,11 @@ export default function OpenPacks({ user, setUser, setUserCards, userPacks, setU
     }, [])
 
 
-    function handlePackClick(e) {
-        axios.get(`/studio_pack`)
-            .then(r => {
-                if (r.data.length > 15) {
-                    alert(r.data)
-                } else {
-                    console.log(r.data)
-                    fetch("/me")
-                    .then((r) => {
-                        if (r.ok) {
-                            r.json().then((user) => {
-                                setUser(user)
-                                setUserCards(user.cards)
-                                setUserPacks(user.packs)
-                            })
-                        }
-                    })        
-                }
-
-            })
-
-    }
-
 
     //{userPacks["booster"]}
     return (
         <div className='yourCards-container'>
-            <div className="pack booster" onClick={handlePackClick}>
-                <div className='pack-info-container'>
-                    <div>studio</div>
-                    <img className='floppy' src={icon} />
-                    <div>{userPacks["studio"]}</div>
-                </div>
-            </div>
+            <Pack />
         </div>
     )
 }
