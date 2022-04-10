@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,oBAAoB,CAAC;EACjB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,MAAM;EACrB,UAAU,EAAE,KAAK;CACpB",
     "sources": [
         "OpenPacks.scss"
     ],

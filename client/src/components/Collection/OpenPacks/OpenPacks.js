@@ -27,7 +27,7 @@ export default function OpenPacks({ user, setUser, setUserCards, userPacks, setU
     })
 
     return (
-        <div className='yourCards-container'>
+        <div className='yourPacks-container'>
             {packsToDisplay}
         </div>
     )
