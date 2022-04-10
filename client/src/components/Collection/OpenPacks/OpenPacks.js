@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
-import Card from '../../Card/Card'
+import Modal from "../../Modals/Modal";
 
 import Pack from './PackToOpen/PackToOpen';
 import buyIcon from './PackToOpen/img/bwbuyicon.png'
@@ -11,6 +11,9 @@ import buyIcon from './PackToOpen/img/bwbuyicon.png'
 
 export default function OpenPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn, handleBackClick }) {
     document.title = 'Pocket Pros - Open Packs';
+
+    const [openedCards,setOpenedCards] = useState([]);
+    const [showModal,setShowModal] = useState(false);
 
     let packTypes = ["booster", "regular", "pro", "max", "ultra", "studio"]
     let navigate = useNavigate();
@@ -23,7 +26,7 @@ export default function OpenPacks({ user, setUser, setUserCards, userPacks, setU
 
     let packsToDisplay = packTypes.map(packType => {
         return (
-            userPacks[packType] == 0 ? null : <Pack packType={packType} user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks} />
+            userPacks[packType] == 0 ? null : <Pack packType={packType} user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks} setOpenedCards={setOpenedCards} setShowModal={setShowModal} />
         )
     })
 
@@ -51,6 +54,7 @@ export default function OpenPacks({ user, setUser, setUserCards, userPacks, setU
                     <h3>Back</h3>
                 </div>
             </div>
+            <Modal showModal={showModal} setShowModal={setShowModal} openedCards={openedCards}/>
         </React.Fragment>
 
 

@@ -22,7 +22,6 @@ function Modal({ showModal, setShowModal, openedCards }) {
 
     return (
         <div className="overlay">
-
                 <div className='openedCards-container'>
                     {openedCardsToDisplay}
                 </div>

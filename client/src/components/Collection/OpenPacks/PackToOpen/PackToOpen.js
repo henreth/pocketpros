@@ -5,7 +5,7 @@ import axios from 'axios';
 import icon from './img/bwfloppy.png'
 
 
-export default function PackToOpen({packType, setUser, setUserCards, userPacks, setUserPacks }){
+export default function PackToOpen({packType, setUser, setUserCards, userPacks, setUserPacks, setOpenedCards,setShowModal }){
     
     function handlePackClick(e) {
         if(userPacks[packType] == 0){
@@ -14,6 +14,8 @@ export default function PackToOpen({packType, setUser, setUserCards, userPacks, 
             axios.get(`/${packType}_pack`)
             .then(r => {
                     console.log(r.data)
+                    setOpenedCards(r.data)
+                    setShowModal(true)
                     //update user information
                     fetch("/me")
                     .then((r) => {
