@@ -31,7 +31,8 @@ export default function PackToBuy({user,packType, setUser, setUserCards, userPac
             alert(`ERROR: You do not have enough credits to purchase this pack.`)
         } else{
             let packToBuy = {
-                "pack": packType
+                "pack": packType,
+                "cost": packCost
             }
             axios.post('buy_pack',packToBuy)
             .then(r => {
