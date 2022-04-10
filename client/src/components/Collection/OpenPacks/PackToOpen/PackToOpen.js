@@ -5,12 +5,12 @@ import axios from 'axios';
 import icon from './img/floppydisk3.png'
 
 
-export default function PackToOpen({setUser, setUserCards, userPacks, setUserPacks }){
+export default function PackToOpen({packType, setUser, setUserCards, userPacks, setUserPacks }){
     function handlePackClick(e) {
-        if(userPacks["studio"] == 0){
-            alert('ERROR: You have no Studio Packs left!')
+        if(userPacks[packType] == 0){
+            alert(`ERROR: You have no ${packType[0].toUpperCase()+packType.slice(1,packType.length)} Packs left!`)
         } else{
-            axios.get(`/studio_pack`)
+            axios.get(`/${packType}_pack`)
             .then(r => {
                     console.log(r.data)
                     //update user information
@@ -35,9 +35,9 @@ export default function PackToOpen({setUser, setUserCards, userPacks, setUserPac
     return(
         <div className="pack booster" onClick={handlePackClick}>
         <div className='pack-info-container'>
-            <div>studio</div>
+            <div>{packType}</div>
             <img className='floppy' src={icon} />
-            <div>{userPacks["studio"]}</div>
+            <div>{userPacks[packType]}</div>
         </div>
     </div>
     )
