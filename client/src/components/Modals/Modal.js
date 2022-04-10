@@ -2,14 +2,21 @@ import React from 'react';
 import './Modal.css';
 import Card from '../Card/Card';
 import NewCard from '../Collection/OpenPacks/NewCard/NewCard';
+import { useNavigate } from 'react-router-dom';
 
 
 
-// open, onClose 
+// ! Add 'GO TO YOUR DECK' 'OPEN MORE PACKS" Buttons
 function Modal({ showModal, setShowModal, openedCards }) {
+    let navigate = useNavigate();
 
     if (!showModal) {
         return null
+    }
+
+    function handleGoToDeckClick() {
+        setShowModal(false)
+        navigate('/cards')
     }
 
     function handleClick() {
@@ -23,10 +30,15 @@ function Modal({ showModal, setShowModal, openedCards }) {
     })
 
     return (
-        <div className="overlay" onDrop={handleClick}>
-                <div className='openedCards-container'>
-                    {openedCardsToDisplay}
-                </div>
+        <div className="overlay" onBlur={handleClick}>
+            <div className='openedCards-container' >
+                {openedCardsToDisplay}
+            </div>
+            <div className='button-wrapper'>
+                <button onClick={handleGoToDeckClick}>GO TO YOUR DECK</button>
+                <button onClick={handleClick}>OPEN MORE PACKS</button>
+            </div>
+
         </div>
     );
 }
