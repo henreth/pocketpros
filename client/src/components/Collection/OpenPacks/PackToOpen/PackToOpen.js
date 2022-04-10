@@ -2,7 +2,7 @@ import './PackToOpen.css';
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
-import icon from './img/floppydisk3.png'
+import icon from './img/bwfloppy.png'
 
 
 export default function PackToOpen({packType, setUser, setUserCards, userPacks, setUserPacks }){

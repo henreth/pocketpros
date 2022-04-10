@@ -6,8 +6,8 @@
           perspective: 600px;
   cursor: pointer;
   background-color: #6d6d6d;
-  width: 20vw;
-  height: 44vh;
+  width: 18vw;
+  height: 43vh;
   border-radius: 10px;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .regular {
-  background-color: #634313;
+  background-color: #cd7f32;
 }
 
 .pro {
@@ -33,6 +33,10 @@
 
 .studio {
   background-color: #ac6ed6;
+}
+
+.buy-more {
+  background-color: #68b287;
 }
 
 .pack-info-container {
@@ -56,7 +60,7 @@
 
 .floppy {
   height: 30vh;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  -webkit-filter: opacity(0.35);
+          filter: opacity(0.35);
 }
 /*# sourceMappingURL=PackToOpen.css.map */

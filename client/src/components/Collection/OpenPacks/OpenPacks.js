@@ -6,6 +6,7 @@ import axios from 'axios';
 import Card from '../../Card/Card'
 
 import Pack from './PackToOpen/PackToOpen';
+import buyIcon from './PackToOpen/img/bwbuyicon.png'
 
 
 export default function OpenPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn }) {
@@ -36,7 +37,7 @@ export default function OpenPacks({ user, setUser, setUserCards, userPacks, setU
             <div className='pack buy-more' onClick={handleBuyPackClick}>
                 <div className='pack-info-container'>
                     <div>BUY MORE</div>
-                    {/* <img className='floppy' src={icon} /> */}
+                    <img className='floppy' src={buyIcon} />
                     <div>+</div>
                 </div>
 

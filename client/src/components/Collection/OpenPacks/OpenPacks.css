@@ -1,10 +1,10 @@
 .yourPacks-container {
+  margin-left: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -13,5 +13,6 @@
   -ms-flex-line-pack: center;
       align-content: center;
   min-height: 100vh;
+  width: 80%;
 }
 /*# sourceMappingURL=OpenPacks.css.map */

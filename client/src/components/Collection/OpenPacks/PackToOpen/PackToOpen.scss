@@ -4,8 +4,8 @@
     perspective: 600px;
     cursor: pointer;
     background-color: rgb(109, 109, 109);
-    width: 20vw;
-    height: 44vh;
+    width: 18vw;
+    height: 43vh;
     border-radius: 10px;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .regular {
-    background-color: rgb(99, 67, 19);
+    background-color: #cd7f32;
 }
 
 .pro {
@@ -31,6 +31,10 @@
 
 .studio {
     background-color: rgb(172, 110, 214);
+}
+
+.buy-more{
+    background-color: rgb(104, 178, 135);
 }
 
 // .pack :hover {
@@ -54,5 +58,5 @@ color: #fff
 
 .floppy{
     height: 30vh;
-    filter: grayscale(100%);
+    filter: opacity(.35) 
 }

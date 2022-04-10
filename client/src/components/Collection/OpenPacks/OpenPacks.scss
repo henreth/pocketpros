@@ -1,8 +1,10 @@
 .yourPacks-container {
+    margin-left: 10%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     align-content: center;
     min-height: 100vh;
+    width: 80%;
 }
