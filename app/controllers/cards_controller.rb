@@ -38,7 +38,8 @@ class CardsController < ApplicationController
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
         # Gold
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)        
+        cards = cards.shuffle
         end
         render json: cards    
     end
@@ -96,8 +97,11 @@ class CardsController < ApplicationController
         newLength.times {|i| 
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:0)
         }
+        cards = cards.shuffle
+
     end
         render json: cards
+
     end
 
     def pro_pack
@@ -123,7 +127,7 @@ class CardsController < ApplicationController
 
         # Holo
         rand_holo = rand() * 100
-        if rand_holo < 5
+        if rand_holo < 1
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:3)
         end
 
@@ -157,6 +161,7 @@ class CardsController < ApplicationController
         newLength.times {|i| 
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:0)
         }
+        cards = cards.shuffle
     end
         render json: cards
     end
@@ -205,6 +210,7 @@ class CardsController < ApplicationController
         newLength.times {|i| 
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
         }
+        cards = cards.shuffle
     end
         render json: cards
     end
@@ -255,6 +261,7 @@ class CardsController < ApplicationController
         newLength.times {|i| 
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
         }
+        cards = cards.shuffle
     end
         render json: cards
     end
@@ -295,7 +302,7 @@ class CardsController < ApplicationController
         newLength.times {|i| 
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
         }
-
+        cards = cards.shuffle
     end
         render json: cards
     end

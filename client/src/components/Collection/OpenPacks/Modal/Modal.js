@@ -1,7 +1,6 @@
 import React from 'react';
 import './Modal.css';
-import Card from '../Card/Card';
-import NewCard from '../Collection/OpenPacks/NewCard/NewCard';
+import NewCard from '../NewCard/NewCard';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -23,11 +22,22 @@ function Modal({ showModal, setShowModal, openedCards }) {
         setShowModal(false)
     }
 
+    // let openedCardsToDisplay = shuffle(openedCards).map(card => {
     let openedCardsToDisplay = openedCards.map(card => {
         return (
             <NewCard key={card.id} char={card} />
         )
     })
+
+    function shuffle(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    return array
+    }
 
     return (
         <div className="overlay" onBlur={handleClick}>
