@@ -1,6 +1,7 @@
 .yourCards-container {
     display: flex;
     justify-content: center;
+    flex-wrap: flex;
     align-items: center;
     align-content: center;
     min-height: 100vh;
@@ -47,4 +48,43 @@
 .card,
 .card .noImage {
     transition: all 250ms ease-out;
+}
+
+
+.back_button-yc {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    position: relative;
+    overflow: hidden;
+    // cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: -57%;
+
+
+    h3 {
+        text-transform: uppercase;
+        position: relative;
+        text-align: center;
+        color: #45758C;
+        background-color: rgba(45, 51, 61, 0.8);
+        padding: 2% 2%;
+        font-size: 1em;
+        font-weight: 300;
+        z-index: -1;
+        background-image: url('../../../img/led-grid.png');
+        background-size: cover;
+    }
+
+    >div>h3 {
+        font-size: 2em;
+        font-weight: bold;
+        min-width: 20%;
+        max-width: 20%;
+        text-align: left;
+        color: #79D9FF;
+    }
+    
 }
