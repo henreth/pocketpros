@@ -24,7 +24,7 @@ export default function Home({ handleClick }) {
             <p>View your current collection and open any unused packs.</p>
           </div>
         </div>
-        <div className="menu__slot">
+        <div className="menu__slot" onClick={() => { navigate('/buypacks') }}>
           <div className="blackscreen"></div>
           <div className="char hopper"></div>
           <div className="slot-item-2">
