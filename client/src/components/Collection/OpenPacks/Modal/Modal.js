@@ -1,7 +1,6 @@
 import React from 'react';
 import './Modal.css';
-import Card from '../Card/Card';
-import NewCard from '../Collection/OpenPacks/NewCard/NewCard';
+import NewCard from '../NewCard/NewCard';
 import { useNavigate } from 'react-router-dom';
 
 
