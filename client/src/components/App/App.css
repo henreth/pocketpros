@@ -6,4 +6,8 @@
   margin-left: 83.5%;
   cursor: default;
 }
+
+.hidden {
+  visibility: hidden;
+}
 /*# sourceMappingURL=App.css.map */
