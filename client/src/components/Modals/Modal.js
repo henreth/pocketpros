@@ -21,11 +21,10 @@ function Modal({ showModal, setShowModal, openedCards }) {
     })
 
     return (
-        <div className="overlay">
+        <div className="overlay" onClick={handleClick}>
                 <div className='openedCards-container'>
                     {openedCardsToDisplay}
                 </div>
-                <button onClick={handleClick}> X </button>
         </div>
     );
 }
