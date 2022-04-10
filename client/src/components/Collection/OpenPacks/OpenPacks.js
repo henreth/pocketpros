@@ -24,7 +24,7 @@ export default function OpenPacks({ user, setUser, setUserCards, userPacks, setU
     //{userPacks["booster"]}
     return (
         <div className='yourCards-container'>
-            <Pack />
+            <Pack user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>
         </div>
     )
 }

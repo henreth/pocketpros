@@ -5,7 +5,7 @@ import axios from 'axios';
 import icon from './img/floppydisk3.png'
 
 
-export default function PackToOpen({setUser, setUserCards, userPacks, setUserPacks, }){
+export default function PackToOpen({setUser, setUserCards, userPacks, setUserPacks }){
     function handlePackClick(e) {
         if(userPacks["studio"] == 0){
             alert('ERROR: You have no Studio Packs left!')
