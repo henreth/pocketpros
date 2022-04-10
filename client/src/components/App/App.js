@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { Route, Routes,Navigate, useNavigate } from "react-router-dom";
+import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 import Home from '../Home/Home'
@@ -11,6 +11,7 @@ import BuyPacks from '../BuyPacks/BuyPacks'
 import Auth from '../Auth/Auth';
 import LogIn from '../Auth/LogIn/LogIn';
 import SignUp from '../Auth/SignUp/SignUp';
+import About from '../About/About';
 import Profile from '../Profile/Profile';
 
 export default function App() {
@@ -169,6 +170,7 @@ export default function App() {
             setSignUpLastName={setSignUpLastName}
             handleSignUpSubmit={handleSignUpSubmit} 
             handleBackClick={handleBackClick}/>} />
+        <Route path="/about" element={<About signedIn={signedIn} userCards={userCards}/>}/>
         <Route path="/profile" element={<Profile handleLogOut={handleLogOut} signedIn={signedIn} setSignedIn={setSignedIn} handleBackClick={handleBackClick}/>} />
         <Route path="/*" element={signedIn?<Home />:<Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
       </Routes>

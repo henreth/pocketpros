@@ -40,7 +40,7 @@ export default function Home({ handleClick }) {
             <p>Looking for a specific card? Check out the market for offers from other users.</p>
           </div>
         </div>
-        <div className="menu__slot">
+        <div className="menu__slot" onClick={() => { navigate('/about ') }}>
       <div className="blackscreen"></div>
       <div className="char hamilton"></div>
       <div className="slot-item-4">
