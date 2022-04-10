@@ -1,6 +1,8 @@
 import React from 'react';
 import './Modal.css';
-import Card from '../Card/Card'
+import Card from '../Card/Card';
+import NewCard from '../Collection/OpenPacks/NewCard/NewCard';
+
 
 
 // open, onClose 
@@ -16,12 +18,12 @@ function Modal({ showModal, setShowModal, openedCards }) {
 
     let openedCardsToDisplay = openedCards.map(card => {
         return (
-            <Card key={card.id} char={card} />
+            <NewCard key={card.id} char={card} />
         )
     })
 
     return (
-        <div className="overlay" onClick={handleClick}>
+        <div className="overlay" onDrop={handleClick}>
                 <div className='openedCards-container'>
                     {openedCardsToDisplay}
                 </div>
