@@ -22,7 +22,8 @@ function Modal({ showModal, setShowModal, openedCards }) {
         setShowModal(false)
     }
 
-    let openedCardsToDisplay = shuffle(openedCards).map(card => {
+    // let openedCardsToDisplay = shuffle(openedCards).map(card => {
+    let openedCardsToDisplay = openedCards.map(card => {
         return (
             <NewCard key={card.id} char={card} />
         )
