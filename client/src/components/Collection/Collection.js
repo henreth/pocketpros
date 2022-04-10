@@ -44,7 +44,7 @@ export default function Collection({ user, signedIn, handleBackClick }) {
             <p>Use credits in order to buy more card packs.</p>
           </div>
         </div>
-        <div className="menu__slot" onClick={handleBackClick}>
+        <div className="menu__slot" onClick={()=>navigate('/')}>
           <div className="blackscreen"></div>
           <div className="char larry"></div>
           <div className="slot-item-3">
