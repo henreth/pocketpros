@@ -6,7 +6,7 @@ import axios from 'axios';
 import Card from '../../Card/Card'
 
 
-export default function OpenPacks({ user, userPacks, setUserPacks, signedIn }) {
+export default function OpenPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn }) {
     document.title = 'Pocket Pros - Open Packs';
 
     let navigate = useNavigate();
@@ -21,7 +21,17 @@ export default function OpenPacks({ user, userPacks, setUserPacks, signedIn }) {
     function handleStudioClick(e){
         axios.get(`/${e.target.textContent.toLowerCase()}_pack`)
         .then(r=>console.log(r.data))
-    }
+
+        fetch("/me")
+        .then((r) => {
+          if (r.ok) {
+            r.json().then((user) => {
+              setUser(user)
+              setUserCards(user.cards)
+              setUserPacks(user.packs)
+            })} 
+    })}
+    
 
     //{userPacks["booster"]}
     return (
