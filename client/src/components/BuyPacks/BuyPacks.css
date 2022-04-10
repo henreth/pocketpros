@@ -1,4 +1,5 @@
 .yourPacks-container {
+  position: absolute;
   margin-left: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,5 +12,45 @@
       align-content: space-evenly;
   min-height: 100vh;
   width: 80%;
+}
+
+.back_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.back_button h3 {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  color: #45758C;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 2% 2%;
+  font-size: 1em;
+  font-weight: 300;
+  z-index: -1;
+  background-image: url("../../img/led-grid.png");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.back_button > div > h3 {
+  font-size: 2em;
+  font-weight: bold;
+  min-width: 20%;
+  max-width: 20%;
+  text-align: left;
+  color: #79D9FF;
 }
 /*# sourceMappingURL=BuyPacks.css.map */

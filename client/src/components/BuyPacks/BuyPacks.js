@@ -6,7 +6,6 @@ import axios from 'axios';
 import Card from './../Card/Card'
 
 import Pack from './PackToBuy/PackToBuy';
-import buyIcon from './PackToBuy/img/bwbuyicon.png'
 
 
 export default function BuyPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn }) {
@@ -27,13 +26,22 @@ export default function BuyPacks({ user, setUser, setUserCards, userPacks, setUs
         )
     })
 
-    function handleBuyPackClick(){
+    function handleBuyPackClick() {
         navigate('/')
     }
 
     return (
-        <div className='yourPacks-container'>
-            {packsToDisplay}
-        </div>
+        <React.Fragment>
+            <div className='yourPacks-container'>
+                {packsToDisplay}
+            </div>
+            <div className="back_button">
+                <div className></div>
+                <div className="log-in-title">
+                    <h3>Back</h3>
+                </div>
+            </div>
+        </React.Fragment>
+
     )
 }

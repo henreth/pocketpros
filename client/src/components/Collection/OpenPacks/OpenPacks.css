@@ -10,6 +10,7 @@
   -ms-flex-line-pack: space-evenly;
       align-content: space-evenly;
   min-height: 100vh;
-  width: 80%;
+  width: 10vw;
+  color: red;
 }
 /*# sourceMappingURL=OpenPacks.css.map */
