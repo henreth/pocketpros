@@ -31,6 +31,22 @@
   color: #fff;
 }
 
+.bronze {
+  background-color: #cd7f32;
+}
+
+.silver {
+  background-color: #afaeab;
+}
+
+.gold {
+  background-color: #d6ac6e;
+}
+
+.holo {
+  background-color: #6ecfd6;
+}
+
 .unopened {
   background-color: #080808;
 }
