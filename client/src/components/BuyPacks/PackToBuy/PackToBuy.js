@@ -10,19 +10,19 @@ export default function PackToBuy({user,packType, setUser, setUserCards, userPac
     let packCost;
     switch (packType){
         case ('regular'):
-            packCost=5;
-            break
-        case ('pro'):
-            packCost=10;
-            break
-        case ('max'):
             packCost=15;
             break
+        case ('pro'):
+            packCost=30;
+            break
+        case ('max'):
+            packCost=55;
+            break
         case ('ultra'):
-            packCost=20;
+            packCost=100;
             break
         case ('studio'):
-            packCost=25;
+            packCost=350;
             break
     }
     
