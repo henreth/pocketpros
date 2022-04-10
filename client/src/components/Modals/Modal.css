@@ -8,6 +8,19 @@
   z-index: 1000;
   -webkit-transition: 1s ease;
   transition: 1s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal {
@@ -19,5 +32,19 @@
   padding: 50px;
   z-index: 1000;
   background-color: white;
+}
+
+.openedCards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  min-height: 100vh;
+  width: 80%;
 }
 /*# sourceMappingURL=Modal.css.map */

@@ -18,7 +18,7 @@ export default function About({signedIn,userCards}){
         }
       }, [])
 
-      let openedCards = userCards.slice(0,4);
+      let openedCards = userCards.slice(0,12);
 
 
     return (
