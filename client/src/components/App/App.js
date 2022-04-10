@@ -170,7 +170,7 @@ export default function App() {
             setSignUpLastName={setSignUpLastName}
             handleSignUpSubmit={handleSignUpSubmit} 
             handleBackClick={handleBackClick}/>} />
-        <Route path="/about" element={<About signedIn={signedIn}/>}/>
+        <Route path="/about" element={<About signedIn={signedIn} userCards={userCards}/>}/>
         <Route path="/profile" element={<Profile handleLogOut={handleLogOut} signedIn={signedIn} setSignedIn={setSignedIn} handleBackClick={handleBackClick}/>} />
         <Route path="/*" element={signedIn?<Home />:<Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
       </Routes>

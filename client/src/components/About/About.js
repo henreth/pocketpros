@@ -1,9 +1,15 @@
-import React, {useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import {useNavigate } from "react-router-dom";
+import Modal from "../Modals/Modal";
 
 import './About.css'
 
-export default function About({signedIn}){
+export default function About({signedIn,userCards}){
+    const [showModal,setShowModal] = useState(false)
+
+    function handleOpenModal(){
+        setShowModal(true)
+    }
     let navigate = useNavigate();
 
     useEffect(() => {
@@ -11,6 +17,8 @@ export default function About({signedIn}){
           navigate('/');
         }
       }, [])
+
+      let openedCards = userCards.slice(0,4);
 
 
     return (
@@ -22,6 +30,8 @@ export default function About({signedIn}){
                     <h3>Back</h3>
                 </div>
             </div>
+            <button onClick={handleOpenModal}>OPEN</button>
+            <Modal showModal={showModal} setShowModal={setShowModal} openedCards={openedCards}/>
         </React.Fragment>
     )
 }

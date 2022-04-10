@@ -1,23 +1,34 @@
 import React from 'react';
 import './Modal.css';
+import Card from '../Card/Card'
+
 
 // open, onClose 
-function Modal({ }) {
+function Modal({ showModal, setShowModal, openedCards }) {
 
-    // if(!open){
-    //     return null
-    // }
-
-    function handleClick(){
-        console.log('working')
+    if (!showModal) {
+        return null
     }
+
+    function handleClick() {
+        setShowModal(false)
+    }
+
+    let openedCardsToDisplay = openedCards.map(card => {
         return (
-            <div className="overlay">
-                <div className="modal">                    
-                    <button onClick={handleClick}> X </button>
+            <Card key={card.id} char={card} />
+        )
+    })
+
+    return (
+        <div className="overlay">
+
+                <div className='yourCards-container'>
+                    {openedCardsToDisplay}
                 </div>
-            </div>
-        );
+                <button onClick={handleClick}> X </button>
+        </div>
+    );
 }
 
 export default Modal;
