@@ -62,7 +62,7 @@ export default function PackToBuy({user,packType, setUser, setUserCards, userPac
         <div className='pack-info-container'>
             <img className='floppy' src={icon} />
             <div>{packType.toUpperCase()}</div>
-            <div>{packCost}</div>
+            <div>🪙 {packCost}</div>
         </div>
     </div>
     )

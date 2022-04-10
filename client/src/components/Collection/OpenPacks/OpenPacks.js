@@ -31,7 +31,7 @@ export default function OpenPacks({ user, setUser, setUserCards, userPacks, setU
     })
 
     function handleBuyPackClick() {
-        navigate('/')
+        navigate('/buypacks')
     }
 
     return (

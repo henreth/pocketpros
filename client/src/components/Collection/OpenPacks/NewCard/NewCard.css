@@ -1,0 +1,69 @@
+.charCard {
+  margin: 4px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-perspective: 600px;
+          perspective: 600px;
+  cursor: pointer;
+  background-color: #6d6d6d;
+  width: 10.5vw;
+  height: 27vh;
+  border-radius: 5px;
+}
+
+.charCard:hover {
+  z-index: 10;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.charCard .charCard-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.bronze {
+  background-color: #cd7f32;
+}
+
+.silver {
+  background-color: #afaeab;
+}
+
+.gold {
+  background-color: #d6ac6e;
+}
+
+.holo {
+  background-image: -webkit-gradient(linear, left top, right top, from(#c2ffb6), color-stop(#ffa3b6), color-stop(#dda9ff), to(#a2d1ff));
+  background-image: linear-gradient(to right, #c2ffb6, #ffa3b6, #dda9ff, #a2d1ff);
+}
+
+.unopened {
+  background-color: #080808;
+}
+
+.unopened .charCard-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #080808;
+  visibility: hidden;
+}
+/*# sourceMappingURL=NewCard.css.map */

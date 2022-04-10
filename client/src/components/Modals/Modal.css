@@ -4,8 +4,8 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 100;
   -webkit-transition: 1s ease;
   transition: 1s ease;
   display: -webkit-box;
@@ -45,6 +45,6 @@
   -ms-flex-line-pack: space-evenly;
       align-content: space-evenly;
   min-height: 100vh;
-  width: 80%;
+  width: 70%;
 }
 /*# sourceMappingURL=Modal.css.map */
