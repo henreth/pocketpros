@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,oBAAoB,CAAC;EACjB,WAAW,EAAE,GAAG;EAChB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;EAC7B,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,YAAY;EAC3B,UAAU,EAAE,KAAK;EACjB,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "BuyPacks.scss"
+    ],
+    "names": [],
+    "file": "BuyPacks.css"
+}

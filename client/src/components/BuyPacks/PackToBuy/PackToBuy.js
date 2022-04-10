@@ -1,11 +1,11 @@
-import './PackToOpen.css';
+import './PackToBuy.css';
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import icon from './img/bwfloppy.png'
 
 
-export default function PackToOpen({packType, setUser, setUserCards, userPacks, setUserPacks }){
+export default function PackToBuy({packType, setUser, setUserCards, userPacks, setUserPacks }){
     
     function handlePackClick(e) {
         if(userPacks[packType] == 0){
