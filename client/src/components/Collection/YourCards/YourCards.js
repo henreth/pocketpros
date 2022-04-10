@@ -23,19 +23,25 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
     return data.map(card => {
       return (
         // <div key={card.id} className="card"><div className="noImage">{card.rarity} {card.character.first_name} {card.character.last_name}</div></div>
-        <Card key={card.id} char={card}/>
+        <Card key={card.id} char={card} />
       )
     })
   }
 
   return (
-    <div className='yourCards-container'>
-      <div className="card"><div className="noImage">1</div></div>
-      {displayCards(userCards.splice(0, 4))}
-      {/* <div class="card"><div class="noImage">2</div></div>
-          <div class="card"><div class="noImage">3</div></div>
-          <div class="card"><div class="noImage">4</div></div>
-          <div class="card"><div class="noImage">5</div></div> */}
-    </div>
+    <React.Fragment>
+      <div className='yourCards-container'>
+        <div className="card"><div className="noImage">1</div></div>
+        {displayCards(userCards.splice(0, 4))}
+      </div>
+      <div className="back_button-yc" onClick={() => navigate('/collection')}>
+        <div className></div>
+        <div className="log-in-title" >
+          <h3>Back</h3>
+        </div>
+      </div>
+    </React.Fragment>
+
+
   )
 }
