@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
 
   # User
-  post "/buypack", to: "users#buy_pack"
+  post "/buy_pack", to: "users#buy_pack"
 
 
 end
