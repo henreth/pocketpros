@@ -31,9 +31,10 @@ export default function PackToOpen({packType, setUser, setUserCards, userPacks, 
 
     }
 
+    let packClass = 'pack '+packType
 
     return(
-        <div className="pack booster" onClick={handlePackClick}>
+        <div className={packClass} onClick={handlePackClick}>
         <div className='pack-info-container'>
             <div>{packType}</div>
             <img className='floppy' src={icon} />

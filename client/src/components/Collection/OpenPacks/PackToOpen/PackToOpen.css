@@ -5,14 +5,34 @@
   -webkit-perspective: 600px;
           perspective: 600px;
   cursor: pointer;
-  background-color: #171717;
+  background-color: #6d6d6d;
   width: 20vw;
   height: 44vh;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .booster {
-  background-color: #6d6d6d;
+  background-color: #314574;
+}
+
+.regular {
+  background-color: #634313;
+}
+
+.pro {
+  background-color: #afaeab;
+}
+
+.max {
+  background-color: #d6ac6e;
+}
+
+.ultra {
+  background-color: #6ecfd6;
+}
+
+.studio {
+  background-color: #ac6ed6;
 }
 
 .pack-info-container {
@@ -31,6 +51,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #fff;
 }
 
 .floppy {
