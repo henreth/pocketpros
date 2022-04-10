@@ -3,15 +3,38 @@
     transform: scale(1);
     perspective: 600px;
     cursor: pointer;
-    background-color: rgb(23, 23, 23);
-    width: 20vw;
-    height: 44vh;
-    border-radius: 5px;
-
+    background-color: rgb(109, 109, 109);
+    width: 18vw;
+    height: 43vh;
+    border-radius: 10px;
 }
 
 .booster {
-    background-color: rgb(109, 109, 109);
+    background-color: rgb(49, 69, 116);
+}
+
+.regular {
+    background-color: #cd7f32;
+}
+
+.pro {
+    background-color: rgb(175, 174, 171);
+}
+
+.max {
+    background-color: rgb(214, 172, 110);
+}
+
+.ultra {
+    background-color: rgb(110, 207, 214);
+}
+
+.studio {
+    background-color: rgb(172, 110, 214);
+}
+
+.buy-more{
+    background-color: rgb(104, 178, 135);
 }
 
 // .pack :hover {
@@ -30,9 +53,10 @@ flex-direction: column;
 align-content: center;
 justify-content: center;
 align-items: center;
+color: #fff
 }
 
 .floppy{
     height: 30vh;
-    filter: grayscale(100%);
+    filter: opacity(.35) 
 }

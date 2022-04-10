@@ -6,11 +6,13 @@ import axios from 'axios';
 import Card from '../../Card/Card'
 
 import Pack from './PackToOpen/PackToOpen';
+import buyIcon from './PackToOpen/img/bwbuyicon.png'
 
 
 export default function OpenPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn }) {
     document.title = 'Pocket Pros - Open Packs';
 
+    let packTypes = ["booster", "regular", "pro", "max", "ultra", "studio"]
     let navigate = useNavigate();
 
     useEffect(() => {
@@ -19,12 +21,27 @@ export default function OpenPacks({ user, setUser, setUserCards, userPacks, setU
         }
     }, [])
 
+    let packsToDisplay = packTypes.map(packType => {
+        return (
+            <Pack packType={packType} user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks} />
+        )
+    })
 
+    function handleBuyPackClick(){
+        navigate('/')
+    }
 
-    //{userPacks["booster"]}
     return (
-        <div className='yourCards-container'>
-            <Pack user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>
+        <div className='yourPacks-container'>
+            {packsToDisplay}
+            <div className='pack buy-more' onClick={handleBuyPackClick}>
+                <div className='pack-info-container'>
+                    <img className='floppy' src={buyIcon} />
+                    <div>BUY MORE</div>
+                    <div>+</div>
+                </div>
+
+            </div>
         </div>
     )
 }

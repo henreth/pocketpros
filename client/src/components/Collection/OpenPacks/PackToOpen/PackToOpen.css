@@ -5,14 +5,38 @@
   -webkit-perspective: 600px;
           perspective: 600px;
   cursor: pointer;
-  background-color: #171717;
-  width: 20vw;
-  height: 44vh;
-  border-radius: 5px;
+  background-color: #6d6d6d;
+  width: 18vw;
+  height: 43vh;
+  border-radius: 10px;
 }
 
 .booster {
-  background-color: #6d6d6d;
+  background-color: #314574;
+}
+
+.regular {
+  background-color: #cd7f32;
+}
+
+.pro {
+  background-color: #afaeab;
+}
+
+.max {
+  background-color: #d6ac6e;
+}
+
+.ultra {
+  background-color: #6ecfd6;
+}
+
+.studio {
+  background-color: #ac6ed6;
+}
+
+.buy-more {
+  background-color: #68b287;
 }
 
 .pack-info-container {
@@ -31,11 +55,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #fff;
 }
 
 .floppy {
   height: 30vh;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  -webkit-filter: opacity(0.35);
+          filter: opacity(0.35);
 }
 /*# sourceMappingURL=PackToOpen.css.map */
