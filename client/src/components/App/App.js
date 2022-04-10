@@ -6,6 +6,7 @@ import axios from 'axios';
 import Home from '../Home/Home'
 import Collection from '../Collection/Collection'
 import YourCards from '../Collection/YourCards/YourCards'
+import OpenPacks from '../Collection/OpenPacks/OpenPacks'
 import Auth from '../Auth/Auth';
 import LogIn from '../Auth/LogIn/LogIn';
 import SignUp from '../Auth/SignUp/SignUp';
@@ -26,6 +27,7 @@ export default function App() {
 
   const [user,setUser]= useState(null)
   const [userCards,setUserCards] = useState([]);
+  const [userPacks,setUserPacks] = useState({});
   const [signedIn,setSignedIn] = useState(false)
 
   useEffect(() => {
@@ -35,6 +37,7 @@ export default function App() {
           r.json().then((user) => {
             setUser(user)
             setUserCards(user.cards)
+            setUserPacks(user.packs)
             setSignedIn(true)
           })}
         else {
@@ -146,6 +149,7 @@ export default function App() {
           signedIn={signedIn} 
           handleBackClick={handleBackClick}
           />} />
+        <Route path="/openpacks" element={<OpenPacks user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} />
         <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
         <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick}/>} />
         <Route path="/signup" element={<SignUp 

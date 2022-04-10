@@ -5,7 +5,6 @@ import axios from 'axios';
 
 import Card from '../../Card/Card'
 
-// add ashnc await to the cards element query selector 
 
 export default function YourCards({ user, userCards, setUserCards, handleBackClick, signedIn }) {
   document.title = 'Pocket Pros - Your Cards';

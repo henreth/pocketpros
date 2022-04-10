@@ -15,6 +15,10 @@ export default function Collection({ user, signedIn, handleBackClick }) {
     }
   }, [])
 
+  function handleOpenPacksClick(){
+    navigate('/openpacks');
+  }
+
   function handleYourCardsClick(){
     navigate('/cards');
   }
@@ -32,7 +36,7 @@ export default function Collection({ user, signedIn, handleBackClick }) {
             <p>View your current collection and open any unused packs.</p>
           </div>
         </div>
-        <div className="menu__slot">
+        <div className="menu__slot" onClick={handleOpenPacksClick}>
           <div className="blackscreen"></div>
           <div className="char vanrossum"></div>
           <div className="slot-item-2">
