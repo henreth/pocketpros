@@ -44,7 +44,8 @@
 }
 
 .holo {
-  background-color: #6ecfd6;
+  background-image: -webkit-gradient(linear, left top, right top, from(#c2ffb6), color-stop(#ffa3b6), color-stop(#dda9ff), to(#a2d1ff));
+  background-image: linear-gradient(to right, #c2ffb6, #ffa3b6, #dda9ff, #a2d1ff);
 }
 
 .unopened {
@@ -63,5 +64,6 @@
       -ms-flex-align: center;
           align-items: center;
   color: #080808;
+  visibility: hidden;
 }
 /*# sourceMappingURL=NewCard.css.map */

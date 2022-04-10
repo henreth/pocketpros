@@ -40,8 +40,16 @@
 }
 
 .holo {
-    background-color: rgb(110, 207, 214);
-}
+    // background-image: linear-gradient(to left,rgb(117, 202, 213), rgb(238, 167, 238), rgb(157, 108, 192), rgb(117, 202, 213), rgb(157, 108, 192),  rgb(238, 167, 238),rgb(117, 202, 213));
+    // color: transparent;
+    background-image: linear-gradient(
+        to right,
+        rgb(194, 255, 182),
+        rgb(255, 163, 182),
+        rgb(221, 169, 255),
+        rgb(162, 209, 255)
+    );
+  }
 
 
 .unopened{
@@ -53,6 +61,6 @@
         flex-direction: column;
         align-items: center;
         color: rgb(8, 8, 8);
-
+        visibility: hidden;
         }
 }
