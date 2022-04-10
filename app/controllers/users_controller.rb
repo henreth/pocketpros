@@ -31,6 +31,10 @@ class UsersController < ApplicationController
     def buy_pack 
         # Update designated pack count
         @pack = params[:pack]
+        @cost = params[:cost]
+        if @current_user.credits < @cost
+            updatedUser = 'ERROR: You do not have enough credits to purchase this pack.'
+        else
         newpacks = @current_user.packs
         newval = Integer(newpacks[@pack]) + 1
         newpacks[@pack] = newval
@@ -39,8 +43,11 @@ class UsersController < ApplicationController
         tot = @current_user.pack_count
         newpacks = @current_user.packs
         newpacks["total"] = tot
-        @current_user.update!(packs: newpacks)
-        render json: @current_user, status: :ok
+        newcredits = @current_user.credits-@cost
+        @current_user.update!(packs: newpacks, credits: newcredits)
+        updatedUser = @current_user
+        end
+        render json: updatedUser, status: :ok
     end
 
 
