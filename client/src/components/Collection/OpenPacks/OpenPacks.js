@@ -10,7 +10,8 @@ import Pack from './PackToOpen/PackToOpen';
 
 export default function OpenPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn }) {
     document.title = 'Pocket Pros - Open Packs';
-
+    
+    let packTypes= ["booster","regular","pro","max","ultra","studio"]
     let navigate = useNavigate();
 
     useEffect(() => {
@@ -19,12 +20,16 @@ export default function OpenPacks({ user, setUser, setUserCards, userPacks, setU
         }
     }, [])
 
-
+    let packsToDisplay = packTypes.map(packType=>{
+        return (
+            <Pack packType={packType} user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>
+        )
+    })
 
     //{userPacks["booster"]}
     return (
         <div className='yourCards-container'>
-            <Pack user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>
+            {packsToDisplay}
         </div>
     )
 }
