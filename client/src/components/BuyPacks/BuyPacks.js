@@ -8,7 +8,7 @@ import Card from './../Card/Card'
 import Pack from './PackToBuy/PackToBuy';
 
 
-export default function BuyPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn }) {
+export default function BuyPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn,handleBackClick }) {
     document.title = 'Pocket Pros - Open Packs';
 
     let packTypes = ["regular", "pro", "max", "ultra", "studio"]
@@ -26,18 +26,18 @@ export default function BuyPacks({ user, setUser, setUserCards, userPacks, setUs
         )
     })
 
-    function handleBuyPackClick() {
-        navigate('/')
-    }
 
+    function handleClickBack(){
+        navigate(-1)
+    }
     return (
         <React.Fragment>
-            <div className='yourPacks-container'>
+            <div className='yourPacks-container' >
                 {packsToDisplay}
             </div>
-            <div className="back_button">
+            <div className="back_button" onClick={handleClickBack}>
                 <div className></div>
-                <div className="log-in-title">
+                <div className="log-in-title" >
                     <h3>Back</h3>
                 </div>
             </div>

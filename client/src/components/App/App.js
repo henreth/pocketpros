@@ -151,7 +151,7 @@ export default function App() {
           handleBackClick={handleBackClick}
           />} />
         <Route path="/openpacks" element={<OpenPacks user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} />
-        <Route path="/buypacks" element={<BuyPacks user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} />
+        <Route path="/buypacks" element={<BuyPacks user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} handleBackClick={handleBackClick} />
         <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
         <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick}/>} />
         <Route path="/signup" element={<SignUp 
