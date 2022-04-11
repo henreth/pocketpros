@@ -6,9 +6,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -68,5 +65,36 @@
   max-width: 20%;
   text-align: left;
   color: #79D9FF;
+}
+
+.yourCards-filter-container {
+  margin-top: 5%;
+  margin-bottom: -5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #fff;
+  top: 25%;
+}
+
+.yourCards-tab {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  background-color: rgba(198, 74, 112, 0.534);
+  height: 5vh;
+  width: 100%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  padding-top: .75%;
+  margin-right: 5%;
 }
 /*# sourceMappingURL=YourCards.css.map */

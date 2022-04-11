@@ -8,6 +8,7 @@ import Card from '../../Card/Card'
 
 export default function YourCards({ user, userCards, setUserCards, handleBackClick, signedIn }) {
   document.title = 'Pocket Pros - Your Cards';
+  let [selectedRarity, setSelectedRarity] = useState('ALL')
 
   let navigate = useNavigate();
 
@@ -27,18 +28,33 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
     })
   }
 
+  let rarities = ['all', 'bronze', 'silver', 'gold', 'holo']
+  let raritiesToDisplay = rarities.map(rarity => {
+    let rarityClassName = selectedRarity === rarity ? 'yourCards-tab selected' : 'yourCards-tab'
+    return (
+      <div key={rarity} className={rarityClassName} onClick={handleClickTab}>{rarity.toUpperCase()}</div>
+    )
+  })
+
+  function handleClickTab(e) {
+    setSelectedRarity(e.target.textContent)
+  }
+
   return (
     <React.Fragment>
       <div className='displayCards-page'>
+        <div className='yourCards-filter-container'>
+          {raritiesToDisplay}
+        </div>
         <div className='yourCards-container'>
           {displayCards(userCards)}
         </div>
         <div className="back_button-yc" onClick={() => navigate('/collection')}>
-        <div className></div>
-        <div className="log-in-title" >
-          <h3>Back</h3>
+          <div className></div>
+          <div className="log-in-title" >
+            <h3>Back</h3>
+          </div>
         </div>
-      </div>
       </div>
 
     </React.Fragment>
