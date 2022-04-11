@@ -36,7 +36,7 @@ export default function PackToBuy({user,packType, setUser, setUserCards, userPac
             }
             axios.post('buy_pack',packToBuy)
             .then(r => {
-                    alert(`${packType.toUpperCase} Pack bought!`)
+                    alert(`${packType[0].toUpperCase()+packType.slice(1,)} Pack bought!`)
                     //update user information
                     fetch("/me")
                     .then((r) => {
