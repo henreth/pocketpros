@@ -13,8 +13,8 @@ User.create!([
         credits: "5000",
         packs: {
             "total": 15,
-            "booster":1,
-            "regular":2,
+            "booster":0,
+            "regular":3,
             "pro":3,
             "max":4,
             "ultra":5,
