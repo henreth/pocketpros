@@ -15,6 +15,7 @@
 }
 
 .yourCards-container {
+  margin-top: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,12 +39,12 @@
           flex-direction: column;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  position: fixed;
+  position: absolute;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
   cursor: pointer;
-  margin-top: -307%;
+  z-index: 99;
+  top: -.5vh;
+  left: 0vw;
 }
 
 .back_button-yc h3 {
