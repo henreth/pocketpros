@@ -1,14 +1,17 @@
 import './Card.css';
-import React, {useRef} from 'react';
+import React, { useState } from 'react';
 
 
-export default function Card({char,setCardElements}){
+export default function Card({ char }) {
 
-    return(
-            <div id={char.id} className="card">
-                <div className="noImage">{char.rarity} {char.character.first_name} {char.character.last_name}</div>
-                                {/* <div className="text-container"></div> */}
+    let cardClass = `charCard ${char.rarity}`
 
+    return (
+        <div className={cardClass}>
+            <div className='charCard-info-container'>
+                <div>{char.rarity.toUpperCase()}</div>
+                <div>{char.character.first_name} {char.character.last_name}</div>
             </div>
+        </div>
     )
 }
