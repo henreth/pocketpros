@@ -96,8 +96,20 @@ export default function App() {
 
     axios.post("/login", logInDetails)
       .then((r) => {
-        setSignedIn(true);
-        setUser(r.data);
+        fetch("/me")
+        .then((r) => {
+          if (r.ok) {
+            r.json().then((user) => {
+              setUser(user)
+              setUserCards(user.cards)
+              setUserPacks(user.packs)
+              setSignedIn(true)
+            })}
+          else {
+            navigate("/");
+          }
+        })
+  
         navigate('/');
       })
       .catch(function (error) {

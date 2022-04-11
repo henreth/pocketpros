@@ -33,7 +33,7 @@ export default function Collection({ user, signedIn, handleBackClick }) {
           <div className="char lamarr"></div>
           <div className="slot-item-1">
             <h3>Your Cards</h3>
-            <p>View your current collection and open any unused packs.</p>
+            <p>View all of your cards in one place.</p>
           </div>
         </div>
         <div className="menu__slot" onClick={handleOpenPacksClick}>
@@ -41,7 +41,7 @@ export default function Collection({ user, signedIn, handleBackClick }) {
           <div className="char vanrossum"></div>
           <div className="slot-item-2">
             <h3>Open Packs</h3>
-            <p>Use credits in order to buy more card packs.</p>
+            <p>Open any available packs to unlock more cards.</p>
           </div>
         </div>
         <div className="menu__slot" onClick={()=>navigate('/')}>

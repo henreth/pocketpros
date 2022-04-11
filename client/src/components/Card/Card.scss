@@ -1,14 +1,70 @@
-.test{
-    color:aquamarine;
+.charCard-yc {
+    margin: 4px;
+    transform: scale(1);
+    perspective: 600px;
+    cursor: pointer;
+    background-color: rgb(109, 109, 109);
+    width: 10.65vw;
+    height: 27vh;
+    border-radius: 5px;
+    transition: .5s ease;
+
+
+
+
+    &:hover{
+        z-index: 10;
+        transform: scale(1.5);
+        border: 1px solid rgba(0, 0, 0, 0.24);
+        transition: .5s ease;
+    }
+
+
+    .charCard-info-container{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff
+
+        }
+    
+    
 }
 
+.bronze {
+    background-color: #cd7f32;
+}
 
-.text-container{
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    background-color: aquamarine;
-    color: #fff;
+.silver {
+    background-color: rgb(175, 174, 171);
+}
 
-    height: 38vh;
+.gold {
+    background-color: rgb(214, 172, 110);
+}
+
+.holo {
+    // background-image: linear-gradient(to left,rgb(117, 202, 213), rgb(238, 167, 238), rgb(157, 108, 192), rgb(117, 202, 213), rgb(157, 108, 192),  rgb(238, 167, 238),rgb(117, 202, 213));
+    // color: transparent;
+    background-image: linear-gradient(
+        to right,
+        rgb(194, 255, 182),
+        rgb(255, 163, 182),
+        rgb(221, 169, 255),
+        rgb(162, 209, 255)
+    );
+  }
+
+
+.unopened{
+    background-color: rgb(8, 8, 8);
+
+
+    .charCard-info-container{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: rgb(8, 8, 8);
+        visibility: hidden;
+        }
 }
