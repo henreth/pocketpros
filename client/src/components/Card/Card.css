@@ -1,10 +1,9 @@
-.charCard-yc {
+.charCard {
   margin: 4px;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-perspective: 600px;
           perspective: 600px;
-  cursor: pointer;
   background-color: #6d6d6d;
   width: 12.075vw;
   height: 31.05vh;
@@ -13,7 +12,7 @@
   transition: .5s ease;
 }
 
-.charCard-yc:hover {
+.charCard:hover {
   z-index: 10;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
@@ -22,7 +21,7 @@
   transition: .5s ease;
 }
 
-.charCard-yc .charCard-yc-info-container {
+.charCard .charCard-info-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,7 +35,7 @@
   color: rgba(255, 255, 255, 0.584);
 }
 
-.charCard-yc .charCard-image {
+.charCard .charCard-image {
   height: 24.15vh;
   width: 12.075vw;
   border-top-left-radius: 5px;
@@ -47,26 +46,26 @@
   border-bottom: 3px solid rgba(255, 255, 255, 0.584);
 }
 
-.charCard-yc .charCard-text {
+.charCard .charCard-text {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-left: 2.5%;
   font-size: smaller;
 }
 
-.charCard-yc .charCard-name {
+.charCard .charCard-name {
   font-size: smaller;
   margin-top: 2%;
   margin-bottom: 0.75%;
 }
 
-.charCard-yc .charCard-rarity {
+.charCard .charCard-rarity {
   font-size: x-small;
   margin-top: 2%;
   margin-bottom: 0.75%;
 }
 
-.charCard-yc .charCard-id {
+.charCard .charCard-id {
   font-size: x-small;
   margin-top: 2%;
   margin-bottom: 0.75%;
@@ -91,6 +90,7 @@
 
 .unopened {
   background-color: #080808;
+  cursor: pointer;
 }
 
 .unopened .charCard-info-container {

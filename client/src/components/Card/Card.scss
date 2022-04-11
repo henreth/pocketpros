@@ -1,9 +1,9 @@
 
-.charCard-yc {
+.charCard {
     margin: 4px;
     transform: scale(1);
     perspective: 600px;
-    cursor: pointer;
+    // cursor: pointer;
     background-color: rgb(109, 109, 109);
     // width: 10.65vw;
     // height: 27vh;
@@ -22,7 +22,7 @@
         transition: .5s ease;
     }
 
-    .charCard-yc-info-container {
+    .charCard-info-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -101,6 +101,7 @@
 
 .unopened {
     background-color: rgb(8, 8, 8);
+    cursor: pointer;
 
 
     .charCard-info-container {
