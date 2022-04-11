@@ -87,7 +87,10 @@
 
 .holo {
   background-image: -webkit-gradient(linear, left top, right top, from(#c2ffb6), color-stop(#ffa3b6), color-stop(#dda9ff), to(#a2d1ff));
-  background-image: linear-gradient(to right, #c2ffb6, #ffa3b6, #dda9ff, #a2d1ff);
+  background-image: linear-gradient(90deg, #c2ffb6, #ffa3b6, #dda9ff, #a2d1ff);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 20s ease infinite;
+          animation: gradient 20s ease infinite;
 }
 
 .unopened {
@@ -126,5 +129,29 @@
           filter: opacity(90%);
   -webkit-transition: .5s ease;
   transition: .5s ease;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 /*# sourceMappingURL=Card.css.map */
