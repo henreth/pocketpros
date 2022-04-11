@@ -12,23 +12,41 @@
 
 
 
-    &:hover{
+    &:hover {
         z-index: 10;
         transform: scale(1.5);
         border: 1px solid rgba(0, 0, 0, 0.24);
         transition: .5s ease;
     }
 
+    .charCard-id {
+        align-self: flex-end;
+        margin-right: 2.5%;
+        font-size: smaller;
+        margin-top: 0.75%;
+        margin-bottom: 0.75%;
+    }
 
-    .charCard-info-container{ 
+    .charCard-yc-info-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: #fff
+        color: rgba(255, 255, 255, 0.584)
+    }
 
-        }
-    
-    
+    .charCard-image {
+        // margin-top: 5%;
+        // height: 18.55vh;
+        // height: 17vh;
+        // max-width:230px;
+        max-height: 17vh;
+        // width: auto;
+        // height: auto;
+        // border-radius: 5px;
+        margin-bottom: 5%;
+
+    }
+
 }
 
 .bronze {
@@ -46,25 +64,23 @@
 .holo {
     // background-image: linear-gradient(to left,rgb(117, 202, 213), rgb(238, 167, 238), rgb(157, 108, 192), rgb(117, 202, 213), rgb(157, 108, 192),  rgb(238, 167, 238),rgb(117, 202, 213));
     // color: transparent;
-    background-image: linear-gradient(
-        to right,
-        rgb(194, 255, 182),
-        rgb(255, 163, 182),
-        rgb(221, 169, 255),
-        rgb(162, 209, 255)
-    );
-  }
+    background-image: linear-gradient(to right,
+            rgb(194, 255, 182),
+            rgb(255, 163, 182),
+            rgb(221, 169, 255),
+            rgb(162, 209, 255));
+}
 
 
-.unopened{
+.unopened {
     background-color: rgb(8, 8, 8);
 
 
-    .charCard-info-container{ 
+    .charCard-info-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         color: rgb(8, 8, 8);
         visibility: hidden;
-        }
+    }
 }

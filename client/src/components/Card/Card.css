@@ -22,7 +22,16 @@
   transition: .5s ease;
 }
 
-.charCard-yc .charCard-info-container {
+.charCard-yc .charCard-id {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 2.5%;
+  font-size: smaller;
+  margin-top: 0.75%;
+  margin-bottom: 0.75%;
+}
+
+.charCard-yc .charCard-yc-info-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,7 +42,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.584);
+}
+
+.charCard-yc .charCard-image {
+  max-height: 17vh;
+  margin-bottom: 5%;
 }
 
 .bronze {
