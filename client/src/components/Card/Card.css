@@ -6,8 +6,8 @@
           perspective: 600px;
   cursor: pointer;
   background-color: #6d6d6d;
-  width: 10.65vw;
-  height: 27vh;
+  width: 12.075vw;
+  height: 31.05vh;
   border-radius: 5px;
   -webkit-transition: .5s ease;
   transition: .5s ease;
@@ -37,15 +37,14 @@
 }
 
 .charCard-yc .charCard-image {
-  height: 21vh;
-  width: 10.65vw;
-  max-height: 21vh;
-  max-width: 10.65vw;
+  height: 24.15vh;
+  width: 12.075vw;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin-bottom: 5%;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.584);
 }
 
 .charCard-yc .charCard-text {
@@ -107,5 +106,14 @@
           align-items: center;
   color: #080808;
   visibility: hidden;
+}
+
+.floppy-icon {
+  position: absolute;
+  height: 5vh;
+  -webkit-filter: opacity(0.35);
+          filter: opacity(0.35);
+  top: 82%;
+  left: 70%;
 }
 /*# sourceMappingURL=Card.css.map */
