@@ -125,6 +125,7 @@ export default function App() {
   function handleLogOut() {
     axios.delete('/logout')
       .then(r => {
+        alert('You have now been logged out.')
         setSignedIn(false);
         navigate('/');
         setUser(null);
