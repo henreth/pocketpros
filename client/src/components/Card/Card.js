@@ -12,9 +12,9 @@ export default function Card({ char }) {
     return (
         <div className={cardClass}>
             <div className='charCard-yc-info-container'>
-                <img src={alanturing} className='charCard-image' />
+                <img src={hedy} className='charCard-image' />
                 <div className='charCard-text'>
-                    <div>{char.character.first_name} {char.character.last_name}</div>
+                    <div className='charCard-name'>{char.character.first_name} {char.character.last_name}</div>
                     <div className='charCard-rarity'>{char.rarity[0].toUpperCase()+char.rarity.slice(1,)}</div>
                     <div className='charCard-id'>Card #{char.id}</div>
                 </div>
