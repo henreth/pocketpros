@@ -1,72 +1,37 @@
+.displayCards-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .yourCards-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: flex;
-    align-items: center;
-    align-content: center;
-    min-height: 100vh;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    // min-height: 100vh;
+    width: 70%;
+    z-index: 100;
 }
-
-.card3d {
-    margin: 4px;
-    transform: scale(1);
-    perspective: 600px;
-    cursor: pointer;
-}
-
-.card3d:hover {
-    z-index: 10;
-    transform: scale(1.3);
-}
-
-.card3d,
-.card3d img {
-    transition: all 250ms ease-out;
-}
-
-.card {
-    margin: 4px;
-    transform: scale(1);
-    perspective: 600px;
-    cursor: pointer;
-}
-
-.noImage {
-    background-color: rgb(234, 221, 202);
-    width: 12vw;
-    height: 30vh;
-    // width:180px;
-    // height:250px;
-    border-radius: 5px;
-}
-
-.card:hover {
-    z-index: 10;
-    transform: scale(1.3);
-}
-
-.card,
-.card .noImage {
-    transition: all 250ms ease-out;
-}
-
 
 .back_button-yc {
     display: flex;
     flex-direction: column;
     flex-basis: 50%;
-    position: relative;
+    position: fixed;
     overflow: hidden;
     // cursor: pointer;
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-top: -57%;
+    margin-top: -307%;
+    // margin-top: -57%;
 
 
     h3 {
         text-transform: uppercase;
-        position: relative;
+        position: fixed;
         text-align: center;
         color: #45758C;
         background-color: rgba(45, 51, 61, 0.8);
