@@ -36,20 +36,22 @@ function Modal({ showModal, setShowModal, openedCards }) {
             array[i] = array[j];
             array[j] = temp;
         }
-    return array
+        return array
     }
 
     return (
-        <div className="overlay" onBlur={handleClick}>
+        <React.Fragment>
+            <div className="overlay" onBlur={handleClick}>
+                <button className='button goToDeck' onClick={handleGoToDeckClick}>GO TO YOUR DECK</button>
+            <button className= 'button openPacks' onClick={handleClick}>OPEN MORE PACKS</button>
+
+
             <div className='openedCards-container' >
                 {openedCardsToDisplay}
             </div>
-            <div className='button-wrapper'>
-                <button onClick={handleGoToDeckClick}>GO TO YOUR DECK</button>
-                <button onClick={handleClick}>OPEN MORE PACKS</button>
-            </div>
-
         </div>
+
+        </React.Fragment>
     );
 }
 

@@ -32,3 +32,38 @@
     min-height: 100vh;
     width: 70%;
 }
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-evenly;
+    align-items: space-around;
+    position: absolute;
+    cursor: pointer;
+    background-color: rgba(45, 51, 61, 0.8);
+    background-image: url('./led-grid.png');
+    color: #79D9FF;
+    border: none;
+    transition: .5s;
+
+    padding: 3% 4%;
+    font-size: 1.5em;
+    font-weight: 300;
+
+
+    &.openPacks{
+        margin-top: 35%;
+        margin-left: 72.5%;
+    }
+
+    &.goToDeck{
+        margin-top: 35%;
+        margin-left: -72.5%;
+    }
+
+    &:hover{
+        color: #fff        
+    }
+
+}

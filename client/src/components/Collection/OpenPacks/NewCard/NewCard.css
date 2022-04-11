@@ -6,15 +6,17 @@
           perspective: 600px;
   cursor: pointer;
   background-color: #6d6d6d;
-  width: 10.5vw;
-  height: 27vh;
+  width: 12.075vw;
+  height: 31.05vh;
   border-radius: 5px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .charCard:hover {
   z-index: 10;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
   border: 1px solid rgba(0, 0, 0, 0.24);
   -webkit-transition: .5s ease;
   transition: .5s ease;

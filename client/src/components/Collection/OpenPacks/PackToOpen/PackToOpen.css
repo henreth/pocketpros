@@ -9,12 +9,16 @@
   width: 18vw;
   height: 43vh;
   border-radius: 10px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .pack:hover {
   z-index: 10;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .booster {
