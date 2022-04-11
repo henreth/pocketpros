@@ -2,6 +2,7 @@ import './Card.css';
 import React, { useState } from 'react';
 import hedy from '../../img/characters/hedylamarr.jpeg'
 import zuckerberg from '../../img/characters/markzuckerberg.jpeg'
+import alanturing from '../../img/characters/alanturing.jpeg'
 
 
 export default function Card({ char }) {
@@ -11,10 +12,12 @@ export default function Card({ char }) {
     return (
         <div className={cardClass}>
             <div className='charCard-yc-info-container'>
-                <div className='charCard-id'>#{char.id}</div>
-                <img src={zuckerberg} className='charCard-image'/>
-                {/* <div>{char.rarity.toUpperCase()}</div> */}
-                <div>{char.character.first_name} {char.character.last_name}</div>
+                <img src={alanturing} className='charCard-image' />
+                <div className='charCard-text'>
+                    <div>{char.character.first_name} {char.character.last_name}</div>
+                    <div className='charCard-rarity'>{char.rarity[0].toUpperCase()+char.rarity.slice(1,)}</div>
+                    <div className='charCard-id'>Card #{char.id}</div>
+                </div>
             </div>
         </div>
     )

@@ -22,15 +22,6 @@
   transition: .5s ease;
 }
 
-.charCard-yc .charCard-id {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-right: 2.5%;
-  font-size: smaller;
-  margin-top: 0.75%;
-  margin-bottom: 0.75%;
-}
-
 .charCard-yc .charCard-yc-info-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,8 +37,32 @@
 }
 
 .charCard-yc .charCard-image {
-  max-height: 17vh;
+  height: 21vh;
+  width: 10.65vw;
+  max-height: 21vh;
+  max-width: 10.65vw;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   margin-bottom: 5%;
+}
+
+.charCard-yc .charCard-text {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 2.5%;
+  font-size: smaller;
+}
+
+.charCard-yc .charCard-rarity {
+  font-size: smaller;
+  margin-top: 2%;
+  margin-bottom: 0.75%;
+}
+
+.charCard-yc .charCard-id {
+  font-size: smaller;
+  margin-top: 2%;
+  margin-bottom: 0.75%;
 }
 
 .bronze {
