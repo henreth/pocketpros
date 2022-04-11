@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 export default function Card({ char }) {
 
-    let cardClass = `charCard ${char.rarity}`
+    let cardClass = `charCard-yc ${char.rarity}`
 
     return (
         <div className={cardClass}>
