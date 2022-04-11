@@ -39,8 +39,9 @@ export default function LogIn({ username, setUsername, password, setPassword, si
           <form className="log-in-container">
             <input className='login-input' type="email" placeholder="Email" value={username} onChange={(e) => setUsername(e.target.value)} />
             <input className='login-input' type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <a className='modal-a' href="#">Forgot your password?</a>
             <button className='login-button' onClick={handleLogInSubmit}>Sign In</button>
+            <div className='login-forgot' href="#">Forgot your password?</div>
+
           </form>
         </div>
         <div className="menu__slot" onClick={handleSignUpClick}>

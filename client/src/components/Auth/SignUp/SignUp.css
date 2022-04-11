@@ -68,20 +68,22 @@
   transition: transform 80ms ease-in;
   transition: transform 80ms ease-in, -webkit-transform 80ms ease-in;
   cursor: pointer;
+  width: 30%;
+  -webkit-transition: .25s ease;
+  transition: .25s ease;
 }
 
 .signup-button:hover {
   border: 1px solid transparent;
-  background-color: #45758C;
+  color: #79D9FF;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .signup-button:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-}
-
-.signup-button:focus {
-  outline: none;
+  background-color: #45758C;
 }
 
 .signup-input-fullname {
