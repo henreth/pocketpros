@@ -33,14 +33,14 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
         <div className='yourCards-container'>
           {displayCards(userCards)}
         </div>
-
-      </div>
-      <div className="back_button-yc" onClick={() => navigate('/collection')}>
+        <div className="back_button-yc" onClick={() => navigate('/collection')}>
         <div className></div>
         <div className="log-in-title" >
           <h3>Back</h3>
         </div>
       </div>
+      </div>
+
     </React.Fragment>
 
 

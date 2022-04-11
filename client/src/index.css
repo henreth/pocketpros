@@ -1,5 +1,13 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    background-color: #858585;
-  }
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #858585;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+/*# sourceMappingURL=index.css.map */

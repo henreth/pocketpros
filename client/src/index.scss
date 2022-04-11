@@ -1,0 +1,13 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #858585;
+    overflow-y: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+  }
