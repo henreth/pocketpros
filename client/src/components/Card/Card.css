@@ -44,6 +44,8 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin-bottom: 5%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .charCard-yc .charCard-text {
@@ -53,14 +55,20 @@
   font-size: smaller;
 }
 
-.charCard-yc .charCard-rarity {
+.charCard-yc .charCard-name {
   font-size: smaller;
   margin-top: 2%;
   margin-bottom: 0.75%;
 }
 
+.charCard-yc .charCard-rarity {
+  font-size: x-small;
+  margin-top: 2%;
+  margin-bottom: 0.75%;
+}
+
 .charCard-yc .charCard-id {
-  font-size: smaller;
+  font-size: x-small;
   margin-top: 2%;
   margin-bottom: 0.75%;
 }
