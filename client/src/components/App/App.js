@@ -61,9 +61,7 @@ export default function App() {
       username,
       password,
       "password_confirmation": signUpPasswordConfirmation,
-      credits: '25'
-    }
-    console.log(signUpDetails)
+  }
     axios.post("/signup", signUpDetails)
       .then(r => {
         setUsername('');

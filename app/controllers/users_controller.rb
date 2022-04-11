@@ -14,6 +14,14 @@ class UsersController < ApplicationController
 
     def create
         user = User.create!(user_params)
+        user.update!(packs: {      
+            "total": 1,
+            "booster":1,
+            "regular":0,
+            "pro":0,
+            "max":0,
+            "ultra":0,
+            "studio":0}, credits: 25)
         session[:user_id] = user.id
         render json: user, status: :created
     end
@@ -63,7 +71,7 @@ class UsersController < ApplicationController
           :last_name,
           :username, 
           :password, 
-          :password_confirmation,  
+          :password_confirmation,
           )
     end
 end
