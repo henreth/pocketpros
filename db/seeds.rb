@@ -10,7 +10,7 @@ User.create!([
         last_name: "Arthur",
         username: "excalibur",
         password: "camelot",
-        credits: "5000",
+        credits: 5000,
         packs: {
             "total": 15,
             "booster":0,
@@ -26,7 +26,7 @@ User.create!([
         last_name: "Gawain",
         username: "greenknight",
         password: "giants",
-        credits: "25",
+        credits: 25,
         packs: {
             "total": 1,
             "booster":1,
