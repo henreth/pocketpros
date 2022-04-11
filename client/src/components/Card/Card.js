@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import hedy from '../../img/characters/hedylamarr.jpeg'
 import zuckerberg from '../../img/characters/markzuckerberg.jpeg'
 import alanturing from '../../img/characters/alanturing.jpeg'
-import stevejobs from '../../../../img/characters/stevejobs.jpeg'
+import stevejobs from '../../img/characters/stevejobs.jpeg'
 
 
 export default function Card({ char }) {
