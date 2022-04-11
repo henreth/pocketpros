@@ -1,11 +1,11 @@
-import './NewCard.css';
+// import './NewCard.css';
+import '../../../Card/Card.css'
 import React, { useState } from 'react';
 import hedy from '../../../../img/characters/hedylamarr.jpeg'
 import zuckerberg from '../../../../img/characters/markzuckerberg.jpeg'
 import alanturing from '../../../../img/characters/alanturing.jpeg'
 import stevejobs from '../../../../img/characters/stevejobs.jpeg'
-
-
+import icon from '../../../../img/clearqr.png';
 
 export default function NewCard({ char, setCardElements }) {
 
@@ -28,6 +28,7 @@ export default function NewCard({ char, setCardElements }) {
                     <div className='charCard-id'>Card #{char.id}</div>
                 </div>
             </div>
+            <img className='floppy-icon' src={icon} />
         </div>
     )
 }

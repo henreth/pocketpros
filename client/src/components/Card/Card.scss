@@ -1,11 +1,14 @@
-.charCard-yc {
+
+.charCard {
     margin: 4px;
     transform: scale(1);
     perspective: 600px;
-    cursor: pointer;
+    // cursor: pointer;
     background-color: rgb(109, 109, 109);
-    width: 10.65vw;
-    height: 27vh;
+    // width: 10.65vw;
+    // height: 27vh;
+    width: 12.075vw;
+    height: 31.05vh;
     border-radius: 5px;
     transition: .5s ease;
 
@@ -19,7 +22,7 @@
         transition: .5s ease;
     }
 
-    .charCard-yc-info-container {
+    .charCard-info-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -28,20 +31,19 @@
 
     .charCard-image {
         // margin-top: 5%;
-        height: 21vh;
-        width: 10.65vw;
-        // height: 17vh;
-        // max-width:230px;
-        max-height: 21vh;
-        max-width: 10.65vw;
-        // width: auto;
-        // height: auto;
-        // border-radius: 5px;
+        // height: 21vh;
+        // width: 10.65vw;
+
+        // max-height: 21vh;
+        // max-width: 10.65vw;
+        height: 24.15vh;
+        width: 12.075vw;
+
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         margin-bottom: 5%;
         filter: grayscale(100%);
-
+        border-bottom: 3px solid rgba(255, 255, 255, 0.584);
     }
 
     .charCard-text{
@@ -99,6 +101,7 @@
 
 .unopened {
     background-color: rgb(8, 8, 8);
+    cursor: pointer;
 
 
     .charCard-info-container {
@@ -108,4 +111,13 @@
         color: rgb(8, 8, 8);
         visibility: hidden;
     }
+}
+
+.floppy-icon{
+    position: absolute;
+    height: 5vh;
+    filter: opacity(.35);
+    top: 82%;
+    left: 70%;
+
 }
