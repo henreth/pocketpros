@@ -11,6 +11,7 @@
     height: 31.05vh;
     border-radius: 5px;
     transition: .5s ease;
+    text-transform: uppercase;
 
 
 
@@ -50,6 +51,7 @@
         align-self: flex-start;
         margin-left: 2.5%;
         font-size: smaller;
+        cursor: default;
 
     }
 
@@ -116,8 +118,14 @@
 .floppy-icon{
     position: absolute;
     height: 5vh;
-    filter: opacity(.35);
+    filter: opacity(.25);
     top: 82%;
     left: 70%;
+    transition: .5s ease;
+
+    &:hover{
+        filter: opacity(90%);
+        transition: .5s ease;
+    }
 
 }

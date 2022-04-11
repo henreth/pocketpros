@@ -10,6 +10,7 @@
   border-radius: 5px;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+  text-transform: uppercase;
 }
 
 .charCard:hover {
@@ -51,6 +52,7 @@
       align-self: flex-start;
   margin-left: 2.5%;
   font-size: smaller;
+  cursor: default;
 }
 
 .charCard .charCard-name {
@@ -111,9 +113,18 @@
 .floppy-icon {
   position: absolute;
   height: 5vh;
-  -webkit-filter: opacity(0.35);
-          filter: opacity(0.35);
+  -webkit-filter: opacity(0.25);
+          filter: opacity(0.25);
   top: 82%;
   left: 70%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.floppy-icon:hover {
+  -webkit-filter: opacity(90%);
+          filter: opacity(90%);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 /*# sourceMappingURL=Card.css.map */
