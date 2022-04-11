@@ -8,7 +8,7 @@ import Card from '../../Card/Card'
 
 export default function YourCards({ user, userCards, setUserCards, handleBackClick, signedIn }) {
   document.title = 'Pocket Pros - Your Cards';
-  let [selectedRarity, setSelectedRarity] = useState('ALL')
+  let [selectedRarity, setSelectedRarity] = useState('all')
 
   let navigate = useNavigate();
 
@@ -37,7 +37,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   })
 
   function handleClickTab(e) {
-    setSelectedRarity(e.target.textContent)
+    setSelectedRarity(e.target.textContent.toLowerCase())
   }
 
   return (

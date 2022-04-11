@@ -79,7 +79,7 @@
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  color: #fff;
+  color: rgba(65, 65, 65, 0.643);
   top: 25%;
 }
 
@@ -89,12 +89,19 @@
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
-  background-color: rgba(198, 74, 112, 0.534);
   height: 5vh;
   width: 100%;
   -webkit-transition: .5s ease;
   transition: .5s ease;
   padding-top: .75%;
   margin-right: 5%;
+}
+
+.yourCards-tab:hover {
+  cursor: pointer;
+}
+
+.selected {
+  color: #fff;
 }
 /*# sourceMappingURL=YourCards.css.map */
