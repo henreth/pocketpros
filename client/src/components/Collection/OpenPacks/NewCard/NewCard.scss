@@ -2,7 +2,7 @@
     margin: 4px;
     transform: scale(1);
     perspective: 600px;
-    cursor: pointer;
+    // cursor: pointer;
     background-color: rgb(109, 109, 109);
     width: 12.075vw;
     height: 31.05vh;
@@ -101,6 +101,7 @@
 
 .unopened{
     background-color: rgb(8, 8, 8);
+    cursor: pointer;
 
 
     .charCard-info-container{ 

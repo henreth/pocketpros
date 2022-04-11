@@ -4,7 +4,6 @@
           transform: scale(1);
   -webkit-perspective: 600px;
           perspective: 600px;
-  cursor: pointer;
   background-color: #6d6d6d;
   width: 12.075vw;
   height: 31.05vh;
@@ -92,6 +91,7 @@
 
 .unopened {
   background-color: #080808;
+  cursor: pointer;
 }
 
 .unopened .charCard-info-container {
