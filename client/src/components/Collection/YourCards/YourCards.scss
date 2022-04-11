@@ -69,13 +69,18 @@
     justify-self: center;
     // background-color: rgba(198, 74, 111, 0.386);
     height: 5vh;
-    width: 100%;
+    // width: 100%;
+    font-size: larger;
     transition: .5s ease;
     padding-top: .75%;
-    margin-right: 5%;
+    margin-right: 7.5%;
 
     &:hover{
         cursor: pointer;
+    }
+
+    &:active{
+        color: #45758C;
     }
 }
 

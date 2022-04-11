@@ -90,15 +90,19 @@
   -ms-grid-column-align: center;
       justify-self: center;
   height: 5vh;
-  width: 100%;
+  font-size: larger;
   -webkit-transition: .5s ease;
   transition: .5s ease;
   padding-top: .75%;
-  margin-right: 5%;
+  margin-right: 7.5%;
 }
 
 .yourCards-tab:hover {
   cursor: pointer;
+}
+
+.yourCards-tab:active {
+  color: #45758C;
 }
 
 .selected {
