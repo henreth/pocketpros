@@ -129,8 +129,10 @@ export default function App() {
       .then(r => {
         setSignedIn(false);
         navigate('/');
-        window.location.reload();
         setUser(null);
+        setUserCards(null);
+        setUserPacks(null);
+        window.location.reload();
       })
       .catch(function (error) {
         if (error.response) {
