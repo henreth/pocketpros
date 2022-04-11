@@ -44,6 +44,8 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin-bottom: 5%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .charCard-yc .charCard-text {

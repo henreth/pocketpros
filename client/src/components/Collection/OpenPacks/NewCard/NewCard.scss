@@ -25,6 +25,52 @@
 
         }
     
+        .charCard-image {
+            // margin-top: 5%;
+            height: 24.15vh;
+            width: 12.075vw;
+            // height: 17vh;
+            // max-width:230px;
+            max-height: 24.15vh;
+            max-width: 12.075vw;
+            // width: auto;
+            // height: auto;
+            // border-radius: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            margin-bottom: 5%;
+            filter: grayscale(100%);
+    
+        }
+    
+        .charCard-text{
+            align-self: flex-start;
+            margin-left: 2.5%;
+            font-size: smaller;
+    
+        }
+    
+        .charCard-name {
+            // margin-right: 2.5%;
+            font-size: smaller;
+            margin-top: 2%;
+            margin-bottom: 0.75%;
+        }
+    
+        .charCard-rarity {
+            // margin-right: 2.5%;
+            font-size: x-small;
+            margin-top: 2%;
+            margin-bottom: 0.75%;
+        }
+    
+        .charCard-id {
+            // margin-right: 2.5%;
+            font-size: x-small;
+            margin-top: 2%;
+            margin-bottom: 0.75%;
+        }
+    
     
 }
 
