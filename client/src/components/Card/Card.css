@@ -5,8 +5,8 @@
   -webkit-perspective: 600px;
           perspective: 600px;
   background-color: #6d6d6d;
-  width: 12.075vw;
-  height: 31.05vh;
+  width: 15vw;
+  height: 38.125vh;
   border-radius: 5px;
   -webkit-transition: .5s ease;
   transition: .5s ease;
@@ -37,8 +37,8 @@
 }
 
 .charCard .charCard-image {
-  height: 24.15vh;
-  width: 12.075vw;
+  height: 30.1875vh;
+  width: 15vw;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin-bottom: 5%;
@@ -115,11 +115,11 @@
 
 .floppy-icon {
   position: absolute;
-  height: 5vh;
+  height: 5.5vh;
   -webkit-filter: opacity(0.25);
           filter: opacity(0.25);
-  top: 81%;
-  left: 70%;
+  top: 83%;
+  left: 75%;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
