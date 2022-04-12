@@ -8,6 +8,8 @@ import stevejobs from '../../../../img/characters/stevejobs.jpeg'
 import icon from '../../../../img/cleargithubqr.png';
 
 export default function NewCard({ char, setCardElements }) {
+    const charImages = require.context('../../../../img/characters', true);
+
 
     let [opened, setOpened] = useState(false)
 
@@ -21,7 +23,7 @@ export default function NewCard({ char, setCardElements }) {
     return (
         <div className={cardClass} onClick={handleClickCard}>
             <div className='charCard-info-container'>
-            <img src={stevejobs} className='charCard-image' />
+            <img src={charImages('./'+char.character.image_url)} className='charCard-image' />
                 <div className='charCard-text'>
                     <div className='charCard-rarity'>{char.rarity[0].toUpperCase()+char.rarity.slice(1,)}</div>
                     <div className='charCard-name'><b>{char.character.first_name} {char.character.last_name}</b></div>
