@@ -37,7 +37,7 @@ export default function About({ signedIn, }) {
             </div>
             <div className='about-page-container'>
                 <div className='qr-container'>
-                    <img className='qr-code' src={linkedinqr} />
+                    <img className='qr-code' src={linkedinqr} onClick={()=>{window.open('https://www.linkedin.com/in/henrym01/')}} />
                 </div>
                 <div className={cardClass} onClick={handleClickCard}>
                     <div className='aboutCard-info-container'>
@@ -51,7 +51,7 @@ export default function About({ signedIn, }) {
                     <img className='floppy-icon' src={icon} />
                 </div>
                 <div className='qr-container'>
-                    <img className='qr-code' src={gitqr} />
+                    <img className='qr-code' src={gitqr} onClick={()=>{window.open('https://github.com/henreth')}} />
                 </div>
             </div>
         </React.Fragment>
