@@ -110,7 +110,7 @@ Character.create!([
         first_name: "Mary Kenneth",
         last_name: "Keller",
         description: "~",
-        image_url: "gavinwood.jpeg",
+        image_url: "marykennethkeller.jpeg",
         birth_year: 1,
     },
     {
