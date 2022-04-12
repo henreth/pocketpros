@@ -1,6 +1,7 @@
 class Card < ApplicationRecord
   belongs_to :user
   belongs_to :character
+  has_many :transactions
 
   enum rarity: { bronze: 0, silver: 1, gold: 2, holo: 3 }
 
