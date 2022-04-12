@@ -9,7 +9,11 @@ import Card from '../../Card/Card'
 export default function YourCards({ user, userCards, setUserCards, handleBackClick, signedIn }) {
   document.title = 'Pocket Pros - Your Cards';
   let [selectedRarity, setSelectedRarity] = useState('all')
-  let [searchTerm,setSearchTerm] = useState('');
+  let [searchTerm, setSearchTerm] = useState('');
+
+  function handleSearchChange(e){
+    setSearchTerm(e.target.value);
+  }
 
   let uniqueCards = [];
   userCards.forEach(card => {
@@ -18,7 +22,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   })
 
 
-  let filteredCards = userCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all').filter(card=>card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase())||card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm==='')
+  let filteredCards = userCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all').filter(card => card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm === '')
 
   let navigate = useNavigate();
 
@@ -55,12 +59,12 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
     <React.Fragment>
       <div className='displayCards-page'>
         <div className='yourCards-filter-container'>
-        <div className='count-container'>
+          <div className='count-container'>
             <div className='yourCards-Cards-Count'>CARDS:{userCards.length}</div>
             <div className='yourCards-Cards-Count'>UNIQUE:{uniqueCards.length}</div>
           </div>
-
           {raritiesToDisplay}
+          <input type='text' onChange={handleSearchChange}></input>
         </div>
         <div className='yourCards-container'>
           {displayCards(filteredCards)}
