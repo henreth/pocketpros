@@ -168,7 +168,7 @@
   visibility: hidden;
 }
 
-.floppy-icon {
+.about-icon {
   position: absolute;
   height: 8.25vh;
   -webkit-filter: opacity(0.25);
@@ -179,7 +179,7 @@
   transition: .5s ease;
 }
 
-.floppy-icon:hover {
+.about-icon:hover {
   -webkit-filter: opacity(90%);
           filter: opacity(90%);
   -webkit-transition: .5s ease;

@@ -48,7 +48,7 @@ export default function About({ signedIn, }) {
                             <div className='aboutCard-id'>#Ω</div>
                         </div>
                     </div>
-                    <img className='floppy-icon' src={icon} />
+                    <img className='about-icon' src={icon} />
                 </div>
                 <div className='qr-container'>
                     <img className='qr-code' src={gitqr} onClick={()=>{window.open('https://github.com/henreth')}} />
