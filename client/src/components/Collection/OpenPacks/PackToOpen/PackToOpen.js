@@ -13,7 +13,7 @@ export default function PackToOpen({packType, setUser, setUserCards, userPacks, 
         } else{
             axios.get(`/${packType}_pack`)
             .then(r => {
-                    console.log(r.data)
+                    document.title = (`Opening ${packType} Pack`)
                     setOpenedCards(r.data)
                     setShowModal(true)
                     //update user information

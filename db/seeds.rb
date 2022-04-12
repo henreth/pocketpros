@@ -13,7 +13,7 @@ User.create!([
         password: "camelot",
         credits: 5000,
         packs: {
-            "total": 15,
+            "total": 21,
             "booster":0,
             "regular":3,
             "pro":3,
