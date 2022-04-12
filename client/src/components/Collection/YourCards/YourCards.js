@@ -9,6 +9,7 @@ import Card from '../../Card/Card'
 export default function YourCards({ user, userCards, setUserCards, handleBackClick, signedIn }) {
   document.title = 'Pocket Pros - Your Cards';
   let [selectedRarity, setSelectedRarity] = useState('all')
+  let [searchTerm,setSearchTerm] = useState('');
 
   let uniqueCards = [];
   userCards.forEach(card => {
@@ -17,7 +18,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   })
 
 
-  let filteredCards = userCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all')
+  let filteredCards = userCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all').filter(card=>card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase())||card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm==='')
 
   let navigate = useNavigate();
 
@@ -48,6 +49,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   function handleClickTab(e) {
     setSelectedRarity(e.target.textContent.toLowerCase())
   }
+
 
   return (
     <React.Fragment>
