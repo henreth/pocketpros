@@ -225,6 +225,13 @@ Character.create!([
         image_url: "johnmccarthy.jpeg",
         birth_year: 1,
     },
+    {
+        first_name: "Stanislaw",
+        last_name: "Ulam",
+        description: "~",
+        image_url: "stanislawulam.jpeg",
+        birth_year: 1,
+    },
 
 
 ])
