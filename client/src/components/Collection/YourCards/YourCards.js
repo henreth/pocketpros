@@ -9,8 +9,20 @@ import Card from '../../Card/Card'
 export default function YourCards({ user, userCards, setUserCards, handleBackClick, signedIn }) {
   document.title = 'Pocket Pros - Your Cards';
   let [selectedRarity, setSelectedRarity] = useState('all')
+  let [searchTerm, setSearchTerm] = useState('');
 
- let filteredCards = userCards.filter(card=>card.rarity===selectedRarity||selectedRarity==='all')
+  function handleSearchChange(e){
+    setSearchTerm(e.target.value);
+  }
+
+  let uniqueCards = [];
+  userCards.forEach(card => {
+    let details = card.character.id + '-' + card.rarity
+    if (!uniqueCards.includes(details)) { uniqueCards.push(details) }
+  })
+
+
+  let filteredCards = userCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all').filter(card => card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm === '')
 
   let navigate = useNavigate();
 
@@ -42,11 +54,17 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
     setSelectedRarity(e.target.textContent.toLowerCase())
   }
 
+
   return (
     <React.Fragment>
       <div className='displayCards-page'>
         <div className='yourCards-filter-container'>
+          <div className='count-container'>
+            <div className='yourCards-Cards-Count'>CARDS:{userCards.length}</div>
+            <div className='yourCards-Cards-Count'>UNIQUE:{uniqueCards.length}</div>
+          </div>
           {raritiesToDisplay}
+          <input type='text' onChange={handleSearchChange}></input>
         </div>
         <div className='yourCards-container'>
           {displayCards(filteredCards)}

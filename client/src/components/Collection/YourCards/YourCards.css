@@ -68,7 +68,7 @@
 }
 
 .yourCards-filter-container {
-  margin-top: 5%;
+  margin-top: 3.5%;
   margin-bottom: -5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,8 +77,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   color: rgba(65, 65, 65, 0.643);
   top: 25%;
 }
@@ -107,5 +105,40 @@
 
 .selected {
   color: #fff;
+}
+
+.count-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: -60.5%;
+  margin-right: 45%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.count-container:nth-child(1) {
+  margin-bottom: -5%;
+}
+
+.yourCards-Cards-Count {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  height: 5vh;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  padding-top: .75%;
+}
+
+.yourCards-Cards-Count:nth-of-type(1) {
+  margin-bottom: -35%;
 }
 /*# sourceMappingURL=YourCards.css.map */
