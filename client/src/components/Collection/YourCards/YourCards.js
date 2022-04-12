@@ -10,7 +10,14 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   document.title = 'Pocket Pros - Your Cards';
   let [selectedRarity, setSelectedRarity] = useState('all')
 
- let filteredCards = userCards.filter(card=>card.rarity===selectedRarity||selectedRarity==='all')
+  let uniqueCards = [];
+  userCards.forEach(card => {
+    let details = card.character.id + '-' + card.rarity
+    if (!uniqueCards.includes(details)) { uniqueCards.push(details) }
+  })
+
+
+  let filteredCards = userCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all')
 
   let navigate = useNavigate();
 
@@ -46,6 +53,11 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
     <React.Fragment>
       <div className='displayCards-page'>
         <div className='yourCards-filter-container'>
+        <div className='count-container'>
+            <div className='yourCards-Cards-Count'>CARDS:{userCards.length}</div>
+            <div className='yourCards-Cards-Count'>UNIQUE:{uniqueCards.length}</div>
+          </div>
+
           {raritiesToDisplay}
         </div>
         <div className='yourCards-container'>
