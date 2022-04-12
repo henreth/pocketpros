@@ -115,8 +115,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: -60.5%;
-  margin-right: 45%;
+  margin-left: -20.5%;
+  margin-right: 22%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -140,5 +140,22 @@
 
 .yourCards-Cards-Count:nth-of-type(1) {
   margin-bottom: -35%;
+}
+
+.yourCards-Cards-Count b {
+  margin-left: 5%;
+  color: rgba(213, 213, 213, 0.857);
+}
+
+.search-input {
+  background-color: #363636;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 2.75%;
+  font-size: larger;
+  margin-left: 5%;
+  color: #fff;
+  padding-left: 1.5%;
+  padding-right: -2%;
 }
 /*# sourceMappingURL=YourCards.css.map */
