@@ -1,4 +1,4 @@
-.displayCards-page{
+.displayCards-page {
     display: flex;
     flex-direction: column;
     // justify-content: center;
@@ -53,7 +53,7 @@
 
 }
 
-.yourCards-filter-container{
+.yourCards-filter-container {
     margin-top: 3.5%;
     margin-bottom: -5%;
     display: flex;
@@ -75,29 +75,28 @@
     padding-top: .75%;
     margin-right: 7.5%;
 
-    &:hover{
+    &:hover {
         cursor: pointer;
     }
 
-    &:active{
+    &:active {
         color: #45758C;
     }
 }
 
-.selected{
-color: #fff
+.selected {
+    color: #fff
 }
 
-.count-container{    
+.count-container {
     display: flex;
     flex-direction: column;
-    margin-left: -60.5%;
-    margin-right: 45%;
-
+    margin-left: -20.5%;
+    margin-right: 22%;
     align-items: center;
 
 
-    &:nth-child(1){
+    &:nth-child(1) {
         // margin-top: -5%;
         margin-bottom: -5%;
     }
@@ -112,8 +111,25 @@ color: #fff
     padding-top: .75%;
     // margin-right: 7.5%;
 
-    &:nth-of-type(1){
+    &:nth-of-type(1) {
         margin-bottom: -35%;
+    }
+
+    b{
+        margin-left: 5%;
+        color: rgba(213, 213, 213, 0.857);
     }
 }
 
+.search-input {
+    background-color: rgb(54, 54, 54);
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 2.75%;
+    font-size: larger;
+    margin-left: 5%;
+    color: #fff;
+    padding-left: 1.5%;
+    padding-right: -2%;
+
+}

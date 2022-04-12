@@ -60,11 +60,11 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
       <div className='displayCards-page'>
         <div className='yourCards-filter-container'>
           <div className='count-container'>
-            <div className='yourCards-Cards-Count'>CARDS:{userCards.length}</div>
-            <div className='yourCards-Cards-Count'>UNIQUE:{uniqueCards.length}</div>
+            <div className='yourCards-Cards-Count'>CARDS:<b>{userCards.length}</b></div>
+            <div className='yourCards-Cards-Count'>UNIQUE:<b>{uniqueCards.length}</b></div>
           </div>
           {raritiesToDisplay}
-          <input type='text' onChange={handleSearchChange}></input>
+          <input className='search-input' type='text' placeholder='SEARCH' onChange={handleSearchChange}></input>
         </div>
         <div className='yourCards-container'>
           {displayCards(filteredCards)}
