@@ -18,8 +18,8 @@
 }
 
 .qr-container {
-  height: 35vh;
-  width: 20vw;
+  height: 42.525vh;
+  width: 24.3vw;
   background-color: #393939;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -32,10 +32,20 @@
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.qr-container:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.35);
+          transform: scale(1.35);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .qr-code {
-  height: 30vh;
+  height: 36.45vh;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -54,6 +64,8 @@
   -webkit-transition: .5s ease;
   transition: .5s ease;
   text-transform: uppercase;
+  -webkit-transform: scale(1.35);
+          transform: scale(1.35);
 }
 
 .aboutCard:hover {

@@ -43,7 +43,7 @@ export default function About({ signedIn, }) {
                     <div className='aboutCard-info-container'>
                         <img src={stevejobs} className='aboutCard-image' />
                         <div className='aboutCard-text'>
-                            <div className='aboutCard-rarity'>HOLO</div>
+                            <div className='aboutCard-rarity'>Core Dev</div>
                             <div className='aboutCard-name'>Henry Miller</div>
                             <div className='aboutCard-id'>#Ω</div>
                         </div>

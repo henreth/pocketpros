@@ -8,18 +8,28 @@
 }
 
 .qr-container{
-    height: 35vh;
-    width: 20vw;
+    height: 47.25 * .9vh;
+    width: 27 * .9vw;
     background-color: rgb(57, 57, 57);
     display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
+    transition: .5s ease;
+
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.35);
+        transition: .5s ease;
+    }
+
 }
 
 .qr-code{
-    height: 30vh;
+    height: 40.5 * .9vh;
     align-self: center;
+
 
 }
 
@@ -39,6 +49,7 @@
     transition: .5s ease;
     text-transform: uppercase;
 
+    transform: scale(1.35);
 
 
 
