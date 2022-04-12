@@ -7,8 +7,8 @@
     background-color: rgb(109, 109, 109);
     // width: 10.65vw;
     // height: 27vh;
-    width: 12.075vw;
-    height: 31.05vh;
+    width: 15vw;
+    height: 38.125vh;
     border-radius: 5px;
     transition: .5s ease;
     text-transform: uppercase;
@@ -37,8 +37,8 @@
 
         // max-height: 21vh;
         // max-width: 10.65vw;
-        height: 24.15vh;
-        width: 12.075vw;
+        height: 30.1875vh;
+        width: 15vw;
 
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
@@ -121,10 +121,10 @@
 
 .floppy-icon{
     position: absolute;
-    height: 5vh;
+    height: 5.5vh;
     filter: opacity(.25);
-    top: 81%;
-    left: 70%;
+    top: 83%;
+    left: 75%;
     transition: .5s ease;
 
     &:hover{
