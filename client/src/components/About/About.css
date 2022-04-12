@@ -1,5 +1,212 @@
-.test {
-  color: red;
-  background-color: black;
+.about-page-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.qr-container {
+  height: 42.525vh;
+  width: 24.3vw;
+  background-color: #393939;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.qr-container:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.35);
+          transform: scale(1.35);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.qr-code {
+  height: 36.45vh;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.aboutCard {
+  margin: 4px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-perspective: 600px;
+          perspective: 600px;
+  background-color: #6d6d6d;
+  width: 22.5vw;
+  height: 57.1875vh;
+  border-radius: 5px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  text-transform: uppercase;
+  -webkit-transform: scale(1.35);
+          transform: scale(1.35);
+}
+
+.aboutCard:hover {
+  z-index: 10;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.aboutCard .aboutCard-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 255, 255, 0.584);
+}
+
+.aboutCard .aboutCard-image {
+  height: 45.28125vh;
+  width: 22.5vw;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 5%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.584);
+}
+
+.aboutCard .aboutCard-text {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 2.5%;
+  font-size: larger;
+  cursor: default;
+}
+
+.aboutCard .aboutCard-name {
+  font-size: larger;
+  margin-top: 2%;
+  margin-bottom: 0.75%;
+}
+
+.aboutCard .aboutCard-rarity {
+  font-size: small;
+  margin-top: 2%;
+  margin-bottom: 0.75%;
+}
+
+.aboutCard .aboutCard-id {
+  font-size: small;
+  margin-top: 2%;
+  margin-bottom: 0.75%;
+}
+
+.bronze {
+  background-color: #cd7f32;
+}
+
+.silver {
+  background-color: #afaeab;
+}
+
+.gold {
+  background-color: #d6ac6e;
+}
+
+.holo {
+  background-image: -webkit-gradient(linear, left top, right top, from(#c2ffb6), color-stop(#ffa3b6), color-stop(#dda9ff), to(#a2d1ff));
+  background-image: linear-gradient(90deg, #c2ffb6, #ffa3b6, #dda9ff, #a2d1ff);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 20s ease infinite;
+          animation: gradient 20s ease infinite;
+}
+
+.unopened {
+  background-color: #080808;
+  cursor: pointer;
+}
+
+.unopened .aboutCard-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #080808;
+  visibility: hidden;
+}
+
+.floppy-icon {
+  position: absolute;
+  height: 8.25vh;
+  -webkit-filter: opacity(0.25);
+          filter: opacity(0.25);
+  top: 83%;
+  left: 75%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.floppy-icon:hover {
+  -webkit-filter: opacity(90%);
+          filter: opacity(90%);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 /*# sourceMappingURL=About.css.map */
