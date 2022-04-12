@@ -86,8 +86,22 @@ Character.create!([
         birth_year: 1,
     },
     {
+        first_name: "Joan",
+        last_name: "Clarke",
+        description: "~",
+        image_url: "joanclarke.jpeg",
+        birth_year: 1,
+    },
+    {
         first_name: "Gavin",
         last_name: "Wood",
+        description: "~",
+        image_url: "gavinwood.jpeg",
+        birth_year: 1,
+    },
+    {
+        first_name: "Mary Kenneth",
+        last_name: "Keller",
         description: "~",
         image_url: "gavinwood.jpeg",
         birth_year: 1,
@@ -139,6 +153,13 @@ Character.create!([
         last_name: "Bezos",
         description: "~",
         image_url: "jeffbezos.jpeg",
+        birth_year: 1,
+    },
+    {
+        first_name: "Annie",
+        last_name: "Easley",
+        description: "~",
+        image_url: "annieeasley.jpeg",
         birth_year: 1,
     },
     {
