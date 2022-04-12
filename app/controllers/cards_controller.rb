@@ -63,27 +63,27 @@ class CardsController < ApplicationController
         
 
         cards = []
-        len = 12
+        len = 8
 
         # Gold 
         rand_gold1 = rand() * 100
-        if rand_gold1 < 15
+        if rand_gold1 < 10
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
         end
 
         rand_gold2 = rand() * 100
-        if rand_gold2 < 10
+        if rand_gold2 < 2.5
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
         end
 
         # Silver
         rand_silver1 = rand() * 100
-        if rand_silver1 < 30
+        if rand_silver1 < 25
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
         end
 
         rand_silver2 = rand() * 100
-        if rand_silver2 < 30
+        if rand_silver2 < 20
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
         end
 
@@ -123,7 +123,7 @@ class CardsController < ApplicationController
         
 
         cards = []
-        len = 8
+        len = 7
 
         # Holo
         rand_holo = rand() * 100
@@ -133,12 +133,12 @@ class CardsController < ApplicationController
 
         # Gold 
         rand_gold1 = rand() * 100
-        if rand_gold1 < 25
+        if rand_gold1 < 20
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
         end
 
         rand_gold2 = rand() * 100
-        if rand_gold2 < 20
+        if rand_gold2 < 18.5
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
         end
 
@@ -149,7 +149,7 @@ class CardsController < ApplicationController
         end
 
         rand_silver2 = rand() * 100
-        if rand_silver2 < 55
+        if rand_silver2 < 50
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:1)
         end
 
@@ -199,7 +199,7 @@ class CardsController < ApplicationController
         end
 
         rand_gold2 = rand() * 100
-        if rand_gold2 < 50
+        if rand_gold2 < 30
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
         end
 
@@ -249,7 +249,7 @@ class CardsController < ApplicationController
         end
 
         rand_gold2 = rand() * 100
-        if rand_gold2 < 70
+        if rand_gold2 < 30
             cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id,rarity:2)
         end
         
