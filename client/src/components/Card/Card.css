@@ -17,7 +17,7 @@
   z-index: 10;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
-  border: 1px solid rgba(0, 0, 0, 0.24);
+  outline: 1px solid rgba(0, 0, 0, 0.103);
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
