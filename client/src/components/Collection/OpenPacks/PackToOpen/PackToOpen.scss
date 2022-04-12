@@ -88,12 +88,14 @@ color: #fff
 
 .top{
     margin-top: 2.5%;
-    transform: scale(1, -1);
+    // transform: scale(-1, -1);
     margin-bottom: 7.5%;    
 }
 
 
-
+.inverse {
+    transform: scale(-1, -1); 
+}
 
 .booster-text {
     color: rgb(2, 28, 88);
@@ -104,7 +106,7 @@ color: #fff
 }
 
 .pro-text {
-    color: rgb(175, 174, 171);
+    color: rgb(131, 130, 127);
 }
 
 .max-text {
@@ -120,5 +122,5 @@ color: #fff
 }
 
 .buy-more-text{
-    color: rgb(4, 77, 34);
+    color: rgb(9, 133, 61);
 }
