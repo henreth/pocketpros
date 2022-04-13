@@ -66,17 +66,15 @@ export default function PackToOpen({packType, setUser, setUserCards, userPacks, 
     return(
         <div className={packClass} onClick={handlePackClick}>
         <div className='pack-info-container'>
+                                <img className='pack-logo' src={packLogos(logo)} />
+
         <div className='pack-title top inverse'>POCKET PROGRAMMERS</div>
         {/* <div className='pack-title top'>{packType.toUpperCase()}</div> */}
+
         <div className={packType+'-text inverse'} >{packType.toUpperCase()}</div>
-            {/* <img className='floppy' src={icon} /> */}
-            <img className='pack-logo' src={packLogos(logo)} />
-            {/* <div className={'pack-count ' + packType + '-text'}>{packCount}</div> */}
+            <div className={'pack-count ' + packType + '-text'}>{userPacks[packType]}</div>
             <div className={packType+'-text'} >{packType.toUpperCase()}</div>
-
-
             <div className='pack-title bottom' >POCKET PROGRAMMERS</div>
-            {/* <div className='pack-title bottom' >{packType.toUpperCase()}</div> */}
         </div>
     </div>
     )
