@@ -80,6 +80,10 @@
   margin-bottom: 7.5%;
 }
 
+.bottom {
+  margin-top: 2.5%;
+}
+
 .inverse {
   -webkit-transform: scale(-1, -1);
           transform: scale(-1, -1);
