@@ -34,12 +34,18 @@
       align-content: center;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+  color: transparent;
 }
 
 .qr-container:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.35);
-          transform: scale(1.35);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  color: #fff;
+}
+
+.qr-container:active {
+  color: #79D9FF;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
@@ -73,8 +79,8 @@
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   outline: 1px solid rgba(0, 0, 0, 0.103);
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .aboutCard .aboutCard-info-container {
@@ -196,5 +202,12 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+.qrlink {
+  position: absolute;
+  top: 24.5%;
+  font-weight: bolder;
+  font-size: 3.5vh;
 }
 /*# sourceMappingURL=About.css.map */
