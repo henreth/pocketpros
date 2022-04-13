@@ -233,6 +233,24 @@ Character.create!([
         image_url: "stanislawulam.jpeg",
         birth_year: 1,
     },
+    {
+        first_name: "Heron",
+        last_name: "of Alexandria",
+        description: "~",
+        image_url: "heronofalexandria.jpeg"
+    },
+    {
+        first_nam: "Guido",
+        last_name: "Van Rossum",
+        description: "~",
+        image_url: "guidovanrossum.jpeg"
+    },
+    {
+        first_nam: "John W.",
+        last_name: "Tukey",
+        description: "~",
+        image_url: "johnwtukey.jpeg"
+    }
 
 
 ])
