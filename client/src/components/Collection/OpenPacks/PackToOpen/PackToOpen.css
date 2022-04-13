@@ -57,14 +57,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: #fff;
 }
 
@@ -72,5 +67,59 @@
   height: 30vh;
   -webkit-filter: opacity(0.35);
           filter: opacity(0.35);
+  margin-top: -2.5%;
+}
+
+.pack-icon {
+  height: 25vh;
+  -webkit-filter: opacity(0.5);
+          filter: opacity(0.5);
+}
+
+.pack-count {
+  font-size: large;
+  margin-bottom: 2.5%;
+  color: rgba(255, 255, 255, 0.755);
+}
+
+.pack-title {
+  font-size: larger;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.384);
+}
+
+.top {
+  margin-top: 2.5%;
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+  margin-bottom: 7.5%;
+}
+
+.booster-text {
+  color: #021c58;
+}
+
+.regular-text {
+  color: #b05901;
+}
+
+.pro-text {
+  color: #afaeab;
+}
+
+.max-text {
+  color: #9b7503;
+}
+
+.ultra-text {
+  color: #01959f;
+}
+
+.studio-text {
+  color: #6c08af;
+}
+
+.buy-more-text {
+  color: #044d22;
 }
 /*# sourceMappingURL=PackToOpen.css.map */
