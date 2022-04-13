@@ -7,6 +7,30 @@ import icon2 from '../../../../img/cleargithubqr.png'
 
 
 export default function PackToOpen({packType, setUser, setUserCards, userPacks, setUserPacks, setOpenedCards,setShowModal }){
+    const packLogos = require.context('../../../../img/pack_logos', true);
+
+    let logo;
+    switch (packType){
+        case 'booster':
+            logo = './bwfolder.png';
+            break
+        case 'regular':
+            logo = './bwfloppy.png'
+            break
+        case 'pro':
+            logo = './bwfork.png';
+            break;
+        case 'max':
+            logo = './bwglass.png';
+            break
+        case 'ultra':
+            logo ='./bwcode.png';
+            break
+        case 'studio':
+            logo = './bwcubes.png';
+            break
+    }
+
     
     function handlePackClick(e) {
         if(userPacks[packType] == 0){
@@ -45,7 +69,8 @@ export default function PackToOpen({packType, setUser, setUserCards, userPacks, 
         <div className='pack-title top inverse'>POCKET PROGRAMMERS</div>
         {/* <div className='pack-title top'>{packType.toUpperCase()}</div> */}
         <div className={packType+'-text inverse'} >{packType.toUpperCase()}</div>
-            <img className='floppy' src={icon} />
+            {/* <img className='floppy' src={icon} /> */}
+            <img className='pack-logo' src={packLogos(logo)} />
             {/* <div className={'pack-count ' + packType + '-text'}>{packCount}</div> */}
             <div className={packType+'-text'} >{packType.toUpperCase()}</div>
 

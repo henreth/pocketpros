@@ -11,6 +11,8 @@ import buyIcon from './PackToOpen/img/bwbuyicon.png'
 
 export default function OpenPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn, handleBackClick }) {
     document.title = 'Pocket Pros - Open Packs';
+    const packLogos = require.context('../../../img/pack_logos', true);
+
 
     const [openedCards, setOpenedCards] = useState([]);
     const [showModal, setShowModal] = useState(false);
@@ -34,25 +36,31 @@ export default function OpenPacks({ user, setUser, setUserCards, userPacks, setU
         navigate('/buypacks')
     }
 
+    function buyMorePack(){
+        return (
+            <div className='pack buy-more' onClick={handleBuyPackClick}>
+            <div className='pack-info-container'>
+
+                <div className='pack-title top inverse'>POCKET PROGRAMMERS</div>
+
+                <div className='buy-more-text inverse' >BUY MORE</div>
+                <img className='pack-logo' src={packLogos('./bwbuyicon.png')} />
+                <div className='buy-more-text'>BUY MORE</div>
+
+                <div className='pack-title bottom' >POCKET PROGRAMMERS</div>
+
+            </div>
+
+        </div>
+        )
+    }
+
     return (
         <React.Fragment>
 
             <div className='yourPacks-container'>
                 {packsToDisplay}
-                <div className='pack buy-more' onClick={handleBuyPackClick}>
-                    <div className='pack-info-container'>
-
-                        <div className='pack-title top inverse'>POCKET PROGRAMMERS</div>
-
-                        <div className='buy-more-text' >BUY MORE</div>
-                        <img className='floppy' src={buyIcon} />
-                        <div className='pack-count buy-more-text'>+</div>
-
-                        <div className='pack-title bottom' >POCKET PROGRAMMERS</div>
-
-                    </div>
-
-                </div>
+                {buyMorePack()}
             </div>
             <div className="back_button" onClick={() => navigate('/collection')}>
                 <div className></div>

@@ -60,16 +60,10 @@ justify-content: center;
 color: #fff
 }
 
-.floppy{
-    height: 30vh;
-    filter: opacity(.35);
-    margin-top: -2.5% 
-}
-
-.pack-icon{
-    height: 25vh;
-    filter: opacity(.5);
-}
+// .pack-icon{
+//     height: 25vh;
+//     filter: opacity(.5);
+// }
 
 .pack-count{
     font-size: large;
@@ -124,3 +118,9 @@ color: #fff
 .buy-more-text{
     color: rgb(9, 133, 61);
 }
+
+.pack-logo{
+    height: 30vh;
+    filter: opacity(.35);
+    margin-top: -2.5% 
+  }
