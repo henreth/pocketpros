@@ -16,11 +16,18 @@
     justify-content: center;
     align-content: center;
     transition: .5s ease;
+    color: transparent;
 
 
     &:hover{
         cursor: pointer;
         // transform: scale(1.35);
+        transition: .5s ease;
+        color: #fff;
+    }
+
+    &:active{
+        color: #79D9FF;
         transition: .5s ease;
     }
 
@@ -57,7 +64,7 @@
         z-index: 10;
         transform: scale(1.5);
         outline: 1px solid rgba(0, 0, 0, 0.103);
-        transition: .5s ease;
+        transition: 1s ease;
     }
 
     .aboutCard-info-container {
@@ -170,7 +177,7 @@
 .qrlink {
     position: absolute;
     top: 24.5%;
-    color: #fff;
+    // color: #fff;
     font-weight: bolder;
     font-size: 3.5vh;
 }
