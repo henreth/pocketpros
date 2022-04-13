@@ -39,12 +39,14 @@ export default function OpenPacks({ user, setUser, setUserCards, userPacks, setU
     function buyMorePack(){
         return (
             <div className='pack buy-more' onClick={handleBuyPackClick}>
+            <img className='pack-logo' />
             <div className='pack-info-container'>
 
                 <div className='pack-title top inverse'>POCKET PROGRAMMERS</div>
 
                 <div className='buy-more-text inverse' >BUY MORE</div>
-                <img className='pack-logo' src={packLogos('./bwbuyicon.png')} />
+                <div className={'pack-count buy-more-text'}>+</div>
+
                 <div className='buy-more-text'>BUY MORE</div>
 
                 <div className='pack-title bottom' >POCKET PROGRAMMERS</div>

@@ -9,14 +9,22 @@
     border-radius: 10px;
     transition: .5s ease;
 
-    &:hover{
+    &:hover {
         z-index: 10;
         transform: scale(1.1);
         transition: .5s ease;
 
     }
 
-    
+    &:active {
+        z-index: 10;
+        transform: scale(.95) !important;
+        transition: .5s ease;
+        color: #79D9FF !important;
+    }
+
+
+
 }
 
 .booster {
@@ -43,7 +51,7 @@
     background-color: rgb(172, 110, 214);
 }
 
-.buy-more{
+.buy-more {
     background-color: rgb(104, 178, 135);
 }
 
@@ -53,42 +61,53 @@
 //     transition: all 250ms ease-out;
 // }
 
-.pack-info-container{ 
-display: flex;
-flex-direction: column;
-justify-content: center;
-color: #fff
+.pack-info-container {
+    display: flex;
+    flex-direction: column;
+    // color: #fff
 }
 
-// .pack-icon{
-//     height: 25vh;
-//     filter: opacity(.5);
-// }
+.pack-count {
+    font-size: 12vh;
+    margin-bottom: 7.25vh;
+    margin-top: 6.75vh;
+    font-weight: bold;
+    transition: .5s ease;
+    z-index:10;
+    // color: rgba(60, 60, 60, 0.925) !important;
 
-.pack-count{
-    font-size: large;
-    margin-bottom: 2.5%;
-    // font-weight: bold;
-    color: rgba(255, 255, 255, 0.755);
+    &:hover{
+        color: rgba(255, 255, 255, 0.871) ;
+        transition: .5s ease;
+    }
+
+    &:active{
+        color: #79D9FF ;
+        transition: .5s ease;
+    }
 }
 
 
-.pack-title{
+.pack-title {
     font-size: larger;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.384); 
+    color: rgba(255, 255, 255, 0.384);
 }
 
 
-.top{
+.top {
     margin-top: 2.5%;
     // transform: scale(-1, -1);
-    margin-bottom: 7.5%;    
+    margin-bottom: 7.5%;
+}
+
+.bottom {
+    margin-top: 7.5%;
 }
 
 
 .inverse {
-    transform: scale(-1, -1); 
+    transform: scale(-1, -1);
 }
 
 .booster-text {
@@ -115,12 +134,13 @@ color: #fff
     color: rgb(108, 8, 175);
 }
 
-.buy-more-text{
+.buy-more-text {
     color: rgb(9, 133, 61);
 }
 
-.pack-logo{
+.pack-logo {
     height: 30vh;
-    filter: opacity(.35);
-    margin-top: -2.5% 
-  }
+    filter: opacity(.25);
+    margin-top: 0%;
+    position: absolute;
+}

@@ -10,6 +10,8 @@ import Pack from './PackToBuy/PackToBuy';
 
 export default function BuyPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn,handleBackClick }) {
     document.title = 'Pocket Pros - Open Packs';
+    const packLogos = require.context('../../img/pack_logos', true);
+
 
     let packTypes = ["regular", "pro", "max", "ultra", "studio"]
     let navigate = useNavigate();
@@ -30,6 +32,7 @@ export default function BuyPacks({ user, setUser, setUserCards, userPacks, setUs
     function handleClickBack(){
         navigate(-1)
     }
+    
     return (
         <React.Fragment>
             <div className='yourPacks-container' >

@@ -45,6 +45,10 @@
   background-color: #68b287;
 }
 
+.buy {
+  color: rgba(0, 0, 0, 0.39) !important;
+}
+
 .pack-info-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,9 +68,23 @@
   color: #fff;
 }
 
-.floppy {
-  height: 30vh;
-  -webkit-filter: opacity(0.35);
-          filter: opacity(0.35);
+.pack-cost {
+  position: absolute;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.88);
+  color: #fff;
+  width: 18vw;
+  font-size: 4.5vh;
+  z-index: 15;
+  top: 60%;
+}
+
+.pack-cost:active {
+  color: #79D9FF;
+}
+
+.locked b {
+  text-decoration: line-through;
+  color: #e76a6a;
 }
 /*# sourceMappingURL=PackToBuy.css.map */

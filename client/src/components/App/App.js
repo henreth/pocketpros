@@ -30,6 +30,7 @@ export default function App() {
   const [user,setUser]= useState(null)
   const [userCards,setUserCards] = useState([]);
   const [userPacks,setUserPacks] = useState({});
+  const [userCredits,setUserCredits] = useState(0);
   const [signedIn,setSignedIn] = useState(false)
 
   useEffect(() => {
@@ -40,6 +41,7 @@ export default function App() {
             setUser(user)
             setUserCards(user.cards)
             setUserPacks(user.packs)
+            setUserCredits(user.credits)
             setSignedIn(true)
           })}
         else {
@@ -101,6 +103,7 @@ export default function App() {
               setUser(user)
               setUserCards(user.cards)
               setUserPacks(user.packs)
+              setUserCredits(user.credits)
               setSignedIn(true)
             })}
           else {
@@ -131,6 +134,7 @@ export default function App() {
         setUser(null);
         setUserCards(null);
         setUserPacks(null);
+        setUserCredits(null)
         window.location.reload();
       })
       .catch(function (error) {
@@ -165,7 +169,7 @@ export default function App() {
           handleBackClick={handleBackClick}
           />} />
         <Route path="/openpacks" element={<OpenPacks user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} />
-        <Route path="/buypacks" element={<BuyPacks user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} handleBackClick={handleBackClick} />
+        <Route path="/buypacks" element={<BuyPacks user={user} userCredits={userCredits} setUserCredits={setUserCredits} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} handleBackClick={handleBackClick} />
         <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
         <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick}/>} />
         <Route path="/signup" element={<SignUp 
