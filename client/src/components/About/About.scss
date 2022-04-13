@@ -20,7 +20,7 @@
 
     &:hover{
         cursor: pointer;
-        transform: scale(1.35);
+        // transform: scale(1.35);
         transition: .5s ease;
     }
 
@@ -166,3 +166,11 @@
         background-position: 0% 50%;
     }
     }
+
+.qrlink {
+    position: absolute;
+    top: 24.5%;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 3.5vh;
+}

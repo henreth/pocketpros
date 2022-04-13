@@ -38,8 +38,6 @@
 
 .qr-container:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.35);
-          transform: scale(1.35);
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
@@ -196,5 +194,13 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+.qrlink {
+  position: absolute;
+  top: 24.5%;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 3.5vh;
 }
 /*# sourceMappingURL=About.css.map */
