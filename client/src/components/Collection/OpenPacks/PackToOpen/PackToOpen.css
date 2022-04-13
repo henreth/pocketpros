@@ -63,19 +63,6 @@
   color: #fff;
 }
 
-.floppy {
-  height: 30vh;
-  -webkit-filter: opacity(0.35);
-          filter: opacity(0.35);
-  margin-top: -2.5%;
-}
-
-.pack-icon {
-  height: 25vh;
-  -webkit-filter: opacity(0.5);
-          filter: opacity(0.5);
-}
-
 .pack-count {
   font-size: large;
   margin-bottom: 2.5%;
@@ -90,9 +77,12 @@
 
 .top {
   margin-top: 2.5%;
-  -webkit-transform: scale(1, -1);
-          transform: scale(1, -1);
   margin-bottom: 7.5%;
+}
+
+.inverse {
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
 }
 
 .booster-text {
@@ -104,7 +94,7 @@
 }
 
 .pro-text {
-  color: #afaeab;
+  color: #83827f;
 }
 
 .max-text {
@@ -120,6 +110,13 @@
 }
 
 .buy-more-text {
-  color: #044d22;
+  color: #09853d;
+}
+
+.pack-logo {
+  height: 30vh;
+  -webkit-filter: opacity(0.35);
+          filter: opacity(0.35);
+  margin-top: -2.5%;
 }
 /*# sourceMappingURL=PackToOpen.css.map */
