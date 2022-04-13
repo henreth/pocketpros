@@ -46,6 +46,10 @@
     background-color: rgb(104, 178, 135);
 }
 
+.buy{
+    color:rgba(0, 0, 0, 0.39) !important;
+}
+
 
 // .pack ,
 // .card .noImage {
@@ -61,8 +65,26 @@ align-items: center;
 color: #fff
 }
 
-.floppy{
-    height: 30vh;
-    filter: opacity(.35) 
+.pack-cost{
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.88);
+    color: #fff;
+    width:18vw;
+    font-size: 4.5vh;
+    z-index: 15;
+    top: 60%;
+
+    &:active{
+        color: #79D9FF ;
+
+    }
 }
 
+.locked{
+
+    b{
+        text-decoration: line-through;
+        color: rgb(231, 106, 106);    
+    }
+}

@@ -21,6 +21,15 @@
   transition: .5s ease;
 }
 
+.pack:active {
+  z-index: 10;
+  -webkit-transform: scale(0.95) !important;
+          transform: scale(0.95) !important;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  color: #79D9FF !important;
+}
+
 .booster {
   background-color: #314574;
 }
@@ -70,13 +79,13 @@
 }
 
 .pack-count:hover {
-  color: rgba(255, 255, 255, 0.871) !important;
+  color: rgba(255, 255, 255, 0.871);
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
 
 .pack-count:active {
-  color: #79D9FF !important;
+  color: #79D9FF;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }

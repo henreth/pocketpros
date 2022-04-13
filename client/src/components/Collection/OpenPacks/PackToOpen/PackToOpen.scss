@@ -16,6 +16,14 @@
 
     }
 
+    &:active {
+        z-index: 10;
+        transform: scale(.95) !important;
+        transition: .5s ease;
+        color: #79D9FF !important;
+    }
+
+
 
 }
 
@@ -69,12 +77,12 @@
     // color: rgba(60, 60, 60, 0.925) !important;
 
     &:hover{
-        color: rgba(255, 255, 255, 0.871) !important;
+        color: rgba(255, 255, 255, 0.871) ;
         transition: .5s ease;
     }
 
     &:active{
-        color: #79D9FF !important;
+        color: #79D9FF ;
         transition: .5s ease;
     }
 }
