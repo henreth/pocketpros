@@ -25,7 +25,7 @@ export default function About({ signedIn, }) {
         setOpened(true)
     }
 
-    let cardClass = opened ? `aboutCard holo` : 'aboutCard unopened'
+    let cardClass = opened ? `aboutCard about-holo` : 'aboutCard unopened'
 
     return (
         <React.Fragment>
@@ -45,7 +45,7 @@ export default function About({ signedIn, }) {
                         <div className='aboutCard-text'>
                             <div className='aboutCard-rarity'>Core Dev</div>
                             <div className='aboutCard-name'>Henry Miller</div>
-                            <div className='aboutCard-id'>#Ω</div>
+                            <div className='aboutCard-id'>Ω</div>
                         </div>
                     </div>
                     <img className='about-icon' src={icon} />

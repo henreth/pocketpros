@@ -72,7 +72,7 @@
   z-index: 10;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
-  border: 1px solid rgba(0, 0, 0, 0.24);
+  outline: 1px solid rgba(0, 0, 0, 0.103);
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
@@ -128,21 +128,9 @@
   margin-bottom: 0.75%;
 }
 
-.bronze {
-  background-color: #cd7f32;
-}
-
-.silver {
-  background-color: #afaeab;
-}
-
-.gold {
-  background-color: #d6ac6e;
-}
-
-.holo {
-  background-image: -webkit-gradient(linear, left top, right top, from(#c2ffb6), color-stop(#ffa3b6), color-stop(#dda9ff), to(#a2d1ff));
-  background-image: linear-gradient(90deg, #c2ffb6, #ffa3b6, #dda9ff, #a2d1ff);
+.about-holo {
+  background-image: -webkit-gradient(linear, left top, right top, from(#a2d1ff), color-stop(#b6a3ff), color-stop(#dda9ff), color-stop(#b6a3ff), to(#a2d1ff));
+  background-image: linear-gradient(90deg, #a2d1ff, #b6a3ff, #dda9ff, #b6a3ff, #a2d1ff);
   background-size: 400% 400%;
   -webkit-animation: gradient 20s ease infinite;
           animation: gradient 20s ease infinite;

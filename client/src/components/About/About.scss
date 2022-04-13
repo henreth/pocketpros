@@ -56,7 +56,7 @@
     &:hover {
         z-index: 10;
         transform: scale(1.5);
-        border: 1px solid rgba(0, 0, 0, 0.24);
+        outline: 1px solid rgba(0, 0, 0, 0.103);
         transition: .5s ease;
     }
 
@@ -109,25 +109,14 @@
 
 }
 
-.bronze {
-    background-color: #cd7f32;
-}
-
-.silver {
-    background-color: rgb(175, 174, 171);
-}
-
-.gold {
-    background-color: rgb(214, 172, 110);
-}
-
-.holo {
+.about-holo {
     // background-image: linear-gradient(to left,rgb(117, 202, 213), rgb(238, 167, 238), rgb(157, 108, 192), rgb(117, 202, 213), rgb(157, 108, 192),  rgb(238, 167, 238),rgb(117, 202, 213));
     // color: transparent;
     background-image: linear-gradient(90deg,
-            rgb(194, 255, 182),
-            rgb(255, 163, 182),
+            rgb(162, 209, 255),
+            rgb(182, 163, 255),
             rgb(221, 169, 255),
+            rgb(182, 163, 255),
             rgb(162, 209, 255));
             background-size: 400% 400%;
 
