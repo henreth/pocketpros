@@ -233,6 +233,61 @@ Character.create!([
         image_url: "stanislawulam.jpeg",
         birth_year: 1,
     },
+    {
+        first_name: "Heron",
+        last_name: "of Alexandria",
+        description: "~",
+        image_url: "heronofalexandria.jpeg"
+    },
+    {
+        first_name: "Guido",
+        last_name: "Van Rossum",
+        description: "~",
+        image_url: "guidovanrossum.jpeg"
+    },
+    {
+        first_name: "John W.",
+        last_name: "Tukey",
+        description: "~",
+        image_url: "johnwtukey.jpeg"
+    },
+    {
+        first_name: "Joseph Marie",
+        last_name: "Jacquard",
+        description: "~",
+        image_url: "josephmariejacquard.jpeg"
+    },
+    {
+        first_name: "Charles",
+        last_name: "Babbage",
+        description: "~",
+        image_url: "charlesbabbage.jpeg"
+    },
+    {
+        first_name: "Dorothy",
+        last_name: "Vaughan",
+        description: "~",
+        image_url: "dorothyvaughan.jpeg"
+    },
+    {
+        first_name: "Tommy",
+        last_name: "Flowers",
+        description: "~",
+        image_url: "tommyflowers.jpeg"
+    },
+    {
+        first_name: "Linus",
+        last_name: "Torvalds",
+        description: "~",
+        image_url: "linustorvalds.jpeg"
+    },
+    {
+        first_name: "John",
+        last_name: "Backus",
+        description: "~",
+        image_url: "johnbackus.jpeg"
+    },
+
 
 
 ])
