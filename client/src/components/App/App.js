@@ -72,6 +72,7 @@ export default function App() {
         setSignUpFirstName('');
         setSignUpLastName('');
         navigate('/login')
+        alert('Please sign in with your provided details')
       })
       .catch(function (error) {
         if (error.response) {

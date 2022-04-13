@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 export default function Auth({signedIn,setSignedIn}) {
-  document.title = 'Pocket Pros - Authorization Required';
+  document.title = 'Pocket Pros - Log In Required';
   let navigate = useNavigate();
 
   useEffect(()=>{

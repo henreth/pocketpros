@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 export default function SignUp({ username, setUsername, password, setPassword, signedIn, setSignedIn, signUpFirstName, setSignUpFirstName, signUpLastName, setSignUpLastName, signUpPasswordConfirmation, setSignUpPasswordConfirmation, handleSignUpSubmit, handleBackClick }) {
-  document.title = 'Pocket Pros - Log In Required';
+  document.title = 'Pocket Pros - Sign Up';
   let navigate = useNavigate();
 
   function clickLogIn() {
