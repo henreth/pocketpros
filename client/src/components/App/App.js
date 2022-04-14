@@ -204,7 +204,7 @@ export default function App() {
         <Route path="/profile" element={<Profile 
             handleLogOut={handleLogOut} 
             signedIn={signedIn} 
-            setSignedIn={setSignedIn} 
+            setSignedIn={setSignedIn}l
             handleBackClick={handleBackClick}/>} />
         <Route path="/edit" element={<Edit
             user={user}

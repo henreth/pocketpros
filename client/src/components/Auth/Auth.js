@@ -27,6 +27,22 @@ export default function Auth({signedIn,setSignedIn}) {
   return (
     <React.Fragment>
       <div id="menu">
+        {/* <div className="title__slot" >
+          <div className="blackscreen"></div>
+          <div className=""></div>
+          <div className="slot-item-1">
+            <h3>Pocket</h3>
+            <p></p>
+          </div>
+        </div>
+        <div className="title__slot">
+          <div className="blackscreen"></div>
+          <div className=""></div>
+          <div className="slot-item-2">
+            <h3>Programmers</h3>
+            <p></p>
+          </div>
+        </div> */}
         <div className="menu__slot" onClick={handleLogInClick}>
           <div className="blackscreen"></div>
           <div className="char jobs"></div>
