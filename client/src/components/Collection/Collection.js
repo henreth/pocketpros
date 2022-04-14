@@ -26,7 +26,6 @@ export default function Collection({ user, signedIn, handleBackClick }) {
 
   return (
     <React.Fragment>
-      <div id="video-overlay"></div>
       <div id="menu">
         <div className="menu__slot" onClick={handleYourCardsClick}>
           <div className="blackscreen"></div>

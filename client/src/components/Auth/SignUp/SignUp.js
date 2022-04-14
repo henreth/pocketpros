@@ -28,7 +28,6 @@ export default function SignUp({ username, setUsername, password, setPassword, s
 
   return (
     <React.Fragment>
-      <div id="video-overlay"></div>
       <div id="menu">
         <div className="menu__slot" onClick={clickLogIn}>
           <div className="blackscreen"></div>
