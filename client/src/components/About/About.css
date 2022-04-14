@@ -74,15 +74,6 @@
           transform: scale(1.35);
 }
 
-.aboutCard:hover {
-  z-index: 10;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  outline: 1px solid rgba(0, 0, 0, 0.103);
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
 .aboutCard .aboutCard-info-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,6 +169,7 @@
           filter: opacity(90%);
   -webkit-transition: .5s ease;
   transition: .5s ease;
+  cursor: pointer;
 }
 
 @-webkit-keyframes gradient {

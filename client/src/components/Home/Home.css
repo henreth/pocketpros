@@ -299,6 +299,8 @@
   z-index: 1;
   line-height: 1.5em;
   color: #fff;
+  font-weight: 400;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff984400, 0 0 0.5em #ff984400, 0 0 0.1em #ff984400, 0 1px 3px #000;
 }
 
 .menu__slot:hover > div > p {

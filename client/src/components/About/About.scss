@@ -60,12 +60,12 @@
 
 
 
-    &:hover {
-        z-index: 10;
-        transform: scale(1.5);
-        outline: 1px solid rgba(0, 0, 0, 0.103);
-        transition: 1s ease;
-    }
+    // &:hover {
+    //     z-index: 10;
+    //     transform: scale(1.5);
+    //     outline: 1px solid rgba(0, 0, 0, 0.103);
+    //     transition: 1s ease;
+    // }
 
     .aboutCard-info-container {
         display: flex;
@@ -157,6 +157,7 @@
     &:hover{
         filter: opacity(90%);
         transition: .5s ease;
+        cursor: pointer;
     }
 
 }
