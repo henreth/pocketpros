@@ -31,7 +31,7 @@ export default function Auth({signedIn,setSignedIn}) {
           <div className="blackscreen"></div>
           <div className=""></div>
           <div className="slot-item-2">
-            <h3 className='first'><a className='t-one'>P</a>o<a className='t-two'>c</a><a className='t-three'>k</a><a className='t-five'>e</a><a className='t-four'>t</a></h3>
+            <h3 className='first'> ><a className='t-one'> </a><a className='t-two'>P</a>o<a className='t-three'>c</a><a className='t-four'>k</a><a className='t-five'>e</a><a className='t-six'>t</a></h3>
             <p></p>
           </div>
         </div>
@@ -40,7 +40,7 @@ export default function Auth({signedIn,setSignedIn}) {
           <div className=""></div>
           <div className="slot-item-2">
             {/* <h3 className='second'>Programmers</h3> */}
-            <h3 className='second'><a className='t-six'>P</a><a className='t-e'>r</a><a className='t-seven'>o</a><a className='t-three'>g</a><a className='t-four'>r</a><a className='t-two'>a</a><a className='t-'>m</a><a className='t-one'>m</a><a className='t-seven'>e</a><a className='t-six'>r</a><a className='t-'>s</a></h3>
+            <h3 className='second'><a className='t-one'>P</a><a className='t-two'>r</a><a className='t-three'>o</a><a className='t-four'>g</a><a className='t-five'>r</a><a className='t-six'>a</a><a className='t-'>m</a><a className='t-seven'>m</a><a className='t-one'>e</a><a className='t-two'>r</a><a className='t-three'>s</a></h3>
             <p></p>
           </div>
         </div>

@@ -35,6 +35,7 @@
   -webkit-transition: .5s ease;
   transition: .5s ease;
   color: transparent;
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 .qr-container:hover {

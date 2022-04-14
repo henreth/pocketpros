@@ -8,6 +8,8 @@
     height: 43vh;
     border-radius: 10px;
     transition: .5s ease;
+    font-family: 'Ubuntu Mono', monospace;
+
 
     &:hover {
         z-index: 10;
@@ -56,11 +58,6 @@
 }
 
 
-// .pack ,
-// .card .noImage {
-//     transition: all 250ms ease-out;
-// }
-
 .pack-info-container {
     display: flex;
     flex-direction: column;
@@ -68,28 +65,19 @@
 }
 
 .pack-count {
-    font-size: 12vh;
+    font-size: 13.5vh;
     margin-bottom: 7.25vh;
     margin-top: 6.75vh;
     font-weight: bold;
     transition: .5s ease;
     z-index:10;
+    font-family: 'Ubuntu Mono', monospace;
     // color: rgba(60, 60, 60, 0.925) !important;
-
-    &:hover{
-        color: rgba(255, 255, 255, 0.871) ;
-        transition: .5s ease;
-    }
-
-    &:active{
-        color: #79D9FF ;
-        transition: .5s ease;
-    }
 }
 
 
 .pack-title {
-    font-size: larger;
+    font-size: 2.75vh;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.384);
 }
