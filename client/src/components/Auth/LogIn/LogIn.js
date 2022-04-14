@@ -29,7 +29,6 @@ export default function LogIn({ username, setUsername, password, setPassword, si
 
   return (
     <React.Fragment>
-      <div id="video-overlay"></div>
       <div id="menu">
         <div className="login__slot">
           <div className></div>

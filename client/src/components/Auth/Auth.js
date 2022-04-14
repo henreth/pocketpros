@@ -26,7 +26,6 @@ export default function Auth({signedIn,setSignedIn}) {
 
   return (
     <React.Fragment>
-      <div id="video-overlay"></div>
       <div id="menu">
         <div className="menu__slot" onClick={handleLogInClick}>
           <div className="blackscreen"></div>

@@ -21,7 +21,6 @@ export default function Profile({signedIn,setSignedIn,handleLogOut,handleBackCli
 
   return (
     <React.Fragment>
-      <div id="video-overlay"></div>
       <div id="menu">
         <div className="menu__slot">
           <div className="blackscreen"></div>
