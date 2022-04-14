@@ -13,16 +13,16 @@ export default function Profile({signedIn,setSignedIn,handleLogOut,handleBackCli
     navigate('/');
   }
 
-  // useEffect(()=>{
-  //   if (signedIn==false){
-  //     navigate('/');
-  //   }
-  // },[])
+  useEffect(()=>{
+    if (signedIn==false){
+      navigate('/');
+    }
+  },[])
 
   return (
     <React.Fragment>
       <div id="menu">
-        <div className="menu__slot">
+        <div className="menu__slot" onClick={()=>{navigate('/edit')}}>
           <div className="blackscreen"></div>
           <div className="char andrew"></div>
           <div className="slot-item-1">

@@ -1,4 +1,4 @@
-.signup__slot {
+.login__slot {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,7 +12,7 @@
   position: relative;
   overflow: hidden;
   background-color: whitesmoke;
-  background: linear-gradient(100deg, #f2a3ca, #cbe2e9, #4d94f1);
+  background: linear-gradient(140deg, #338fc8, #f7eeee, hotpink);
   display: flex;
   flex-direction: column;
 }
@@ -21,7 +21,22 @@
   margin-top: 45vh;
 }
 
-.signup__slot h3 {
+.log-in-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+}
+
+.login__slot h3 {
   text-transform: uppercase;
   position: relative;
   text-align: center;
@@ -35,7 +50,7 @@
   background-size: cover;
 }
 
-.signup__slot > div > h3 {
+.login__slot > div > h3 {
   font-size: 2.45em;
   font-weight: bold;
   min-width: 80%;
@@ -44,7 +59,7 @@
   color: #79D9FF;
 }
 
-.signup-input {
+.login-input {
   background-color: #353333;
   border: none;
   padding: 12px 15px;
@@ -54,7 +69,7 @@
   color: #fff;
 }
 
-.signup-button {
+.login-button {
   border: 1px solid transparent;
   background-color: #353333;
   color: #FFFFFF;
@@ -73,39 +88,24 @@
   transition: .25s ease;
 }
 
-.signup-button:hover {
+.login-button:hover {
   border: 1px solid transparent;
   color: #79D9FF;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
 
-.signup-button:active {
+.login-button:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
   background-color: #45758C;
 }
 
-.signup-input-fullname {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.login-forgot {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  margin-left: 1%;
+  color: rgba(255, 255, 255, 0.348);
+  cursor: pointer;
 }
-
-.signup-input-name {
-  background-color: #353333;
-  border: none;
-  padding: 12px 15px;
-  /* margin-right: 2.5%; */
-  width: 45%;
-  color: #fff;
-}
-
-.signup-input-name:nth-child(1) {
-  margin-right: .5%;
-}
-/*# sourceMappingURL=SignUp.css.map */
+/*# sourceMappingURL=Edit.css.map */

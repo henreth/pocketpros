@@ -162,7 +162,7 @@
 }
 
 .menu__slot:hover .zuckerberg {
-  background-image: url("./zuckerb.png");
+  background-image: url("./zuckerberg.png");
   background-position: 57.5% -30px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);

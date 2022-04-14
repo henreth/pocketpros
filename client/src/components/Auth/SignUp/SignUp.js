@@ -24,7 +24,7 @@ export default function SignUp({ username, setUsername, password, setPassword, s
     setSignUpFirstName('');
     setSignUpLastName('');
     navigate('/auth')
-  } 
+  }
 
   return (
     <React.Fragment>
@@ -48,7 +48,7 @@ export default function SignUp({ username, setUsername, password, setPassword, s
               <input className='signup-input-name' type="text" placeholder="First Name" value={signUpFirstName} onChange={(e) => { setSignUpFirstName(e.target.value) }} />
               <input className='signup-input-name last' type="text" placeholder="Last Name" value={signUpLastName} onChange={(e) => { setSignUpLastName(e.target.value) }} />
             </div>
-            <input className='signup-input' type="text" placeholder="Email" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input className='signup-input' type="email" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
             <input className='signup-input' type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
             <input className='signup-input' type="password" placeholder="Password Confirmation" value={signUpPasswordConfirmation} onChange={(e) => setSignUpPasswordConfirmation(e.target.value)} />
             <button className='signup-button' onClick={handleSignUpSubmit} >Sign Up</button>
@@ -56,9 +56,9 @@ export default function SignUp({ username, setUsername, password, setPassword, s
         </div>
         <div className="menu__slot" onClick={handleAuthClick}>
           <div className="blackscreen"></div>
-          <div className="char larry"></div>
+          <div className="char eich"></div>
           <div className="slot-item-4">
-            <h3>Back</h3>
+            <h3>Cancel</h3>
             <p></p>
           </div>
         </div>

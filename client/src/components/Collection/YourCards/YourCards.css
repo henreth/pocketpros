@@ -77,7 +77,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: rgba(65, 65, 65, 0.643);
+  color: rgba(65, 65, 65, 0.729);
   top: 25%;
 }
 
@@ -148,7 +148,7 @@
 }
 
 .search-input {
-  background-color: #363636;
+  background-color: rgba(54, 54, 54, 0.709);
   border: none;
   border-radius: 6px;
   margin-bottom: 2.75%;
