@@ -149,7 +149,7 @@
 }
 
 .menu__slot:hover .zuckerberg {
-  background-image: url('./zuckerberg.png');
+  background-image: url('./zuckerb.png');
   background-position: 57.5% -30px;
   filter: grayscale(100%);
 }
@@ -224,6 +224,12 @@
 .menu__slot:hover .guido {
   background-image: url('./guido.png');
   background-position:70% -40px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .eich {
+  background-image: url('./eich.png');
+  background-position: 40% -10px;
   filter: grayscale(100%);
 }
 
