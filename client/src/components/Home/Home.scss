@@ -2,11 +2,12 @@
   position: fixed;
   overflow: hidden;
   height: auto;
-  width: 100%;
-  height: 100vh;
+  width: 120%;
+  height: 120%;
   top: 0;
   left: 0;
   z-index: -2;
+  margin-top: -7.5%
 }
 
 #video-overlay {
@@ -57,7 +58,7 @@
   }
 
   &:nth-child(1):hover {
-    background: linear-gradient(140deg, rgb(51, 143, 200), rgb(255, 255, 255), rgb(255, 105, 180));
+    background: linear-gradient(140deg, rgb(51, 143, 200), rgb(250, 216, 216), rgb(255, 105, 180));
   }
   
   &:nth-child(2):hover {
@@ -73,7 +74,7 @@
   }
   
   &:nth-child(5):hover {
-    background: linear-gradient(140deg, rgb(135, 206, 250), rgb(255, 105, 180), rgb(228, 245, 252));
+    background: linear-gradient(140deg, rgb(135, 206, 250), rgb(191, 119, 155), rgb(228, 245, 252));
   }
   
   

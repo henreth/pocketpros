@@ -2,11 +2,12 @@
   position: fixed;
   overflow: hidden;
   height: auto;
-  width: 100%;
-  height: 100vh;
+  width: 120%;
+  height: 120%;
   top: 0;
   left: 0;
   z-index: -2;
+  margin-top: -7.5%;
 }
 
 #video-overlay {
@@ -65,7 +66,7 @@
 }
 
 .menu__slot:nth-child(1):hover {
-  background: linear-gradient(140deg, #338fc8, white, hotpink);
+  background: linear-gradient(140deg, #338fc8, #fad8d8, hotpink);
 }
 
 .menu__slot:nth-child(2):hover {
@@ -81,7 +82,7 @@
 }
 
 .menu__slot:nth-child(5):hover {
-  background: linear-gradient(140deg, lightskyblue, hotpink, #e4f5fc);
+  background: linear-gradient(140deg, lightskyblue, #bf779b, #e4f5fc);
 }
 
 .slot-item-1 {
