@@ -14,7 +14,7 @@ export default function Home({ handleClick }) {
         <div className="menu__slot" onClick={() => { navigate('/collection') }}>
           <div className="blackscreen"></div>
           <div className="char turing"></div>
-          <div className="slot-item-1">
+          <div className="slot-item-one">
             <h3>Your Deck</h3>
             <p>View your current collection and open any unused packs.</p>
           </div>
@@ -22,7 +22,7 @@ export default function Home({ handleClick }) {
         <div className="menu__slot" onClick={() => { navigate('/buypacks') }}>
           <div className="blackscreen"></div>
           <div className="char hopper"></div>
-          <div className="slot-item-2">
+          <div className="slot-item-two">
             <h3>Buy Packs</h3>
             <p>Use credits in order to buy more card packs.</p>
           </div>
@@ -30,7 +30,7 @@ export default function Home({ handleClick }) {
         <div className="menu__slot">
           <div className="blackscreen"></div>
           <div className="char reddy"></div>
-          <div className="slot-item-3">
+          <div className="slot-item-three">
             <h3>Marketplace</h3>
             <p>Looking for a specific card? Check out the market for offers from other users.</p>
           </div>
@@ -38,7 +38,7 @@ export default function Home({ handleClick }) {
         <div className="menu__slot" onClick={() => { navigate('/about ') }}>
           <div className="blackscreen"></div>
           <div className="char hamilton"></div>
-          <div className="slot-item-4">
+          <div className="slot-item-four">
             <h3>About</h3>
             <p>Learn more about Pocket Programmers and the programmer behind it.</p>
           </div>
@@ -46,7 +46,7 @@ export default function Home({ handleClick }) {
         <div className="menu__slot" onClick={() => { navigate('/profile ') }}>
           <div className="blackscreen"></div>
           <div className="char annie"></div>
-          <div className="slot-item-5">
+          <div className="slot-item-five">
             <h3>Profile</h3>
             <p>View and edit your account details.</p>
           </div>

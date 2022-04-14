@@ -7,6 +7,8 @@ import alanturing from '../../../../img/characters/alanturing.jpeg'
 import stevejobs from '../../../../img/characters/stevejobs.jpeg'
 import icon from '../../../../img/cleargithubqr.png';
 
+
+
 export default function NewCard({ char, setCardElements }) {
     const charImages = require.context('../../../../img/characters', true);
 
