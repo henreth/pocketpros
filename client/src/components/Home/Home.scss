@@ -203,6 +203,30 @@
   filter: grayscale(100%);
 }
 
+.menu__slot:hover .tommy {
+  background-image: url('./tommyflowersclear.png');
+  background-position: 55% -60px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .annie {
+  background-image: url('./annie.png');
+  background-position:70% -40px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .clarence {
+  background-image: url('./clarence.png');
+  background-position:70% -40px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .guido {
+  background-image: url('./guido.png');
+  background-position:70% -40px;
+  filter: grayscale(100%);
+}
+
 .char {
   height: 100%;
   width: 100%;

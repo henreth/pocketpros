@@ -45,7 +45,7 @@ export default function Home({ handleClick }) {
         </div>
         <div className="menu__slot" onClick={() => { navigate('/profile ') }}>
           <div className="blackscreen"></div>
-          <div className="char zuckerberg"></div>
+          <div className="char annie"></div>
           <div className="slot-item-5">
             <h3>Profile</h3>
             <p>View and edit your account details.</p>
