@@ -287,6 +287,96 @@ Character.create!([
         description: "~",
         image_url: "johnbackus.jpeg"
     },
+    {
+        first_name: "Douglas",
+        last_name: "Crockford",
+        description: "~",
+        image_url: "douglascrockford.jpeg"
+    },
+    {
+        first_name: "Miguel",
+        last_name: "De Izaca",
+        description: "~",
+        image_url: "migueldeizaca.jpeg"
+    },
+    {
+        first_name: "Brendan",
+        last_name: "Eich",
+        description: "~",
+        image_url: "brendaneich.jpeg"
+    },
+    {
+        first_name: "Barbara",
+        last_name: "Liskov",
+        description: "~",
+        image_url: "barbaraliskov.jpeg"
+    },
+    {
+        first_name: "David",
+        last_name: "Axmark",
+        description: "~",
+        image_url: "davidaxmark.jpeg"
+    },
+    {
+        first_name: "David",
+        last_name: "Knuth",
+        description: "~",
+        image_url: "davidknuth.jpeg"
+    },
+    {
+        first_name: "Sergey",
+        last_name: "Brin",
+        description: "~",
+        image_url: "sergeybrin.jpeg"
+    },
+    {
+        first_name: "Elizabeth",
+        last_name: "Feinler",
+        description: "~",
+        image_url: "elizabethfeinler.jpeg"
+    },
+    {
+        first_name: "Alexey",
+        last_name: "Pajitnov",
+        description: "~",
+        image_url: "alexeypajitnov.jpeg"
+    },
+    {
+        first_name: "Andrew",
+        last_name: "Ng",
+        description: "~",
+        image_url: "andrewng.jpeg"
+    },
+    {
+        first_name: "Demis",
+        last_name: "Hassabis",
+        description: "~",
+        image_url: "demishassabis.jpeg"
+    },
+    {
+        first_name: "Karen",
+        last_name: "Sparck Jones",
+        description: "~",
+        image_url: "karensparckjones.jpeg"
+    },
+    {
+        first_name: "Karen",
+        last_name: "Sparck Jones",
+        description: "~",
+        image_url: "karensparckjones.jpeg"
+    },
+    {
+        first_name: "Max",
+        last_name: "Levchin",
+        description: "~",
+        image_url: "maxlevchin.jpeg"
+    },
+    {
+        first_name: "Shafi",
+        last_name: "Goldwasser",
+        description: "~",
+        image_url: "shafigoldwasser.jpeg"
+    },
 
 
 

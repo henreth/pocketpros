@@ -69,19 +69,19 @@
 }
 
 .menu__slot:nth-child(2):hover {
-  background: linear-gradient(140deg, #d8e0dd, lightskyblue, #00ffae);
+  background: linear-gradient(-280deg, #d8e0dd, lightskyblue, #f2a3ca);
 }
 
 .menu__slot:nth-child(3):hover {
-  background: linear-gradient(-140deg, hotpink, lightblue, #00ffae);
+  background: linear-gradient(-140deg, hotpink, lightblue, #ebfbff);
 }
 
 .menu__slot:nth-child(4):hover {
-  background: linear-gradient(140deg, #00ffae, #4d94f1, #cbe2e9);
+  background: linear-gradient(100deg, #f2a3ca, #cbe2e9, #4d94f1);
 }
 
 .menu__slot:nth-child(5):hover {
-  background: linear-gradient(140deg, lightskyblue, hotpink, #00ffae);
+  background: linear-gradient(140deg, lightskyblue, hotpink, #e4f5fc);
 }
 
 .slot-item-1 {
@@ -161,7 +161,7 @@
 }
 
 .menu__slot:hover .zuckerberg {
-  background-image: url("./zuckerberg.png");
+  background-image: url("./zuckerb.png");
   background-position: 57.5% -30px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -216,6 +216,48 @@
 .menu__slot:hover .reddy {
   background-image: url("./reddy.png");
   background-position: 40% -50px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.menu__slot:hover .tommy {
+  background-image: url("./tommyflowersclear.png");
+  background-position: 55% -60px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.menu__slot:hover .annie {
+  background-image: url("./annie.png");
+  background-position: 70% -40px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.menu__slot:hover .clarence {
+  background-image: url("./clarence.png");
+  background-position: 70% -40px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.menu__slot:hover .guido {
+  background-image: url("./guido.png");
+  background-position: 70% -40px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.menu__slot:hover .eich {
+  background-image: url("./eich.png");
+  background-position: 25% -10px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.menu__slot:hover .andrew {
+  background-image: url("./andrewngclear.png");
+  background-position: 60% -70px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
