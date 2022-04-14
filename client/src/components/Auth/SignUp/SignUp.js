@@ -32,7 +32,7 @@ export default function SignUp({ username, setUsername, password, setPassword, s
       <div id="menu">
         <div className="menu__slot" onClick={clickLogIn}>
           <div className="blackscreen"></div>
-          <div className="char larry"></div>
+          <div className="char jobs"></div>
           <div className="slot-item-3">
             <h3>Log In</h3>
             <p></p>
@@ -57,7 +57,7 @@ export default function SignUp({ username, setUsername, password, setPassword, s
         </div>
         <div className="menu__slot" onClick={handleAuthClick}>
           <div className="blackscreen"></div>
-          <div className="char turing"></div>
+          <div className="char larry"></div>
           <div className="slot-item-4">
             <h3>Back</h3>
             <p></p>

@@ -2,6 +2,10 @@
   position: fixed;
   overflow: hidden;
   height: auto;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
   z-index: -2;
 }
 
@@ -61,23 +65,23 @@
 }
 
 .menu__slot:nth-child(1):hover {
-  background: linear-gradient(140deg, #6027bb, white, gray);
+  background: linear-gradient(140deg, #338fc8, white, hotpink);
 }
 
 .menu__slot:nth-child(2):hover {
-  background: linear-gradient(140deg, #d33, beige, green);
+  background: linear-gradient(140deg, #d8e0dd, lightskyblue, #00ffae);
 }
 
 .menu__slot:nth-child(3):hover {
-  background: linear-gradient(140deg, hotpink, lightblue, orange);
+  background: linear-gradient(-140deg, hotpink, lightblue, #00ffae);
 }
 
 .menu__slot:nth-child(4):hover {
-  background: linear-gradient(140deg, gold, lightyellow, lightskyblue);
+  background: linear-gradient(140deg, #00ffae, #4d94f1, #cbe2e9);
 }
 
 .menu__slot:nth-child(5):hover {
-  background: linear-gradient(140deg, forestgreen, lightblue, firebrick);
+  background: linear-gradient(140deg, lightskyblue, hotpink, #00ffae);
 }
 
 .slot-item-1 {
