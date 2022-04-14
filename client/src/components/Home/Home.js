@@ -2,8 +2,6 @@ import './Home.css';
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
-import video from './bluerain.mp4'
-
 
 export default function Home({ handleClick }) {
   document.title = 'Pocket Pros - Home';
@@ -12,9 +10,6 @@ export default function Home({ handleClick }) {
 
   return (
     <React.Fragment>
-      <video width="400" autoPlay={true} muted playsInline id="bg-video">
-        <source src={video} type="video/ogg"></source>
-      </video>
       <div id="video-overlay"></div>
       <div id="menu">
         <div className="menu__slot" onClick={() => { navigate('/collection') }}>

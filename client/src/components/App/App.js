@@ -14,6 +14,9 @@ import SignUp from '../Auth/SignUp/SignUp';
 import About from '../About/About';
 import Profile from '../Profile/Profile';
 
+import video from '../../video/bluerain.mp4'
+
+
 export default function App() {
 
   //Sign Up
@@ -157,6 +160,11 @@ export default function App() {
 
   return (
     <React.Fragment>
+            <video width="400" autoPlay={true} muted playsInline id="bg-video">
+        <source src={video} type="video/ogg"></source>
+      </video>
+      <div id="video-overlay"></div>
+
       {user?<div className='user-identification'>👤{user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div>:null}
       <Routes>
         <Route exact path="/" element={signedIn?<Home />:<Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
