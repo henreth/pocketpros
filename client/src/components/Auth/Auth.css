@@ -1,0 +1,36 @@
+.title__slot {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 28%;
+      flex-basis: 28%;
+  position: relative;
+  overflow: hidden;
+}
+
+.title__slot h3 {
+  text-transform: uppercase;
+  position: relative;
+  color: #a09f9f;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 3.6% 5%;
+  font-size: 2.25em;
+  font-weight: 300;
+  z-index: 1;
+  background-image: url("./led-grid.png");
+  background-size: cover;
+}
+
+.first {
+  text-align: center;
+}
+
+.second {
+  text-align: left;
+}
+/*# sourceMappingURL=Auth.css.map */
