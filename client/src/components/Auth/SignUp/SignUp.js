@@ -24,7 +24,7 @@ export default function SignUp({ username, setUsername, password, setPassword, s
     setSignUpFirstName('');
     setSignUpLastName('');
     navigate('/auth')
-  } 
+  }
 
   return (
     <React.Fragment>
@@ -48,7 +48,7 @@ export default function SignUp({ username, setUsername, password, setPassword, s
               <input className='signup-input-name' type="text" placeholder="First Name" value={signUpFirstName} onChange={(e) => { setSignUpFirstName(e.target.value) }} />
               <input className='signup-input-name last' type="text" placeholder="Last Name" value={signUpLastName} onChange={(e) => { setSignUpLastName(e.target.value) }} />
             </div>
-            <input className='signup-input' type="text" placeholder="Email" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input className='signup-input' type="email" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
             <input className='signup-input' type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
             <input className='signup-input' type="password" placeholder="Password Confirmation" value={signUpPasswordConfirmation} onChange={(e) => setSignUpPasswordConfirmation(e.target.value)} />
             <button className='signup-button' onClick={handleSignUpSubmit} >Sign Up</button>

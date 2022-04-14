@@ -71,7 +71,7 @@ export default function Edit({ user, setUser, signedIn, handleLogOut }) {
               <input className='signup-input-name' type="text" placeholder="First Name" value={firstName} onChange={(e) => { setFirstName(e.target.value) }} />
               <input className='signup-input-name last' type="text" placeholder="Last Name" value={lastName} onChange={(e) => { setLastName(e.target.value) }} />
             </div>
-            <input className='signup-input' type="text" placeholder="Email" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input className='signup-input' type="email" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
             <button className='signup-button' onClick={handleSubmitChanges} >Submit Changes</button>
           </form>
         </div>
