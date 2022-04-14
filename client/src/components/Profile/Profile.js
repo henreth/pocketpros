@@ -24,7 +24,7 @@ export default function Profile({signedIn,setSignedIn,handleLogOut,handleBackCli
       <div id="menu">
         <div className="menu__slot">
           <div className="blackscreen"></div>
-          <div className="char lamarr"></div>
+          <div className="char andrew"></div>
           <div className="slot-item-1">
             <h3>Edit Account</h3>
             <p></p>

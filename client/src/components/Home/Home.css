@@ -250,7 +250,14 @@
 
 .menu__slot:hover .eich {
   background-image: url("./eich.png");
-  background-position: 40% -10px;
+  background-position: 25% -10px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.menu__slot:hover .andrew {
+  background-image: url("./andrewngclear.png");
+  background-position: 60% -70px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }

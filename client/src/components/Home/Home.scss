@@ -229,7 +229,13 @@
 
 .menu__slot:hover .eich {
   background-image: url('./eich.png');
-  background-position: 40% -10px;
+  background-position: 25% -10px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .andrew {
+  background-image: url('./andrewngclear.png');
+  background-position: 60% -70px;
   filter: grayscale(100%);
 }
 
