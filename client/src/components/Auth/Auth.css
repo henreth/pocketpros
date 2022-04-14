@@ -33,4 +33,32 @@
 .second {
   text-align: left;
 }
+
+.t-one {
+  color: red;
+}
+
+.t-two {
+  color: #56c656;
+}
+
+.t-three {
+  color: blue;
+}
+
+.t-four {
+  color: #8d1bf7;
+}
+
+.t-five {
+  color: orange;
+}
+
+.t-six {
+  color: cyan;
+}
+
+.t-seven {
+  color: #d206d2;
+}
 /*# sourceMappingURL=Auth.css.map */
