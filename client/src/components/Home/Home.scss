@@ -61,19 +61,19 @@
   }
   
   &:nth-child(2):hover {
-    background: linear-gradient(140deg, rgb(216, 224, 221), rgb(135, 206, 250), rgb(0, 255, 174));
+    background: linear-gradient(-280deg, rgb(216, 224, 221), rgb(135, 206, 250), rgb(242, 163, 202));
   }
   
   &:nth-child(3):hover {
-    background: linear-gradient(-140deg, rgb(255, 105, 180), rgb(173, 216, 230), rgb(0, 255, 174));
+    background: linear-gradient(-140deg, rgb(255, 105, 180), rgb(173, 216, 230), rgb(235, 251, 255));
   }
   
   &:nth-child(4):hover {
-    background: linear-gradient(140deg, rgb(0, 255, 174), rgb(77, 148, 241), rgb(203, 226, 233));
+    background: linear-gradient(100deg, rgb(242, 163, 202), rgb(203, 226, 233), rgb(77, 148, 241), );
   }
   
   &:nth-child(5):hover {
-    background: linear-gradient(140deg, rgb(135, 206, 250), rgb(255, 105, 180), rgb(0, 255, 174));
+    background: linear-gradient(140deg, rgb(135, 206, 250), rgb(255, 105, 180), rgb(228, 245, 252));
   }
   
   

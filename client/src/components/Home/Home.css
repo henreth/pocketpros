@@ -69,19 +69,19 @@
 }
 
 .menu__slot:nth-child(2):hover {
-  background: linear-gradient(140deg, #d8e0dd, lightskyblue, #00ffae);
+  background: linear-gradient(-280deg, #d8e0dd, lightskyblue, #f2a3ca);
 }
 
 .menu__slot:nth-child(3):hover {
-  background: linear-gradient(-140deg, hotpink, lightblue, #00ffae);
+  background: linear-gradient(-140deg, hotpink, lightblue, #ebfbff);
 }
 
 .menu__slot:nth-child(4):hover {
-  background: linear-gradient(140deg, #00ffae, #4d94f1, #cbe2e9);
+  background: linear-gradient(100deg, #f2a3ca, #cbe2e9, #4d94f1);
 }
 
 .menu__slot:nth-child(5):hover {
-  background: linear-gradient(140deg, lightskyblue, hotpink, #00ffae);
+  background: linear-gradient(140deg, lightskyblue, hotpink, #e4f5fc);
 }
 
 .slot-item-1 {
