@@ -71,6 +71,7 @@
   font-size: x-small;
   margin-top: 2%;
   margin-bottom: 0.75%;
+  text-transform: none;
 }
 
 .bronze {

@@ -15,7 +15,7 @@ import About from '../About/About';
 import Profile from '../Profile/Profile';
 import Edit from '../Auth/Edit/Edit';
 
-import video from '../../video/bluerain.mp4'
+import video from '../../video/rainbowrain.mp4'
 
 
 

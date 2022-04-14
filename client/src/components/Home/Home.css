@@ -66,23 +66,39 @@
 }
 
 .menu__slot:nth-child(1):hover {
-  background: linear-gradient(140deg, #338fc8, #fad8d8, hotpink);
+  background-image: -webkit-gradient(linear, left top, right top, from(#c5f9ba), color-stop(#fdc3cf), color-stop(#ecd2fe), to(#bddaf8));
+  background-image: linear-gradient(90deg, #c5f9ba, #fdc3cf, #ecd2fe, #bddaf8);
+  background-size: 300% 300%;
+  -webkit-animation: gradient 10s ease infinite;
+          animation: gradient 10s ease infinite;
 }
 
 .menu__slot:nth-child(2):hover {
-  background: linear-gradient(-280deg, #d8e0dd, lightskyblue, #f2a3ca);
+  background: linear-gradient(-140deg, #d8e0dd, lightskyblue, #f2a3ca);
+  background-size: 300% 300%;
+  -webkit-animation: gradient 7.5s ease infinite;
+          animation: gradient 7.5s ease infinite;
 }
 
 .menu__slot:nth-child(3):hover {
   background: linear-gradient(-140deg, hotpink, lightblue, #ebfbff);
+  background-size: 300% 300%;
+  -webkit-animation: gradient 7.5s ease infinite;
+          animation: gradient 7.5s ease infinite;
 }
 
 .menu__slot:nth-child(4):hover {
   background: linear-gradient(100deg, #f2a3ca, #cbe2e9, #4d94f1);
+  background-size: 300% 300%;
+  -webkit-animation: gradient 7.5s ease infinite;
+          animation: gradient 7.5s ease infinite;
 }
 
 .menu__slot:nth-child(5):hover {
   background: linear-gradient(140deg, lightskyblue, #bf779b, #e4f5fc);
+  background-size: 300% 300%;
+  -webkit-animation: gradient 7.5s ease infinite;
+          animation: gradient 7.5s ease infinite;
 }
 
 .slot-item-1 {
@@ -103,6 +119,26 @@
 
 .slot-item-5 {
   margin-top: 42vh;
+}
+
+.slot-item-one {
+  margin-top: 15vh;
+}
+
+.slot-item-two {
+  margin-top: 30vh;
+}
+
+.slot-item-three {
+  margin-top: 45vh;
+}
+
+.slot-item-four {
+  margin-top: 60vh;
+}
+
+.slot-item-five {
+  margin-top: 75vh;
 }
 
 .menu__slot:hover div.blackscreen {
@@ -202,13 +238,6 @@
           filter: grayscale(100%);
 }
 
-.menu__slot:hover .vanrossum {
-  background-image: url("./vanrossum.png");
-  background-position: 50% 0px;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-}
-
 .menu__slot:hover .kjohnson {
   background-image: url("./kjohnson.png");
   background-position: 40% -50px;
@@ -274,7 +303,7 @@
   text-transform: uppercase;
   position: relative;
   text-align: center;
-  color: #45758C;
+  color: #bbbbbb;
   background-color: rgba(45, 51, 61, 0.8);
   padding: 3.6% 5%;
   font-size: 2em;
@@ -290,7 +319,7 @@
   min-width: 80%;
   max-width: 80%;
   text-align: left;
-  color: #79D9FF;
+  color: #f4f4f4;
 }
 
 .menu__slot p {
