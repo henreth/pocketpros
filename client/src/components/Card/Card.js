@@ -21,7 +21,7 @@ export default function Card({ char }) {
                 <div className='charCard-text'>
                     <div className='charCard-rarity'>{char.rarity[0].toUpperCase() + char.rarity.slice(1,)}</div>
                     <div className='charCard-name'><b>{char.character.first_name} {char.character.last_name}</b></div>
-                    <div className='charCard-id'> #{char.id}</div>
+                    <div className='charCard-id'> #{char.unique_id}</div>
                 </div>
             </div>
             <img className='floppy-icon' src={icon} />

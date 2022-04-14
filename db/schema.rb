@@ -21,7 +21,8 @@ ActiveRecord::Schema.define(version: 2022_04_06_180611) do
     t.bigint "character_id", null: false
     t.integer "rarity"
     t.boolean "for_sale"
-    t.integer "value"
+    t.integer "sale_price"
+    t.string "unique_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["character_id"], name: "index_cards_on_character_id"
