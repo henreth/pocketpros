@@ -7,6 +7,8 @@
 .vscode
 visualizations
 z-notes
+/client/src/components/Home/bluerain.mp4
+/client/src/components/Home/coderain.mp4
 
 # Ignore bundler config.
 /.bundle

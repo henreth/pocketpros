@@ -2,6 +2,7 @@ import './Home.css';
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
+import video from './bluerain.mp4'
 
 
 export default function Home({ handleClick }) {
@@ -11,9 +12,9 @@ export default function Home({ handleClick }) {
 
   return (
     <React.Fragment>
-      {/* <video autoplay muted loop id="bg-video">
-    <source src="./background.ogv" type="video/ogg"> </source>
-  </video> */}
+      <video width="400" autoPlay={true} muted playsInline id="bg-video">
+        <source src={video} type="video/ogg"></source>
+      </video>
       <div id="video-overlay"></div>
       <div id="menu">
         <div className="menu__slot" onClick={() => { navigate('/collection') }}>
@@ -41,19 +42,19 @@ export default function Home({ handleClick }) {
           </div>
         </div>
         <div className="menu__slot" onClick={() => { navigate('/about ') }}>
-      <div className="blackscreen"></div>
-      <div className="char hamilton"></div>
-      <div className="slot-item-4">
-      <h3>About</h3>
+          <div className="blackscreen"></div>
+          <div className="char hamilton"></div>
+          <div className="slot-item-4">
+            <h3>About</h3>
             <p>Learn more about Pocket Programmers and the programmer behind it.</p>
-      </div>
-    </div>
+          </div>
+        </div>
         <div className="menu__slot" onClick={() => { navigate('/profile ') }}>
           <div className="blackscreen"></div>
           <div className="char zuckerberg"></div>
-            <div className="slot-item-5">
-      <h3>Profile</h3>
-      <p>View and edit your account details.</p>
+          <div className="slot-item-5">
+            <h3>Profile</h3>
+            <p>View and edit your account details.</p>
           </div>
         </div>
       </div>
