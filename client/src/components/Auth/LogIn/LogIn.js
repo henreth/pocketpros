@@ -14,13 +14,13 @@ export default function LogIn({ username, setUsername, password, setPassword, si
     }
   }, [])
 
-  function handleSignUpClick(){
+  function handleSignUpClick() {
     setUsername('');
     setPassword('');
     navigate('/signup')
   }
 
-  function handleAuthClick(){
+  function handleAuthClick() {
     setUsername('');
     setPassword('');
     navigate('/auth')
@@ -43,22 +43,22 @@ export default function LogIn({ username, setUsername, password, setPassword, si
 
           </form>
         </div>
-        <div className="menu__slot" onClick={handleSignUpClick}>
-            <div className="blackscreen"></div>
-            <div className="char kjohnson"></div>
-            <div className="slot-item-3">
-              <h3>Sign Up</h3>
-              <p></p>
-            </div>
+        {/* <div className="menu__slot" onClick={handleSignUpClick}>
+          <div className="blackscreen"></div>
+          <div className="char kjohnson"></div>
+          <div className="slot-item-3">
+            <h3>Sign Up</h3>
+            <p></p>
           </div>
-          <div className="menu__slot" onClick={handleAuthClick}>
-            <div className="blackscreen"></div>
-            <div className="char larry"></div>
-            <div className="slot-item-4">
-              <h3>Back</h3>
-              <p></p>
-            </div>
+        </div> */}
+        <div className="menu__slot" onClick={handleAuthClick}>
+          <div className="blackscreen"></div>
+          <div className="char tommy"></div>
+          <div className="slot-item-2">
+            <h3>Cancel</h3>
+            <p></p>
           </div>
+        </div>
 
 
       </div>
