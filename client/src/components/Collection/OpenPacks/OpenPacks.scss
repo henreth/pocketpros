@@ -40,7 +40,17 @@
         min-width: 20%;
         max-width: 20%;
         text-align: left;
-        color: #79D9FF;
+        // color: #79D9FF;
+        color: #bbbbbb;
+        transition: .5s ease;
+
+
+        &:hover{
+                   color: #f4f4f4; 
+                   transition: .5s ease;
+        }
+
+
     }
     
 }

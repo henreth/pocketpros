@@ -68,7 +68,7 @@
   cursor: pointer;
   background-color: rgba(45, 51, 61, 0.8);
   background-image: url("./led-grid.png");
-  color: #79D9FF;
+  color: #bbbbbb;
   border: none;
   -webkit-transition: .5s;
   transition: .5s;
@@ -87,6 +87,8 @@
 }
 
 .button:hover {
-  color: #fff;
+  color: #f4f4f4;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 /*# sourceMappingURL=Modal.css.map */
