@@ -295,9 +295,9 @@ Character.create!([
     },
     {
         first_name: "Miguel",
-        last_name: "De Izaca",
+        last_name: "De Icaza",
         description: "~",
-        image_url: "migueldeizaca.jpeg"
+        image_url: "migueldeicaza.jpeg"
     },
     {
         first_name: "Brendan",

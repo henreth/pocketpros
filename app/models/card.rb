@@ -6,5 +6,7 @@ class Card < ApplicationRecord
   enum rarity: { bronze: 0, silver: 1, gold: 2, holo: 3 }
 
   validates :rarity, presence: true
+  validates :unique_id, presence: true
+  validates :rarity, presence: true
 
 end
