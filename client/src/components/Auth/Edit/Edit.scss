@@ -8,6 +8,9 @@
   // cursor: pointer;
   background-color: whitesmoke;
   background: linear-gradient(140deg, rgb(51, 143, 200), rgb(247, 238, 238), rgb(255, 105, 180));
+  background-size: 300% 300%;
+  animation: gradient 7.5s ease infinite;
+
   display: flex;
   flex-direction: column;
 

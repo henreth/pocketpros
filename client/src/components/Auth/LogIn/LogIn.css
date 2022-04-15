@@ -13,6 +13,9 @@
   overflow: hidden;
   background-color: whitesmoke;
   background: linear-gradient(140deg, lightskyblue, hotpink, #00ffae);
+  background-size: 300% 300%;
+  -webkit-animation: gradient 7.5s ease infinite;
+          animation: gradient 7.5s ease infinite;
   display: flex;
   flex-direction: column;
 }
@@ -64,9 +67,10 @@
   border: none;
   padding: 12px 15px;
   margin: 8px 0;
-  width: 100%;
+  width: 60%;
   z-index: 100;
   color: #fff;
+  font-size: larger;
 }
 
 .login-button {
@@ -86,6 +90,7 @@
   width: 30%;
   -webkit-transition: .25s ease;
   transition: .25s ease;
+  font-size: larger;
 }
 
 .login-button:hover {

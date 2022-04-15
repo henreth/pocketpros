@@ -13,6 +13,9 @@
   overflow: hidden;
   background-color: whitesmoke;
   background: linear-gradient(140deg, #338fc8, #f7eeee, hotpink);
+  background-size: 300% 300%;
+  -webkit-animation: gradient 7.5s ease infinite;
+          animation: gradient 7.5s ease infinite;
   display: flex;
   flex-direction: column;
 }
