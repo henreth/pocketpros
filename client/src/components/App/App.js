@@ -162,12 +162,12 @@ export default function App() {
 
   return (
     <React.Fragment>
-            <video width="400" autoPlay={true} muted playsInline id="bg-video">
+            <video width="400" autoPlay={true} muted playsInline loop id="bg-video">
         <source src={video} type="video/ogg"></source>
       </video>
       <div id="video-overlay"></div>
 
-      {user?<div className='user-identification'>👤{user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div>:null}
+      {user?<div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div>:null}
       <Routes>
         <Route exact path="/" element={signedIn?<Home />:<Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
         <Route path="/collection" element={<Collection user={user} signedIn={signedIn} handleBackClick={handleBackClick} />} />

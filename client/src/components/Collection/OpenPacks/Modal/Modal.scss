@@ -43,7 +43,8 @@
     cursor: pointer;
     background-color: rgba(45, 51, 61, 0.8);
     background-image: url('./led-grid.png');
-    color: #79D9FF;
+    // color: #79D9FF;
+    color: #bbbbbb;
     border: none;
     transition: .5s;
 
@@ -59,9 +60,12 @@
     &.goToDeck{
         margin-left: -72.5%;
     }
-
+    
     &:hover{
-        color: #fff        
+               color: #f4f4f4; 
+               transition: .5s ease;
     }
+
+
 
 }

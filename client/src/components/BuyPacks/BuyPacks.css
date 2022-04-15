@@ -51,6 +51,14 @@
   min-width: 20%;
   max-width: 20%;
   text-align: left;
-  color: #79D9FF;
+  color: #bbbbbb;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.back_button > div > h3:hover {
+  color: #f4f4f4;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 /*# sourceMappingURL=BuyPacks.css.map */

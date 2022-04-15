@@ -50,12 +50,6 @@
     color:rgba(0, 0, 0, 0.39) !important;
 }
 
-
-// .pack ,
-// .card .noImage {
-//     transition: all 250ms ease-out;
-// }
-
 .pack-info-container{ 
 display: flex;
 flex-direction: column;
@@ -74,6 +68,8 @@ color: #fff
     font-size: 4.5vh;
     z-index: 15;
     top: 60%;
+    font-family: 'Ubuntu Mono', monospace;
+
 
     &:active{
         color: #79D9FF ;

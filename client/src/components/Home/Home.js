@@ -24,7 +24,7 @@ export default function Home({ handleClick }) {
           <div className="char hopper"></div>
           <div className="slot-item-two">
             <h3>Buy Packs</h3>
-            <p>Use credits in order to buy more card packs.</p>
+            <p>Use credits to buy more card packs.</p>
           </div>
         </div>
         <div className="menu__slot">
@@ -32,7 +32,7 @@ export default function Home({ handleClick }) {
           <div className="char reddy"></div>
           <div className="slot-item-three">
             <h3>Marketplace</h3>
-            <p>Looking for a specific card? Check out the market for offers from other users.</p>
+            <p>Buy and sell cards with other users.</p>
           </div>
         </div>
         <div className="menu__slot" onClick={() => { navigate('/about ') }}>
@@ -40,7 +40,7 @@ export default function Home({ handleClick }) {
           <div className="char hamilton"></div>
           <div className="slot-item-four">
             <h3>About</h3>
-            <p>Learn more about Pocket Programmers and the programmer behind it.</p>
+            <p>Learn more about this app and the programmer behind it.</p>
           </div>
         </div>
         <div className="menu__slot" onClick={() => { navigate('/profile ') }}>

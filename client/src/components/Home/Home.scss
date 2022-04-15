@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,100;0,700;1,400;1,700&display=swap');
+
 #bg-video {
   position: fixed;
   overflow: hidden;
@@ -288,6 +290,8 @@
   z-index: 1;
   background-image: url('./led-grid.png');
   background-size: cover;
+  font-family: 'Ubuntu Mono', monospace;
+
 }
 
 .menu__slot:hover>div>h3 {
@@ -298,6 +302,8 @@
   text-align: left;
   // color: #79D9FF;
   color: #f4f4f4;
+  font-family: 'Ubuntu Mono', monospace;
+
 }
 
 .menu__slot p {
@@ -305,9 +311,9 @@
   position: relative;
   z-index: 1;
   line-height: 1.5em;
-  color: #fff;
-  font-weight: 400;
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff984400, 0 0 0.5em #ff984400, 0 0 0.1em #ff984400, 0 1px 3px #000;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  text-shadow:  0 1px 3px #000;
 }
 
 .menu__slot:hover>div>p {

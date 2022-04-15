@@ -9,22 +9,58 @@
 
   
   .title__slot h3 {
-    text-transform: uppercase;
+    text-transform:lowercase;
     position: relative;
-    color: #a09f9f;
+    // color: #a09f9f;
+    color: #f4f4f4;
     background-color: rgba(45, 51, 61, 0.8);
     padding: 3.6% 5%;
-    font-size: 2.25em;
-    font-weight: 300;
+    font-size: 3.5em;
+    font-weight: 100;
     z-index: 1;
     background-image: url('./led-grid.png');
     background-size: cover;
+    font-family: 'Ubuntu Mono', monospace;
+    :nth-of-type(1){
+      margin-left: -5.5%;
+    }
   } 
 
   .first {
-    text-align: center;
+    text-align: right;
+    // color: rgb(86, 198, 86) !important;
   }
 
   .second {
       text-align: left;
+      // color: rgb(86, 198, 86) !important;
   }
+
+
+  // .t-one {
+  //   color: red;
+  // }
+
+  // .t-two {
+  //   color: rgb(86, 198, 86);
+  // }
+
+  // .t-three{
+  //   color: blue;
+  // }
+
+  // .t-four{
+  //   color: rgb(141, 27, 247);
+  // }
+
+  // .t-five{
+  //   color: orange;
+  // }
+
+  // .t-six{
+  //   color: cyan;
+  // }
+
+  // .t-seven{
+  //   color: rgb(210, 6, 210);
+  // }
