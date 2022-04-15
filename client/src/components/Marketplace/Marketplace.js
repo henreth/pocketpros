@@ -6,7 +6,7 @@ import axios from 'axios';
 import Card from '../Card/Card'
 
 
-export default function Marketplace({ user, userCards, setUserCards, signedIn }) {
+export default function Marketplace({ user, userCards, setUserCards, marketCards,setMarketCards, signedIn }) {
   document.title = 'Pocket Pros - Your Cards';
   let [selectedRarity, setSelectedRarity] = useState('all')
   let [searchTerm, setSearchTerm] = useState('');
@@ -22,7 +22,7 @@ export default function Marketplace({ user, userCards, setUserCards, signedIn })
   // })
 
 
-  let filteredCards = userCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all').filter(card => card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm === '')
+  let filteredCards = marketCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all').filter(card => card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm === '')
 
   let navigate = useNavigate();
 
@@ -59,9 +59,9 @@ export default function Marketplace({ user, userCards, setUserCards, signedIn })
     <React.Fragment>
       <div className='displayCards-page'>
         <div className='yourCards-filter-container'>
-          <div className='count-container'>
-            <div className='yourCards-Cards-Count'>CARDS:<b>{userCards.length}</b></div>
-          </div>
+          {/* <div className='count-container'>
+            <div className='yourCards-Cards-Count'>CARDS:<b>{marketCards.length}</b></div>
+          </div> */}
           {raritiesToDisplay}
           <input className='search-input' type='text' placeholder='SEARCH' onChange={handleSearchChange}></input>
         </div>

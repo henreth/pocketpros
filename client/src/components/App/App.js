@@ -39,6 +39,8 @@ export default function App() {
   const [userCredits,setUserCredits] = useState(0);
   const [signedIn,setSignedIn] = useState(false)
 
+  const [marketCards,setMarketCards] = useState([]);
+
   useEffect(() => {
     fetch("/me")
       .then((r) => {
@@ -54,6 +56,9 @@ export default function App() {
           navigate("/");
         }
       })
+
+    axios.get('/marketcards')
+    .then(r=>setMarketCards(r.data))
     },[])
 
   let navigate = useNavigate();
@@ -185,6 +190,8 @@ export default function App() {
           user={user} 
           userCards={userCards}
           setUserCards={setUserCards}
+          marketCards={marketCards}
+          setMarketCards={setMarketCards}
           handleClick={handleClick} 
           signedIn={signedIn} 
           />} />
