@@ -5,6 +5,10 @@ class CardsController < ApplicationController
         render json: @cards
     end
 
+    def user_cards
+        render json: @current_user.cards
+    end
+
     def market_cards
         @cards = Card.all.where('for_sale!=false')
         render json: @cards
@@ -30,6 +34,25 @@ class CardsController < ApplicationController
         @card = Card.find_by(id: @id)
         @card.update!(for_sale: false, sale_price: nil)
         render json: @card
+    end
+
+    def buy_card
+        @card_id = params[:card_id]
+        @card = Card.find_by(id: @card_id)
+        @card_owner = @card.user_id
+
+        if @current_user.credits < @card.sale_price
+           message = 'ERROR: You do not have enough credits to buy this card.' 
+        else
+
+        @newcredits = @current_user.credits - @card.sale_price
+        @current_user.update!(credits: @newcredits)
+        @card.update!(for_sale: false, sale_price: nil, user: @current_user)
+
+        message = @current_user
+
+        end 
+        render json: message
     end
 
     def booster_pack

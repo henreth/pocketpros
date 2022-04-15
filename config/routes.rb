@@ -21,12 +21,13 @@ Rails.application.routes.draw do
   # Card Marketplace
   post "/listcard", to: "cards#list_card"
   post "/unlistcard", to: "cards#unlist_card"
-
+  post "/buycard", to: "cards#buy_card"
 
   get "/marketcards", to: "cards#market_cards"
 
   # User
-  post "/buy_pack", to: "users#buy_pack"
+  post "/buypack", to: "users#buy_pack"
+  get "/usercards", to: "cards#user_cards"
 
 
 
