@@ -1,0 +1,143 @@
+.displayCards-page {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+}
+
+.yourCards-container {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    // min-height: 100vh;
+    width: 70%;
+    z-index: 100;
+}
+
+.back_button-yc {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    // margin-top: -307%;
+    z-index: 99;
+    top: -.5vh;
+    left: 0vw;
+    
+
+    h3 {
+        text-transform: uppercase;
+        position: fixed;
+        text-align: center;
+        color: #45758C;
+        background-color: rgba(45, 51, 61, 0.8);
+        padding: 2% 2%;
+        font-size: 1em;
+        font-weight: 300;
+        z-index: -1;
+        background-image: url('../../../img/led-grid.png');
+        background-size: cover;
+    }
+
+    >div>h3 {
+        font-size: 2em;
+        font-weight: bold;
+        min-width: 20%;
+        max-width: 20%;
+        text-align: left;
+        // color: #79D9FF;
+        color: #bbbbbb;
+        transition: .5s ease;
+
+
+        &:hover{
+                   color: #f4f4f4; 
+                   transition: .5s ease;
+        }
+
+    }
+
+}
+
+.yourCards-filter-container {
+    margin-top: 3.5%;
+    margin-bottom: -5%;
+    display: flex;
+    flex-direction: row;
+    // color: rgba(65, 65, 65, 0.729);
+    color: rgba(102, 102, 102, 0.747);
+    top: 25%;
+}
+
+
+.yourCards-tab {
+    align-self: center;
+    justify-self: center;
+    height: 5vh;
+    font-size: larger;
+    transition: .5s ease;
+    padding-top: .75%;
+    margin-right: 7.5%;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        color: #45758C;
+    }
+}
+
+.selected {
+    color: #fff
+}
+
+.count-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: -20.5%;
+    margin-right: 22%;
+    align-items: center;
+
+
+    &:nth-child(1) {
+        // margin-top: -5%;
+        margin-bottom: -5%;
+    }
+}
+
+.yourCards-Cards-Count {
+    align-self: center;
+    justify-self: center;
+    height: 5vh;
+    // font-size: 90%;
+    transition: .5s ease;
+    padding-top: .75%;
+    // margin-right: 7.5%;
+
+    &:nth-of-type(1) {
+        margin-bottom: -35%;
+    }
+
+    b{
+        margin-left: 5%;
+        color: rgba(213, 213, 213, 0.857);
+    }
+}
+
+.search-input {
+    background-color: rgba(54, 54, 54, 0.709);
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 2.75%;
+    font-size: larger;
+    margin-left: 5%;
+    color: #fff;
+    padding-left: 1.5%;
+    padding-right: -2%;
+
+}
