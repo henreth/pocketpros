@@ -1,0 +1,64 @@
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right:0; 
+    background-color: rgba(0, 0, 0, 0.406);
+    z-index: 100;
+    transition: 1s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    z-index: 1000;
+    background-color: white;
+ }
+ 
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-evenly;
+    align-items: space-around;
+    position: absolute;
+    cursor: pointer;
+    background-color: rgba(45, 51, 61, 0.8);
+    background-image: url('./led-grid.png');
+    // color: #79D9FF;
+    color: #bbbbbb;
+    border: none;
+    transition: .5s;
+    font-family: 'Ubuntu Mono', monospace;
+    text-transform: uppercase;
+
+    padding: 3% 4%;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-top: 45%;
+
+    &.openPacks{
+        margin-left: 72.5%;
+    }
+
+    &.goToDeck{
+        margin-left: -72.5%;
+    }
+    
+    &:hover{
+               color: #f4f4f4; 
+               transition: .5s ease;
+    }
+
+
+
+}

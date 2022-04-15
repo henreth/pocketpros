@@ -4,6 +4,7 @@
           transform: scale(1);
   -webkit-perspective: 600px;
           perspective: 600px;
+  cursor: pointer;
   background-color: #6d6d6d;
   width: 15vw;
   height: 38.125vh;

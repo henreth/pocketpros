@@ -2,14 +2,14 @@ import './Card.css';
 import React, { useState } from 'react';
 import icon from '../../img/clearpocketpros.png';
 
-export default function Card({ char }) {
+export default function Card({ char, handleClickCard }) {
     const charImages = require.context('../../img/characters', true);
 
     let cardClass = `charCard ${char.rarity}`
 
     return (
         <div className={cardClass}>
-            <div className='charCard-info-container'>
+            <div className='charCard-info-container' onClick={handleClickCard}>
                 <img src={charImages('./'+char.character.image_url)} className='charCard-image' />
                 <div className='charCard-text'>
                     <div className='charCard-rarity'>{char.rarity[0].toUpperCase() + char.rarity.slice(1,)}</div>
