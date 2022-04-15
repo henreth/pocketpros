@@ -52,6 +52,7 @@
   width: 100%;
   z-index: 100;
   color: #fff;
+  font-size: larger;
 }
 
 .signup-button {
@@ -100,9 +101,9 @@
   background-color: #353333;
   border: none;
   padding: 12px 15px;
-  /* margin-right: 2.5%; */
   width: 45%;
   color: #fff;
+  font-size: larger;
 }
 
 .signup-input-name:nth-child(1) {

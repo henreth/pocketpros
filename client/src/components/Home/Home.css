@@ -75,28 +75,32 @@
 }
 
 .menu__slot:nth-child(2):hover {
-  background: linear-gradient(-140deg, #d8e0dd, lightskyblue, #f2a3ca);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ecd2fe), color-stop(#bddaf8), color-stop(#c5f9ba), to(#fdc3cf));
+  background-image: linear-gradient(90deg, #ecd2fe, #bddaf8, #c5f9ba, #fdc3cf);
   background-size: 300% 300%;
   -webkit-animation: gradient 7.5s ease infinite;
           animation: gradient 7.5s ease infinite;
 }
 
 .menu__slot:nth-child(3):hover {
-  background: linear-gradient(-140deg, hotpink, lightblue, #ebfbff);
+  background-image: -webkit-gradient(linear, left top, right top, from(#c5f9ba), color-stop(#bddaf8), color-stop(#ecd2fe), to(#fdc3cf));
+  background-image: linear-gradient(90deg, #c5f9ba, #bddaf8, #ecd2fe, #fdc3cf);
   background-size: 300% 300%;
   -webkit-animation: gradient 7.5s ease infinite;
           animation: gradient 7.5s ease infinite;
 }
 
 .menu__slot:nth-child(4):hover {
-  background: linear-gradient(100deg, #f2a3ca, #cbe2e9, #4d94f1);
+  background-image: -webkit-gradient(linear, left top, right top, from(#fdc3cf), color-stop(#c5f9ba), color-stop(#ecd2fe), to(#bddaf8));
+  background-image: linear-gradient(90deg, #fdc3cf, #c5f9ba, #ecd2fe, #bddaf8);
   background-size: 300% 300%;
   -webkit-animation: gradient 7.5s ease infinite;
           animation: gradient 7.5s ease infinite;
 }
 
 .menu__slot:nth-child(5):hover {
-  background: linear-gradient(140deg, lightskyblue, #bf779b, #e4f5fc);
+  background-image: -webkit-gradient(linear, left top, right top, from(#bddaf8), color-stop(#fdc3cf), color-stop(#c5f9ba), to(#ecd2fe));
+  background-image: linear-gradient(90deg, #bddaf8, #fdc3cf, #c5f9ba, #ecd2fe);
   background-size: 300% 300%;
   -webkit-animation: gradient 7.5s ease infinite;
           animation: gradient 7.5s ease infinite;
@@ -323,6 +327,12 @@
   text-align: left;
   color: #f4f4f4;
   font-family: 'Ubuntu Mono', monospace;
+}
+
+.menu__slot:active > div > h3 {
+  color: #2d2e2d;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
 }
 
 .menu__slot p {

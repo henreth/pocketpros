@@ -5,9 +5,11 @@
   flex-basis: 50%;
   position: relative;
   overflow: hidden;
-  // cursor: pointer;
   background-color: whitesmoke;
   background: linear-gradient(140deg, rgb(135, 206, 250), rgb(255, 105, 180), rgb(0, 255, 174));
+  background-size: 300% 300%;
+  animation: gradient 7.5s ease infinite;
+
   display: flex;
   flex-direction: column;
 
@@ -30,8 +32,6 @@
   text-transform: uppercase;
   position: relative;
   text-align: center;
-  // color: #45758C;
-  // color: #bbbbbb;
   color: #f4f4f4; 
 
   background-color: rgba(45, 51, 61, 0.8);
@@ -49,7 +49,6 @@
   min-width: 80%;
   max-width: 80%;
   text-align: left;
-  // color: #79D9FF;
   color: #f4f4f4; 
 
 }
@@ -60,13 +59,13 @@
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
-	width: 100%;
+	width: 60%;
   z-index: 100;
-  color: #fff
+  color: #fff;
+  font-size: larger;
 }
 
 .login-button {
-	// border-radius: 20px;
 	border: 1px solid transparent;
 	background-color: rgb(53, 51, 51);
 	color: #FFFFFF;
@@ -79,10 +78,10 @@
 	cursor: pointer;
   width: 30%;
   transition: .25s ease;
+  font-size: larger;
 
   &:hover{
 	border: 1px solid transparent;
-  // color: #79D9FF;
   color: #f4f4f4; 
 
   transition: .5s ease;
