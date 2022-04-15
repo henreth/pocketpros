@@ -283,8 +283,8 @@
           filter: grayscale(100%);
 }
 
-.menu__slot:hover .eich {
-  background-image: url("./eich.png");
+.menu__slot:hover .miguel {
+  background-image: url("./miguel.png");
   background-position: 25% -10px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);

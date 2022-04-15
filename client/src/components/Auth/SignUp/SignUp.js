@@ -56,7 +56,7 @@ export default function SignUp({ username, setUsername, password, setPassword, s
         </div>
         <div className="menu__slot" onClick={handleAuthClick}>
           <div className="blackscreen"></div>
-          <div className="char eich"></div>
+          <div className="char migeul"></div>
           <div className="slot-item-4">
             <h3>Cancel</h3>
             <p></p>
