@@ -39,14 +39,16 @@ class CardsController < ApplicationController
     def buy_card
         @card_id = params[:card_id]
         @card = Card.find_by(id: @card_id)
-        @card_owner = @card.user_id
+        @card_seller = User.find_by(id: @card.user_id)
 
         if @current_user.credits < @card.sale_price
            message = 'ERROR: You do not have enough credits to buy this card.' 
         else
 
-        @newcredits = @current_user.credits - @card.sale_price
-        @current_user.update!(credits: @newcredits)
+        @newbuyercredits = @current_user.credits - @card.sale_price
+        @current_user.update!(credits: @newbuyercredits)
+        @newsellercredits = @card_seller.credits + @card.sale_price
+        @card_seller.update!(credits: @newsellercredits)
         @card.update!(for_sale: false, sale_price: nil, user: @current_user)
 
         message = @current_user
