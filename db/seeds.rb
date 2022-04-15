@@ -300,10 +300,10 @@ Character.create!([
         image_url: "migueldeicaza.jpeg"
     },
     {
-        first_name: "Brendan",
-        last_name: "Eich",
+        first_name: "Carl",
+        last_name: "Sassenrath",
         description: "~",
-        image_url: "brendaneich.jpeg"
+        image_url: "carlsassenrath.jpeg"
     },
     {
         first_name: "Barbara",
@@ -376,6 +376,18 @@ Character.create!([
         last_name: "Goldwasser",
         description: "~",
         image_url: "shafigoldwasser.jpeg"
+    },
+    {
+        first_name: "Lisa",
+        last_name: "Su",
+        description: "~",
+        image_url: "lisasu.jpeg"
+    },
+    {
+        first_name: "Sophie",
+        last_name: "Wilson",
+        description: "~",
+        image_url: "sophiewilson.jpeg"
     },
 
 

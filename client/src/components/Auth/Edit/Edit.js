@@ -77,7 +77,7 @@ export default function Edit({ user, setUser, signedIn, handleLogOut }) {
         </div>
         {/* <div className="menu__slot" onClick={handleLogOut}>
             <div className="blackscreen"></div>
-            <div className="char eich"></div>
+            <div className="char miguel"></div>
             <div className="slot-item-3">
               <h3>Log Out</h3>
               <p></p>
