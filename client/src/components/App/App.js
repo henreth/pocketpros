@@ -16,6 +16,7 @@ import Profile from '../Profile/Profile';
 import Edit from '../Auth/Edit/Edit';
 
 import video from '../../video/rainbowrain.mp4'
+import Marketplace from '../Marketplace/Marketplace';
 
 
 
@@ -38,6 +39,8 @@ export default function App() {
   const [userCredits,setUserCredits] = useState(0);
   const [signedIn,setSignedIn] = useState(false)
 
+  const [marketCards,setMarketCards] = useState([]);
+
   useEffect(() => {
     fetch("/me")
       .then((r) => {
@@ -53,6 +56,9 @@ export default function App() {
           navigate("/");
         }
       })
+
+    axios.get('/marketcards')
+    .then(r=>setMarketCards(r.data))
     },[])
 
   let navigate = useNavigate();
@@ -177,10 +183,18 @@ export default function App() {
           setUserCards={setUserCards}
           handleClick={handleClick} 
           signedIn={signedIn} 
-          handleBackClick={handleBackClick}
           />} />
         <Route path="/openpacks" element={<OpenPacks user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} />
         <Route path="/buypacks" element={<BuyPacks user={user} userCredits={userCredits} setUserCredits={setUserCredits} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} handleBackClick={handleBackClick} />
+        <Route path="/market" element={<Marketplace 
+          user={user} 
+          userCards={userCards}
+          setUserCards={setUserCards}
+          marketCards={marketCards}
+          setMarketCards={setMarketCards}
+          handleClick={handleClick} 
+          signedIn={signedIn} 
+          />} />
         <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
         <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick}/>} />
         <Route path="/signup" element={<SignUp 
