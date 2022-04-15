@@ -21,6 +21,7 @@ export default function About({ signedIn, }) {
 
     return (
         <React.Fragment>
+                    <div className='yourCards-overlay'></div>
             <div className="back_button-yc" onClick={() => navigate('/')}>
                 <div className></div>
                 <div className="log-in-title" >

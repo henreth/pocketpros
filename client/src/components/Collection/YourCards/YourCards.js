@@ -58,6 +58,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   return (
     <React.Fragment>
       <div className='displayCards-page'>
+        <div className='yourCards-overlay'></div>
         <div className='yourCards-filter-container'>
           <div className='count-container'>
             <div className='yourCards-Cards-Count'>CARDS:<b>{userCards.length}</b></div>

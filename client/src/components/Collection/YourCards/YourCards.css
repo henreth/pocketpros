@@ -76,6 +76,7 @@
 }
 
 .yourCards-filter-container {
+  z-index: 5;
   margin-top: 3.5%;
   margin-bottom: -5%;
   display: -webkit-box;
@@ -165,5 +166,29 @@
   color: #fff;
   padding-left: 1.5%;
   padding-right: -2%;
+}
+
+.yourCards-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(56, 55, 55, 0.406);
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=YourCards.css.map */

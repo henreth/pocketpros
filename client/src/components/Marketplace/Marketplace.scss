@@ -141,3 +141,19 @@
     padding-right: -2%;
 
 }
+
+.yourCards-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right:0; 
+    background-color: rgba(56, 55, 55, 0.406);
+    transition: 1s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
