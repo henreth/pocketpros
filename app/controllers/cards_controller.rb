@@ -17,14 +17,17 @@ class CardsController < ApplicationController
 
     def list_card
         @sale_price = params[:sale_price]
+        @id = params[:id]
 
-        @card = Card.find_by(params[:id])
+        @card = Card.find_by(id: @id)
         @card.update!(for_sale: true, sale_price: @sale_price)
         render json: @card
     end
 
     def unlist_card
-        @card = Card.find_by(params[:id])
+        @id = params[:id]
+
+        @card = Card.find_by(id: @id)
         @card.update!(for_sale: false, sale_price: nil)
         render json: @card
     end
