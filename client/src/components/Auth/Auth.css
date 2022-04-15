@@ -38,4 +38,33 @@
 .second {
   text-align: left;
 }
+
+.t-eight {
+  -webkit-animation: blink  1.45s linear infinite;
+          animation: blink  1.45s linear infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /*# sourceMappingURL=Auth.css.map */

@@ -40,7 +40,7 @@ export default function Auth({signedIn,setSignedIn}) {
           <div className=""></div>
           <div className="slot-item-2">
             {/* <h3 className='second'>Programmers</h3> */}
-            <h3 className='second'><a className='t-one'>P</a><a className='t-two'>r</a><a className='t-three'>o</a><a className='t-four'>g</a><a className='t-five'>r</a><a className='t-six'>a</a><a className='t-'>m</a><a className='t-seven'>m</a><a className='t-one'>e</a><a className='t-two'>r</a><a className='t-three'>s</a></h3>
+            <h3 className='second'><a className='t-one'>P</a><a className='t-two'>r</a><a className='t-three'>o</a><a className='t-four'>g</a><a className='t-five'>r</a><a className='t-six'>a</a><a className='t-'>m</a><a className='t-seven'>m</a><a className='t-one'>e</a><a className='t-two'>r</a><a className='t-three'>s</a><a className='t-eight'>_</a></h3>
             <p></p>
           </div>
         </div>
