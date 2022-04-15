@@ -1,9 +1,9 @@
-import './Marketplace.css';
+import '../Collection/YourCards/YourCards.css';
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
-import Card from '../../Card/Card'
+import Card from '../Card/Card'
 
 
 export default function Marketplace({ user, userCards, setUserCards, signedIn }) {
