@@ -7,7 +7,7 @@ import Card from '../../Card/Card'
 import CardInformation from './CardInformation/CardInformation';
 
 
-export default function YourCards({ user, userCards, setUserCards, handleBackClick, signedIn }) {
+export default function YourCards({ user, userCards, setUserCards, handleBackClick, signedIn, users }) {
   document.title = 'Pocket Pros - Your Cards';
   let [showModal,setShowModal]= useState(false);
   let [selectedCard,setSelectedCard] = useState({})
@@ -84,7 +84,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
           </div>
         </div>
       </div>
-      <CardInformation selectedCard={selectedCard} showModal={showModal} setShowModal={setShowModal}/>
+      <CardInformation selectedCard={selectedCard} showModal={showModal} setShowModal={setShowModal} users={users}/>
     </React.Fragment>
 
 

@@ -115,5 +115,35 @@
   border-radius: 5px;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.history-title {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #383838;
+  text-transform: uppercase;
+}
+
+.history-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 70%;
+  width: 100%;
+  background-color: black;
+  color: #383838;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=CardInformation.css.map */

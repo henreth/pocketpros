@@ -4,9 +4,20 @@ import { useNavigate } from 'react-router-dom';
 import icon from '../../../../img/clearpocketpros.png';
 
 
-export default function CardInformation({ selectedCard, showModal, setShowModal }) {
+export default function CardInformation({ selectedCard, showModal, setShowModal,users }) {
     console.log(selectedCard)
     const charImages = require.context('../../../../img/characters', true);
+
+    let cardTransactions = selectedCard.transactions;
+
+    let date = cardTransactions!=undefined?cardTransactions[0].created_at.slice(0, 10):""
+    let year = date.slice(0, 4)
+    let month = date.slice(5, 7);
+    let day = date.slice(8, 10)
+    let toId = cardTransactions!=undefined?cardTransactions[0].to_id-1:''
+    let dateMsg = cardTransactions!=undefined?`> ${day}-${month}-${year}: Unpacked by ${users[toId].username}`:''
+
+
 
     let navigate = useNavigate();
 
@@ -37,8 +48,15 @@ export default function CardInformation({ selectedCard, showModal, setShowModal 
                         </div>
                         <img className='floppy-icon' src={icon} />
                     </div>
-                    <div className='market-information-container'></div>
+                    <div className='market-information-container'>
+                    <div className='history-title'>History</div>
+                    <hr></hr>
+                    <div className='history-list'>
+                        <div>{dateMsg}</div>
+                    </div>
 
+
+                    </div>
                 </div>
             </div>
 
