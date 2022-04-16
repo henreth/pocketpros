@@ -4,7 +4,7 @@ class TransactionsController < ApplicationController
         @char_id = params[:char_id]
         @card_rarity = params[:rarity]
 
-        all_transactions = Transaction.all.filter{|transaction| transaction.card.character.id == @char_id && transaction.card.rarity == @card_rarity}
+        all_transactions = Transaction.all.filter{|transaction| transaction.card.character.id == @char_id && transaction.card.rarity == @card_rarity && transaction.sale_price != nil} 
 
         render json: all_transactions
     end
