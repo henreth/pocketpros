@@ -5,8 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-// ! Add 'GO TO YOUR DECK' 'OPEN MORE PACKS" Buttons
-function Modal({ showModal, setShowModal, openedCards }) {
+export default function Modal({ showModal, setShowModal, openedCards }) {
     let navigate = useNavigate();
 
     if (!showModal) {
@@ -54,5 +53,3 @@ function Modal({ showModal, setShowModal, openedCards }) {
         </React.Fragment>
     );
 }
-
-export default Modal;

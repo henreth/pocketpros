@@ -4,10 +4,13 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 import Card from '../../Card/Card'
+import CardInformation from './CardInformation/CardInformation';
 
 
 export default function YourCards({ user, userCards, setUserCards, handleBackClick, signedIn }) {
   document.title = 'Pocket Pros - Your Cards';
+  let [showModal,setShowModal]= useState(false);
+  let [selectedCard,setSelectedCard] = useState({})
   let [selectedRarity, setSelectedRarity] = useState('all')
   let [searchTerm, setSearchTerm] = useState('');
 
@@ -37,7 +40,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   function displayCards(data) {
     return data.map(card => {
       return (
-        <Card key={card.id} char={card} />
+        <Card key={card.id} char={card} handleClickCard={handleClickCard} setSelectedCard={setSelectedCard}/>
       )
     })
   }
@@ -52,6 +55,10 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
 
   function handleClickTab(e) {
     setSelectedRarity(e.target.textContent.toLowerCase())
+  }
+
+  function handleClickCard(){
+    setShowModal(true);
   }
 
 
@@ -77,7 +84,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
           </div>
         </div>
       </div>
-
+      <CardInformation selectedCard={selectedCard} showModal={showModal} setShowModal={setShowModal}/>
     </React.Fragment>
 
 
