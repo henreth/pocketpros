@@ -23,7 +23,7 @@
   -ms-flex-line-pack: space-evenly;
       align-content: space-evenly;
   width: 70%;
-  z-index: 100;
+  z-index: 99;
 }
 
 .back_button-yc {
@@ -39,7 +39,7 @@
   position: absolute;
   overflow: hidden;
   cursor: pointer;
-  z-index: 99;
+  z-index: 98;
   top: -.5vh;
   left: 0vw;
 }

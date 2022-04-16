@@ -4,7 +4,7 @@
     left: 0;
     bottom: 0;
     right:0; 
-    background-color: rgba(0, 0, 0, 0.406);
+    background-color: rgba(0, 0, 0, 0.573);
     z-index: 100;
     transition: 1s ease;
     display: flex;
@@ -61,4 +61,19 @@
 
 
 
+}
+
+
+.yourCard-Information {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.selectedCard{
+    transform: scale(1.75);
+
+    :hover{
+        transform: scale(1);
+    }
 }

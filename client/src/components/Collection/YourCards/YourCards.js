@@ -10,6 +10,7 @@ import CardInformation from './CardInformation/CardInformation';
 export default function YourCards({ user, userCards, setUserCards, handleBackClick, signedIn }) {
   document.title = 'Pocket Pros - Your Cards';
   let [showModal,setShowModal]= useState(false);
+  let [selectedCard,setSelectedCard] = useState({})
   let [selectedRarity, setSelectedRarity] = useState('all')
   let [searchTerm, setSearchTerm] = useState('');
 
@@ -39,7 +40,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   function displayCards(data) {
     return data.map(card => {
       return (
-        <Card key={card.id} char={card} handleClickCard={handleClickCard}/>
+        <Card key={card.id} char={card} handleClickCard={handleClickCard} setSelectedCard={setSelectedCard}/>
       )
     })
   }
@@ -83,7 +84,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
           </div>
         </div>
       </div>
-      <CardInformation showModal={showModal} setShowModal={setShowModal}/>
+      <CardInformation selectedCard={selectedCard} showModal={showModal} setShowModal={setShowModal}/>
     </React.Fragment>
 
 

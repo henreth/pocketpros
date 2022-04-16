@@ -4,7 +4,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.406);
+  background-color: rgba(0, 0, 0, 0.573);
   z-index: 100;
   -webkit-transition: 1s ease;
   transition: 1s ease;
@@ -77,5 +77,25 @@
   color: #f4f4f4;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+}
+
+.yourCard-Information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.selectedCard {
+  -webkit-transform: scale(1.75);
+          transform: scale(1.75);
+}
+
+.selectedCard :hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 /*# sourceMappingURL=CardInformation.css.map */
