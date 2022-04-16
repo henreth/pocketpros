@@ -91,5 +91,28 @@
     perspective: 600px;
     border-radius: 5px;
     transition: .5s ease;
+    display: flex;
+    flex-direction: column;
+    // font-family: 'Ubuntu Mono', monospace;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.history-title{
+    align-self: center;
+    color: rgb(56, 56, 56);
+    text-transform: uppercase;
+}
+
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 100%;
+    background-color: rgb(95, 95, 95);
+    border-radius: 5px;
+    color:rgb(56, 56, 56);
+    text-transform: uppercase;
 
 }

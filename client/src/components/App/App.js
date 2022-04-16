@@ -33,7 +33,8 @@ export default function App() {
 
 
 
-  const [user,setUser]= useState(null)
+  const [user,setUser]= useState(null);
+  const [users,setUsers]= useState([]);
   const [userCards,setUserCards] = useState([]);
   const [userPacks,setUserPacks] = useState({});
   const [userCredits,setUserCredits] = useState(0);
@@ -47,7 +48,6 @@ export default function App() {
         if (r.ok) {
           r.json().then((user) => {
             setUser(user)
-            // setUserCards(user.cards)
             setUserPacks(user.packs)
             setUserCredits(user.credits)
             setSignedIn(true)
@@ -62,7 +62,10 @@ export default function App() {
 
     axios.get('/usercards')
     .then(r=>setUserCards(r.data))
+    axios.get('/users')
+    .then(r=>{setUsers(r.data)})
     },[])
+
 
   let navigate = useNavigate();
   function handleClick() {
@@ -186,6 +189,7 @@ export default function App() {
           setUserCards={setUserCards}
           handleClick={handleClick} 
           signedIn={signedIn} 
+          users={users}
           />} />
         <Route path="/openpacks" element={<OpenPacks user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} />
         <Route path="/buypacks" element={<BuyPacks user={user} userCredits={userCredits} setUserCredits={setUserCredits} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} handleBackClick={handleBackClick} />
@@ -196,7 +200,8 @@ export default function App() {
           marketCards={marketCards}
           setMarketCards={setMarketCards}
           handleClick={handleClick} 
-          signedIn={signedIn} 
+          signedIn={signedIn}
+          users={users} 
           />} />
         <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
         <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick}/>} />
