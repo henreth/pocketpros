@@ -64,9 +64,12 @@
 }
 
 
-.yourCard-Information {
+.cardInformation-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: -5%;
 }
 
 
@@ -76,4 +79,17 @@
     :hover{
         transform: scale(1);
     }
+}
+
+
+.market-information-container{
+    margin-left: -25%;
+    width: 27vw;
+    height: 38.125vh;
+    background-color: rgb(109, 109, 109);
+    transform: scale(1.75);
+    perspective: 600px;
+    border-radius: 5px;
+    transition: .5s ease;
+
 }

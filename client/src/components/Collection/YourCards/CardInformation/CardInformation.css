@@ -79,7 +79,7 @@
   transition: .5s ease;
 }
 
-.yourCard-Information {
+.cardInformation-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,6 +87,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  margin-top: -5%;
 }
 
 .selectedCard {
@@ -97,5 +101,19 @@
 .selectedCard :hover {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.market-information-container {
+  margin-left: -25%;
+  width: 27vw;
+  height: 38.125vh;
+  background-color: #6d6d6d;
+  -webkit-transform: scale(1.75);
+          transform: scale(1.75);
+  -webkit-perspective: 600px;
+          perspective: 600px;
+  border-radius: 5px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 /*# sourceMappingURL=CardInformation.css.map */
