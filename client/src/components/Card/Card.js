@@ -1,14 +1,35 @@
 import './Card.css';
 import React, { useState } from 'react';
 import icon from '../../img/clearpocketpros.png';
+import axios from 'axios';
 
-export default function Card({ char, handleClickCard,setSelectedCard }) {
+
+export default function Card({ char, handleClickCard,setSelectedCard,setNumCardOwners, setNumOtherCards, setAllCardTransactions }) {
     const charImages = require.context('../../img/characters', true);
 
     let cardClass = `charCard ${char.rarity}`
 
     function handleClickChar(){
         setSelectedCard(char)
+        let charId = char.character.id
+        let cardRarity = char.rarity
+        let cardDetails = {
+            "char_id": charId,
+            "rarity": cardRarity
+        }
+        
+        axios.post('/findcardowners',cardDetails)
+        .then(r=>{setNumCardOwners(r.data.length)})
+
+        axios.post('/findcardsstrict',cardDetails)
+        .then(r=>{setNumOtherCards(r.data.length)})
+
+
+        axios.post('/findtransactions', cardDetails)
+        .then(r=>{setAllCardTransactions(r.data)})
+
+
+
         handleClickCard();
     }
 

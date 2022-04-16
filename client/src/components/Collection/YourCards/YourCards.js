@@ -14,6 +14,11 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   let [selectedRarity, setSelectedRarity] = useState('all')
   let [searchTerm, setSearchTerm] = useState('');
 
+  //  * for additoinal information 
+  let [numCardOwners,setNumCardOwners] =useState(0)
+  let [numOthercards,setNumOtherCards] =useState(0)
+  let [allCardTransactions,setAllCardTransactions] = useState([])
+
   function handleSearchChange(e){
     setSearchTerm(e.target.value);
   }
@@ -40,7 +45,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   function displayCards(data) {
     return data.map(card => {
       return (
-        <Card key={card.id} char={card} handleClickCard={handleClickCard} setSelectedCard={setSelectedCard}/>
+        <Card key={card.id} char={card} handleClickCard={handleClickCard} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} />
       )
     })
   }
@@ -84,7 +89,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
           </div>
         </div>
       </div>
-{selectedCard!={}?<CardInformation selectedCard={selectedCard} showModal={showModal} setShowModal={setShowModal} users={users}/>:null}    
+{selectedCard!={}?<CardInformation selectedCard={selectedCard} showModal={showModal} setShowModal={setShowModal} users={users} numCardOwners={numCardOwners} numOthercards={numOthercards} allCardTransactions={allCardTransactions} />:null}    
 </React.Fragment>
 
 

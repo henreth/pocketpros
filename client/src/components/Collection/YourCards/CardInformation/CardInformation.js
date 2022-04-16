@@ -2,35 +2,13 @@ import React,{useEffect, useState} from 'react';
 import './CardInformation.css';
 import { useNavigate } from 'react-router-dom';
 import icon from '../../../../img/clearpocketpros.png';
-import axios from 'axios';
 
 import Graph from './Graph/Graph';
 
 
-export default function CardInformation({ selectedCard, showModal, setShowModal,users }) {
+export default function CardInformation({ selectedCard, showModal, setShowModal,users, numCardOwners, numOthercards,allCardTransactions}) {
     let navigate = useNavigate();
     const charImages = require.context('../../../../img/characters', true);
-    let [numCardOwners,setNumCardOwners] =useState(0)
-    let [numOthercards,setNumOtherCards] =useState(0)
-    let [allCardTransactions,setAllCardTransactions] = useState([])
-    let charId = selectedCard==undefined?1:selectedCard.character.id
-    let cardRarity = selectedCard==undefined?'gold':selectedCard.rarity
-    let cardDetails = {
-        "char_id": charId,
-        "rarity": cardRarity
-    }
-
-    useEffect(()=>{
-        axios.post('/findcardowners',cardDetails)
-        .then(r=>{setNumOtherCards(r.data.length)})
-
-        axios.post('/findcardsstrict',cardDetails)
-        .then(r=>{setNumOtherCards(r.data.length)})
-
-
-        axios.post('/findtransactions', cardDetails)
-        .then(r=>{setAllCardTransactions(r.data)})
-    },selectedCard)
 
     if (selectedCard==={}){
         return null
@@ -91,17 +69,17 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
                         </div>
                         <img className='floppy-icon' src={icon} />
                     </div>
+
+
                     <div className='market-information-container'>
                     <div className='history-title'>{selectedCard.rarity} {selectedCard.character.first_name} {selectedCard.character.last_name}</div>
                     <div className='history-title'>🟥 {numOthercards}  TOTAL  👤 {numCardOwners} Owners </div>
                     <div className='history-title'>Average Sale Price: 🪙 {averagePrice} </div>
                     <div className='history-list'>
-                        <div>{dateMsg}</div>
+
+                        {/* <div>{dateMsg}</div> */}
                     </div>
-                    <div div='sale-status'>
-                    <div>Status: {selectedCard.for_sale?'For Sale': 'Not For Sale'}</div>
-                    <div>{selectedCard.for_sale?`Price: 🪙 ${selectedCard.sale_price}`:null}</div>
-                    </div>
+
 
                     </div>
                 </div>
