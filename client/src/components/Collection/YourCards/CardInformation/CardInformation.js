@@ -5,8 +5,17 @@ import icon from '../../../../img/clearpocketpros.png';
 
 
 export default function CardInformation({ selectedCard, showModal, setShowModal,users }) {
-    console.log(selectedCard)
+    let navigate = useNavigate();
     const charImages = require.context('../../../../img/characters', true);
+
+    if (selectedCard==={}){
+        return null
+    }
+
+    if (!showModal) {
+        return null
+    }
+
 
     let cardTransactions = selectedCard.transactions;
 
@@ -18,12 +27,6 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
     let dateMsg = cardTransactions!=undefined?`> ${day}-${month}-${year}: Unpacked by ${users[toId].username}`:''
 
 
-
-    let navigate = useNavigate();
-
-    if (!showModal) {
-        return null
-    }
 
     function handleClick() {
         setShowModal(false)

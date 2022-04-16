@@ -9,6 +9,35 @@ class CardsController < ApplicationController
         render json: @current_user.cards
     end
 
+    def find_cards_relative 
+        @char_id = params[:char_id]
+
+        all_cards = Card.all.filter{|card| card.character_id==@char_id}
+        
+
+        render json: all_cards
+    end
+
+    def find_cards_strict
+        @char_id = params[:char_id]
+        @card_rarity = params[:rarity]
+
+        all_cards = Card.all.filter{|card| card.character_id==@char_id && card.rarity == @card_rarity}        
+
+        render json: all_cards
+    end
+
+    def find_card_owners
+        @char_id = params[:char_id]
+        @card_rarity = params[:rarity]
+
+        all_cards = Card.all.filter{|card| card.character_id==@char_id && card.rarity == @card_rarity}        
+        card_owners = all_cards.map{|card| User.find_by(id: card.user_id)}.uniq
+
+        render json: card_owners
+
+    end
+
     def market_cards
         @cards = Card.all.where('for_sale!=false')
         render json: @cards

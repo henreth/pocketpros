@@ -25,6 +25,14 @@ Rails.application.routes.draw do
 
   get "/marketcards", to: "cards#market_cards"
 
+  # Cards
+  post "/findcardsrelative", to: "cards#find_cards_relative"
+  post "/findcardsstrict", to: "cards#find_cards_strict"
+  post "/findcardowners", to: "cards#find_card_owners"
+
+  # Transactions
+  post "/findtransactions", to: "transactions#find_all_tx"
+
   # User
   post "/buypack", to: "users#buy_pack"
   get "/usercards", to: "cards#user_cards"
