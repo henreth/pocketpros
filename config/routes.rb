@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   # Cards
   post "/findcardsrelative", to: "cards#find_cards_relative"
   post "/findcardsstrict", to: "cards#find_cards_strict"
+  post "/findcardowners", to: "cards#find_card_owners"
 
   # User
   post "/buypack", to: "users#buy_pack"
