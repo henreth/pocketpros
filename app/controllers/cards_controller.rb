@@ -12,7 +12,7 @@ class CardsController < ApplicationController
     def find_cards_relative 
         @char_id = params[:char_id]
 
-        all_cards = Card.all.filter{|card| card.character_id==char_id}
+        all_cards = Card.all.filter{|card| card.character_id==@char_id}
         
 
         render json: all_cards
@@ -20,8 +20,9 @@ class CardsController < ApplicationController
 
     def find_cards_strict
         @char_id = params[:char_id]
+        @card_rarity = params[:rarity]
 
-        all_cards = Card.all.filter{|card| card.character_id==c.character_id && card.rarity == c.rarity}        
+        all_cards = Card.all.filter{|card| card.character_id==@char_id && card.rarity == @card_rarity}        
 
         render json: all_cards
     end
