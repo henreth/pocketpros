@@ -108,9 +108,10 @@
 .history-list {
     display: flex;
     flex-direction: column;
-    height: 70%;
+    height: 60%;
     width: 100%;
-    background-color: black;
+    background-color: rgb(95, 95, 95);
+    border-radius: 5px;
     color:rgb(56, 56, 56);
     text-transform: uppercase;
 

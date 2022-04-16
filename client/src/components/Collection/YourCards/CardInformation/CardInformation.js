@@ -50,11 +50,14 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
                     </div>
                     <div className='market-information-container'>
                     <div className='history-title'>History</div>
-                    <hr></hr>
+                    <div> # of Transactions: {cardTransactions.length-1}</div>
                     <div className='history-list'>
                         <div>{dateMsg}</div>
                     </div>
-
+                    <div div='sale-status'>
+                    <div>Status: {selectedCard.for_sale?'For Sale': 'Not For Sale'}</div>
+                    <div>{selectedCard.for_sale?`Price: 🪙 ${selectedCard.sale_price}`:null}</div>
+                    </div>
 
                     </div>
                 </div>
