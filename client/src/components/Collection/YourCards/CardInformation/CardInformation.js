@@ -1,12 +1,36 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import './CardInformation.css';
 import { useNavigate } from 'react-router-dom';
 import icon from '../../../../img/clearpocketpros.png';
+import axios from 'axios';
+
+import Graph from './Graph/Graph';
 
 
 export default function CardInformation({ selectedCard, showModal, setShowModal,users }) {
     let navigate = useNavigate();
     const charImages = require.context('../../../../img/characters', true);
+    let [numCardOwners,setNumCardOwners] =useState(0)
+    let [numOthercards,setNumOtherCards] =useState(0)
+    let [allCardTransactions,setAllCardTransactions] = useState([])
+    let charId = selectedCard==undefined?1:selectedCard.character.id
+    let cardRarity = selectedCard==undefined?'gold':selectedCard.rarity
+    let cardDetails = {
+        "char_id": charId,
+        "rarity": cardRarity
+    }
+
+    useEffect(()=>{
+        axios.post('/findcardowners',cardDetails)
+        .then(r=>{setNumOtherCards(r.data.length)})
+
+        axios.post('/findcardsstrict',cardDetails)
+        .then(r=>{setNumOtherCards(r.data.length)})
+
+
+        axios.post('/findtransactions', cardDetails)
+        .then(r=>{setAllCardTransactions(r.data)})
+    },selectedCard)
 
     if (selectedCard==={}){
         return null
@@ -15,6 +39,8 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
     if (!showModal) {
         return null
     }
+
+
 
 
     let cardTransactions = selectedCard.transactions;
@@ -32,8 +58,22 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
         setShowModal(false)
     }
 
+    function calculateAverage(array) {
+        let total = 0;
+        let count = 0;
+    
+        array.forEach(function(item, index) {
+            total += item;
+            count++;
+        });
+    
+        return total / count;
+    }
+
 
     let cardClass = `charCard ${selectedCard.rarity} selectedCard`
+
+    let averagePrice = allCardTransactions.length===0?'0 (No Sales Found)':calculateAverage(allCardTransactions.map(tx=>parseInt(tx.sale_price)))
 
     return (
         <React.Fragment>
@@ -52,8 +92,9 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
                         <img className='floppy-icon' src={icon} />
                     </div>
                     <div className='market-information-container'>
-                    <div className='history-title'>History</div>
-                    <div> # of Transactions: {cardTransactions.length-1}</div>
+                    <div className='history-title'>{selectedCard.rarity} {selectedCard.character.first_name} {selectedCard.character.last_name}</div>
+                    <div className='history-title'>🟥 {numOthercards}  TOTAL  👤 {numCardOwners} Owners </div>
+                    <div className='history-title'>Average Sale Price: 🪙 {averagePrice} </div>
                     <div className='history-list'>
                         <div>{dateMsg}</div>
                     </div>
