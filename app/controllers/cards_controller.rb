@@ -9,6 +9,14 @@ class CardsController < ApplicationController
         render json: @current_user.cards
     end
 
+    def find_cards_relative 
+        @char_id = params[:char_id]
+
+        all_cards = Card.all.filter{|card| card.character_id==char_id}
+
+        render json: all_cards
+    end
+
     def market_cards
         @cards = Card.all.where('for_sale!=false')
         render json: @cards
