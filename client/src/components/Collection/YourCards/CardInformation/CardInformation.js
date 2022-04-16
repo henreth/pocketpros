@@ -5,6 +5,7 @@ import icon from '../../../../img/clearpocketpros.png';
 
 
 export default function CardInformation({ selectedCard, showModal, setShowModal }) {
+    console.log(selectedCard)
     const charImages = require.context('../../../../img/characters', true);
 
     let navigate = useNavigate();

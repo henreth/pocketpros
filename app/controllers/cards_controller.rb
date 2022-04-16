@@ -83,13 +83,21 @@ class CardsController < ApplicationController
 
         # Bronze
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:0)
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:0)
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:0)
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
+
         # Silver
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:1)
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:1)
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         # Gold
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)        
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
+
         cards = cards.shuffle
         end
         render json: cards    

@@ -47,7 +47,7 @@ export default function App() {
         if (r.ok) {
           r.json().then((user) => {
             setUser(user)
-            setUserCards(user.cards)
+            // setUserCards(user.cards)
             setUserPacks(user.packs)
             setUserCredits(user.credits)
             setSignedIn(true)
@@ -59,6 +59,9 @@ export default function App() {
 
     axios.get('/marketcards')
     .then(r=>setMarketCards(r.data))
+
+    axios.get('/usercards')
+    .then(r=>setUserCards(r.data))
     },[])
 
   let navigate = useNavigate();
