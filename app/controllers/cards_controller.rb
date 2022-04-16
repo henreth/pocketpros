@@ -13,6 +13,15 @@ class CardsController < ApplicationController
         @char_id = params[:char_id]
 
         all_cards = Card.all.filter{|card| card.character_id==char_id}
+        
+
+        render json: all_cards
+    end
+
+    def find_cards_strict
+        @char_id = params[:char_id]
+
+        all_cards = Card.all.filter{|card| card.character_id==c.character_id && card.rarity == c.rarity}        
 
         render json: all_cards
     end
