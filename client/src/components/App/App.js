@@ -38,7 +38,11 @@ export default function App() {
   const [userCredits,setUserCredits] = useState(0);
   const [signedIn,setSignedIn] = useState(false)
 
+  // Market
   const [marketCards,setMarketCards] = useState([]);
+  let [marketSelectedRarity, setMarketSelectedRarity] = useState('all')
+  let [marketSearchTerm, setMarketSearchTerm] = useState('');
+
 
   useEffect(() => {
     fetch("/me")
@@ -201,7 +205,11 @@ export default function App() {
           setMarketCards={setMarketCards}
           handleClick={handleClick} 
           signedIn={signedIn}
-          users={users} 
+          users={users}
+          marketSearchTerm={marketSearchTerm}
+          setMarketSearchTerm={setMarketSearchTerm}
+          marketSelectedRarity={marketSelectedRarity}
+          setMarketSelectedRarity={setMarketSelectedRarity}
           />} />
         <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
         <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick}/>} />

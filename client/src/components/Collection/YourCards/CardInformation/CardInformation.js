@@ -235,6 +235,10 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
             })
     }
 
+    function clickViewAll(){
+        navigate('/market')
+    }
+
     return (
         <React.Fragment>
             <div className="overlay" >
@@ -274,11 +278,11 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
                             {selectedCard.for_sale === true ? <React.Fragment>
                                 {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Take Off Market</button>}
                                 {clickedUnlist ? <button className='cardInformation-button'>Are You Sure?</button> : null}
-                                {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickConfirmUnlist}>Confirm</button> : <button className='cardInformation-button'>View All</button>}
+                                {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickConfirmUnlist}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
                             </React.Fragment> : <React.Fragment>
                                 {clickedList ? <button className='cardInformation-button' onClick={handleClickListForSale}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickListForSale}>List For Sale</button>}
                                 {clickedList ? <input className='saleprice-input' type='number' value={listingPrice} onChange={handleChangeListingPrice} min='1' placeholder='Listing Price'></input> : null}
-                                {clickedList ? <button className='cardInformation-button' onClick={handleClickConfirmList}>Confirm</button> : <button className='cardInformation-button'>View All</button>}
+                                {clickedList ? <button className='cardInformation-button' onClick={handleClickConfirmList}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
                             </React.Fragment>}
                         </div>
 
