@@ -11,6 +11,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
     let navigate = useNavigate();
     const charImages = require.context('../../../../img/characters', true);
     let [clickedList, setClickedList] = useState(false);
+    let [clickedUnlist, setClickedUnlist] = useState(false);
     let [listingPrice, setListingPrice] = useState('');
 
 
@@ -178,9 +179,35 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         }
     }
 
+    // let displayButtons;
+    // if (selectedCard.for_sale === true) {
+    //     displayButtons = () => {
+    //         return (
+    //             <React.Fragment>
+    //                 {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Take Off Market</button>}
+    //                 {clickedUnlist ? <button className='cardInformation-button'>Are You Sure?</button> : null}
+    //                 {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickConfirmUnlist}>Confirm</button> : <button className='cardInformation-button'>View All</button>}
+    //             </React.Fragment>
+    //         )
+    //     }
+    // } else if (selectedCard.for_sale === false) {
+    //     return (
+    //         <React.Fragment>
+    //             {clickedList ? <button className='cardInformation-button' onClick={handleClickListForSale}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickListForSale}>List For Sale</button>}
+    //             {clickedList ? <input className='saleprice-input' type='number' value={listingPrice} onChange={handleChangeListingPrice} min='1' placeholder='Listing Price'></input> : null}
+    //             {clickedList ? <button className='cardInformation-button' onClick={handleClickConfirmList}>Confirm</button> : <button className='cardInformation-button'>View All</button>}
+    //         </React.Fragment>
+    //     )
+    // }
+
     function handleClickListForSale() {
         setClickedList(!clickedList)
     }
+
+    function handleClickTakeOffMarket() {
+        setClickedUnlist(!clickedUnlist)
+    }
+
 
     function handleChangeListingPrice(e) {
         setListingPrice(parseInt(Math.round(e.target.value)))
@@ -204,6 +231,19 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
                 })
         }
 
+    }
+
+    function handleClickConfirmUnlist(){
+        let details = {
+            'id': selectedCard.id,
+        }
+        axios.post('/unlistcard', details)
+            .then(r => {
+                alert('Your card has been taken off the market.')
+                setSelectedCard(r.data)
+                setClickedUnlist(false)
+                setListingPrice('')
+            })
     }
 
     return (
@@ -242,9 +282,15 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
                             {tabsToDisplay}
                         </div>
                         <div className='button-wrapper'>
-                            {clickedList ? <button className='cardInformation-button' onClick={handleClickListForSale}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickListForSale}>List For Sale</button>}
-                            {clickedList ? <input className='saleprice-input' type='number' value={listingPrice} onChange={handleChangeListingPrice} min='1' placeholder='Listing Price'></input> : null}
-                            {clickedList ? <button className='cardInformation-button' onClick={handleClickConfirmList}>Confirm</button> : <button className='cardInformation-button'>View All</button>}
+                            {selectedCard.for_sale===true?<React.Fragment>
+                    {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Take Off Market</button>}
+                    {clickedUnlist ? <button className='cardInformation-button'>Are You Sure?</button> : null}
+                    {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickConfirmUnlist}>Confirm</button> : <button className='cardInformation-button'>View All</button>}
+                </React.Fragment>:<React.Fragment>
+                {clickedList ? <button className='cardInformation-button' onClick={handleClickListForSale}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickListForSale}>List For Sale</button>}
+                {clickedList ? <input className='saleprice-input' type='number' value={listingPrice} onChange={handleChangeListingPrice} min='1' placeholder='Listing Price'></input> : null}
+                {clickedList ? <button className='cardInformation-button' onClick={handleClickConfirmList}>Confirm</button> : <button className='cardInformation-button'>View All</button>}
+            </React.Fragment>}
                         </div>
 
 
