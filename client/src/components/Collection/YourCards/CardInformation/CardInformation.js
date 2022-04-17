@@ -191,6 +191,11 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
                     <div className='market-information-container'>
                         <div className='history-title'>{selectedCard.rarity} {selectedCard.character.first_name} {selectedCard.character.last_name}</div>
                         <div className='history-summary'>
+                            <div className='totalcardscount'>Owner: <b>{selectedCard.user.username}</b></div>
+                            <div className='ownerscount'>Status: <b>{selectedCard.for_sale?'For Sale':'Not For Sale'}</b></div>
+                            <div className='avgsaleprice'>{selectedCard.for_sale?'Cost: 🪙':''} <b>{selectedCard.for_sale?selectedCard.sale_price:''}</b></div>
+                        </div>
+                        <div className='history-summary'>
                             <div className='totalcardscount'>⧉ <b>{numOthercards}</b> Copies</div>
                             <div className='ownerscount'>👥 <b>{numCardOwners}</b> Owners</div>
                             <div className='avgsaleprice'>🪙 <b>{averagePrice}</b> {priceMessage}</div>
@@ -201,6 +206,10 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
                         </div>
                         <div className='history-tabs-container'>
                             {tabsToDisplay}
+                        </div>
+                        <div className='button-wrapper'>
+                            <button className='cardInformation-button'>List For Sale</button>
+                            <button className='cardInformation-button'>View All</button>
                         </div>
 
 

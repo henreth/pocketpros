@@ -34,51 +34,6 @@
   background-color: white;
 }
 
-.button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
-  -webkit-box-align: space-around;
-      -ms-flex-align: space-around;
-          align-items: space-around;
-  position: absolute;
-  cursor: pointer;
-  background-color: rgba(45, 51, 61, 0.8);
-  background-image: url("./led-grid.png");
-  color: #bbbbbb;
-  border: none;
-  -webkit-transition: .5s;
-  transition: .5s;
-  font-family: 'Ubuntu Mono', monospace;
-  text-transform: uppercase;
-  padding: 3% 4%;
-  font-size: 1.5em;
-  font-weight: 300;
-  margin-top: 45%;
-}
-
-.button.openPacks {
-  margin-left: 72.5%;
-}
-
-.button.goToDeck {
-  margin-left: -72.5%;
-}
-
-.button:hover {
-  color: #f4f4f4;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
 .cardInformation-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -228,7 +183,54 @@
   color: #828282;
 }
 
-.transaction-row.start {
+.transaction-row:nth-of-type(1) {
   margin-top: 1%;
+}
+
+.button-wrapper {
+  margin-top: 3.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cardInformation-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  cursor: pointer;
+  background-color: rgba(28, 28, 28, 0.8);
+  color: #bbbbbb;
+  border: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-family: 'Ubuntu Mono', monospace;
+  text-transform: uppercase;
+  padding: 3% 4%;
+  font-size: 2vh;
+  font-weight: 300;
+}
+
+.cardInformation-button:hover {
+  color: #f4f4f4;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 /*# sourceMappingURL=CardInformation.css.map */
