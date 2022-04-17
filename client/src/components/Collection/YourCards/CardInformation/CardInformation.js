@@ -56,20 +56,13 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
         let year = date.slice(0, 4)
         let month = date.slice(5, 7);
         let day = date.slice(8, 10)
-        let toId = tx.to_id - 1
-        let fromId = tx.from_id - 1
-        let txRow = `> ${day}-${month}-${year} - From: ${users[toId].username} To: ${users[fromId].username} Price: 🪙 ${tx.sale_price}`
-        return (<div className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{users[toId].username}</b> - To: <b>{users[fromId].username}</b> - Price: <b>🪙 {tx.sale_price}</b></div>)
+        let toId = tx.to_id 
+        let toUsername  = users.filter(user=> user.id == toId)[0].username
+        let fromId = tx.from_id
+        let fromUsername  = users.filter(user=> user.id == fromId)[0].username
+
+        return (<div className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - Price: <b>🪙 {tx.sale_price}</b></div>)
     })
-
-
-    let date = cardTransactions != undefined ? cardTransactions[0].created_at.slice(0, 10) : ""
-    let year = date.slice(0, 4)
-    let month = date.slice(5, 7);
-    let day = date.slice(8, 10)
-    let toId = cardTransactions != undefined ? cardTransactions[0].to_id - 1 : ''
-    let dateMsg = cardTransactions != undefined ? `> ${day}-${month}-${year}: Unpacked by ${users[toId].username}` : ''
-
 
 
     function handleClickCard() {
@@ -107,6 +100,14 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
         setSelectedTab(e.target.textContent)
     }
 
+    let date = cardTransactions != undefined ? cardTransactions[0].created_at.slice(0, 10) : ""
+    let year = date.slice(0, 4)
+    let month = date.slice(5, 7);
+    let day = date.slice(8, 10)
+    let toId = cardTransactions != undefined ? cardTransactions[0].to_id: ''
+    let toUsername  = users.filter(user=> user.id == toId)[0].username
+
+
     let displayItem;
     if (selectedTab === 'SALE PRICE') {
         displayItem = () => {
@@ -120,7 +121,7 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
         displayItem = () => {
             return (
                 <React.Fragment>
-                    <div className='transaction-row'>> <b>{day}-{month}-{year}</b> - Unpacked by: <b>{users[toId].username}</b></div>
+                    <div className='transaction-row'>> <b>{day}-{month}-{year}</b> - Unpacked by: <b>{toUsername}</b></div>
                     {transactionsToDisplay}
                 </React.Fragment>
             )
