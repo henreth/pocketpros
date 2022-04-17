@@ -189,7 +189,7 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
                     </div>
 
                     <div className='market-information-container'>
-                        <div className='history-title'>{selectedCard.rarity} {selectedCard.character.first_name} {selectedCard.character.last_name}</div>
+                        <div className='history-title'><b>{selectedCard.character.first_name} {selectedCard.character.last_name}</b> ({selectedCard.rarity})</div>
                         <div className='history-summary'>
                             <div className='totalcardscount'>Owner: <b>{selectedCard.user.username}</b></div>
                             <div className='ownerscount'>Status: <b>{selectedCard.for_sale?'For Sale':'Not For Sale'}</b></div>

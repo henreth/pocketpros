@@ -64,6 +64,10 @@
     text-transform: uppercase;
     font-size: large;
     margin-bottom: .5%;
+    b {
+        color: rgb(175, 175, 175);
+    }
+
 }
 
 .history-summary {
@@ -88,7 +92,7 @@
 .history-list {
     display: flex;
     flex-direction: column;
-    height: 60%;
+    height: 62.5%;
     width: 100%;
     background-color: rgb(29, 29, 29);
     // border-radius: 5px;
@@ -154,7 +158,7 @@
 }
 
 .button-wrapper{   
-    margin-top: 1.5%; 
+    margin-top: .5%; 
     display:flex;
     flex-direction: row;
     justify-content: space-around;

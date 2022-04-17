@@ -90,6 +90,10 @@
   margin-bottom: .5%;
 }
 
+.history-title b {
+  color: #afafaf;
+}
+
 .history-summary {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,7 +129,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 60%;
+  height: 62.5%;
   width: 100%;
   background-color: #1d1d1d;
   color: #383838;
@@ -193,7 +197,7 @@
 }
 
 .button-wrapper {
-  margin-top: 1.5%;
+  margin-top: .5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
