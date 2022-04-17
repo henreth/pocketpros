@@ -83,6 +83,7 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  color: #1e1e1e;
   color: #282828;
   text-transform: uppercase;
   font-size: large;
@@ -100,12 +101,16 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #1e1e1e;
   text-transform: uppercase;
   font-size: 70%;
-  font-weight: 300;
+  font-weight: 400;
+  border-top: 2px solid #282828;
+  margin-top: .25%;
+  margin-bottom: .25%;
 }
 
 .history-summary b {
@@ -188,7 +193,7 @@
 }
 
 .button-wrapper {
-  margin-top: 3.5%;
+  margin-top: 1.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -210,11 +215,8 @@
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
-  -webkit-box-align: space-around;
-      -ms-flex-align: space-around;
-          align-items: space-around;
+  -ms-flex-item-align: center;
+      align-self: center;
   cursor: pointer;
   background-color: rgba(28, 28, 28, 0.8);
   color: #bbbbbb;
@@ -224,7 +226,7 @@
   font-family: 'Ubuntu Mono', monospace;
   text-transform: uppercase;
   padding: 3% 4%;
-  font-size: 2vh;
+  font-size: 1.75vh;
   font-weight: 300;
 }
 
