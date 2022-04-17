@@ -32,7 +32,7 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
   })
 
 
-  let filteredCards = userCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all').filter(card => card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm === '')
+  let filteredCards = userCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all').filter(card => card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || searchTerm.toLowerCase().includes(card.character.last_name.toLowerCase())  || searchTerm === '').sort((card1,card2)=>{card1.character.first_name.localeCompare(card2.character.first_name)})
 
   let navigate = useNavigate();
 
