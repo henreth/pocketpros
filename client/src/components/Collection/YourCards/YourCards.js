@@ -18,6 +18,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   let [numCardOwners,setNumCardOwners] =useState(0)
   let [numOthercards,setNumOtherCards] =useState(0)
   let [allCardTransactions,setAllCardTransactions] = useState([])
+  let [activeListings,setActiveListings] = useState([])
   let [selectedTab,setSelectedTab] = useState('SALE PRICE')
 
   function handleSearchChange(e){
@@ -46,7 +47,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   function displayCards(data) {
     return data.map(card => {
       return (
-        <Card key={card.id} char={card} handleClickCard={handleClickCard} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setSelectedTab={setSelectedTab} />
+        <Card key={card.id} char={card} handleClickCard={handleClickCard} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab} />
       )
     })
   }
@@ -98,6 +99,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
             numCardOwners={numCardOwners} 
             numOthercards={numOthercards} 
             allCardTransactions={allCardTransactions}
+            activeListings={activeListings}
             selectedTab={selectedTab}
             setSelectedTab={setSelectedTab} 
             />:null}    

@@ -6,7 +6,7 @@ import icon from '../../../../img/clearpocketpros.png';
 import Graph from './Graph/Graph';
 
 
-export default function CardInformation({ selectedCard, showModal, setShowModal, users, numCardOwners, numOthercards, allCardTransactions, selectedTab, setSelectedTab }) {
+export default function CardInformation({ selectedCard, showModal, setShowModal, users, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab }) {
     let navigate = useNavigate();
     const charImages = require.context('../../../../img/characters', true);
 
@@ -46,25 +46,6 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
 
     };
 
-
-
-
-
-    let cardTransactions = selectedCard.transactions;
-    let transactionsToDisplay = cardTransactions.slice(1,).map(tx => {
-        let date = tx.created_at.slice(0, 10)
-        let year = date.slice(0, 4)
-        let month = date.slice(5, 7);
-        let day = date.slice(8, 10)
-        let toId = tx.to_id 
-        let toUsername  = users.filter(user=> user.id == toId)[0].username
-        let fromId = tx.from_id
-        let fromUsername  = users.filter(user=> user.id == fromId)[0].username
-
-        return (<div className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - Price: <b>🪙 {tx.sale_price}</b></div>)
-    })
-
-
     function handleClickCard() {
         setShowModal(false)
     }
@@ -80,7 +61,6 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
 
         return total / count;
     }
-
 
     let cardClass = `charCard ${selectedCard.rarity} selectedCard`
 
@@ -100,6 +80,7 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
         setSelectedTab(e.target.textContent)
     }
 
+    let cardTransactions = selectedCard.transactions;
     let date = cardTransactions != undefined ? cardTransactions[0].created_at.slice(0, 10) : ""
     let year = date.slice(0, 4)
     let month = date.slice(5, 7);
@@ -107,6 +88,28 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
     let toId = cardTransactions != undefined ? cardTransactions[0].to_id: ''
     let toUsername  = users.filter(user=> user.id == toId)[0].username
 
+
+    let transactionsToDisplay = cardTransactions.slice(1,).map(tx => {
+        let date = tx.created_at.slice(0, 10)
+        let year = date.slice(0, 4)
+        let month = date.slice(5, 7);
+        let day = date.slice(8, 10)
+        let toId = tx.to_id 
+        let toUsername  = users.filter(user=> user.id == toId)[0].username
+        let fromId = tx.from_id
+        let fromUsername  = users.filter(user=> user.id == fromId)[0].username
+
+        return (<div className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
+    })
+
+    let listingsToDisplay = activeListings.map(card=>{
+        let date = card.updated_at.slice(0, 10)
+        let year = date.slice(0, 4)
+        let month = date.slice(5, 7);
+        let day = date.slice(8, 10)
+
+        return (<div className='transaction-row'>> <b>{day}-{month}-{year}</b> - Seller: <b>{card.user.username}</b> - 🪙 <b>{card.sale_price}</b> </div>)
+    })
 
     let displayItem;
     if (selectedTab === 'SALE PRICE') {
@@ -127,7 +130,11 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
             )
         }
     } else if (selectedTab === 'ACTIVE LISTINGS') {
-        displayItem = () => { return (null) }
+        displayItem = () => { return (
+            <React.Fragment>
+                {listingsToDisplay}
+            </React.Fragment>
+        ) }
     }
 
     return (
