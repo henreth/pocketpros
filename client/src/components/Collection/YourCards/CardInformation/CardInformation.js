@@ -79,7 +79,9 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
 
     let cardClass = `charCard ${selectedCard.rarity} selectedCard`
 
-    let averagePrice = allCardTransactions.length===0?'0 (No Sales Found)':calculateAverage(allCardTransactions.map(tx=>parseInt(tx.sale_price)))
+    let avg = calculateAverage(allCardTransactions.map(tx=>parseInt(tx.sale_price)));
+    let averagePrice = allCardTransactions.length===0?'':Math.round(calculateAverage(allCardTransactions.map(tx=>parseInt(tx.sale_price))))
+    let priceMessage = allCardTransactions.length===0?'(No Transactions Found)':'- Average Sale Price'
 
     let tabs = ['SALE PRICE', 'TRANSACTION HISTORY', 'ACTIVE LISTINGS']
     let tabsToDisplay = tabs.map(tab => {
@@ -92,6 +94,21 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
     function handleClickTab(e) {
         setSelectedTab(e.target.textContent)
       }
+
+    let displayItem;
+      if (selectedTab==='SALE PRICE'){
+        displayItem = ()=> {return(
+            <div className='tx-graph'>
+            <Graph options={options} data={data}/>
+        </div>
+        )}
+      } else if (selectedTab==='TRANSACTION HISTORY'){
+        displayItem = ()=> {return(
+            <div>{dateMsg}</div>
+      )}
+    } else if (selectedTab==='ACTIVE LISTINGS'){
+        displayItem = ()=> {return(null)}
+    }
 
     return (
         <React.Fragment>
@@ -116,13 +133,14 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
                     <div className='history-summary'>
                         <div className='totalcardscount'>🟥 <b>{numOthercards}</b> Total</div>
                         <div className='ownerscount'>👤 <b>{numCardOwners}</b> Owners</div>
-                        <div className='avgsaleprice'>🪙 <b>{Math.round(averagePrice)}</b> Average Sale Price</div>
+                        <div className='avgsaleprice'>🪙 <b>{averagePrice}</b> {priceMessage}</div>
                     </div>
                     <div className='history-title'> </div>
                     <div className='history-list'>
-                        <div className='tx-graph'>
+                    {/* <div className='tx-graph'>
                         <Graph options={options} data={data}/>
-                        </div>
+                    </div> */}
+                    {displayItem()}
 
                         {/* <div>{dateMsg}</div> */}
                     </div>

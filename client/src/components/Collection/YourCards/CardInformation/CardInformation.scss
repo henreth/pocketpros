@@ -140,16 +140,23 @@
     margin-left: -32.5%;
 }
 
+.history-tabs-container{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-content: center;
+background-color: rgb(47, 47, 47);
+}
+
 .history-tab {
     align-self: center;
     justify-self: center;
-    height: 5vh;
-    font-size: larger;
+    height: 2vh;
+    font-size: 70%;
     transition: .5s ease;
     padding-top: .75%;
-    margin-right: 7.5%;
-    color: rgba(102, 102, 102, 0.747);
-
+    background-color: rgb(47, 47, 47);
+    color:rgb(85, 85, 85);
     &:hover {
         cursor: pointer;
     }
@@ -160,5 +167,5 @@
 }
 
 .selected {
-    color: #fff
+    color: rgba(255, 255, 255, 0.823)
 }
