@@ -6,7 +6,7 @@ import icon from '../../../../img/clearpocketpros.png';
 import Graph from './Graph/Graph';
 
 
-export default function CardInformation({ selectedCard, showModal, setShowModal,users, numCardOwners, numOthercards,allCardTransactions}) {
+export default function CardInformation({ selectedCard, showModal, setShowModal,users, numCardOwners, numOthercards,allCardTransactions, selectedTab, setSelectedTab}) {
     let navigate = useNavigate();
     const charImages = require.context('../../../../img/characters', true);
 
@@ -18,6 +18,34 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
         return null
     }
 
+    let labels = allCardTransactions.map(tx=>{
+        let date = tx.created_at.slice(0, 10)
+        let year = date.slice(0, 4)
+        let month = date.slice(5, 7);
+        let day = date.slice(8, 10)
+        let dateMsg = `${day}-${month}-${year}`
+        return dateMsg
+    })
+
+    let priceLabels = allCardTransactions.map(tx=>tx.sale_price)
+
+    const options = {
+        responsive: true,
+      };
+  
+      const data = {
+        labels,
+        datasets: [
+            {
+                label: 'Sale Price',
+                data: priceLabels,
+                borderColor: 'rgb(56, 56, 56)',
+                backgroundColor: 'whitesmoke',
+            }
+        ],
+      
+      };
+      
 
 
 
@@ -53,6 +81,18 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
 
     let averagePrice = allCardTransactions.length===0?'0 (No Sales Found)':calculateAverage(allCardTransactions.map(tx=>parseInt(tx.sale_price)))
 
+    let tabs = ['SALE PRICE', 'TRANSACTION HISTORY', 'ACTIVE LISTINGS']
+    let tabsToDisplay = tabs.map(tab => {
+      let tabClassName = selectedTab === tab ? 'history-tab selected' : 'history-tab'
+      return (
+        <div key={tab} className={tabClassName} onClick={handleClickTab}>{tab}</div>
+      )
+    })
+
+    function handleClickTab(e) {
+        setSelectedTab(e.target.textContent)
+      }
+
     return (
         <React.Fragment>
             <div className="overlay" onBlur={handleClick}>
@@ -73,11 +113,21 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
 
                     <div className='market-information-container'>
                     <div className='history-title'>{selectedCard.rarity} {selectedCard.character.first_name} {selectedCard.character.last_name}</div>
-                    <div className='history-title'>🟥 {numOthercards}  TOTAL  👤 {numCardOwners} Owners </div>
-                    <div className='history-title'>Average Sale Price: 🪙 {averagePrice} </div>
+                    <div className='history-summary'>
+                        <div className='totalcardscount'>🟥 <b>{numOthercards}</b> Total</div>
+                        <div className='ownerscount'>👤 <b>{numCardOwners}</b> Owners</div>
+                        <div className='avgsaleprice'>🪙 <b>{Math.round(averagePrice)}</b> Average Sale Price</div>
+                    </div>
+                    <div className='history-title'> </div>
                     <div className='history-list'>
+                        <div className='tx-graph'>
+                        <Graph options={options} data={data}/>
+                        </div>
 
                         {/* <div>{dateMsg}</div> */}
+                    </div>
+                    <div className='history-tabs-container'>
+                    {tabsToDisplay}
                     </div>
 
 

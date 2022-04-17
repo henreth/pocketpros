@@ -18,6 +18,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   let [numCardOwners,setNumCardOwners] =useState(0)
   let [numOthercards,setNumOtherCards] =useState(0)
   let [allCardTransactions,setAllCardTransactions] = useState([])
+  let [selectedTab,setSelectedTab] = useState('SALE PRICE')
 
   function handleSearchChange(e){
     setSearchTerm(e.target.value);
@@ -45,7 +46,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
   function displayCards(data) {
     return data.map(card => {
       return (
-        <Card key={card.id} char={card} handleClickCard={handleClickCard} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} />
+        <Card key={card.id} char={card} handleClickCard={handleClickCard} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setSelectedTab={setSelectedTab} />
       )
     })
   }
@@ -89,7 +90,17 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
           </div>
         </div>
       </div>
-{selectedCard!={}?<CardInformation selectedCard={selectedCard} showModal={showModal} setShowModal={setShowModal} users={users} numCardOwners={numCardOwners} numOthercards={numOthercards} allCardTransactions={allCardTransactions} />:null}    
+{selectedCard!={}?<CardInformation 
+            selectedCard={selectedCard} 
+            showModal={showModal} 
+            setShowModal={setShowModal} 
+            users={users} 
+            numCardOwners={numCardOwners} 
+            numOthercards={numOthercards} 
+            allCardTransactions={allCardTransactions}
+            selectedTab={selectedTab}
+            setSelectedTab={setSelectedTab} 
+            />:null}    
 </React.Fragment>
 
 

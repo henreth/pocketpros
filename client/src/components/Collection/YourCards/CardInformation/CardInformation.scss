@@ -86,7 +86,7 @@
     margin-left: -25%;
     width: 27vw;
     height: 38.125vh;
-    background-color: rgb(109, 109, 109);
+    background-color:rgb(81, 81, 81);
     transform: scale(1.75);
     perspective: 600px;
     border-radius: 5px;
@@ -100,19 +100,65 @@
 
 .history-title{
     align-self: center;
-    color: rgb(56, 56, 56);
+    color: rgb(40, 40, 40);
     text-transform: uppercase;
+    font-size: large;
+    margin-bottom: .5%;
 }
 
+.history-summary{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    color: rgb(30, 30, 30);
+    text-transform: uppercase;
+    font-size: 70% ;
+    font-weight: 300;
+     b{
+         color: rgb(130,130,130);
+     }
+}
 
 .history-list {
     display: flex;
     flex-direction: column;
     height: 60%;
     width: 100%;
-    background-color: rgb(95, 95, 95);
-    border-radius: 5px;
+    background-color: rgb(29, 29, 29);
+    // border-radius: 5px;
     color:rgb(56, 56, 56);
     text-transform: uppercase;
 
+}
+
+
+.tx-graph{
+    width: 190%;
+    // background-color: #f4f4f4;
+    overflow-x: hidden;
+    margin-left: -32.5%;
+}
+
+.history-tab {
+    align-self: center;
+    justify-self: center;
+    height: 5vh;
+    font-size: larger;
+    transition: .5s ease;
+    padding-top: .75%;
+    margin-right: 7.5%;
+    color: rgba(102, 102, 102, 0.747);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        color: #45758C;
+    }
+}
+
+.selected {
+    color: #fff
 }

@@ -51,7 +51,7 @@
 
     .charCard-name {
         // margin-right: 2.5%;
-        font-size: smaller;
+        font-size: small;
         margin-top: 2%;
         margin-bottom: 0.75%;
     }
@@ -61,6 +61,7 @@
         font-size: x-small;
         margin-top: 2%;
         margin-bottom: 0.75%;
+        font-weight: 200;
     }
 
     .charCard-id {
@@ -69,6 +70,8 @@
         margin-top: 2%;
         margin-bottom: 0.75%;
         text-transform: none;
+                font-weight: 200;
+
     }
 
 }
