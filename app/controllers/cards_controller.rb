@@ -43,6 +43,16 @@ class CardsController < ApplicationController
         render json: @cards
     end
 
+    def find_listings
+        @char_id = params[:char_id]
+        @card_rarity = params[:rarity]        
+
+        @cards = Card.all.where('for_sale!=false')
+        @listings = @cards.filter{|card| card.character_id==@char_id && card.rarity == @card_rarity}
+    
+        render json: @listings
+    end
+
     def show
         @card = Card.find_by(params[:id])
         render json: @card

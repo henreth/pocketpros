@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   post "/buycard", to: "cards#buy_card"
 
   get "/marketcards", to: "cards#market_cards"
+  post "/findlistings", to: "cards#find_listings"
 
   # Cards
   post "/findcardsrelative", to: "cards#find_cards_relative"
