@@ -69,7 +69,7 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
         labels,
         datasets: [
             {
-                label: 'Sale Price',
+                label: 'SALE PRICE',
                 data: priceLabels,
                 borderColor: 'rgb(56, 56, 56)',
                 // backgroundColor: 'whitesmoke',
