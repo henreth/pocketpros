@@ -7,7 +7,7 @@ import Card from '../../Card/Card'
 import CardInformation from './CardInformation/CardInformation';
 
 
-export default function YourCards({ user, userCards, setUserCards, handleBackClick, signedIn, users }) {
+export default function YourCards({ user, userCards, setUserCards, marketCards, setMarketCards, handleBackClick, signedIn, users }) {
   document.title = 'Pocket Pros - Your Cards';
   let [showModal,setShowModal]= useState(false);
   let [selectedCard,setSelectedCard] = useState(userCards[0])
@@ -99,6 +99,8 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
             users={users} 
             userCards={userCards}
             setUserCards={setUserCards}
+            marketCards={marketCards}
+            setMarketCards={setMarketCards}  
             numCardOwners={numCardOwners} 
             numOthercards={numOthercards} 
             allCardTransactions={allCardTransactions}

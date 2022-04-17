@@ -185,6 +185,8 @@ export default function App() {
           user={user} 
           userCards={userCards}
           setUserCards={setUserCards}
+          marketCards={marketCards}
+          setMarketCards={setMarketCards}
           handleClick={handleClick} 
           signedIn={signedIn} 
           users={users}
