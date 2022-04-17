@@ -60,7 +60,7 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
 
 
 
-    function handleClick() {
+    function handleClickCard() {
         setShowModal(false)
     }
 
@@ -112,11 +112,11 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
 
     return (
         <React.Fragment>
-            <div className="overlay" onBlur={handleClick}>
-                <button className='button openPacks' onClick={handleClick}>cancel</button>
+            <div className="overlay" onBlur={handleClickCard}>
+                {/* <button className='button openPacks' onClick={handleClick}>cancel</button> */}
                 <div className='cardInformation-container'>
                     <div className={cardClass}>
-                        <div className='charCard-info-container' >
+                        <div className='charCard-info-container' onClick={handleClickCard} >
                             <img src={charImages('./' + selectedCard.character.image_url)} className='charCard-image' />
                             <div className='charCard-text'>
                                 <div className='charCard-rarity'>{selectedCard.rarity}</div>
