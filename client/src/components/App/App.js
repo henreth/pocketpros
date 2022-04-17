@@ -18,8 +18,6 @@ import Edit from '../Auth/Edit/Edit';
 import video from '../../video/rainbowrain.mp4'
 import Marketplace from '../Marketplace/Marketplace';
 
-
-
 export default function App() {
 
   //Sign Up
