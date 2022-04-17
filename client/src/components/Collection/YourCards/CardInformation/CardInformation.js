@@ -7,7 +7,7 @@ import Graph from './Graph/Graph';
 import axios from 'axios';
 
 
-export default function CardInformation({ selectedCard, setSelectedCard, showModal, setShowModal, users, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab }) {
+export default function CardInformation({ selectedCard, setSelectedCard, showModal, setShowModal, users, userCards,setUserCards, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab }) {
     let navigate = useNavigate();
     const charImages = require.context('../../../../img/characters', true);
     let [clickedList, setClickedList] = useState(false);
@@ -217,7 +217,6 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         if (listingPrice === '' || listingPrice === 0) {
             alert('You must enter a listing price before submitting!')
         } else {
-            console.log('working')
             let details = {
                 'id': selectedCard.id,
                 'sale_price': listingPrice
@@ -228,6 +227,9 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
                     setSelectedCard(r.data)
                     setClickedList(false)
                     setListingPrice('')
+                    let filteredCards = userCards.filter(card=>card.id!=selectedCard.id)
+                    let updatedCards = [...filteredCards,r.data]
+                    setUserCards(updatedCards)
                 })
         }
 
@@ -243,6 +245,9 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
                 setSelectedCard(r.data)
                 setClickedUnlist(false)
                 setListingPrice('')
+                let filteredCards = userCards.filter(card=>card.id!=selectedCard.id)
+                let updatedCards = [...filteredCards,r.data]
+                setUserCards(updatedCards)
             })
     }
 
