@@ -54,7 +54,7 @@ class CardsController < ApplicationController
     end
 
     def show
-        @card = Card.find_by(params[:id])
+        @card = Card.find_by(id: params[:id])
         render json: @card
     end
 
@@ -100,6 +100,7 @@ class CardsController < ApplicationController
         render json: message
     end
 
+
     def booster_pack
         if Integer(@current_user.packs["booster"]) < 1
             cards = 'ERROR: You have no Booster Packs left to open.'
@@ -136,10 +137,11 @@ class CardsController < ApplicationController
         # Gold
         cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)        
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
-
         cards = cards.shuffle
+        CardSerializer.new(cards)
         end
-        render json: cards    
+        
+        render json: cards
     end
 
     def regular_pack
@@ -202,7 +204,7 @@ class CardsController < ApplicationController
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         }
         cards = cards.shuffle
-
+        CardSerializer.new(cards)
     end
         render json: cards
 
@@ -274,6 +276,7 @@ class CardsController < ApplicationController
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         }
         cards = cards.shuffle
+        CardSerializer.new(cards)
     end
         render json: cards
     end
@@ -328,6 +331,7 @@ class CardsController < ApplicationController
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         }
         cards = cards.shuffle
+        CardSerializer.new(cards)
     end
         render json: cards
     end
@@ -385,6 +389,7 @@ class CardsController < ApplicationController
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         }
         cards = cards.shuffle
+        CardSerializer.new(cards)
     end
         render json: cards
     end
@@ -429,6 +434,7 @@ class CardsController < ApplicationController
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         }
         cards = cards.shuffle
+        CardSerializer.new(cards)
     end
         render json: cards
     end

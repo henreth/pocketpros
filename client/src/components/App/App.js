@@ -63,7 +63,8 @@ export default function App() {
     .then(r=>setMarketCards(r.data))
 
     axios.get('/usercards')
-    .then(r=>setUserCards(r.data))
+    .then(r=>{
+      setUserCards(r.data)})
     axios.get('/users')
     .then(r=>{setUsers(r.data)})
     },[])

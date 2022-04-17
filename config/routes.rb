@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   post "/findcardsrelative", to: "cards#find_cards_relative"
   post "/findcardsstrict", to: "cards#find_cards_strict"
   post "/findcardowners", to: "cards#find_card_owners"
-
+  
   # Transactions
   post "/findtransactions", to: "transactions#find_all_tx"
 

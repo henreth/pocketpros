@@ -127,22 +127,21 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
     let year = date.slice(0, 4)
     let month = date.slice(5, 7);
     let day = date.slice(8, 10)
-    let toId = cardTransactions != undefined ? cardTransactions[0].to_id : ''
-    let toUsername = users.filter(user => user.id == toId)[0].username
+    let toId = cardTransactions != undefined ? cardTransactions[0].to_id : ""
+    let toUsername = cardTransactions != undefined ? users.filter(user => user.id == toId)[0].username: ""
 
 
-    let transactionsToDisplay = cardTransactions.slice(1,).map(tx => {
+    let transactionsToDisplay = cardTransactions != undefined ? cardTransactions.slice(2,).map(tx => {
         let date = tx.created_at.slice(0, 10)
         let year = date.slice(0, 4)
         let month = date.slice(5, 7);
         let day = date.slice(8, 10)
         let toId = tx.to_id
-        let toUsername = users.filter(user => user.id == toId)[0].username
+        let toUsername = users.filter(user => user.id === toId)[0].username
         let fromId = tx.from_id
-        let fromUsername = users.filter(user => user.id == fromId)[0].username
-
+        let fromUsername = users.filter(user => user.id === fromId)[0].username
         return (<div className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
-    })
+    }): null
 
     let listingsToDisplay = activeListings.map(card => {
         let date = card.updated_at.slice(0, 10)

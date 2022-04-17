@@ -9,7 +9,9 @@ export default function Card({ char, handleClickCard,setSelectedCard,setNumCardO
 
     let cardClass = `charCard ${char.rarity}`
 
-    function handleClickChar(){
+    async function handleClickChar(){
+        // await axios.get('/cards/'+char.id)
+        // .then(r=>{setSelectedCard(char)})
         setSelectedCard(char)
         setSelectedTab('SALE PRICE')
 
