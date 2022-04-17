@@ -20,7 +20,7 @@ export default function Marketplace({ user, userCards, setUserCards, marketCards
   // })
 
 
-  let filteredCards = marketCards.filter(card => card.rarity === marketSelectedRarity || marketSelectedRarity === 'all').filter(card => card.character.first_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || marketSearchTerm === '')
+  let filteredCards = marketCards.filter(card => card.rarity === marketSelectedRarity || marketSelectedRarity === 'all').filter(card => card.character.first_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.last_name.toLowerCase())  || marketSearchTerm === '')
 
   let navigate = useNavigate();
 
@@ -68,7 +68,7 @@ export default function Marketplace({ user, userCards, setUserCards, marketCards
             <div className='yourCards-Cards-Count'>CARDS:<b>{marketCards.length}</b></div>
           </div> */}
           {raritiesToDisplay}
-          <input className='search-input' type='text' placeholder='SEARCH' onChange={handleSearchChange}></input>
+          <input className='search-input' type='text' placeholder='SEARCH' value={marketSearchTerm} onChange={handleSearchChange}></input>
         </div>
         <div className='yourCards-container'>
           {displayCards(filteredCards)}

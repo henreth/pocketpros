@@ -7,7 +7,7 @@ import Graph from './Graph/Graph';
 import axios from 'axios';
 
 
-export default function CardInformation({ selectedCard, setSelectedCard, showModal, setShowModal, users, userCards, setUserCards, marketCards, setMarketCards, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab }) {
+export default function CardInformation({ selectedCard, setSelectedCard, showModal, setShowModal, users, userCards, setUserCards, marketCards, setMarketCards, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab,setMarketSearchTerm,setMarketSelectedRarity}) {
     let navigate = useNavigate();
     const charImages = require.context('../../../../img/characters', true);
     let [clickedList, setClickedList] = useState(false);
@@ -236,7 +236,9 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
     }
 
     function clickViewAll(){
-        navigate('/market')
+        navigate('/marketplace')
+        setMarketSearchTerm(`${selectedCard.character.first_name} ${selectedCard.character.last_name}`)
+        setMarketSelectedRarity(selectedCard.rarity)
     }
 
     return (

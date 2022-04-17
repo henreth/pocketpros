@@ -194,10 +194,12 @@ export default function App() {
           handleClick={handleClick} 
           signedIn={signedIn} 
           users={users}
+          setMarketSearchTerm={setMarketSearchTerm}
+          setMarketSelectedRarity={setMarketSelectedRarity}
           />} />
         <Route path="/openpacks" element={<OpenPacks user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} />
         <Route path="/buypacks" element={<BuyPacks user={user} userCredits={userCredits} setUserCredits={setUserCredits} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} handleBackClick={handleBackClick} />
-        <Route path="/market" element={<Marketplace 
+        <Route path="/marketplace" element={<Marketplace 
           user={user} 
           userCards={userCards}
           setUserCards={setUserCards}

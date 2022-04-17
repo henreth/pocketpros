@@ -7,21 +7,21 @@ import Card from '../../Card/Card'
 import CardInformation from './CardInformation/CardInformation';
 
 
-export default function YourCards({ user, userCards, setUserCards, marketCards, setMarketCards, handleBackClick, signedIn, users }) {
+export default function YourCards({ user, userCards, setUserCards, marketCards, setMarketCards, handleBackClick, signedIn, users, setMarketSearchTerm, setMarketSelectedRarity }) {
   document.title = 'Pocket Pros - Your Cards';
-  let [showModal,setShowModal]= useState(false);
-  let [selectedCard,setSelectedCard] = useState(userCards[0])
+  let [showModal, setShowModal] = useState(false);
+  let [selectedCard, setSelectedCard] = useState(userCards[0])
   let [selectedRarity, setSelectedRarity] = useState('all')
   let [searchTerm, setSearchTerm] = useState('');
 
   //  * for additoinal information 
-  let [numCardOwners,setNumCardOwners] =useState(0)
-  let [numOthercards,setNumOtherCards] =useState(0)
-  let [allCardTransactions,setAllCardTransactions] = useState([])
-  let [activeListings,setActiveListings] = useState([])
-  let [selectedTab,setSelectedTab] = useState('SALE PRICE')
+  let [numCardOwners, setNumCardOwners] = useState(0)
+  let [numOthercards, setNumOtherCards] = useState(0)
+  let [allCardTransactions, setAllCardTransactions] = useState([])
+  let [activeListings, setActiveListings] = useState([])
+  let [selectedTab, setSelectedTab] = useState('SALE PRICE')
 
-  function handleSearchChange(e){
+  function handleSearchChange(e) {
     setSearchTerm(e.target.value);
   }
 
@@ -64,7 +64,7 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
     setSelectedRarity(e.target.textContent.toLowerCase())
   }
 
-  function handleClickCard(){
+  function handleClickCard() {
     setShowModal(true);
   }
 
@@ -91,24 +91,26 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
           </div>
         </div>
       </div>
-{selectedCard!={}?<CardInformation 
-            selectedCard={selectedCard} 
-            setSelectedCard={setSelectedCard}
-            showModal={showModal} 
-            setShowModal={setShowModal} 
-            users={users} 
-            userCards={userCards}
-            setUserCards={setUserCards}
-            marketCards={marketCards}
-            setMarketCards={setMarketCards}  
-            numCardOwners={numCardOwners} 
-            numOthercards={numOthercards} 
-            allCardTransactions={allCardTransactions}
-            activeListings={activeListings}
-            selectedTab={selectedTab}
-            setSelectedTab={setSelectedTab} 
-            />:null}    
-</React.Fragment>
+      {selectedCard != {} ? <CardInformation
+        selectedCard={selectedCard}
+        setSelectedCard={setSelectedCard}
+        showModal={showModal}
+        setShowModal={setShowModal}
+        users={users}
+        userCards={userCards}
+        setUserCards={setUserCards}
+        marketCards={marketCards}
+        setMarketCards={setMarketCards}
+        numCardOwners={numCardOwners}
+        numOthercards={numOthercards}
+        allCardTransactions={allCardTransactions}
+        activeListings={activeListings}
+        selectedTab={selectedTab}
+        setSelectedTab={setSelectedTab}
+        setMarketSearchTerm={setMarketSearchTerm}
+        setMarketSelectedRarity={setMarketSelectedRarity}
+      /> : null}
+    </React.Fragment>
 
 
   )
