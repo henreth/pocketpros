@@ -34,51 +34,6 @@
   background-color: white;
 }
 
-.button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
-  -webkit-box-align: space-around;
-      -ms-flex-align: space-around;
-          align-items: space-around;
-  position: absolute;
-  cursor: pointer;
-  background-color: rgba(45, 51, 61, 0.8);
-  background-image: url("./led-grid.png");
-  color: #bbbbbb;
-  border: none;
-  -webkit-transition: .5s;
-  transition: .5s;
-  font-family: 'Ubuntu Mono', monospace;
-  text-transform: uppercase;
-  padding: 3% 4%;
-  font-size: 1.5em;
-  font-weight: 300;
-  margin-top: 45%;
-}
-
-.button.openPacks {
-  margin-left: 72.5%;
-}
-
-.button.goToDeck {
-  margin-left: -72.5%;
-}
-
-.button:hover {
-  color: #f4f4f4;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
 .cardInformation-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,10 +83,15 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  color: #1e1e1e;
   color: #282828;
   text-transform: uppercase;
   font-size: large;
   margin-bottom: .5%;
+}
+
+.history-title b {
+  color: #afafaf;
 }
 
 .history-summary {
@@ -145,12 +105,16 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #1e1e1e;
   text-transform: uppercase;
   font-size: 70%;
-  font-weight: 300;
+  font-weight: 400;
+  border-top: 2px solid #282828;
+  margin-top: .25%;
+  margin-bottom: .25%;
 }
 
 .history-summary b {
@@ -165,7 +129,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 60%;
+  height: 62.5%;
   width: 100%;
   background-color: #1d1d1d;
   color: #383838;
@@ -228,7 +192,94 @@
   color: #828282;
 }
 
-.transaction-row.start {
+.transaction-row:nth-of-type(1) {
   margin-top: 1%;
+}
+
+.button-wrapper {
+  margin-top: .5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cardInformation-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  cursor: pointer;
+  background-color: rgba(28, 28, 28, 0.8);
+  color: #bbbbbb;
+  border: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-family: 'Ubuntu Mono', monospace;
+  text-transform: uppercase;
+  padding: 3% 4%;
+  font-size: 1.75vh;
+  font-weight: 300;
+}
+
+.cardInformation-button:hover {
+  color: #f4f4f4;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.saleprice-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-item-align: center;
+      align-self: center;
+  cursor: pointer;
+  background-color: rgba(28, 28, 28, 0.8);
+  color: #bbbbbb;
+  border: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-family: 'Ubuntu Mono', monospace;
+  text-transform: uppercase;
+  padding: 3% 4%;
+  font-weight: 300;
+  text-align: center;
+}
+
+.saleprice-input:hover {
+  color: #f4f4f4;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.saleprice-input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.saleprice-input:-ms-input-placeholder {
+  text-align: center;
+}
+
+.saleprice-input::-ms-input-placeholder {
+  text-align: center;
+}
+
+.saleprice-input::placeholder {
+  text-align: center;
 }
 /*# sourceMappingURL=CardInformation.css.map */
