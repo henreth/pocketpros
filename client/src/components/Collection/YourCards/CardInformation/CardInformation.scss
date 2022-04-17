@@ -167,8 +167,6 @@
 .cardInformation-button {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-self: center;
     cursor: pointer;
     background-color: rgba(28, 28, 28, 0.8);
     // background-image: url('./led-grid.png');
@@ -185,5 +183,33 @@
     &:hover {
         color: #f4f4f4;
         transition: .5s ease;
+    }
+}
+
+.saleprice-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: center;
+    cursor: pointer;
+    background-color: rgba(28, 28, 28, 0.8);
+    // background-image: url('./led-grid.png');
+    color: #bbbbbb;
+    border: none;
+    transition: .5s;
+    font-family: 'Ubuntu Mono', monospace;
+    text-transform: uppercase;
+    padding: 3% 4%;
+    font-weight: 300;
+    text-align: center;
+
+
+    &:hover {
+        color: #f4f4f4;
+        transition: .5s ease;
+    }
+
+    &::placeholder{
+        text-align: center;
     }
 }

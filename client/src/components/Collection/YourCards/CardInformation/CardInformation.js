@@ -4,11 +4,15 @@ import { useNavigate } from 'react-router-dom';
 import icon from '../../../../img/clearpocketpros.png';
 
 import Graph from './Graph/Graph';
+import axios from 'axios';
 
 
-export default function CardInformation({ selectedCard, showModal, setShowModal, users, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab }) {
+export default function CardInformation({ selectedCard, setSelectedCard, showModal, setShowModal, users, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab }) {
     let navigate = useNavigate();
     const charImages = require.context('../../../../img/characters', true);
+    let [clickedList, setClickedList] = useState(false);
+    let [listingPrice, setListingPrice] = useState('');
+
 
     if (selectedCard === {}) {
         return null
@@ -83,6 +87,8 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
 
     function handleClickCard() {
         setShowModal(false)
+        setClickedList(false)
+        setListingPrice('')
     }
 
     function calculateAverage(array) {
@@ -172,6 +178,34 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
         }
     }
 
+    function handleClickListForSale() {
+        setClickedList(!clickedList)
+    }
+
+    function handleChangeListingPrice(e) {
+        setListingPrice(parseInt(Math.round(e.target.value)))
+    }
+
+    function handleClickConfirmList() {
+        if (listingPrice === '' || listingPrice === 0) {
+            alert('You must enter a listing price before submitting!')
+        } else {
+            console.log('working')
+            let details = {
+                'id': selectedCard.id,
+                'sale_price': listingPrice
+            }
+            axios.post('/listcard', details)
+                .then(r => {
+                    alert('Your card has been listed for sale.')
+                    setSelectedCard(r.data)
+                    setClickedList(false)
+                    setListingPrice('')
+                })
+        }
+
+    }
+
     return (
         <React.Fragment>
             <div className="overlay" >
@@ -192,8 +226,8 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
                         <div className='history-title'><b>{selectedCard.character.first_name} {selectedCard.character.last_name}</b> ({selectedCard.rarity})</div>
                         <div className='history-summary'>
                             <div className='totalcardscount'>Owner: <b>{selectedCard.user.username}</b></div>
-                            <div className='ownerscount'>Status: <b>{selectedCard.for_sale?'For Sale':'Not For Sale'}</b></div>
-                            <div className='avgsaleprice'>{selectedCard.for_sale?'Cost: 🪙':''} <b>{selectedCard.for_sale?selectedCard.sale_price:''}</b></div>
+                            <div className='ownerscount'>Status: <b>{selectedCard.for_sale ? 'For Sale' : 'Not For Sale'}</b></div>
+                            <div className='avgsaleprice'>{selectedCard.for_sale ? 'Cost: 🪙' : ''} <b>{selectedCard.for_sale ? selectedCard.sale_price : ''}</b></div>
                         </div>
                         <div className='history-summary'>
                             <div className='totalcardscount'>⧉ <b>{numOthercards}</b> Copies</div>
@@ -208,8 +242,9 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
                             {tabsToDisplay}
                         </div>
                         <div className='button-wrapper'>
-                            <button className='cardInformation-button'>List For Sale</button>
-                            <button className='cardInformation-button'>View All</button>
+                            {clickedList ? <button className='cardInformation-button' onClick={handleClickListForSale}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickListForSale}>List For Sale</button>}
+                            {clickedList ? <input className='saleprice-input' type='number' value={listingPrice} onChange={handleChangeListingPrice} min='1' placeholder='Listing Price'></input> : null}
+                            {clickedList ? <button className='cardInformation-button' onClick={handleClickConfirmList}>Confirm</button> : <button className='cardInformation-button'>View All</button>}
                         </div>
 
 

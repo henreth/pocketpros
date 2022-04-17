@@ -217,10 +217,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-item-align: center;
-      align-self: center;
   cursor: pointer;
   background-color: rgba(28, 28, 28, 0.8);
   color: #bbbbbb;
@@ -238,5 +234,52 @@
   color: #f4f4f4;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+}
+
+.saleprice-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-item-align: center;
+      align-self: center;
+  cursor: pointer;
+  background-color: rgba(28, 28, 28, 0.8);
+  color: #bbbbbb;
+  border: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-family: 'Ubuntu Mono', monospace;
+  text-transform: uppercase;
+  padding: 3% 4%;
+  font-weight: 300;
+  text-align: center;
+}
+
+.saleprice-input:hover {
+  color: #f4f4f4;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.saleprice-input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.saleprice-input:-ms-input-placeholder {
+  text-align: center;
+}
+
+.saleprice-input::-ms-input-placeholder {
+  text-align: center;
+}
+
+.saleprice-input::placeholder {
+  text-align: center;
 }
 /*# sourceMappingURL=CardInformation.css.map */

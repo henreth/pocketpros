@@ -93,6 +93,7 @@ export default function YourCards({ user, userCards, setUserCards, handleBackCli
       </div>
 {selectedCard!={}?<CardInformation 
             selectedCard={selectedCard} 
+            setSelectedCard={setSelectedCard}
             showModal={showModal} 
             setShowModal={setShowModal} 
             users={users} 
