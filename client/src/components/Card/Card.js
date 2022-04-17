@@ -4,7 +4,7 @@ import icon from '../../img/clearpocketpros.png';
 import axios from 'axios';
 
 
-export default function Card({ char, handleClickCard,setSelectedCard,setNumCardOwners, setNumOtherCards, setAllCardTransactions, setSelectedTab }) {
+export default function Card({ char, handleClickCard,setSelectedCard,setNumCardOwners, setNumOtherCards, setAllCardTransactions, setActiveListings, setSelectedTab }) {
     const charImages = require.context('../../img/characters', true);
 
     let cardClass = `charCard ${char.rarity}`
@@ -29,6 +29,9 @@ export default function Card({ char, handleClickCard,setSelectedCard,setNumCardO
 
         axios.post('/findtransactions', cardDetails)
         .then(r=>{setAllCardTransactions(r.data)})
+
+        axios.post('/findlistings', cardDetails)
+        .then(r=>{setActiveListings(r.data)})
 
 
 
