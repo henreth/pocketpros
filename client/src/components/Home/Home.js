@@ -27,7 +27,7 @@ export default function Home({ handleClick }) {
             <p>Use credits to buy more card packs.</p>
           </div>
         </div>
-        <div className="menu__slot" onClick={() => { navigate('/market ') }}>
+        <div className="menu__slot" onClick={() => { navigate('/marketplace') }}>
           <div className="blackscreen"></div>
           <div className="char reddy"></div>
           <div className="slot-item-three">

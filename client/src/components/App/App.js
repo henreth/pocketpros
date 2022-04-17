@@ -38,7 +38,11 @@ export default function App() {
   const [userCredits,setUserCredits] = useState(0);
   const [signedIn,setSignedIn] = useState(false)
 
+  // Market
   const [marketCards,setMarketCards] = useState([]);
+  let [marketSelectedRarity, setMarketSelectedRarity] = useState('all')
+  let [marketSearchTerm, setMarketSearchTerm] = useState('');
+
 
   useEffect(() => {
     fetch("/me")
@@ -185,13 +189,17 @@ export default function App() {
           user={user} 
           userCards={userCards}
           setUserCards={setUserCards}
+          marketCards={marketCards}
+          setMarketCards={setMarketCards}
           handleClick={handleClick} 
           signedIn={signedIn} 
           users={users}
+          setMarketSearchTerm={setMarketSearchTerm}
+          setMarketSelectedRarity={setMarketSelectedRarity}
           />} />
         <Route path="/openpacks" element={<OpenPacks user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} />
         <Route path="/buypacks" element={<BuyPacks user={user} userCredits={userCredits} setUserCredits={setUserCredits} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} handleBackClick={handleBackClick} />
-        <Route path="/market" element={<Marketplace 
+        <Route path="/marketplace" element={<Marketplace 
           user={user} 
           userCards={userCards}
           setUserCards={setUserCards}
@@ -199,7 +207,11 @@ export default function App() {
           setMarketCards={setMarketCards}
           handleClick={handleClick} 
           signedIn={signedIn}
-          users={users} 
+          users={users}
+          marketSearchTerm={marketSearchTerm}
+          setMarketSearchTerm={setMarketSearchTerm}
+          marketSelectedRarity={marketSelectedRarity}
+          setMarketSelectedRarity={setMarketSelectedRarity}
           />} />
         <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
         <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick}/>} />
