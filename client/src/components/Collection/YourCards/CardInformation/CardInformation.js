@@ -121,7 +121,7 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
         displayItem = () => {
             return (
                 <React.Fragment>
-                    <div className='transaction-row'>> <b>{day}-{month}-{year}</b> - Unpacked by: <b>{toUsername}</b></div>
+                    <div className='transaction-row start'>> <b>{day}-{month}-{year}</b> - Unpacked by: <b>{toUsername}</b></div>
                     {transactionsToDisplay}
                 </React.Fragment>
             )
@@ -149,8 +149,8 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
                     <div className='market-information-container'>
                         <div className='history-title'>{selectedCard.rarity} {selectedCard.character.first_name} {selectedCard.character.last_name}</div>
                         <div className='history-summary'>
-                            <div className='totalcardscount'>🟥 <b>{numOthercards}</b> Total</div>
-                            <div className='ownerscount'>👤 <b>{numCardOwners}</b> Owners</div>
+                            <div className='totalcardscount'>⧉ <b>{numOthercards}</b> Copies</div>
+                            <div className='ownerscount'>👥 <b>{numCardOwners}</b> Owners</div>
                             <div className='avgsaleprice'>🪙 <b>{averagePrice}</b> {priceMessage}</div>
                         </div>
                         <div className='history-title'> </div>

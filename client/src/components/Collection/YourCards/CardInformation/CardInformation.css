@@ -228,4 +228,8 @@
 .transaction-row b {
   color: #828282;
 }
+
+.transaction-row.start {
+  margin-top: 1%;
+}
 /*# sourceMappingURL=CardInformation.css.map */
