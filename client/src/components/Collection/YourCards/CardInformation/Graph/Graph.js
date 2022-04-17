@@ -25,8 +25,6 @@ ChartJS.register(
 
 export default function Graph({options, data}) {
     return (
-        <div className='linegraph'>
             <Line options={options} data={data} />
-        </div>
     )
 }

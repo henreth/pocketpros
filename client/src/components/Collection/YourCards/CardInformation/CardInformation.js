@@ -33,6 +33,38 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
         responsive: true,
     };
 
+    let bronzeBorder = '#cd7f32'
+    let silverBorder = 'rgb(175, 174, 171)'
+    let goldBorder = 'rgb(214, 172, 110)'
+    let holoBorder = 'rgb(194, 255, 182)'
+
+    let bronzeBackground = '#8c5620'
+    let silverBackground = 'rgb(96, 95, 93)'
+    let goldBackground = 'rgb(134, 108, 69)'
+    let holoBackground = 'rgb(221, 169, 255)'
+
+    let graphBorderColor;
+    let graphBackgroundColor;
+
+    switch (selectedCard.rarity) {
+        case 'bronze':
+            graphBorderColor = bronzeBorder
+            graphBackgroundColor = bronzeBackground
+            break
+        case 'silver':
+            graphBorderColor = silverBorder
+            graphBackgroundColor = silverBackground
+            break
+        case 'gold':
+            graphBorderColor = goldBorder
+            graphBackgroundColor = goldBackground
+            break
+        case 'holo':
+            graphBorderColor = holoBorder
+            graphBackgroundColor = holoBackground
+            break
+    }
+
     const data = {
         labels,
         datasets: [
@@ -40,7 +72,10 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
                 label: 'Sale Price',
                 data: priceLabels,
                 borderColor: 'rgb(56, 56, 56)',
-                backgroundColor: 'whitesmoke',
+                // backgroundColor: 'whitesmoke',
+                backgroundColor: graphBorderColor,
+                // borderColor: graphBackgroundColor,
+                // backgroundColor: graphBorderColor,
             }
         ],
 
@@ -85,8 +120,8 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
     let year = date.slice(0, 4)
     let month = date.slice(5, 7);
     let day = date.slice(8, 10)
-    let toId = cardTransactions != undefined ? cardTransactions[0].to_id: ''
-    let toUsername  = users.filter(user=> user.id == toId)[0].username
+    let toId = cardTransactions != undefined ? cardTransactions[0].to_id : ''
+    let toUsername = users.filter(user => user.id == toId)[0].username
 
 
     let transactionsToDisplay = cardTransactions.slice(1,).map(tx => {
@@ -94,15 +129,15 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
         let year = date.slice(0, 4)
         let month = date.slice(5, 7);
         let day = date.slice(8, 10)
-        let toId = tx.to_id 
-        let toUsername  = users.filter(user=> user.id == toId)[0].username
+        let toId = tx.to_id
+        let toUsername = users.filter(user => user.id == toId)[0].username
         let fromId = tx.from_id
-        let fromUsername  = users.filter(user=> user.id == fromId)[0].username
+        let fromUsername = users.filter(user => user.id == fromId)[0].username
 
         return (<div className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
     })
 
-    let listingsToDisplay = activeListings.map(card=>{
+    let listingsToDisplay = activeListings.map(card => {
         let date = card.updated_at.slice(0, 10)
         let year = date.slice(0, 4)
         let month = date.slice(5, 7);
@@ -115,9 +150,7 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
     if (selectedTab === 'SALE PRICE') {
         displayItem = () => {
             return (
-                <div className='tx-graph'>
-                    <Graph options={options} data={data} />
-                </div>
+                <Graph options={options} data={data} />
             )
         }
     } else if (selectedTab === 'TRANSACTION HISTORY') {
@@ -130,11 +163,13 @@ export default function CardInformation({ selectedCard, showModal, setShowModal,
             )
         }
     } else if (selectedTab === 'ACTIVE LISTINGS') {
-        displayItem = () => { return (
-            <React.Fragment>
-                {listingsToDisplay}
-            </React.Fragment>
-        ) }
+        displayItem = () => {
+            return (
+                <React.Fragment>
+                    {listingsToDisplay}
+                </React.Fragment>
+            )
+        }
     }
 
     return (
