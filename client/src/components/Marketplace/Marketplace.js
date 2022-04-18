@@ -4,13 +4,14 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 import Card from '../Card/Card'
+import MarketCard from './MarketCard/MarketCard';
 
 
 export default function Marketplace({ user, userCards, setUserCards, marketCards, setMarketCards, signedIn, marketSelectedRarity, setMarketSelectedRarity, marketSearchTerm, setMarketSearchTerm }) {
   document.title = 'Pocket Pros - Your Cards';
   let [sourceFilter,setSourceFilter] = useState(false)
 
-  let sourceClass =  sourceFilter ? 'yourCards-source-tab selected' : 'yourCards-source-tab'
+  let sourceClass =  sourceFilter ? 'yourCards-source-tab source-selected' : 'yourCards-source-tab'
 
   function handleClickSource(){
     setSourceFilter(!sourceFilter);
@@ -35,7 +36,7 @@ export default function Marketplace({ user, userCards, setUserCards, marketCards
   function displayCards(data) {
     return data.map(card => {
       return (
-        <Card key={card.id} char={card} />
+        <MarketCard key={card.id} user={user} card={card} />
       )
     })
   }
