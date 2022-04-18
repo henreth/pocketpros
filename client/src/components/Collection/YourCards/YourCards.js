@@ -73,11 +73,11 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
     <React.Fragment>
       <div className='displayCards-page'>
         <div className='yourCards-overlay'></div>
-        <div className='yourCards-filter-container'>
-          <div className='count-container'>
+        <div className='count-container'>
             <div className='yourCards-Cards-Count'>CARDS:<b>{userCards.length}</b></div>
             <div className='yourCards-Cards-Count'>UNIQUE:<b>{uniqueCards.length}</b></div>
           </div>
+        <div className='yourCards-filter-container'>
           {raritiesToDisplay}
           <input className='search-input' type='text' placeholder='SEARCH' onChange={handleSearchChange}></input>
         </div>

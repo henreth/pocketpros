@@ -6,21 +6,21 @@ import axios from 'axios';
 import Card from '../Card/Card'
 
 
-export default function Marketplace({ user, userCards, setUserCards, marketCards,setMarketCards, signedIn,marketSelectedRarity, setMarketSelectedRarity,marketSearchTerm, setMarketSearchTerm }) {
+export default function Marketplace({ user, userCards, setUserCards, marketCards, setMarketCards, signedIn, marketSelectedRarity, setMarketSelectedRarity, marketSearchTerm, setMarketSearchTerm }) {
   document.title = 'Pocket Pros - Your Cards';
+  let [sourceFilter,setSourceFilter] = useState(false)
 
-  function handleSearchChange(e){
+  let sourceClass =  sourceFilter ? 'yourCards-source-tab selected' : 'yourCards-source-tab'
+
+  function handleClickSource(){
+    setSourceFilter(!sourceFilter);
+  }
+
+  function handleSearchChange(e) {
     setMarketSearchTerm(e.target.value);
   }
 
-  // let uniqueCards = [];
-  // userCards.forEach(card => {
-  //   let details = card.character.id + '-' + card.rarity
-  //   if (!uniqueCards.includes(details)) { uniqueCards.push(details) }
-  // })
-
-
-  let filteredCards = marketCards.filter(card => card.rarity === marketSelectedRarity || marketSelectedRarity === 'all').filter(card => card.character.first_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.last_name.toLowerCase())  || marketSearchTerm === '')
+  let filteredCards = marketCards.filter(card => card.rarity === marketSelectedRarity || marketSelectedRarity === 'all').filter(card => card.character.first_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.last_name.toLowerCase()) || marketSearchTerm === '').filter(card=>card.user.id===user.id || sourceFilter===false)
 
   let navigate = useNavigate();
 
@@ -52,7 +52,7 @@ export default function Marketplace({ user, userCards, setUserCards, marketCards
     setMarketSelectedRarity(e.target.textContent.toLowerCase())
   }
 
-  function handleClickBack(){
+  function handleClickBack() {
     navigate('/')
     setMarketSearchTerm('')
     setMarketSelectedRarity('all')
@@ -61,12 +61,11 @@ export default function Marketplace({ user, userCards, setUserCards, marketCards
   return (
     <React.Fragment>
       <div className='displayCards-page'>
-      <div className='yourCards-overlay'></div>
-
+        <div className='yourCards-overlay'></div>
+        <div className='yourCards-source-container'>
+          <div className={sourceClass} onClick={handleClickSource}>Your Cards</div>
+        </div>
         <div className='yourCards-filter-container'>
-          {/* <div className='count-container'>
-            <div className='yourCards-Cards-Count'>CARDS:<b>{marketCards.length}</b></div>
-          </div> */}
           {raritiesToDisplay}
           <input className='search-input' type='text' placeholder='SEARCH' value={marketSearchTerm} onChange={handleSearchChange}></input>
         </div>
