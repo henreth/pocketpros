@@ -4,19 +4,17 @@ import icon from '../../img/clearpocketpros.png';
 import axios from 'axios';
 
 
-export default function Card({ char, setShowModal,setSelectedCard,setNumCardOwners, setNumOtherCards, setAllCardTransactions, setActiveListings, setSelectedTab }) {
+export default function Card({ card, setShowModal,setSelectedCard,setNumCardOwners, setNumOtherCards, setAllCardTransactions, setActiveListings, setSelectedTab }) {
     const charImages = require.context('../../img/characters', true);
 
-    let cardClass = `charCard ${char.rarity}`
+    let cardClass = `charCard ${card.rarity}`
 
-    async function handleClickChar(){
-        // await axios.get('/cards/'+char.id)
-        // .then(r=>{setSelectedCard(char)})
-        setSelectedCard(char)
+    async function handleClickCard(){
+        setSelectedCard(card)
         setSelectedTab('SALE PRICE')
 
-        let charId = char.character.id
-        let cardRarity = char.rarity
+        let charId = card.character.id
+        let cardRarity = card.rarity
         let cardDetails = {
             "char_id": charId,
             "rarity": cardRarity
@@ -42,12 +40,12 @@ export default function Card({ char, setShowModal,setSelectedCard,setNumCardOwne
 
     return (
         <div className={cardClass}>
-            <div className='charCard-info-container' onClick={handleClickChar}>
-                <img src={charImages('./'+char.character.image_url)} className='charCard-image' />
+            <div className='charCard-info-container' onClick={handleClickCard}>
+                <img src={charImages('./'+card.character.image_url)} className='charCard-image' />
                 <div className='charCard-text'>
-                    <div className='charCard-rarity'>{char.rarity[0].toUpperCase() + char.rarity.slice(1,)}</div>
-                    <div className='charCard-name'><b>{char.character.first_name} {char.character.last_name}</b></div>
-                    <div className='charCard-id'> {char.unique_id}</div>
+                    <div className='charCard-rarity'>{card.rarity[0].toUpperCase() + card.rarity.slice(1,)}</div>
+                    <div className='charCard-name'><b>{card.character.first_name} {card.character.last_name}</b></div>
+                    <div className='charCard-id'> {card.unique_id}</div>
                 </div>
             </div>
             <img className='floppy-icon' src={icon} />

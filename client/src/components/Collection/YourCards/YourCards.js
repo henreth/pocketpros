@@ -47,7 +47,7 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
   function displayCards(data) {
     return data.map(card => {
       return (
-        <Card key={card.id} char={card} setShowModal={setShowModal} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab} />
+        <Card key={card.id} card={card} setShowModal={setShowModal} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab} />
       )
     })
   }
