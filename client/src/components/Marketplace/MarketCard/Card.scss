@@ -143,44 +143,4 @@
     100% {
         background-position: 0% 50%;
     }
-}
-
-.listing-information{
-    position: absolute;
-    text-align: center;
-    font-family: 'Ubuntu Mono', monospace;
-    z-index: 15;
-    top: 61%;
-    color: #fff;
-    display:flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.88);
-}
-
-.card-cost{
-    width:15vw;
-    font-size: 3.5vh;
-    &:active{
-        color: #79D9FF ;
-
     }
-
-}
-
-.seller-name{
-    font-size: 1.25vh;
-    margin-bottom: 2%;
-    b{
-        font-size: 1.5vh;
-    }
-}
-
-.locked{
-
-    b{
-        text-decoration: line-through;
-        color: rgb(231, 106, 106);    
-    }
-}
-
-

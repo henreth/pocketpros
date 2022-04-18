@@ -15,7 +15,7 @@
 }
 
 .charCard:hover {
-  z-index: 10;
+  z-index: 300;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   outline: 1px solid rgba(0, 0, 0, 0.103);
@@ -157,45 +157,5 @@
   100% {
     background-position: 0% 50%;
   }
-}
-
-.listing-information {
-  position: absolute;
-  text-align: center;
-  font-family: 'Ubuntu Mono', monospace;
-  z-index: 15;
-  top: 61%;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.88);
-}
-
-.card-cost {
-  width: 15vw;
-  font-size: 3.5vh;
-}
-
-.card-cost:active {
-  color: #79D9FF;
-}
-
-.seller-name {
-  font-size: 1.25vh;
-  margin-bottom: 2%;
-}
-
-.seller-name b {
-  font-size: 1.5vh;
-}
-
-.locked b {
-  text-decoration: line-through;
-  color: #e76a6a;
 }
 /*# sourceMappingURL=Card.css.map */
