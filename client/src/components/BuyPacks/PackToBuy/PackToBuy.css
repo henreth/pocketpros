@@ -68,16 +68,26 @@
   color: #fff;
 }
 
-.pack-cost {
+.pack-information {
   position: absolute;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.88);
+  font-family: 'Ubuntu Mono', monospace;
+  z-index: 15;
+  top: 63%;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.88);
+}
+
+.pack-cost {
   width: 18vw;
   font-size: 4.5vh;
-  z-index: 15;
-  top: 60%;
-  font-family: 'Ubuntu Mono', monospace;
 }
 
 .pack-cost:active {

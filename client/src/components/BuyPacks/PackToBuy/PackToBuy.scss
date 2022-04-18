@@ -8,14 +8,13 @@
     height: 43vh;
     border-radius: 10px;
 
-    &:hover{
+    &:hover {
         z-index: 10;
-        transform: scale(1.1)
-        // width: 20vw;
-        // height: 45vh;
+        transform: scale(1.1) // width: 20vw;
+            // height: 45vh;
     }
 
-    
+
 }
 
 .booster {
@@ -42,45 +41,51 @@
     background-color: rgb(172, 110, 214);
 }
 
-.buy-more{
+.buy-more {
     background-color: rgb(104, 178, 135);
 }
 
-.buy{
-    color:rgba(0, 0, 0, 0.39) !important;
+.buy {
+    color: rgba(0, 0, 0, 0.39) !important;
 }
 
-.pack-info-container{ 
-display: flex;
-flex-direction: column;
-align-content: center;
-justify-content: center;
-align-items: center;
-color: #fff
+.pack-info-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff
 }
 
-.pack-cost{
+
+.pack-information{
     position: absolute;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.88);
-    color: #fff;
-    width:18vw;
-    font-size: 4.5vh;
-    z-index: 15;
-    top: 60%;
     font-family: 'Ubuntu Mono', monospace;
+    z-index: 15;
+    top: 63%;
+    color: #fff;
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.88);
+}
 
 
-    &:active{
-        color: #79D9FF ;
+.pack-cost {
+    width: 18vw;
+    font-size: 4.5vh;
+
+    &:active {
+        color: #79D9FF;
 
     }
 }
 
-.locked{
+.locked {
 
-    b{
+    b {
         text-decoration: line-through;
-        color: rgb(231, 106, 106);    
+        color: rgb(231, 106, 106);
     }
 }

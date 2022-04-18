@@ -10,27 +10,47 @@ export default function PackToOpen({ packType, setUser, setUserCards, userPacks,
     const packLogos = require.context('../../../../img/pack_logos', true);
 
     let logo;
+    let packCost;
+    let cardsPerPack;
+    let packProb;
     switch (packType) {
         case 'booster':
             logo = './bwfolder.png';
+            packCost = 0;
+            cardsPerPack = 6;
+            packProb='Very Low'
             break
-        case 'regular':
+        case ('regular'):
             logo = './bwfloppy.png'
+            packCost = 15;
+            cardsPerPack = 8;
+            packProb='Low'
             break
-        case 'pro':
+        case ('pro'):
             logo = './bwfork.png';
-            break;
-        case 'max':
+            packCost = 30;
+            cardsPerPack = 7;
+            packProb='Medium'
+            break
+        case ('max'):
             logo = './bwglass.png';
+            packCost = 55;
+            cardsPerPack = 6;
+            packProb='High'
             break
-        case 'ultra':
+        case ('ultra'):
             logo = './bwcode.png';
+            packCost = 100;
+            cardsPerPack = 4;
+            packProb='Very High'
             break
-        case 'studio':
+        case ('studio'):
             logo = './bwcubes.png';
+            packCost = 350;
+            cardsPerPack = 2;
+            packProb='100%'
             break
     }
-
 
     function handlePackClick(e) {
         if (userPacks[packType] == 0) {
@@ -68,7 +88,9 @@ export default function PackToOpen({ packType, setUser, setUserCards, userPacks,
             <div className='pack-info-container'>
                 <img className='pack-logo' src={packLogos(logo)} />
                 <div className='pack-title top inverse'>POCKET PROGRAMMERS</div>
-                <div className={packType + '-text inverse'} >{packType.toUpperCase()}</div>
+                {/* <div className={packType + '-text'} >{packType.toUpperCase()}</div> */}
+                <div className={packType + '-text'} >{cardsPerPack} Cards</div>
+                <div className={packType+ '-text'}><b>{packProb}</b> CHANCE</div>
                 <div className={'pack-count ' + packType + '-text'}>{userPacks[packType]}</div>
                 <div className={packType + '-text'} >{packType.toUpperCase()}</div>
                 <div className='pack-title bottom' >POCKET PROGRAMMERS</div>

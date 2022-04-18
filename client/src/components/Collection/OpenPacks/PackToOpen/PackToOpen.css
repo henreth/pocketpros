@@ -71,8 +71,8 @@
 
 .pack-count {
   font-size: 13.5vh;
-  margin-bottom: 7.25vh;
-  margin-top: 6.75vh;
+  margin-bottom: 7.5vh;
+  margin-top: 4.75vh;
   font-weight: bold;
   -webkit-transition: .5s ease;
   transition: .5s ease;
@@ -102,30 +102,37 @@
 
 .booster-text {
   color: #021c58;
+  text-transform: uppercase;
 }
 
 .regular-text {
   color: #b05901;
+  text-transform: uppercase;
 }
 
 .pro-text {
   color: #83827f;
+  text-transform: uppercase;
 }
 
 .max-text {
   color: #9b7503;
+  text-transform: uppercase;
 }
 
 .ultra-text {
   color: #01959f;
+  text-transform: uppercase;
 }
 
 .studio-text {
   color: #6c08af;
+  text-transform: uppercase;
 }
 
 .buy-more-text {
   color: #09853d;
+  text-transform: uppercase;
 }
 
 .pack-logo {
