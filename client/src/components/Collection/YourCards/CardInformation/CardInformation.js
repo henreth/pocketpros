@@ -119,7 +119,6 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
 
     let cardClass = `charCard ${selectedCard.rarity} selectedCard`
 
-    let avg = calculateAverage(allCardTransactions.map(tx => parseInt(tx.sale_price)));
     let averagePrice = allCardTransactions.length === 0 ? '' : Math.round(calculateAverage(allCardTransactions.map(tx => parseInt(tx.sale_price))))
     let priceMessage = allCardTransactions.length === 0 ? '(No Transactions Found)' : '- Average Sale Price'
 
@@ -148,7 +147,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
                 <div className='transaction-row'>> <b>NO RESULTS FOUND</b></div>
             )
     }
-    
+
     let transactionsToDisplay = cardTransactions.filter(tx=>tx.from_id!=null).map(tx => {
         let date = tx.created_at.slice(0, 10)
         let year = date.slice(0, 4)

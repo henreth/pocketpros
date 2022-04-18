@@ -95,22 +95,19 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
     function calculateAverage(array) {
         let total = 0;
         let count = 0;
-
         array.forEach(function (item, index) {
             total += item;
             count++;
         });
-
         return total / count;
     }
 
     let cardClass = `charCard ${selectedCard.rarity} selectedCard`
 
-    let avg = calculateAverage(allCardTransactions.map(tx => parseInt(tx.sale_price)));
     let averagePrice = allCardTransactions.length === 0 ? '' : Math.round(calculateAverage(allCardTransactions.map(tx => parseInt(tx.sale_price))))
     let priceMessage = allCardTransactions.length === 0 ? '(No Transactions Found)' : '- Average Sale Price'
 
-    let tabs = ['SALE PRICE', 'RECENT TRANSACTIONS', 'ACTIVE LISTINGS', 'THIS CARD\'S HISTORY']
+    let tabs = ['SALE PRICE','RECENT TRANSACTIONS','ACTIVE LISTINGS','THIS CARD\'S HISTORY']
     let tabsToDisplay = tabs.map(tab => {
         let tabClassName = selectedTab === tab ? 'history-tab selected' : 'history-tab'
         return (

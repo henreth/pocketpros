@@ -188,6 +188,7 @@ export default function App() {
         <Route path="/collection" element={<Collection user={user} signedIn={signedIn} handleBackClick={handleBackClick} />} />
         <Route path="/cards" element={<YourCards 
           user={user} 
+          setUser={setUser}
           userCards={userCards}
           setUserCards={setUserCards}
           marketCards={marketCards}
