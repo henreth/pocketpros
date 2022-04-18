@@ -10,7 +10,7 @@ export default function Marketplace({ user, userCards, setUserCards, marketCards
   document.title = 'Pocket Pros - Your Cards';
   let [sourceFilter,setSourceFilter] = useState(false)
 
-  let sourceClass =  sourceFilter ? 'yourCards-source-tab selected' : 'yourCards-source-tab'
+  let sourceClass =  sourceFilter ? 'yourCards-source-tab source-selected' : 'yourCards-source-tab'
 
   function handleClickSource(){
     setSourceFilter(!sourceFilter);

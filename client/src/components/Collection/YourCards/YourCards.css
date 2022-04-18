@@ -287,4 +287,8 @@
 .yourCards-source-tab:active {
   color: #45758C;
 }
+
+.source-selected {
+  color: #c47f7f;
+}
 /*# sourceMappingURL=YourCards.css.map */
