@@ -143,7 +143,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
     let toId = cardTransactions != undefined ? cardTransactions[0].to_id : ""
     let toUsername = cardTransactions != undefined ? users.filter(user => user.id == toId)[0].username : ""
 
-
+    console.log(cardTransactions)
     let transactionsToDisplay = cardTransactions.filter(tx => tx.from_id != null).map(tx => {
         console.log(tx)
         let date = tx.created_at.slice(0, 10)
@@ -272,7 +272,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         }
         axios.post('/buycard', details)
             .then(r => {
-                alert('You have purchased a '+ selectedCard.rarity + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + '.')
+                alert('You have purchased a '+ selectedCard.rarity.toUpperCase() + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + '.')
                 setSelectedCard(r.data)
                 setClickedBuy(false)
                 setListedByUser(true)
