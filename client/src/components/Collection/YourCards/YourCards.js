@@ -14,7 +14,7 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
   let [selectedRarity, setSelectedRarity] = useState('all')
   let [searchTerm, setSearchTerm] = useState('');
 
-  //  * for additoinal information 
+  //  * for additional information 
   let [numCardOwners, setNumCardOwners] = useState(0)
   let [numOthercards, setNumOtherCards] = useState(0)
   let [allCardTransactions, setAllCardTransactions] = useState([])
