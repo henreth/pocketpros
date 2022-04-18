@@ -118,7 +118,7 @@
 
 .yourCards-tab:hover {
   cursor: pointer;
-  color: rgba(209, 209, 209, 0.747);
+  color: #d1d1d1;
 }
 
 .yourCards-tab:active {
@@ -224,5 +224,67 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.cardsource {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+}
+
+.yourCards-source-container {
+  position: fixed;
+  z-index: 201;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(102, 102, 102, 0.747);
+  top: 5.15%;
+  left: 24%;
+  background-color: transparent;
+  padding-left: 1.25%;
+  padding-right: 1.25%;
+}
+
+.yourCards-source-container:hover {
+  background-color: rgba(35, 35, 35, 0.898);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  border-radius: 10px;
+  color: rgba(127, 126, 126, 0.747);
+}
+
+.yourCards-source-tab {
+  text-transform: uppercase;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-size: 125%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  padding-top: 2.75%;
+  padding-bottom: 2.75%;
+}
+
+.yourCards-source-tab:hover {
+  cursor: pointer;
+}
+
+.yourCards-source-tab:active {
+  color: #45758C;
 }
 /*# sourceMappingURL=YourCards.css.map */
