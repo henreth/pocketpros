@@ -143,9 +143,13 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
     let toId = cardTransactions != undefined ? cardTransactions[0].to_id : ""
     let toUsername = cardTransactions != undefined ? users.filter(user => user.id == toId)[0].username: ""
 
-
+    let noResultsFound = () => {
+        return (
+                <div className='transaction-row'>> <b>NO RESULTS FOUND</b></div>
+            )
+    }
     let transactionsToDisplay = cardTransactions.filter(tx=>tx.from_id!=null).map(tx => {
-        console.log(tx)
+        // console.log(tx)
         let date = tx.created_at.slice(0, 10)
         let year = date.slice(0, 4)
         let month = date.slice(5, 7);
@@ -162,7 +166,6 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         let year = date.slice(0, 4)
         let month = date.slice(5, 7);
         let day = date.slice(8, 10)
-
         return (<div className='transaction-row'>> <b>{day}-{month}-{year}</b> - Seller: <b>{card.user.username}</b> - 🪙 <b>{card.sale_price}</b> </div>)
     })
 
@@ -178,8 +181,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
             return (
                 <React.Fragment>
                     <div className='transaction-row start'>> <b>{day}-{month}-{year}</b> - Unpacked by: <b>{toUsername}</b></div>
-                    {transactionsToDisplay}
-                    {console.log(transactionsToDisplay)}
+                    {cardTransactions.length!=0?transactionsToDisplay:noResultsFound()}
                 </React.Fragment>
             )
         }
@@ -187,7 +189,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         displayItem = () => {
             return (
                 <React.Fragment>
-                    {listingsToDisplay}
+                    {activeListings.length!=0?listingsToDisplay:noResultsFound()}
                 </React.Fragment>
             )
         }
@@ -195,7 +197,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         displayItem = () => {
             return (
                 <React.Fragment>
-                    {allTransactionsToDisplay}
+                    {allCardTransactions.length!=0?allTransactionsToDisplay:noResultsFound()}
                 </React.Fragment>
             )
         }

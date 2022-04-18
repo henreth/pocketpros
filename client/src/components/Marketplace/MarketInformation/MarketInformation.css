@@ -168,7 +168,7 @@
   transition: .5s ease;
   padding-top: .75%;
   background-color: #2f2f2f;
-  color: #727171;
+  color: #555555;
 }
 
 .history-tab:hover {
@@ -283,4 +283,4 @@
 .saleprice-input::placeholder {
   text-align: center;
 }
-/*# sourceMappingURL=CardInformation.css.map */
+/*# sourceMappingURL=MarketInformation.css.map */
