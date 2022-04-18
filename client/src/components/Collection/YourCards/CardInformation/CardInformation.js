@@ -23,6 +23,19 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         return null
     }
 
+    let allTransactionsToDisplay = allCardTransactions.filter(tx=>tx.from_id!=null).map(tx => {
+        let date = tx.created_at.slice(0, 10)
+        let year = date.slice(0, 4)
+        let month = date.slice(5, 7);
+        let day = date.slice(8, 10)
+        let toId = tx.to_id
+        let toUsername = users.filter(user => user.id === toId)[0].username
+        let fromId = tx.from_id
+        let fromUsername = users.filter(user => user.id === fromId)[0].username
+        return (<div className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
+    })
+
+
     let labels = allCardTransactions.map(tx => {
         let date = tx.created_at.slice(0, 10)
         let year = date.slice(0, 4)
@@ -110,7 +123,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
     let averagePrice = allCardTransactions.length === 0 ? '' : Math.round(calculateAverage(allCardTransactions.map(tx => parseInt(tx.sale_price))))
     let priceMessage = allCardTransactions.length === 0 ? '(No Transactions Found)' : '- Average Sale Price'
 
-    let tabs = ['SALE PRICE', 'TRANSACTION HISTORY', 'ACTIVE LISTINGS']
+    let tabs = ['SALE PRICE','RECENT TRANSACTIONS','ACTIVE LISTINGS','THIS CARD\'S HISTORY']
     let tabsToDisplay = tabs.map(tab => {
         let tabClassName = selectedTab === tab ? 'history-tab selected' : 'history-tab'
         return (
@@ -160,7 +173,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
                 <Graph options={options} data={data} />
             )
         }
-    } else if (selectedTab === 'TRANSACTION HISTORY') {
+    } else if (selectedTab === 'THIS CARD\'S HISTORY') {
         displayItem = () => {
             return (
                 <React.Fragment>
@@ -175,6 +188,14 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
             return (
                 <React.Fragment>
                     {listingsToDisplay}
+                </React.Fragment>
+            )
+        }
+    } else if (selectedTab === 'RECENT TRANSACTIONS') {
+        displayItem = () => {
+            return (
+                <React.Fragment>
+                    {allTransactionsToDisplay}
                 </React.Fragment>
             )
         }
