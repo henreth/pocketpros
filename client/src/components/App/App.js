@@ -202,6 +202,7 @@ export default function App() {
         <Route path="/buypacks" element={<BuyPacks user={user} userCredits={userCredits} setUserCredits={setUserCredits} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} handleBackClick={handleBackClick} />
         <Route path="/marketplace" element={<Marketplace 
           user={user} 
+          setUser={setUser}
           userCards={userCards}
           setUserCards={setUserCards}
           marketCards={marketCards}

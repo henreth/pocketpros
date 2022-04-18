@@ -8,7 +8,7 @@ import '../Collection/YourCards/YourCards.css';
 import MarketInformation from './MarketInformation/MarketInformation';
 
 
-export default function Marketplace({ user, users, userCards, setUserCards, marketCards, setMarketCards, signedIn, marketSelectedRarity, setMarketSelectedRarity, marketSearchTerm, setMarketSearchTerm }) {
+export default function Marketplace({ user, setUser, users, userCards, setUserCards, marketCards, setMarketCards, signedIn, marketSelectedRarity, setMarketSelectedRarity, marketSearchTerm, setMarketSearchTerm }) {
   document.title = 'Pocket Pros - Marketplace';
 
   let [showModal, setShowModal] = useState(false);
@@ -98,6 +98,8 @@ export default function Marketplace({ user, users, userCards, setUserCards, mark
         setSelectedCard={setSelectedCard}
         showModal={showModal}
         setShowModal={setShowModal}
+        user={user}
+        setUser={setUser}
         users={users}
         userCards={userCards}
         setUserCards={setUserCards}
@@ -111,7 +113,6 @@ export default function Marketplace({ user, users, userCards, setUserCards, mark
         setSelectedTab={setSelectedTab}
         setMarketSearchTerm={setMarketSearchTerm}
         setMarketSelectedRarity={setMarketSelectedRarity}
-
       /> : null}
 
     </React.Fragment>
