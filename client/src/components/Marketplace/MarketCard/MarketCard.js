@@ -4,14 +4,12 @@ import icon from '../../../img/clearpocketpros.png';
 import axios from 'axios';
 
 
-export default function MarketCard({ user, card, handleClickCard, setSelectedCard, setNumCardOwners, setNumOtherCards, setAllCardTransactions, setActiveListings, setSelectedTab }) {
+export default function MarketCard({ user, card, setShowModal, userOwned, setListedByUser, setSelectedCard, setNumCardOwners, setNumOtherCards, setAllCardTransactions, setActiveListings, setSelectedTab }) {
     const charImages = require.context('../../../img/characters', true);
 
     let cardClass = `charCard ${card.rarity}`
 
     async function handleClickCard() {
-        // await axios.get('/cards/'+card.id)
-        // .then(r=>{setSelectedCard(card)})
         setSelectedCard(card)
         setSelectedTab('SALE PRICE')
 
@@ -35,9 +33,8 @@ export default function MarketCard({ user, card, handleClickCard, setSelectedCar
         axios.post('/findlistings', cardDetails)
             .then(r => { setActiveListings(r.data) })
 
-
-
-        handleClickCard();
+        setListedByUser(userOwned)
+        setShowModal(true);
     }
 
     let costClass = parseInt(user.credits) < parseInt(card.sale_price) ? 'card-cost locked' : 'card-cost';

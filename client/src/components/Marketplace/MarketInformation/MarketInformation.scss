@@ -1,0 +1,216 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.573);
+    z-index: 100;
+    transition: 1s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    z-index: 1000;
+    background-color: white;
+}
+
+.cardInformation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: -5%;
+}
+
+
+.selectedCard {
+    transform: scale(1.75);
+
+    :hover {
+        transform: scale(1);
+    }
+}
+
+
+.market-information-container {
+    margin-left: -25%;
+    width: 27vw;
+    height: 38.125vh;
+    background-color: rgb(81, 81, 81);
+    transform: scale(1.75);
+    perspective: 600px;
+    border-radius: 5px;
+    transition: .5s ease;
+    display: flex;
+    flex-direction: column;
+    // font-family: 'Ubuntu Mono', monospace;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.history-title {
+    align-self: center;
+    color: rgb(30, 30, 30);
+    color: rgb(40, 40, 40);
+    text-transform: uppercase;
+    font-size: large;
+    margin-bottom: .5%;
+    b {
+        color: rgb(175, 175, 175);
+    }
+
+}
+
+.history-summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(30, 30, 30);
+    text-transform: uppercase;
+    font-size: 70%;
+    font-weight: 400;
+    border-top: 2px solid rgb(40, 40, 40);
+    margin-top: .25%;
+    margin-bottom: .25%;
+
+
+    b {
+        color: rgb(175, 175, 175);
+    }
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    height: 62%;
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    // border-radius: 5px;
+    color: rgb(56, 56, 56);
+    text-transform: uppercase;
+
+}
+
+
+.tx-graph {
+    // width: 190%;
+    // background-color: #f4f4f4;
+    overflow-x: hidden;
+    margin-left: -32.5%;
+}
+
+.history-tabs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    background-color: rgb(47, 47, 47);
+}
+
+.history-tab {
+    align-self: center;
+    justify-self: center;
+    height: 2vh;
+    font-size: 60%;
+    transition: .5s ease;
+    padding-top: .75%;
+    background-color: rgb(47, 47, 47);
+    color: rgb(85, 85, 85);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        color: #45758C;
+    }
+}
+
+.selected {
+    color: rgba(255, 255, 255, 0.823)
+}
+
+.transaction-row {
+    font-size: 85%;
+    margin-left: 2.5%;
+    font-family: 'Ubuntu Mono', monospace !important;
+
+    b {
+        color: rgb(130, 130, 130);
+    }
+
+    &.start {
+        // margin-top: 1%;
+    }
+
+    &:nth-of-type(1){
+        margin-top: 1%;
+    }
+}
+
+.button-wrapper{   
+    margin-top: .5%; 
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cardInformation-button {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    background-color: rgba(28, 28, 28, 0.8);
+    // background-image: url('./led-grid.png');
+    color: #bbbbbb;
+    border: none;
+    transition: .5s;
+    font-family: 'Ubuntu Mono', monospace;
+    text-transform: uppercase;
+
+    padding: 3% 4%;
+    font-size: 1.75vh;
+    font-weight: 300;
+
+    &:hover {
+        color: #f4f4f4;
+        transition: .5s ease;
+    }
+}
+
+.saleprice-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: center;
+    cursor: pointer;
+    background-color: rgba(28, 28, 28, 0.8);
+    // background-image: url('./led-grid.png');
+    color: #bbbbbb;
+    border: none;
+    transition: .5s;
+    font-family: 'Ubuntu Mono', monospace;
+    text-transform: uppercase;
+    padding: 3% 4%;
+    font-weight: 300;
+    text-align: center;
+
+
+    &:hover {
+        color: #f4f4f4;
+        transition: .5s ease;
+    }
+
+    &::placeholder{
+        text-align: center;
+    }
+}

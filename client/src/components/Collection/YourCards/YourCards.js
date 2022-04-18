@@ -14,7 +14,7 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
   let [selectedRarity, setSelectedRarity] = useState('all')
   let [searchTerm, setSearchTerm] = useState('');
 
-  //  * for additoinal information 
+  //  * for additional information 
   let [numCardOwners, setNumCardOwners] = useState(0)
   let [numOthercards, setNumOtherCards] = useState(0)
   let [allCardTransactions, setAllCardTransactions] = useState([])
@@ -47,7 +47,7 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
   function displayCards(data) {
     return data.map(card => {
       return (
-        <Card key={card.id} char={card} handleClickCard={handleClickCard} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab} />
+        <Card key={card.id} card={card} setShowModal={setShowModal} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab} />
       )
     })
   }
@@ -64,9 +64,9 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
     setSelectedRarity(e.target.textContent.toLowerCase())
   }
 
-  function handleClickCard() {
-    setShowModal(true);
-  }
+  // function handleClickCard() {
+  //   setShowModal(true);
+  // }
 
 
   return (
@@ -85,7 +85,6 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
           {displayCards(filteredCards)}
         </div>
         <div className="back_button-yc" onClick={() => navigate('/collection')}>
-          <div className></div>
           <div className="log-in-title" >
             <h3>Back</h3>
           </div>

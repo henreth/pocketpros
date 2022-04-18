@@ -94,7 +94,7 @@ class CardsController < ApplicationController
 
         Transaction.create(card_id: @card_id, from_id: @card_seller.id, to_id: @current_user.id, sale_price: @sale_price)
 
-        message = @current_user
+        message = @card
 
         end 
         render json: message
