@@ -148,8 +148,8 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
                 <div className='transaction-row'>> <b>NO RESULTS FOUND</b></div>
             )
     }
+    
     let transactionsToDisplay = cardTransactions.filter(tx=>tx.from_id!=null).map(tx => {
-        // console.log(tx)
         let date = tx.created_at.slice(0, 10)
         let year = date.slice(0, 4)
         let month = date.slice(5, 7);
