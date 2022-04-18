@@ -40,7 +40,6 @@ export default function BuyPacks({ user, setUser, setUserCards, userPacks, setUs
                 {packsToDisplay}
             </div>
             <div className="back_button" onClick={handleClickBack}>
-                <div className></div>
                 <div className="log-in-title" >
                     <h3>Back</h3>
                 </div>
