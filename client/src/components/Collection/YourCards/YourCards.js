@@ -4,7 +4,6 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 import Card from '../../Card/Card'
-import CardInformation from './CardInformation/CardInformation';
 import MarketInformation from '../../Marketplace/MarketInformation/MarketInformation';
 
 
