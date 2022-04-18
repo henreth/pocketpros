@@ -121,7 +121,7 @@
     align-self: center;
     justify-self: center;
     height: 2vh;
-    font-size: 70%;
+    font-size: 60%;
     transition: .5s ease;
     padding-top: .75%;
     background-color: rgb(47, 47, 47);
@@ -141,8 +141,9 @@
 }
 
 .transaction-row {
-    font-size: 75%;
+    font-size: 85%;
     margin-left: 2.5%;
+    font-family: 'Ubuntu Mono', monospace !important;
 
     b {
         color: rgb(130, 130, 130);

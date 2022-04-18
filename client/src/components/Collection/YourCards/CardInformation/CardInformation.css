@@ -163,7 +163,7 @@
   -ms-grid-column-align: center;
       justify-self: center;
   height: 2vh;
-  font-size: 70%;
+  font-size: 60%;
   -webkit-transition: .5s ease;
   transition: .5s ease;
   padding-top: .75%;
@@ -184,8 +184,9 @@
 }
 
 .transaction-row {
-  font-size: 75%;
+  font-size: 85%;
   margin-left: 2.5%;
+  font-family: 'Ubuntu Mono', monospace !important;
 }
 
 .transaction-row b {

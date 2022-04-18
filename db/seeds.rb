@@ -554,12 +554,12 @@ puts 'Seeding Cards + Transactions'
 
 
 User.all[2,User.all.size].each{|user| 
-    60.times {|i|
+    50.times {|i|
         cardRarity = rand(4)
         Card.create!(user_id:user.id, character_id: Character.all.sample.id, unique_id: rand(9).to_s + 'x' + SecureRandom.alphanumeric(10), for_sale: false, rarity:cardRarity)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: user.id)
         newFrom = User.all.sample
-        salePrice = 1
+        salePrice = rand(50) + 50
         if cardRarity == 0
             salePrice = rand(20) + 5
         elsif cardRarity == 1
@@ -567,26 +567,106 @@ User.all[2,User.all.size].each{|user|
         elsif cardRarity == 2 
             salePrice = rand(60) + 80
         elsif cardRarity == 3
-            sale_price = rand(100) + 150
+            salePrice = rand(100) + 150
         end
-        Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: newFrom.id, sale_price: salePrice)
-        6.times{|i|
-            newTo = User.all.sample
-            if cardRarity == 0
-                salePrice = rand(20) + 5
-            elsif cardRarity == 1
-                salePrice = rand(40) + 25
-            elsif cardRarity == 2 
-                salePrice = rand(60) + 60
-            elsif cardRarity == 3
-                sale_price = rand(100) + 60
-            end
-            Transaction.create(card_id: Card.all[Card.all.size-1].id, from_id: newFrom.id, to_id: newTo,sale_price: salePrice)
-        }
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, from_id: user.id, to_id: newFrom.id, sale_price: salePrice)
+
+        # 1
+        newTo = User.all.sample
+        if cardRarity == 0
+            salePrice = rand(20) + 5
+        elsif cardRarity == 1
+            salePrice = rand(40) + 25
+        elsif cardRarity == 2 
+            salePrice = rand(60) + 60
+        elsif cardRarity == 3
+            salePrice = rand(100) + 60
+        end
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, from_id: User.all.sample, to_id: newTo, sale_price: salePrice)
+        newFrom = newTo
+        # 2
+        newTo = User.all.sample
+        if cardRarity == 0
+            salePrice = rand(20) + 5
+        elsif cardRarity == 1
+            salePrice = rand(40) + 25
+        elsif cardRarity == 2 
+            salePrice = rand(60) + 60
+        elsif cardRarity == 3
+            salePrice = rand(100) + 60
+        end
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, from_id: User.all.sample, to_id: newTo, sale_price: salePrice)
+        newFrom = newTo
+        # 2
+        newTo = User.all.sample
+        if cardRarity == 0
+            salePrice = rand(20) + 5
+        elsif cardRarity == 1
+            salePrice = rand(40) + 25
+        elsif cardRarity == 2 
+            salePrice = rand(60) + 60
+        elsif cardRarity == 3
+            salePrice = rand(100) + 60
+        end
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, from_id: User.all.sample, to_id: newTo, sale_price: salePrice)
+        newFrom = newTo
+        # 3
+        newTo = User.all.sample
+        if cardRarity == 0
+            salePrice = rand(20) + 5
+        elsif cardRarity == 1
+            salePrice = rand(40) + 25
+        elsif cardRarity == 2 
+            salePrice = rand(60) + 60
+        elsif cardRarity == 3
+            salePrice = rand(100) + 60
+        end
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, from_id: User.all.sample, to_id: newTo, sale_price: salePrice)
+        newFrom = newTo
+        # 4
+        newTo = User.all.sample
+        if cardRarity == 0
+            salePrice = rand(20) + 5
+        elsif cardRarity == 1
+            salePrice = rand(40) + 25
+        elsif cardRarity == 2 
+            salePrice = rand(60) + 60
+        elsif cardRarity == 3
+            salePrice = rand(100) + 60
+        end
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, from_id: User.all.sample, to_id: newTo, sale_price: salePrice)
+        newFrom = newTo
+        # 5
+        newTo = User.all.sample
+        if cardRarity == 0
+            salePrice = rand(20) + 5
+        elsif cardRarity == 1
+            salePrice = rand(40) + 25
+        elsif cardRarity == 2 
+            salePrice = rand(60) + 60
+        elsif cardRarity == 3
+            salePrice = rand(100) + 60
+        end
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, from_id: newFrom, to_id: newTo, sale_price: salePrice)
+        newFrom = newTo
+        # 6.times{|i|
+        #     newTo = User.all.sample
+        #     if cardRarity == 0
+        #         salePrice = rand(20) + 5
+        #     elsif cardRarity == 1
+        #         salePrice = rand(40) + 25
+        #     elsif cardRarity == 2 
+        #         salePrice = rand(60) + 60
+        #     elsif cardRarity == 3
+        #         salePrice = rand(100) + 60
+        #     end
+        #     Transaction.create(card_id: Card.all[Card.all.size-1].id, from_id: User.all.sample, to_id: newTo, sale_price: salePrice)
+        #     newFrom = newTo
+        # }
 
         randNum = rand() * 100
-        if randNum > 50
-            Card.all[Card.all.size-1].update!(for_sale: true, sale_price: rand(150))
+        if randNum > 70
+            Card.all[Card.all.size-1].update!(for_sale: true, sale_price: salePrice)
         end
 
     }
