@@ -7,16 +7,13 @@ import Graph from './Graph/Graph';
 import axios from 'axios';
 
 
-export default function CardInformation({ selectedCard, setSelectedCard, showModal, setShowModal, user, setUser, users, userCards, setUserCards, marketCards, setMarketCards, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab, setMarketSearchTerm, setMarketSelectedRarity }) {
+export default function CardInformation({ selectedCard, setSelectedCard, showModal, setShowModal, user, setUser, users, userCards, setUserCards, marketCards, setMarketCards, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab, setMarketSearchTerm, setMarketSelectedRarity, listedByUser,setListedByUser }) {
     let navigate = useNavigate();
     const charImages = require.context('../../../img/characters', true);
     let [clickedList, setClickedList] = useState(false);
     let [clickedUnlist, setClickedUnlist] = useState(false);
     let [clickedBuy, setClickedBuy] = useState(false)
     let [listingPrice, setListingPrice] = useState('');
-    let [userOwned,setUserOwned] = useState(selectedCard.id == user.id)
-    console.log(userOwned)
-
 
     if (selectedCard === {}) {
         return null
@@ -278,7 +275,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
                 alert('You have purchased a '+ selectedCard.rarity + ' ' + selectedCard.character.first_name + ' ' + selectedCard.last_name + '.')
                 setSelectedCard(r.data)
                 setClickedBuy(false)
-                setUserOwned(true)
+                setListedByUser(true)
 
                 let filteredCards = userCards.filter(card => card.id != selectedCard.id)
                 let updatedCards = [...filteredCards, r.data]
@@ -330,7 +327,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
                         <div className='history-tabs-container'>
                             {tabsToDisplay}
                         </div>
-                        {userOwned ? <div className='button-wrapper'>
+                        {listedByUser ? <div className='button-wrapper'>
                             {selectedCard.for_sale === true ? <React.Fragment>
                                 {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Take Off Market</button>}
                                 {clickedUnlist ? <button className='cardInformation-button'>Are You Sure?</button> : null}

@@ -85,7 +85,6 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
           {displayCards(filteredCards)}
         </div>
         <div className="back_button-yc" onClick={() => navigate('/collection')}>
-          <div className></div>
           <div className="log-in-title" >
             <h3>Back</h3>
           </div>

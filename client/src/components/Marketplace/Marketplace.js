@@ -19,6 +19,9 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
   let [activeListings, setActiveListings] = useState([])
   let [selectedTab, setSelectedTab] = useState('SALE PRICE')
 
+  let [listedByUser,setListedByUser] = useState(false)
+
+
 
 
   let [sourceFilter, setSourceFilter] = useState(false)
@@ -49,8 +52,9 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
 
   function displayCards(data) {
     return data.map(card => {
+        let userOwned = card.user.id === user.id
       return (
-        <MarketCard key={card.id} user={user} card={card} setShowModal={setShowModal} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab}/>
+        <MarketCard key={card.id} user={user} card={card} userOwned={userOwned} setListedByUser={setListedByUser} setShowModal={setShowModal} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab}/>
       )
     })
   }
@@ -113,6 +117,8 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
         setSelectedTab={setSelectedTab}
         setMarketSearchTerm={setMarketSearchTerm}
         setMarketSelectedRarity={setMarketSelectedRarity}
+        listedByUser={listedByUser}
+        setListedByUser={setListedByUser}
       /> : null}
 
     </React.Fragment>
