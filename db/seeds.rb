@@ -37,8 +37,167 @@ User.create!([
             "ultra":0,
             "studio":0
         }
+    },
+    {
+        first_name: "Sir",
+        last_name: "Galahad",
+        username: "galahad",
+        password: "galahad",
+        credits: 5000,
+        packs: {
+            "total": 25,
+            "booster":0,
+            "regular":5,
+            "pro":5,
+            "max":5,
+            "ultra":5,
+            "studio":5
+        }
+    },
+    {
+        first_name: "Sir",
+        last_name: "Lancelot",
+        username: "lancelot",
+        password: "lancelot",
+        credits: 5000,
+        packs: {
+            "total": 25,
+            "booster":0,
+            "regular":5,
+            "pro":5,
+            "max":5,
+            "ultra":5,
+            "studio":5
+        }
+    },
+    {
+        first_name: "Sir",
+        last_name: "Percival",
+        username: "Percival",
+        password: "Percival",
+        credits: 5000,
+        packs: {
+            "total": 30,
+            "booster":5,
+            "regular":5,
+            "pro":5,
+            "max":5,
+            "ultra":5,
+            "studio":5
+        }
+    },
+    {
+        first_name: "Sir",
+        last_name: "Tristan",
+        username: "Tristan",
+        password: "Tristan",
+        credits: 5000,
+        packs: {
+            "total": 25,
+            "booster":0,
+            "regular":5,
+            "pro":5,
+            "max":5,
+            "ultra":5,
+            "studio":5
+        }
+    },
+    {
+        first_name: "Sir",
+        last_name: "Bedivere",
+        username: "Bedivere",
+        password: "Bedivere",
+        credits: 5000,
+        packs: {
+            "total": 25,
+            "booster":0,
+            "regular":5,
+            "pro":5,
+            "max":5,
+            "ultra":5,
+            "studio":5
+        }
+    },
+    {
+        first_name: "Sir",
+        last_name: "Kay",
+        username: "Kay",
+        password: "Kay",
+        credits: 5000,
+        packs: {
+            "total": 25,
+            "booster":0,
+            "regular":5,
+            "pro":5,
+            "max":5,
+            "ultra":5,
+            "studio":5
+        }
+    },
+    {
+        first_name: "Sir",
+        last_name: "Degore",
+        username: "Degore",
+        password: "Degore",
+        credits: 5000,
+        packs: {
+            "total": 25,
+            "booster":0,
+            "regular":5,
+            "pro":5,
+            "max":5,
+            "ultra":5,
+            "studio":5
+        }
+    },
+    {
+        first_name: "Sir",
+        last_name: "Bors",
+        username: "Bors",
+        password: "Bors",
+        credits: 5000,
+        packs: {
+            "total": 25,
+            "booster":0,
+            "regular":5,
+            "pro":5,
+            "max":5,
+            "ultra":5,
+            "studio":5
+        }
+    },
+    {
+        first_name: "Sir",
+        last_name: "Brunor",
+        username: "Brunor",
+        password: "Brunor",
+        credits: 5000,
+        packs: {
+            "total": 25,
+            "booster":0,
+            "regular":5,
+            "pro":5,
+            "max":5,
+            "ultra":5,
+            "studio":5
+        }
+    },
+    {
+        first_name: "Sir",
+        last_name: "Hector",
+        username: "Hector",
+        password: "Hector",
+        credits: 5000,
+        packs: {
+            "total": 25,
+            "booster":0,
+            "regular":5,
+            "pro":5,
+            "max":5,
+            "ultra":5,
+            "studio":5
+        }
     }
-
 ])
 
 puts "Seeding Characters"
@@ -389,7 +548,46 @@ Character.create!([
         description: "~",
         image_url: "sophiewilson.jpeg"
     },
-
-
-
 ])
+
+puts 'Seeding Cards + Transactions'
+
+
+User.all[2,User.all.size].each{|user| 
+    60.times {|i|
+        cardRarity = rand(4)
+        Card.create!(user_id:user.id, character_id: Character.all.sample.id, unique_id: rand(9).to_s + 'x' + SecureRandom.alphanumeric(10), for_sale: false, rarity:cardRarity)
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: user.id)
+        newFrom = User.all.sample
+        salePrice = 1
+        if cardRarity == 0
+            salePrice = rand(20) + 5
+        elsif cardRarity == 1
+            salePrice = rand(40) + 25
+        elsif cardRarity == 2 
+            salePrice = rand(60) + 80
+        elsif cardRarity == 3
+            sale_price = rand(100) + 150
+        end
+        Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: newFrom.id, sale_price: salePrice)
+        6.times{|i|
+            newTo = User.all.sample
+            if cardRarity == 0
+                salePrice = rand(20) + 5
+            elsif cardRarity == 1
+                salePrice = rand(40) + 25
+            elsif cardRarity == 2 
+                salePrice = rand(60) + 60
+            elsif cardRarity == 3
+                sale_price = rand(100) + 60
+            end
+            Transaction.create(card_id: Card.all[Card.all.size-1].id, from_id: newFrom.id, to_id: newTo,sale_price: salePrice)
+        }
+
+        randNum = rand() * 100
+        if randNum > 50
+            Card.all[Card.all.size-1].update!(for_sale: true, sale_price: rand(150))
+        end
+
+    }
+}

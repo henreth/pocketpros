@@ -6,7 +6,6 @@ class UsersController < ApplicationController
         render json: @users
     end
 
-
     def update
         @current_user.update!(user_params)
         render json: @current_user
@@ -27,7 +26,7 @@ class UsersController < ApplicationController
     end
 
     def show
-        render json: @current_user,include: "cards.character", status: :ok
+        render json: @current_user,include: ["cards.character","cards.user","cards.transactions"], status: :ok
     end
 
     def destroy
