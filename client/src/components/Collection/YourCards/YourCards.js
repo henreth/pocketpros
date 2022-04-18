@@ -47,7 +47,7 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
   function displayCards(data) {
     return data.map(card => {
       return (
-        <Card key={card.id} char={card} handleClickCard={handleClickCard} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab} />
+        <Card key={card.id} char={card} setShowModal={setShowModal} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab} />
       )
     })
   }
@@ -64,9 +64,9 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
     setSelectedRarity(e.target.textContent.toLowerCase())
   }
 
-  function handleClickCard() {
-    setShowModal(true);
-  }
+  // function handleClickCard() {
+  //   setShowModal(true);
+  // }
 
 
   return (

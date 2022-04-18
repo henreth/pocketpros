@@ -4,7 +4,7 @@ import icon from '../../img/clearpocketpros.png';
 import axios from 'axios';
 
 
-export default function Card({ char, handleClickCard,setSelectedCard,setNumCardOwners, setNumOtherCards, setAllCardTransactions, setActiveListings, setSelectedTab }) {
+export default function Card({ char, setShowModal,setSelectedCard,setNumCardOwners, setNumOtherCards, setAllCardTransactions, setActiveListings, setSelectedTab }) {
     const charImages = require.context('../../img/characters', true);
 
     let cardClass = `charCard ${char.rarity}`
@@ -37,7 +37,7 @@ export default function Card({ char, handleClickCard,setSelectedCard,setNumCardO
 
 
 
-        handleClickCard();
+        setShowModal(true);
     }
 
     return (

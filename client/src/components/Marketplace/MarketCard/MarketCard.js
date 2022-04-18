@@ -10,8 +10,6 @@ export default function MarketCard({ user, card, setShowModal, setSelectedCard, 
     let cardClass = `charCard ${card.rarity}`
 
     async function handleClickCard() {
-        // await axios.get('/cards/'+card.id)
-        // .then(r=>{setSelectedCard(card)})
         setSelectedCard(card)
         setSelectedTab('SALE PRICE')
 
@@ -34,6 +32,7 @@ export default function MarketCard({ user, card, setShowModal, setSelectedCard, 
 
         axios.post('/findlistings', cardDetails)
             .then(r => { setActiveListings(r.data) })
+
         setShowModal(true);
     }
 
