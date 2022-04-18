@@ -272,7 +272,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         }
         axios.post('/buycard', details)
             .then(r => {
-                alert('You have purchased a '+ selectedCard.rarity + ' ' + selectedCard.character.first_name + ' ' + selectedCard.last_name + '.')
+                alert('You have purchased a '+ selectedCard.rarity + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + '.')
                 setSelectedCard(r.data)
                 setClickedBuy(false)
                 setListedByUser(true)
