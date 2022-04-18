@@ -4,10 +4,10 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 import Card from '../../Card/Card'
-import CardInformation from './CardInformation/CardInformation';
+import MarketInformation from '../../Marketplace/MarketInformation/MarketInformation';
 
 
-export default function YourCards({ user, userCards, setUserCards, marketCards, setMarketCards, handleBackClick, signedIn, users, setMarketSearchTerm, setMarketSelectedRarity }) {
+export default function YourCards({ user,setUser, userCards, setUserCards, marketCards, setMarketCards, handleBackClick, signedIn, users, setMarketSearchTerm, setMarketSelectedRarity }) {
   document.title = 'Pocket Pros - Your Cards';
   let [showModal, setShowModal] = useState(false);
   let [selectedCard, setSelectedCard] = useState(userCards[0])
@@ -20,6 +20,8 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
   let [allCardTransactions, setAllCardTransactions] = useState([])
   let [activeListings, setActiveListings] = useState([])
   let [selectedTab, setSelectedTab] = useState('SALE PRICE')
+  let [listedByUser,setListedByUser] = useState(false)
+
 
   function handleSearchChange(e) {
     setSearchTerm(e.target.value);
@@ -46,8 +48,9 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
 
   function displayCards(data) {
     return data.map(card => {
+      let userOwned = card.user.id === user.id
       return (
-        <Card key={card.id} card={card} setShowModal={setShowModal} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab} />
+        <Card key={card.id} card={card} setShowModal={setShowModal} setSelectedCard={setSelectedCard}  userOwned={userOwned} setListedByUser={setListedByUser} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab} />
       )
     })
   }
@@ -90,11 +93,13 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
           </div>
         </div>
       </div>
-      {selectedCard != {} ? <CardInformation
+            {selectedCard != {} ? <MarketInformation
         selectedCard={selectedCard}
         setSelectedCard={setSelectedCard}
         showModal={showModal}
         setShowModal={setShowModal}
+        user={user}
+        setUser={setUser}
         users={users}
         userCards={userCards}
         setUserCards={setUserCards}
@@ -108,7 +113,10 @@ export default function YourCards({ user, userCards, setUserCards, marketCards, 
         setSelectedTab={setSelectedTab}
         setMarketSearchTerm={setMarketSearchTerm}
         setMarketSelectedRarity={setMarketSelectedRarity}
+        listedByUser={listedByUser}
+        setListedByUser={setListedByUser}
       /> : null}
+
     </React.Fragment>
 
 

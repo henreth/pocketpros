@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../../Collection/YourCards/CardInformation/CardInformation.css'
+import './MarketInformation.scss'
 import { useNavigate } from 'react-router-dom';
 import icon from '../../../img/clearpocketpros.png';
 
@@ -7,7 +7,7 @@ import Graph from './Graph/Graph';
 import axios from 'axios';
 
 
-export default function CardInformation({ selectedCard, setSelectedCard, showModal, setShowModal, user, setUser, users, userCards, setUserCards, marketCards, setMarketCards, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab, setMarketSearchTerm, setMarketSelectedRarity, listedByUser,setListedByUser }) {
+export default function MarketInformation({ selectedCard, setSelectedCard, showModal, setShowModal, user, setUser, users, userCards, setUserCards, marketCards, setMarketCards, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab, setMarketSearchTerm, setMarketSelectedRarity, listedByUser,setListedByUser }) {
     let navigate = useNavigate();
     const charImages = require.context('../../../img/characters', true);
     let [clickedList, setClickedList] = useState(false);
@@ -23,18 +23,9 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         return null
     }
 
-    let allTransactionsToDisplay = allCardTransactions.filter(tx => tx.from_id != null).map(tx => {
-        let date = tx.created_at.slice(0, 10)
-        let year = date.slice(0, 4)
-        let month = date.slice(5, 7);
-        let day = date.slice(8, 10)
-        let toId = tx.to_id
-        let toUsername = users.filter(user => user.id === toId)[0].username
-        let fromId = tx.from_id
-        let fromUsername = users.filter(user => user.id === fromId)[0].username
-        return (<div className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
-    })
-
+    function capitalize(word) {
+        return word[0].toUpperCase() + word.slice(1,)
+    }
 
     let labels = allCardTransactions.map(tx => {
         let date = tx.created_at.slice(0, 10)
@@ -108,22 +99,19 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
     function calculateAverage(array) {
         let total = 0;
         let count = 0;
-
         array.forEach(function (item, index) {
             total += item;
             count++;
         });
-
         return total / count;
     }
 
     let cardClass = `charCard ${selectedCard.rarity} selectedCard`
 
-    let avg = calculateAverage(allCardTransactions.map(tx => parseInt(tx.sale_price)));
     let averagePrice = allCardTransactions.length === 0 ? '' : Math.round(calculateAverage(allCardTransactions.map(tx => parseInt(tx.sale_price))))
     let priceMessage = allCardTransactions.length === 0 ? '(No Transactions Found)' : '- Average Sale Price'
 
-    let tabs = ['SALE PRICE', 'RECENT TRANSACTIONS', 'ACTIVE LISTINGS', 'THIS CARD\'S HISTORY']
+    let tabs = ['SALE PRICE','RECENT TRANSACTIONS','ACTIVE LISTINGS','THIS CARD\'S HISTORY']
     let tabsToDisplay = tabs.map(tab => {
         let tabClassName = selectedTab === tab ? 'history-tab selected' : 'history-tab'
         return (
@@ -143,9 +131,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
     let toId = cardTransactions != undefined ? cardTransactions[0].to_id : ""
     let toUsername = cardTransactions != undefined ? users.filter(user => user.id == toId)[0].username : ""
 
-    console.log(cardTransactions)
     let transactionsToDisplay = cardTransactions.filter(tx => tx.from_id != null).map(tx => {
-        console.log(tx)
         let date = tx.created_at.slice(0, 10)
         let year = date.slice(0, 4)
         let month = date.slice(5, 7);
@@ -154,7 +140,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         let toUsername = users.filter(user => user.id === toId)[0].username
         let fromId = tx.from_id
         let fromUsername = users.filter(user => user.id === fromId)[0].username
-        return (<div className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
+        return (<div key={'tx-'+tx.id} className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
     })
 
     let listingsToDisplay = activeListings.map(card => {
@@ -163,8 +149,27 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         let month = date.slice(5, 7);
         let day = date.slice(8, 10)
 
-        return (<div className='transaction-row'>> <b>{day}-{month}-{year}</b> - Seller: <b>{card.user.username}</b> - 🪙 <b>{card.sale_price}</b> </div>)
+        return (<div key={'listing-'+card.id} className='transaction-row'>> <b>{day}-{month}-{year}</b> - Seller: <b>{card.user.username}</b> - 🪙 <b>{card.sale_price}</b> </div>)
     })
+
+
+    let allTransactionsToDisplay = allCardTransactions.filter(tx => tx.from_id != null).map(tx => {
+        let date = tx.created_at.slice(0, 10)
+        let year = date.slice(0, 4)
+        let month = date.slice(5, 7);
+        let day = date.slice(8, 10)
+        let toId = tx.to_id
+        let toUsername = users.filter(user => user.id === toId)[0].username
+        let fromId = tx.from_id
+        let fromUsername = users.filter(user => user.id === fromId)[0].username
+        return (<div key={'atx-'+tx.id} className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
+    })
+
+    let noResultsFound = () => {
+        return (
+                <div className='transaction-row'>> <b>NO RESULTS FOUND</b></div>
+            )
+    }
 
     let displayItem;
     if (selectedTab === 'SALE PRICE') {
@@ -178,8 +183,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
             return (
                 <React.Fragment>
                     <div className='transaction-row start'>> <b>{day}-{month}-{year}</b> - Unpacked by: <b>{toUsername}</b></div>
-                    {transactionsToDisplay}
-                    {console.log(transactionsToDisplay)}
+                    {cardTransactions.length!=0?transactionsToDisplay:noResultsFound()}
                 </React.Fragment>
             )
         }
@@ -187,7 +191,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         displayItem = () => {
             return (
                 <React.Fragment>
-                    {listingsToDisplay}
+                    {activeListings.length!=0?listingsToDisplay:noResultsFound()}
                 </React.Fragment>
             )
         }
@@ -195,7 +199,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         displayItem = () => {
             return (
                 <React.Fragment>
-                    {allTransactionsToDisplay}
+                    {allCardTransactions.length!=0?allTransactionsToDisplay:noResultsFound()}
                 </React.Fragment>
             )
         }
@@ -223,7 +227,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
             }
             axios.post('/listcard', details)
                 .then(r => {
-                    alert('Your card has been listed for sale.')
+                    alert('Your ' + capitalize(selectedCard.rarity) + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + ' has been listed for 🪙' + listingPrice +'.')
                     setSelectedCard(r.data)
                     setClickedList(false)
                     setListingPrice('')
@@ -244,7 +248,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         }
         axios.post('/unlistcard', details)
             .then(r => {
-                alert('Your card has been taken off the market.')
+                alert('Your ' + capitalize(selectedCard.rarity) + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + 'has been taken off the market.')
                 setSelectedCard(r.data)
                 setClickedUnlist(false)
                 setListingPrice('')
@@ -272,7 +276,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         }
         axios.post('/buycard', details)
             .then(r => {
-                alert('You have purchased a '+ selectedCard.rarity.toUpperCase() + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + '.')
+                alert('You have purchased a '+ capitalize(selectedCard.rarity) + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + ' for 🪙' + selectedCard.sale_price + '.')
                 setSelectedCard(r.data)
                 setClickedBuy(false)
                 setListedByUser(true)

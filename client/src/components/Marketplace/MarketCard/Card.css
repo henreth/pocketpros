@@ -15,7 +15,7 @@
 }
 
 .charCard:hover {
-  z-index: 300;
+  z-index: 10;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   outline: 1px solid rgba(0, 0, 0, 0.103);
