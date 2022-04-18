@@ -131,7 +131,8 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
     let toUsername = cardTransactions != undefined ? users.filter(user => user.id == toId)[0].username: ""
 
 
-    let transactionsToDisplay = cardTransactions != undefined ? cardTransactions.slice(2,).map(tx => {
+    let transactionsToDisplay = cardTransactions.filter(tx=>tx.from_id!=null).map(tx => {
+        console.log(tx)
         let date = tx.created_at.slice(0, 10)
         let year = date.slice(0, 4)
         let month = date.slice(5, 7);
@@ -141,7 +142,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
         let fromId = tx.from_id
         let fromUsername = users.filter(user => user.id === fromId)[0].username
         return (<div className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
-    }): null
+    })
 
     let listingsToDisplay = activeListings.map(card => {
         let date = card.updated_at.slice(0, 10)
@@ -165,6 +166,7 @@ export default function CardInformation({ selectedCard, setSelectedCard, showMod
                 <React.Fragment>
                     <div className='transaction-row start'>> <b>{day}-{month}-{year}</b> - Unpacked by: <b>{toUsername}</b></div>
                     {transactionsToDisplay}
+                    {console.log(transactionsToDisplay)}
                 </React.Fragment>
             )
         }
