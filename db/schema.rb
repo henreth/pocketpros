@@ -32,9 +32,7 @@ ActiveRecord::Schema.define(version: 2022_04_06_180611) do
   create_table "characters", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "description"
     t.string "image_url"
-    t.integer "birth_year"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -56,6 +54,8 @@ ActiveRecord::Schema.define(version: 2022_04_06_180611) do
     t.string "password_digest"
     t.integer "credits"
     t.hstore "packs"
+    t.string "last_log_in"
+    t.integer "streak"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

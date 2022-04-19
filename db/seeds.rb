@@ -4,13 +4,15 @@ Character.destroy_all
 Card.destroy_all
 Transaction.destroy_all
 
-puts "Seeding Users..."
+puts "Seeding Users"
 User.create!([
     {
         first_name: "King",
         last_name: "Arthur",
         username: "excalibur",
         password: "camelot",
+        last_log_in: Time.new,
+        streak: 1,
         credits: 5000,
         packs: {
             "total": 21,
@@ -27,6 +29,8 @@ User.create!([
         last_name: "Gawain",
         username: "greenknight",
         password: "giants",
+        last_log_in: Time.new,
+        streak: 1,
         credits: 25,
         packs: {
             "total": 1,
@@ -43,6 +47,8 @@ User.create!([
         last_name: "Galahad",
         username: "galahad",
         password: "galahad",
+        last_log_in: Time.new,
+        streak: 1,
         credits: 5000,
         packs: {
             "total": 25,
@@ -59,6 +65,8 @@ User.create!([
         last_name: "Lancelot",
         username: "lancelot",
         password: "lancelot",
+        last_log_in: Time.new,
+        streak: 1,
         credits: 5000,
         packs: {
             "total": 25,
@@ -75,6 +83,8 @@ User.create!([
         last_name: "Percival",
         username: "Percival",
         password: "Percival",
+        last_log_in: Time.new,
+        streak: 1,
         credits: 5000,
         packs: {
             "total": 30,
@@ -91,6 +101,8 @@ User.create!([
         last_name: "Tristan",
         username: "Tristan",
         password: "Tristan",
+        last_log_in: Time.new,
+        streak: 1,
         credits: 5000,
         packs: {
             "total": 25,
@@ -107,6 +119,8 @@ User.create!([
         last_name: "Bedivere",
         username: "Bedivere",
         password: "Bedivere",
+        last_log_in: Time.new,
+        streak: 1,
         credits: 5000,
         packs: {
             "total": 25,
@@ -123,6 +137,8 @@ User.create!([
         last_name: "Kay",
         username: "Kay",
         password: "Kay",
+        last_log_in: Time.new,
+        streak: 1,
         credits: 5000,
         packs: {
             "total": 25,
@@ -139,6 +155,8 @@ User.create!([
         last_name: "Degore",
         username: "Degore",
         password: "Degore",
+        last_log_in: Time.new,
+        streak: 1,
         credits: 5000,
         packs: {
             "total": 25,
@@ -155,6 +173,8 @@ User.create!([
         last_name: "Bors",
         username: "Bors",
         password: "Bors",
+        last_log_in: Time.new,
+        streak: 1,
         credits: 5000,
         packs: {
             "total": 25,
@@ -171,6 +191,8 @@ User.create!([
         last_name: "Brunor",
         username: "Brunor",
         password: "Brunor",
+        last_log_in: Time.new,
+        streak: 1,
         credits: 5000,
         packs: {
             "total": 25,
@@ -187,6 +209,8 @@ User.create!([
         last_name: "Hector",
         username: "Hector",
         password: "Hector",
+        last_log_in: Time.new,
+        streak: 1,
         credits: 5000,
         packs: {
             "total": 25,
