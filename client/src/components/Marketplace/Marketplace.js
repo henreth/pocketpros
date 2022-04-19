@@ -40,7 +40,6 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
   .filter(card => card.character.first_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.last_name.toLowerCase()) || marketSearchTerm === '')
   .filter(card => card.user.id === user.id || sourceFilter === false)
   .sort((card1, card2) => { 
-    console.log(typeof card1.updated_at)
     if (sortTerm==='1'){
       return card1.character.first_name.localeCompare(card2.character.first_name) 
     } else if (sortTerm==='2'){
