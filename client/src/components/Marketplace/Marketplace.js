@@ -19,9 +19,9 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
   let [activeListings, setActiveListings] = useState([])
   let [selectedTab, setSelectedTab] = useState('SALE PRICE')
 
-  let [listedByUser,setListedByUser] = useState(false)
+  let [listedByUser, setListedByUser] = useState(false)
 
-  let [sortTerm,setSortTerm] = useState('A-Z')
+  let [sortTerm, setSortTerm] = useState('A-Z')
 
 
   let [sourceFilter, setSourceFilter] = useState(false)
@@ -37,23 +37,23 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
   }
 
   let filteredCards = marketCards.filter(card => card.rarity === marketSelectedRarity || marketSelectedRarity === 'all')
-  .filter(card => card.character.first_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.last_name.toLowerCase()) || marketSearchTerm === '')
-  .filter(card => card.user.id === user.id || sourceFilter === false)
-  .sort((card1, card2) => { 
-    if (sortTerm==='1'){
-      return card1.character.first_name.localeCompare(card2.character.first_name) 
-    } else if (sortTerm==='2'){
-      return card2.character.first_name.localeCompare(card1.character.first_name) 
-    } else if (sortTerm==='3'){
-      return card1.sale_price - card2.sale_price
-    } else if (sortTerm==='4'){
-      return card2.sale_price - card1.sale_price
-    } else if (sortTerm==='5'){
-      return card2.updated_at.localeCompare(card1.updated_at) 
-    } else if (sortTerm==='6'){
-      return card2.updated_at.localeCompare(card1.updated_at) 
-    }
-  })
+    .filter(card => card.character.first_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.last_name.toLowerCase()) || marketSearchTerm === '')
+    .filter(card => card.user.id === user.id || sourceFilter === false)
+    .sort((card1, card2) => {
+      if (sortTerm === '1') {
+        return card1.character.first_name.localeCompare(card2.character.first_name)
+      } else if (sortTerm === '2') {
+        return card2.character.first_name.localeCompare(card1.character.first_name)
+      } else if (sortTerm === '3') {
+        return card1.sale_price - card2.sale_price
+      } else if (sortTerm === '4') {
+        return card2.sale_price - card1.sale_price
+      } else if (sortTerm === '5') {
+        return card2.updated_at.localeCompare(card1.updated_at)
+      } else if (sortTerm === '6') {
+        return card2.updated_at.localeCompare(card1.updated_at)
+      }
+    })
 
   let navigate = useNavigate();
 
@@ -64,15 +64,15 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
   }, [])
 
 
-  function handleSortChange(e){
+  function handleSortChange(e) {
     setSortTerm(e.target.value)
   }
 
   function displayCards(data) {
     return data.map(card => {
-        let userOwned = card.user.id === user.id
+      let userOwned = card.user.id === user.id
       return (
-        <MarketCard key={card.id} user={user} card={card} userOwned={userOwned} setListedByUser={setListedByUser} setShowModal={setShowModal} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab}/>
+        <MarketCard key={card.id} user={user} card={card} userOwned={userOwned} setListedByUser={setListedByUser} setShowModal={setShowModal} setSelectedCard={setSelectedCard} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab} />
       )
     })
   }
@@ -100,7 +100,10 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
       <div className='displayCards-page'>
         <div className='yourCards-overlay'></div>
         <div className='yourCards-source-container'>
-          <div className={sourceClass} onClick={handleClickSource}>Your Cards</div>
+          <div className={sourceClass} onClick={handleClickSource}>{sourceFilter ? 'Your Listed Cards' : 'Market Cards'}</div>
+        </div>
+        <div className='count-container'>
+          <div className='yourCards-Cards-Count'>Total:<b>{filteredCards.length}</b></div>
         </div>
         <div className='yourCards-filter-container'>
           {raritiesToDisplay}
@@ -116,19 +119,19 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
                 <span>Z-A</span>
               </label>
               <label>
-                <input type="radio" name='month' value={'3'} />                         
+                <input type="radio" name='month' value={'3'} />
                 <span>Price ↑</span>
               </label>
               <label>
-                <input type="radio" name='month' value={'4'} />                         
+                <input type="radio" name='month' value={'4'} />
                 <span>Price ↓</span>
               </label>
               <label>
-                <input type="radio" name='month' value={'5'} />                         
+                <input type="radio" name='month' value={'5'} />
                 <span>List Date ↑</span>
               </label>
               <label>
-                <input type="radio" name='month' value={'6'} />                         
+                <input type="radio" name='month' value={'6'} />
                 <span>List Date ↓</span>
               </label>
             </div>

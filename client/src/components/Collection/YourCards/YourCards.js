@@ -86,10 +86,14 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
     <React.Fragment>
       <div className='displayCards-page'>
         <div className='yourCards-overlay'></div>
+        <div className='yourCards-source-container'>
+          <div className='yourCards-source-tab' >Your Cards</div>
+        </div>
         <div className='count-container'>
-          <div className='yourCards-Cards-Count'>CARDS:<b>{userCards.length}</b></div>
+          <div className='yourCards-Cards-Count'>Total:<b>{filteredCards.length}</b></div>
           <div className='yourCards-Cards-Count'>UNIQUE:<b>{uniqueCards.length}</b></div>
         </div>
+        
         <div className='yourCards-filter-container'>
           {raritiesToDisplay}
           <div class="list-choice">
