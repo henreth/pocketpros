@@ -94,6 +94,7 @@
   -webkit-transition: .5s ease;
   transition: .5s ease;
   padding-left: 3.25%;
+  margin-left: 10%;
 }
 
 .yourCards-filter-container:hover {
@@ -188,8 +189,8 @@
   font-size: larger;
   margin-left: 5%;
   color: #fff;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding-top: .5%;
+  padding-bottom: .5%;
   padding-left: 1.5%;
   padding-right: -2%;
   -webkit-transition: .5s ease;
@@ -290,5 +291,98 @@
 
 .source-selected {
   color: #c47f7f;
+}
+
+.list-choice {
+  width: 45vw;
+  margin: 1em auto;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.list-choice input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.list-choice-title {
+  width: 100%;
+  display: block;
+  background-color: rgba(35, 35, 35, 0.898);
+  text-align: center;
+  padding: 0.55em .5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: rgba(127, 126, 126, 0.747);
+  border-radius: 0.2em;
+}
+
+.list-choice:hover .list-choice-title {
+  border-radius: 0.2em 0.2em 0 0;
+}
+
+.list-choice-objects label:nth-last-of-type(1) span {
+  border-radius: 0 0 0.2em 0.2em;
+}
+
+.list-choice input[type="radio"] + span {
+  color: rgba(102, 102, 102, 0.747);
+  background-color: rgba(35, 35, 35, 0.709);
+  padding: 0.55em 1em;
+  display: block;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  width: 100%;
+}
+
+.list-choice-objects {
+  position: absolute;
+  top: 0;
+  padding-top: 2.1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.list-choice:hover .list-choice-objects input[type="radio"] + span {
+  position: relative;
+  top: 0;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.list-choice:hover input[type="radio"] + span:hover {
+  background: #BBB;
+}
+
+.list-choice:hover input[type="radio"]:checked + span:hover {
+  background: #202121;
+}
+
+.list-choice input[type="radio"]:checked + span {
+  background-color: rgba(54, 54, 54, 0.85);
+  color: rgba(255, 255, 255, 0.74);
+  position: absolute;
+  top: 0em;
+  border-radius: 0.2em;
+}
+
+.list-choice:hover input[type="radio"]:checked + span {
+  border-radius: 0;
+}
+
+.list-choice:hover .list-choice-objects label:nth-last-of-type(1) input[type="radio"]:checked + span {
+  border-radius: 0 0 0.2em 0.2em;
+}
+
+.list-choice:hover .list-choice-objects {
+  max-height: 540px;
 }
 /*# sourceMappingURL=YourCards.css.map */

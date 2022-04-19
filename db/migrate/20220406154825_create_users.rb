@@ -8,6 +8,8 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :password_digest
       t.integer :credits
       t.hstore :packs
+      t.string :last_log_in
+      t.integer :streak
 
       t.timestamps
     end

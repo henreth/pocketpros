@@ -7,12 +7,13 @@ import Card from '../../Card/Card'
 import MarketInformation from '../../Marketplace/MarketInformation/MarketInformation';
 
 
-export default function YourCards({ user,setUser, userCards, setUserCards, marketCards, setMarketCards, handleBackClick, signedIn, users, setMarketSearchTerm, setMarketSelectedRarity }) {
+export default function YourCards({ user, setUser, userCards, setUserCards, marketCards, setMarketCards, handleBackClick, signedIn, users, setMarketSearchTerm, setMarketSelectedRarity }) {
   document.title = 'Pocket Pros - Your Cards';
   let [showModal, setShowModal] = useState(false);
   let [selectedCard, setSelectedCard] = useState(userCards[0])
   let [selectedRarity, setSelectedRarity] = useState('all')
   let [searchTerm, setSearchTerm] = useState('');
+  let [sortTerm,setSortTerm] = useState('A-Z')
 
   //  * for additional information 
   let [numCardOwners, setNumCardOwners] = useState(0)
@@ -20,7 +21,7 @@ export default function YourCards({ user,setUser, userCards, setUserCards, marke
   let [allCardTransactions, setAllCardTransactions] = useState([])
   let [activeListings, setActiveListings] = useState([])
   let [selectedTab, setSelectedTab] = useState('SALE PRICE')
-  let [listedByUser,setListedByUser] = useState(false)
+  let [listedByUser, setListedByUser] = useState(false)
 
 
   function handleSearchChange(e) {
@@ -34,7 +35,15 @@ export default function YourCards({ user,setUser, userCards, setUserCards, marke
   })
 
 
-  let filteredCards = userCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all').filter(card => card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || searchTerm.toLowerCase().includes(card.character.last_name.toLowerCase())  || searchTerm === '').sort((card1,card2)=>{card1.character.first_name.localeCompare(card2.character.first_name)})
+  let filteredCards = userCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all')
+  .filter(card => card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || searchTerm.toLowerCase().includes(card.character.last_name.toLowerCase()) || searchTerm === '')
+  .sort((card1, card2) => { 
+    if (sortTerm==='1'){
+      return card1.character.first_name.localeCompare(card2.character.first_name) 
+    } else if (sortTerm==='2'){
+      return card2.character.first_name.localeCompare(card1.character.first_name) 
+    } 
+  })
 
   let navigate = useNavigate();
 
@@ -50,7 +59,7 @@ export default function YourCards({ user,setUser, userCards, setUserCards, marke
     return data.map(card => {
       let userOwned = card.user.id === user.id
       return (
-        <Card key={card.id} card={card} setShowModal={setShowModal} setSelectedCard={setSelectedCard}  userOwned={userOwned} setListedByUser={setListedByUser} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab} />
+        <Card key={card.id} card={card} setShowModal={setShowModal} setSelectedCard={setSelectedCard} userOwned={userOwned} setListedByUser={setListedByUser} setNumCardOwners={setNumCardOwners} setNumOtherCards={setNumOtherCards} setAllCardTransactions={setAllCardTransactions} setActiveListings={setActiveListings} setSelectedTab={setSelectedTab} />
       )
     })
   }
@@ -67,9 +76,10 @@ export default function YourCards({ user,setUser, userCards, setUserCards, marke
     setSelectedRarity(e.target.textContent.toLowerCase())
   }
 
-  // function handleClickCard() {
-  //   setShowModal(true);
-  // }
+  function handleSortChange(e){
+    setSortTerm(e.target.value)
+  }
+
 
 
   return (
@@ -77,11 +87,24 @@ export default function YourCards({ user,setUser, userCards, setUserCards, marke
       <div className='displayCards-page'>
         <div className='yourCards-overlay'></div>
         <div className='count-container'>
-            <div className='yourCards-Cards-Count'>CARDS:<b>{userCards.length}</b></div>
-            <div className='yourCards-Cards-Count'>UNIQUE:<b>{uniqueCards.length}</b></div>
-          </div>
+          <div className='yourCards-Cards-Count'>CARDS:<b>{userCards.length}</b></div>
+          <div className='yourCards-Cards-Count'>UNIQUE:<b>{uniqueCards.length}</b></div>
+        </div>
         <div className='yourCards-filter-container'>
           {raritiesToDisplay}
+          <div class="list-choice">
+            <div class="list-choice-title">Sort</div>
+            <div class="list-choice-objects" onChange={handleSortChange}>
+              <label>
+                <input type="radio" name='month' value={'1'} />
+                <span>A-Z</span>
+              </label>
+              <label>
+                <input type="radio" name='month' value={'2'} />
+                <span>Z-A</span>
+              </label>
+            </div>
+          </div>
           <input className='search-input' type='text' placeholder='SEARCH' onChange={handleSearchChange}></input>
         </div>
         <div className='yourCards-container'>
@@ -93,7 +116,7 @@ export default function YourCards({ user,setUser, userCards, setUserCards, marke
           </div>
         </div>
       </div>
-            {selectedCard != {} ? <MarketInformation
+      {selectedCard != {} ? <MarketInformation
         selectedCard={selectedCard}
         setSelectedCard={setSelectedCard}
         showModal={showModal}
