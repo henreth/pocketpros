@@ -492,6 +492,41 @@ Character.create!([
         last_name: "Wilson",
         image_url: "sophiewilson.jpeg"
     },
+    {
+        first_name: "Vint",
+        last_name: "Cerf",
+        image_url: "vintcerf.jpeg"
+    },
+    {
+        first_name: "Manuel",
+        last_name: "Blum",
+        image_url: "manuelblum.jpeg"
+    },
+    {
+        first_name: "Frances",
+        last_name: "Allen",
+        image_url: "francesallen.jpeg"
+    },
+    {
+        first_name: "Edsger W.",
+        last_name: "Dijkstra",
+        image_url: "edsgerwdijkstra.jpeg"
+    },
+    {
+        first_name: "Kuniko",
+        last_name: "Fukushima",
+        image_url: "kunikofukushima.jpeg"
+    },
+    {
+        first_name: "DJ",
+        last_name: "Patil",
+        image_url: "djpatil.jpeg"
+    },
+    {
+        first_name: "Fei Fei",
+        last_name: "Li",
+        image_url: "feifeili.jpeg"
+    },
 ])
 
 puts 'Seeding Cards + Transactions'

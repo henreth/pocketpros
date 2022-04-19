@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
 import icon from '../../img/clearmedium.png';
 import stevejobs from '../../img/characters/stevejobs.jpeg'
+import me from '../../img/me.jpeg'
 
 import gitqr from '../../img/githubqr.png';
 import linkedinqr from '../../img/linkedinqr.png';
@@ -36,7 +37,7 @@ export default function About({ signedIn, }) {
 
                 <div className='aboutCard about-holo'>
                     <div className='aboutCard-info-container'>
-                        <img src={stevejobs} className='aboutCard-image' />
+                        <img src={me} className='aboutCard-image' />
                         <div className='aboutCard-text'>
                             <div className='aboutCard-rarity'>Core Dev</div>
                             <div className='aboutCard-name'>Henry Miller</div>

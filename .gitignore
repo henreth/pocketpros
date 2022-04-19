@@ -8,6 +8,7 @@
 visualizations
 z-notes
 /client/src/video
+/client/src/img/me.jpeg
 
 # Ignore bundler config.
 /.bundle
