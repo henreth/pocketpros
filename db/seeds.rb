@@ -320,7 +320,7 @@ Character.create!([
     {
         first_name: "Annie",
         last_name: "Easley",
-        image_url: "annieeasley.jpeg",
+        image_url: "annieeasley.png",
     },
     {
         first_name: "Ada",
@@ -485,7 +485,7 @@ Character.create!([
     {
         first_name: "Lisa",
         last_name: "Su",
-        image_url: "lisasu.jpeg"
+        image_url: "lisasu.png"
     },
     {
         first_name: "Sophie",
@@ -513,9 +513,9 @@ Character.create!([
         image_url: "edsgerwdijkstra.jpeg"
     },
     {
-        first_name: "Kuniko",
+        first_name: "Kunihiko",
         last_name: "Fukushima",
-        image_url: "kunikofukushima.jpeg"
+        image_url: "kunihikofukushima.jpeg"
     },
     {
         first_name: "DJ",
