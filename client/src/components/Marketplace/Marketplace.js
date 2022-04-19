@@ -21,7 +21,7 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
 
   let [listedByUser,setListedByUser] = useState(false)
 
-
+  let [sortTerm,setSortTerm] = useState('A-Z')
 
 
   let [sourceFilter, setSourceFilter] = useState(false)
@@ -36,7 +36,25 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
     setMarketSearchTerm(e.target.value);
   }
 
-  let filteredCards = marketCards.filter(card => card.rarity === marketSelectedRarity || marketSelectedRarity === 'all').filter(card => card.character.first_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.last_name.toLowerCase()) || marketSearchTerm === '').filter(card => card.user.id === user.id || sourceFilter === false)
+  let filteredCards = marketCards.filter(card => card.rarity === marketSelectedRarity || marketSelectedRarity === 'all')
+  .filter(card => card.character.first_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.last_name.toLowerCase()) || marketSearchTerm === '')
+  .filter(card => card.user.id === user.id || sourceFilter === false)
+  .sort((card1, card2) => { 
+    console.log(typeof card1.updated_at)
+    if (sortTerm==='1'){
+      return card1.character.first_name.localeCompare(card2.character.first_name) 
+    } else if (sortTerm==='2'){
+      return card2.character.first_name.localeCompare(card1.character.first_name) 
+    } else if (sortTerm==='3'){
+      return card1.sale_price - card2.sale_price
+    } else if (sortTerm==='4'){
+      return card2.sale_price - card1.sale_price
+    } else if (sortTerm==='5'){
+      return card2.updated_at.localeCompare(card1.updated_at) 
+    } else if (sortTerm==='6'){
+      return card2.updated_at.localeCompare(card1.updated_at) 
+    }
+  })
 
   let navigate = useNavigate();
 
@@ -46,8 +64,9 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
     }
   }, [])
 
-  function handleClickCard() {
-    setShowModal(true);
+
+  function handleSortChange(e){
+    setSortTerm(e.target.value)
   }
 
   function displayCards(data) {
@@ -86,6 +105,35 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
         </div>
         <div className='yourCards-filter-container'>
           {raritiesToDisplay}
+          <div class="list-choice">
+            <div class="list-choice-title">Sort</div>
+            <div class="list-choice-objects" onChange={handleSortChange}>
+              <label>
+                <input type="radio" name='month' value={'1'} />
+                <span>A-Z</span>
+              </label>
+              <label>
+                <input type="radio" name='month' value={'2'} />
+                <span>Z-A</span>
+              </label>
+              <label>
+                <input type="radio" name='month' value={'3'} />                         
+                <span>Price ↑</span>
+              </label>
+              <label>
+                <input type="radio" name='month' value={'4'} />                         
+                <span>Price ↓</span>
+              </label>
+              <label>
+                <input type="radio" name='month' value={'5'} />                         
+                <span>List Date ↑</span>
+              </label>
+              <label>
+                <input type="radio" name='month' value={'6'} />                         
+                <span>List Date ↓</span>
+              </label>
+            </div>
+          </div>
           <input className='search-input' type='text' placeholder='SEARCH' value={marketSearchTerm} onChange={handleSearchChange}></input>
         </div>
         <div className='yourCards-container'>

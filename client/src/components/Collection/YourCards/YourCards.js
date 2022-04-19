@@ -42,7 +42,7 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
       return card1.character.first_name.localeCompare(card2.character.first_name) 
     } else if (sortTerm==='2'){
       return card2.character.first_name.localeCompare(card1.character.first_name) 
-    }
+    } 
   })
 
   let navigate = useNavigate();
@@ -96,32 +96,13 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
             <div class="list-choice-title">Sort</div>
             <div class="list-choice-objects" onChange={handleSortChange}>
               <label>
-                <input type="radio" value={'1'} />
+                <input type="radio" name='month' value={'1'} />
                 <span>A-Z</span>
               </label>
               <label>
-                <input type="radio" value={'2'} />
+                <input type="radio" name='month' value={'2'} />
                 <span>Z-A</span>
               </label>
-              <label>
-                <input type="radio" value={'3'} />                         
-                <span>Price ↑</span>
-              </label>
-              <label>
-                <input type="radio" value={'4'} />                         
-                <span>Price ↓</span>
-              </label>
-              <label>
-                <input type="radio" value={'5'} />                         
-                <span>List Date ↑</span>
-              </label>
-              <label>
-                <input type="radio" value={'6'} />                         
-                <span>List Date ↓</span>
-              </label>
-
-
-
             </div>
           </div>
           <input className='search-input' type='text' placeholder='SEARCH' onChange={handleSearchChange}></input>
