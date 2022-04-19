@@ -124,12 +124,12 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
     }
 
     let cardTransactions = selectedCard.transactions;
-    let date = cardTransactions != undefined ? cardTransactions[0].created_at.slice(0, 10) : ""
+    let date = typeof cardTransactions != 'undefined' ? cardTransactions[0].created_at.slice(0, 10) : ""
     let year = date.slice(0, 4)
     let month = date.slice(5, 7);
     let day = date.slice(8, 10)
-    let toId = cardTransactions != undefined ? cardTransactions[0].to_id : ""
-    let toUsername = cardTransactions != undefined ? users.filter(user => user.id == toId)[0].username : ""
+    let toId = typeof cardTransactions != 'undefined' ? cardTransactions[0].to_id : ""
+    let toUsername = typeof cardTransactions != 'undefined' ? users.filter(user => user.id == toId)[0].username : ""
 
     let transactionsToDisplay = cardTransactions.filter(tx => tx.from_id != null).map(tx => {
         let date = tx.created_at.slice(0, 10)

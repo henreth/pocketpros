@@ -297,6 +297,20 @@
           filter: grayscale(100%);
 }
 
+.menu__slot:hover .claude {
+  background-image: url("./clearclaude.png");
+  background-position: 50% -70px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.menu__slot:hover .shafi {
+  background-image: url("./clearshafi.png");
+  background-position: 60% -70px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
 .char {
   height: 100%;
   width: 100%;
@@ -342,7 +356,8 @@
   line-height: 1.5em;
   color: white;
   font-weight: 500;
-  text-shadow: 0 1px 3px #000;
+  font-size: 110%;
+  text-shadow: 0 2px 5px black;
 }
 
 .menu__slot:hover > div > p {

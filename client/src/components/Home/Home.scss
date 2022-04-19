@@ -287,6 +287,18 @@
   filter: grayscale(100%);
 }
 
+.menu__slot:hover .claude {
+  background-image: url('./clearclaude.png');
+  background-position: 50% -70px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .shafi {
+  background-image: url('./clearshafi.png');
+  background-position: 60% -70px;
+  filter: grayscale(100%);
+}
+
 .char {
   height: 100%;
   width: 100%;
@@ -337,7 +349,10 @@
   line-height: 1.5em;
   color: rgb(255, 255, 255);
   font-weight: 500;
-  text-shadow: 0 1px 3px #000;
+  font-size: 110%;
+  text-shadow: 0 2px 5px rgb(0, 0, 0);
+  // -webkit-text-stroke-width: 2px;
+  // -webkit-text-stroke-color: rgb(255, 255, 255);
 }
 
 .menu__slot:hover>div>p {
