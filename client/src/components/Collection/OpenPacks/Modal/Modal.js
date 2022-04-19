@@ -2,6 +2,7 @@ import React from 'react';
 import './Modal.css';
 import NewCard from '../NewCard/NewCard';
 import { useNavigate } from 'react-router-dom';
+import Card from '../../../Card/Card';
 
 
 

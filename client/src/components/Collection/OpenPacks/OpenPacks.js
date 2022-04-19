@@ -5,8 +5,8 @@ import axios from 'axios';
 
 import Modal from "./Modal/Modal";
 
-import Pack from './PackToOpen/PackToOpen';
-import buyIcon from './PackToOpen/img/bwbuyicon.png'
+import Pack from '../../PackToOpen/PackToOpen';
+import buyIcon from '../../PackToOpen/img/bwbuyicon.png'
 
 
 export default function OpenPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn,openedCards, setOpenedCards,showModal, setShowModal, handleBuyPackClick, handleOpenPackClick }) {

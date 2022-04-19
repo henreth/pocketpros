@@ -1,13 +1,9 @@
 import './PackToOpen.css';
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
-import axios from 'axios';
-import icon from './img/bwfloppy.png'
-import icon2 from '../../../../img/cleargithubqr.png'
-
 
 export default function PackToOpen({ buying, user, packType, setUser, setUserCards, userPacks, setUserPacks, setOpenedCards, setShowModal, handleOpenPackClick, handleBuyPackClick }) {
-    const packLogos = require.context('../../../../img/pack_logos', true);
+    const packLogos = require.context('../../img/pack_logos', true);
 
     let logo;
     let packCost;

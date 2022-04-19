@@ -1,15 +1,11 @@
 // import './NewCard.css';
 import '../../../Card/Card.css'
 import React, { useState } from 'react';
-import hedy from '../../../../img/characters/hedylamarr.jpeg'
-import zuckerberg from '../../../../img/characters/markzuckerberg.jpeg'
-import alanturing from '../../../../img/characters/alanturing.jpeg'
-import stevejobs from '../../../../img/characters/stevejobs.jpeg'
 import icon from '../../../../img/cleargithubqr.png';
 
 
 
-export default function NewCard({ char, setCardElements }) {
+export default function NewCard({ char }) {
     const charImages = require.context('../../../../img/characters', true);
 
 

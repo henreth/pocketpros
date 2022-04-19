@@ -1,7 +1,7 @@
 import './BuyPacks.css';
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
-import Pack from '../Collection/OpenPacks/PackToOpen/PackToOpen'
+import Pack from '../PackToOpen/PackToOpen'
 
 
 export default function BuyPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn,handleBuyPackClick, handleOpenPackClick }) {
