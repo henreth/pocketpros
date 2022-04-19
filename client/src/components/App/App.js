@@ -256,7 +256,7 @@ function handleOpenPackClick(packType) {
       </video>
       <div id="video-overlay"></div>
 
-      {user?<div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div>:null}
+      {user?<div className='user-identification'>👤 {user.username} - 🔥 {user.streak} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div>:null}
       <Routes>
         <Route exact path="/" element={signedIn?<Home />:<Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
         <Route path="/collection" element={<Collection user={user} signedIn={signedIn} handleBackClick={handleBackClick} />} />
