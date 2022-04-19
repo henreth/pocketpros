@@ -29,8 +29,6 @@ export default function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-
-
   const [user,setUser]= useState(null);
   const [users,setUsers]= useState([]);
   const [userCards,setUserCards] = useState([]);
@@ -39,9 +37,15 @@ export default function App() {
   const [signedIn,setSignedIn] = useState(false)
 
   // Market
-  const [marketCards,setMarketCards] = useState([]);
+  let [marketCards,setMarketCards] = useState([]);
   let [marketSelectedRarity, setMarketSelectedRarity] = useState('all')
   let [marketSearchTerm, setMarketSearchTerm] = useState('');
+
+
+  // Packs
+  const [openedCards, setOpenedCards] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+
 
 
   useEffect(() => {
@@ -175,6 +179,76 @@ export default function App() {
     navigate(-1);
   }
 
+  // ? Pack Functions
+
+  function handleBuyPackClick(packCost,packType) {
+    if (user.credits < packCost) {
+        alert(`ERROR: You do not have enough credits to purchase this pack.`)
+    } else {
+        let packToBuy = {
+            "pack": packType,
+            "cost": packCost
+        }
+        axios.post('buypack', packToBuy)
+            .then(r => {
+                alert(`${packType[0].toUpperCase() + packType.slice(1,)} Pack bought!`)
+                //update user information
+                fetch("/me")
+                    .then((r) => {
+                        if (r.ok) {
+                            r.json().then((user) => {
+                                setUser(user)
+                                setUserPacks(user.packs)
+                                setUserCredits(user.credits)
+                            })
+                        }
+                    })
+            }
+
+            )
+            .catch(function (error) {
+              if (error.response) {
+                console.log(error.response.data.errors);
+                alert(error.response.data.errors)
+              } else if (error.request) {
+                console.log(error.request);
+              } else {
+                console.log('Error', error.message);
+              }
+            });
+      
+    }
+
+}
+
+function handleOpenPackClick(packType) {
+  if (userPacks[packType] == 0) {
+      alert(`ERROR: You have no ${packType[0].toUpperCase() + packType.slice(1, packType.length)} Packs left!`)
+  } else {
+      axios.get(`/${packType}_pack`)
+          .then(r => {
+              document.title = (`Opening ${packType} Pack`)
+              setOpenedCards(r.data)
+              setShowModal(true)
+              //update user information
+              fetch("/me")
+                  .then((r) => {
+                      if (r.ok) {
+                          r.json().then((user) => {
+                              setUser(user)
+                              setUserCards(user.cards)
+                              setUserPacks(user.packs)
+                          })
+                      }
+                  })
+          }
+
+          )
+  }
+
+}
+
+
   return (
     <React.Fragment>
             <video width="400" autoPlay={true} muted playsInline loop id="bg-video">
@@ -199,8 +273,32 @@ export default function App() {
           setMarketSearchTerm={setMarketSearchTerm}
           setMarketSelectedRarity={setMarketSelectedRarity}
           />} />
-        <Route path="/openpacks" element={<OpenPacks user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} />
-        <Route path="/buypacks" element={<BuyPacks user={user} userCredits={userCredits} setUserCredits={setUserCredits} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks}/>} handleBackClick={handleBackClick} />
+        <Route path="/openpacks" element={<OpenPacks 
+          user={user} 
+          setUser={setUser} 
+          setUserCards={setUserCards} 
+          signedIn={signedIn} 
+          userPacks={userPacks} 
+          setUserPacks={setUserPacks}
+          handleOpenPackClick={handleOpenPackClick}
+          handleBuyPackClick={handleBuyPackClick}
+          openedCards={openedCards}
+          setOpenedCards={setOpenedCards}
+          showModal={showModal}
+          setShowModal={setShowModal}
+          />} />
+        <Route path="/buypacks" element={<BuyPacks 
+            user={user} 
+            userCredits={userCredits} 
+            setUserCredits={setUserCredits} 
+            setUser={setUser} 
+            setUserCards={setUserCards} 
+            signedIn={signedIn} 
+            userPacks={userPacks} 
+            setUserPacks={setUserPacks}
+            handleOpenPackClick={handleOpenPackClick}
+            handleBuyPackClick={handleBuyPackClick}
+            />} />
         <Route path="/marketplace" element={<Marketplace 
           user={user} 
           setUser={setUser}

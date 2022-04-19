@@ -61,7 +61,10 @@
 .pack-info-container {
     display: flex;
     flex-direction: column;
-    // color: #fff
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff
 }
 
 .pack-count {
@@ -144,4 +147,35 @@
     filter: opacity(.25);
     margin-top: 0%;
     position: absolute;
+}
+
+.pack-information{
+    position: absolute;
+    text-align: center;
+    font-family: 'Ubuntu Mono', monospace;
+    z-index: 15;
+    top: 63%;
+    color: #fff;
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.88);
+}
+
+
+.pack-cost {
+    width: 18vw;
+    font-size: 4.5vh;
+
+    &:active {
+        color: #79D9FF;
+
+    }
+}
+
+.locked {
+
+    b {
+        text-decoration: line-through;
+        color: rgb(231, 106, 106);
+    }
 }
