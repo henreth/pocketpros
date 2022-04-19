@@ -20,7 +20,10 @@ class UsersController < ApplicationController
             "pro":0,
             "max":0,
             "ultra":0,
-            "studio":0}, credits: 25)
+            "studio":0}, 
+            credits: 25,
+            last_log_in: Time.new,
+            streak: 1)
         session[:user_id] = user.id
         render json: user, status: :created
     end
