@@ -139,8 +139,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  top: 5%;
-  left: 25%;
+  top: 15%;
+  left: 10%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -161,6 +161,7 @@
 }
 
 .yourCards-Cards-Count {
+  text-transform: uppercase;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -244,16 +245,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: rgba(102, 102, 102, 0.747);
-  top: 5.15%;
-  left: 24%;
+  top: 2.5%;
+  left: 43%;
   background-color: transparent;
   padding-left: 1.25%;
   padding-right: 1.25%;
@@ -274,7 +275,7 @@
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
-  font-size: 125%;
+  font-size: 145%;
   -webkit-transition: .5s ease;
   transition: .5s ease;
   padding-top: 2.75%;

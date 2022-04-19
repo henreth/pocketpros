@@ -117,8 +117,8 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    top: 5%;
-    left: 25%;
+    top: 15%;
+    left: 10%;
     align-items: center;
     transition: .5 ease;
     color: rgba(102, 102, 102, 0.747);
@@ -140,6 +140,7 @@
 }
 
 .yourCards-Cards-Count {
+    text-transform: uppercase;
     align-self: center;
     justify-self: center;
     height: 5vh;
@@ -205,11 +206,11 @@
     position: fixed;
     z-index: 201;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     color: rgba(102, 102, 102, 0.747);
-    top: 5.15%;
-    left: 24%;
+    top: 2.5%;
+    left: 43%;
     background-color: transparent;
     // transition: .5s ease;
     padding-left: 1.25%;
@@ -230,7 +231,7 @@
     text-transform: uppercase;
     align-self: center;
     justify-self: center;
-    font-size: 125%;
+    font-size: 145%;
     transition: .5s ease;
     padding-top: 2.75%;
     padding-bottom: 2.75%;
