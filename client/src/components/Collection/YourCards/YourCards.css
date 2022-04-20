@@ -310,7 +310,7 @@
 .list-choice-title {
   width: 100%;
   display: block;
-  background-color: rgba(35, 35, 35, 0.898);
+  background-color: rgba(35, 35, 35, 0.288);
   text-align: center;
   padding: 0.55em .5em;
   -webkit-box-sizing: border-box;
@@ -329,7 +329,7 @@
 
 .list-choice input[type="radio"] + span {
   color: rgba(102, 102, 102, 0.747);
-  background-color: rgba(35, 35, 35, 0.709);
+  background-color: rgba(35, 35, 35, 0.99);
   padding: 0.55em 1em;
   display: block;
   text-align: center;
