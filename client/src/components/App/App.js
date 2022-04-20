@@ -29,15 +29,15 @@ export default function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const [user,setUser]= useState(null);
-  const [users,setUsers]= useState([]);
-  const [userCards,setUserCards] = useState([]);
-  const [userPacks,setUserPacks] = useState({});
-  const [userCredits,setUserCredits] = useState(0);
-  const [signedIn,setSignedIn] = useState(false)
+  const [user, setUser] = useState(null);
+  const [users, setUsers] = useState([]);
+  const [userCards, setUserCards] = useState([]);
+  const [userPacks, setUserPacks] = useState({});
+  const [userCredits, setUserCredits] = useState(0);
+  const [signedIn, setSignedIn] = useState(false)
 
   // Market
-  let [marketCards,setMarketCards] = useState([]);
+  let [marketCards, setMarketCards] = useState([]);
   let [marketSelectedRarity, setMarketSelectedRarity] = useState('all')
   let [marketSearchTerm, setMarketSearchTerm] = useState('');
 
@@ -57,21 +57,23 @@ export default function App() {
             setUserPacks(user.packs)
             setUserCredits(user.credits)
             setSignedIn(true)
-          })}
+          })
+        }
         else {
           navigate("/");
         }
       })
 
     axios.get('/marketcards')
-    .then(r=>setMarketCards(r.data))
+      .then(r => setMarketCards(r.data))
 
     axios.get('/usercards')
-    .then(r=>{
-      setUserCards(r.data)})
+      .then(r => {
+        setUserCards(r.data)
+      })
     axios.get('/users')
-    .then(r=>{setUsers(r.data)})
-    },[])
+      .then(r => { setUsers(r.data) })
+  }, [])
 
 
   let navigate = useNavigate();
@@ -87,7 +89,7 @@ export default function App() {
       username,
       password,
       "password_confirmation": signUpPasswordConfirmation,
-  }
+    }
     axios.post("/signup", signUpDetails)
       .then(r => {
         setUsername('');
@@ -122,30 +124,32 @@ export default function App() {
     axios.post("/login", logInDetails)
       .then((r) => {
         fetch("/me")
-        .then((r) => {
-          if (r.ok) {
-            r.json().then((user) => {
-              setUser(user)
-              setUserCards(user.cards)
-              setUserPacks(user.packs)
-              setUserCredits(user.credits)
-              setSignedIn(true)
+          .then((r) => {
+            if (r.ok) {
+              r.json().then((user) => {
+                setUser(user)
+                setUserCards(user.cards)
+                setUserPacks(user.packs)
+                setUserCredits(user.credits)
+                setSignedIn(true)
 
-              axios.get('/marketcards')
-              .then(r=>setMarketCards(r.data))
-          
-              axios.get('/usercards')
-              .then(r=>{
-                setUserCards(r.data)})
-              axios.get('/users')
-              .then(r=>{setUsers(r.data)})
-          
-            })}
-          else {
-            navigate("/");
-          }
-        })
-  
+                axios.get('/marketcards')
+                  .then(r => setMarketCards(r.data))
+
+                axios.get('/usercards')
+                  .then(r => {
+                    setUserCards(r.data)
+                  })
+                axios.get('/users')
+                  .then(r => { setUsers(r.data) })
+
+              })
+            }
+            else {
+              navigate("/");
+            }
+          })
+
         navigate('/');
       })
       .catch(function (error) {
@@ -185,110 +189,110 @@ export default function App() {
 
   }
 
-  function handleBackClick(){
+  function handleBackClick() {
     navigate(-1);
   }
 
   // ? Pack Functions
 
-  function handleBuyPackClick(packCost,packType) {
+  function handleBuyPackClick(packCost, packType) {
     if (user.credits < packCost) {
-        alert(`ERROR: You do not have enough credits to purchase this pack.`)
+      alert(`ERROR: You do not have enough credits to purchase this pack.`)
     } else {
-        let packToBuy = {
-            "pack": packType,
-            "cost": packCost
-        }
-        axios.post('buypack', packToBuy)
-            .then(r => {
-                alert(`${packType[0].toUpperCase() + packType.slice(1,)} Pack bought!`)
-                //update user information
-                fetch("/me")
-                    .then((r) => {
-                        if (r.ok) {
-                            r.json().then((user) => {
-                                setUser(user)
-                                setUserPacks(user.packs)
-                                setUserCredits(user.credits)
-                            })
-                        }
-                    })
-            }
-
-            )
-            .catch(function (error) {
-              if (error.response) {
-                console.log(error.response.data.errors);
-                alert(error.response.data.errors)
-              } else if (error.request) {
-                console.log(error.request);
-              } else {
-                console.log('Error', error.message);
+      let packToBuy = {
+        "pack": packType,
+        "cost": packCost
+      }
+      axios.post('buypack', packToBuy)
+        .then(r => {
+          alert(`${packType[0].toUpperCase() + packType.slice(1,)} Pack bought!`)
+          //update user information
+          fetch("/me")
+            .then((r) => {
+              if (r.ok) {
+                r.json().then((user) => {
+                  setUser(user)
+                  setUserPacks(user.packs)
+                  setUserCredits(user.credits)
+                })
               }
-            });
-      
+            })
+        }
+
+        )
+        .catch(function (error) {
+          if (error.response) {
+            console.log(error.response.data.errors);
+            alert(error.response.data.errors)
+          } else if (error.request) {
+            console.log(error.request);
+          } else {
+            console.log('Error', error.message);
+          }
+        });
+
     }
 
-}
-
-function handleOpenPackClick(packType) {
-  if (userPacks[packType] == 0) {
-      alert(`ERROR: You have no ${packType[0].toUpperCase() + packType.slice(1, packType.length)} Packs left!`)
-  } else {
-      axios.get(`/${packType}_pack`)
-          .then(r => {
-              document.title = (`Opening ${packType} Pack`)
-              setOpenedCards(r.data)
-              setShowModal(true)
-              //update user information
-              fetch("/me")
-                  .then((r) => {
-                      if (r.ok) {
-                          r.json().then((user) => {
-                              setUser(user)
-                              setUserCards(user.cards)
-                              setUserPacks(user.packs)
-                          })
-                      }
-                  })
-          }
-
-          )
   }
 
-}
+  function handleOpenPackClick(packType) {
+    if (userPacks[packType] == 0) {
+      alert(`ERROR: You have no ${packType[0].toUpperCase() + packType.slice(1, packType.length)} Packs left!`)
+    } else {
+      axios.get(`/${packType}_pack`)
+        .then(r => {
+          document.title = (`Opening ${packType} Pack`)
+          setOpenedCards(r.data)
+          setShowModal(true)
+          //update user information
+          fetch("/me")
+            .then((r) => {
+              if (r.ok) {
+                r.json().then((user) => {
+                  setUser(user)
+                  setUserCards(user.cards)
+                  setUserPacks(user.packs)
+                })
+              }
+            })
+        }
+
+        )
+    }
+
+  }
 
 
   return (
     <React.Fragment>
-            <video width="400" autoPlay={true} muted playsInline loop id="bg-video">
+      <video width="400" autoPlay={true} muted playsInline loop id="bg-video">
         <source src={video} type="video/ogg"></source>
       </video>
       <div id="video-overlay"></div>
 
-      {user?<div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div>:null}
+      {user ? <div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div> : null}
       <Routes>
-        <Route exact path="/" element={signedIn?<Home />:<Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
+        <Route exact path="/" element={signedIn ? <Home /> : <Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
         <Route path="/collection" element={<Collection user={user} signedIn={signedIn} handleBackClick={handleBackClick} />} />
-        <Route path="/cards" element={<YourCards 
-          user={user} 
+        <Route path="/cards" element={<YourCards
+          user={user}
           setUser={setUser}
           userCards={userCards}
           setUserCards={setUserCards}
           marketCards={marketCards}
           setMarketCards={setMarketCards}
-          handleClick={handleClick} 
-          signedIn={signedIn} 
+          handleClick={handleClick}
+          signedIn={signedIn}
           users={users}
           setMarketSearchTerm={setMarketSearchTerm}
           setMarketSelectedRarity={setMarketSelectedRarity}
-          />} />
-        <Route path="/openpacks" element={<OpenPacks 
-          user={user} 
-          setUser={setUser} 
-          setUserCards={setUserCards} 
-          signedIn={signedIn} 
-          userPacks={userPacks} 
+        />} />
+        <Route path="/openpacks" element={<OpenPacks
+          user={user}
+          setUser={setUser}
+          setUserCards={setUserCards}
+          signedIn={signedIn}
+          userPacks={userPacks}
           setUserPacks={setUserPacks}
           handleOpenPackClick={handleOpenPackClick}
           handleBuyPackClick={handleBuyPackClick}
@@ -296,72 +300,72 @@ function handleOpenPackClick(packType) {
           setOpenedCards={setOpenedCards}
           showModal={showModal}
           setShowModal={setShowModal}
-          />} />
-        <Route path="/buypacks" element={<BuyPacks 
-            user={user} 
-            userCredits={userCredits} 
-            setUserCredits={setUserCredits} 
-            setUser={setUser} 
-            setUserCards={setUserCards} 
-            signedIn={signedIn} 
-            userPacks={userPacks} 
-            setUserPacks={setUserPacks}
-            handleOpenPackClick={handleOpenPackClick}
-            handleBuyPackClick={handleBuyPackClick}
-            />} />
-        <Route path="/marketplace" element={<Marketplace 
-          user={user} 
+        />} />
+        <Route path="/buypacks" element={<BuyPacks
+          user={user}
+          userCredits={userCredits}
+          setUserCredits={setUserCredits}
+          setUser={setUser}
+          setUserCards={setUserCards}
+          signedIn={signedIn}
+          userPacks={userPacks}
+          setUserPacks={setUserPacks}
+          handleOpenPackClick={handleOpenPackClick}
+          handleBuyPackClick={handleBuyPackClick}
+        />} />
+        <Route path="/marketplace" element={<Marketplace
+          user={user}
           setUser={setUser}
           userCards={userCards}
           setUserCards={setUserCards}
           marketCards={marketCards}
           setMarketCards={setMarketCards}
-          handleClick={handleClick} 
+          handleClick={handleClick}
           signedIn={signedIn}
           users={users}
           marketSearchTerm={marketSearchTerm}
           setMarketSearchTerm={setMarketSearchTerm}
           marketSelectedRarity={marketSelectedRarity}
           setMarketSelectedRarity={setMarketSelectedRarity}
-          />} />
+        />} />
         <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
-        <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick}/>} />
-        <Route path="/signup" element={<SignUp 
-            setSignedIn={setSignedIn} 
-            signedIn={signedIn} 
-            username={username} 
-            setUsername={setUsername} 
-            password={password} 
-            setPassword={setPassword}    
-            signUpPasswordConfirmation={signUpPasswordConfirmation}
-            setSignUpPasswordConfirmation={setSignUpPasswordConfirmation}          
-            signUpFirstName={signUpFirstName}
-            setSignUpFirstName={setSignUpFirstName}
-            signUpLastName={signUpLastName}
-            setSignUpLastName={setSignUpLastName}
-            handleSignUpSubmit={handleSignUpSubmit} 
-            handleBackClick={handleBackClick}/>} />
-        <Route path="/about" element={<About 
-            signedIn={signedIn} 
-            userCards={userCards}/>}/>
-        <Route path="/profile" element={<Profile 
-            handleLogOut={handleLogOut} 
-            signedIn={signedIn} 
-            setSignedIn={setSignedIn}l
-            handleBackClick={handleBackClick}/>} />
+        <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick} />} />
+        <Route path="/signup" element={<SignUp
+          setSignedIn={setSignedIn}
+          signedIn={signedIn}
+          username={username}
+          setUsername={setUsername}
+          password={password}
+          setPassword={setPassword}
+          signUpPasswordConfirmation={signUpPasswordConfirmation}
+          setSignUpPasswordConfirmation={setSignUpPasswordConfirmation}
+          signUpFirstName={signUpFirstName}
+          setSignUpFirstName={setSignUpFirstName}
+          signUpLastName={signUpLastName}
+          setSignUpLastName={setSignUpLastName}
+          handleSignUpSubmit={handleSignUpSubmit}
+          handleBackClick={handleBackClick} />} />
+        <Route path="/about" element={<About
+          signedIn={signedIn}
+          userCards={userCards} />} />
+        <Route path="/profile" element={<Profile
+          handleLogOut={handleLogOut}
+          signedIn={signedIn}
+          setSignedIn={setSignedIn} l
+          handleBackClick={handleBackClick} />} />
         <Route path="/edit" element={<Edit
-            user={user}
-            setUser={setUser}
-            signedIn={signedIn} 
-            username={username} 
-            setUsername={setUsername}             
-            signUpFirstName={signUpFirstName}
-            setSignUpFirstName={setSignUpFirstName}
-            signUpLastName={signUpLastName}
-            setSignUpLastName={setSignUpLastName}
-            handleLogOut={handleLogOut}
- />} />
-        <Route path="/*" element={signedIn?<Home />:<Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
+          user={user}
+          setUser={setUser}
+          signedIn={signedIn}
+          username={username}
+          setUsername={setUsername}
+          signUpFirstName={signUpFirstName}
+          setSignUpFirstName={setSignUpFirstName}
+          signUpLastName={signUpLastName}
+          setSignUpLastName={setSignUpLastName}
+          handleLogOut={handleLogOut}
+        />} />
+        <Route path="/*" element={signedIn ? <Home /> : <Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
       </Routes>
     </React.Fragment>
   );
