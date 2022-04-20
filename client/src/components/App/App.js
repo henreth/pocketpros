@@ -130,6 +130,16 @@ export default function App() {
               setUserPacks(user.packs)
               setUserCredits(user.credits)
               setSignedIn(true)
+
+              axios.get('/marketcards')
+              .then(r=>setMarketCards(r.data))
+          
+              axios.get('/usercards')
+              .then(r=>{
+                setUserCards(r.data)})
+              axios.get('/users')
+              .then(r=>{setUsers(r.data)})
+          
             })}
           else {
             navigate("/");
