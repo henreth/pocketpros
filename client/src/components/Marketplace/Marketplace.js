@@ -49,7 +49,7 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
       } else if (sortTerm === '4') {
         return card2.sale_price - card1.sale_price
       } else if (sortTerm === '5') {
-        return card2.updated_at.localeCompare(card1.updated_at)
+        return card1.updated_at.localeCompare(card2.updated_at)
       } else if (sortTerm === '6') {
         return card2.updated_at.localeCompare(card1.updated_at)
       }
