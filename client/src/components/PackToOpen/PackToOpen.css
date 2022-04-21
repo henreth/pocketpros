@@ -28,7 +28,6 @@
           transform: scale(0.95) !important;
   -webkit-transition: .5s ease;
   transition: .5s ease;
-  color: #79D9FF !important;
 }
 
 .booster {
@@ -175,7 +174,7 @@
 }
 
 .pack-cost:active {
-  color: #79D9FF;
+  color: #606060;
 }
 
 .locked b {
