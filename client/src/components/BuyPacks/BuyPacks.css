@@ -22,8 +22,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 0%;
+      flex-basis: 0%;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -35,7 +35,6 @@
   text-transform: uppercase;
   position: relative;
   text-align: center;
-  color: #45758C;
   background-color: rgba(45, 51, 61, 0.8);
   padding: 2% 2%;
   font-size: 1em;

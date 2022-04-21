@@ -96,9 +96,9 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
         
         <div className='yourCards-filter-container'>
           {raritiesToDisplay}
-          <div class="list-choice">
-            <div class="list-choice-title">Sort</div>
-            <div class="list-choice-objects" onChange={handleSortChange}>
+          <div className="list-choice">
+            <div className="list-choice-title">Sort</div>
+            <div className="list-choice-objects" onChange={handleSortChange}>
               <label>
                 <input type="radio" name='month' value={'1'} />
                 <span>A-Z</span>

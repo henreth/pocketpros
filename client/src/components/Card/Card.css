@@ -181,10 +181,6 @@
   font-size: 3.5vh;
 }
 
-.card-cost:active {
-  color: #79D9FF;
-}
-
 .seller-name {
   font-size: 1.25vh;
   margin-bottom: 2%;

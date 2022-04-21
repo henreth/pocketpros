@@ -7,7 +7,7 @@ import Graph from './Graph/Graph';
 import axios from 'axios';
 
 
-export default function MarketInformation({ selectedCard, setSelectedCard, showModal, setShowModal, user, setUser, users, userCards, setUserCards, marketCards, setMarketCards, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab, setMarketSearchTerm, setMarketSelectedRarity, listedByUser,setListedByUser }) {
+export default function MarketInformation({ selectedCard, setSelectedCard, showModal, setShowModal, user, setUser, users, userCards, setUserCards, marketCards, setMarketCards, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab, setMarketSearchTerm, setMarketSelectedRarity, listedByUser, setListedByUser }) {
     let navigate = useNavigate();
     const charImages = require.context('../../../img/characters', true);
     let [clickedList, setClickedList] = useState(false);
@@ -111,7 +111,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
     let averagePrice = allCardTransactions.length === 0 ? '' : Math.round(calculateAverage(allCardTransactions.map(tx => parseInt(tx.sale_price))))
     let priceMessage = allCardTransactions.length === 0 ? '(No Transactions Found)' : '- Average Sale Price'
 
-    let tabs = ['SALE PRICE','RECENT TRANSACTIONS','ACTIVE LISTINGS','THIS CARD\'S HISTORY']
+    let tabs = ['SALE PRICE', 'RECENT TRANSACTIONS', 'ACTIVE LISTINGS', 'THIS CARD\'S HISTORY']
     let tabsToDisplay = tabs.map(tab => {
         let tabClassName = selectedTab === tab ? 'history-tab selected' : 'history-tab'
         return (
@@ -140,7 +140,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
         let toUsername = users.filter(user => user.id === toId)[0].username
         let fromId = tx.from_id
         let fromUsername = users.filter(user => user.id === fromId)[0].username
-        return (<div key={'tx-'+tx.id} className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
+        return (<div key={'tx-' + tx.id} className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
     })
 
     let listingsToDisplay = activeListings.map(card => {
@@ -149,7 +149,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
         let month = date.slice(5, 7);
         let day = date.slice(8, 10)
 
-        return (<div key={'listing-'+card.id} className='transaction-row'>> <b>{day}-{month}-{year}</b> - Seller: <b>{card.user.username}</b> - 🪙 <b>{card.sale_price}</b> </div>)
+        return (<div key={'listing-' + card.id} className='transaction-row'>> <b>{day}-{month}-{year}</b> - Seller: <b>{card.user.username}</b> - 🪙 <b>{card.sale_price}</b> </div>)
     })
 
 
@@ -162,13 +162,13 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
         let toUsername = users.filter(user => user.id === toId)[0].username
         let fromId = tx.from_id
         let fromUsername = users.filter(user => user.id === fromId)[0].username
-        return (<div key={'atx-'+tx.id} className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
+        return (<div key={'atx-' + tx.id} className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
     })
 
     let noResultsFound = () => {
         return (
-                <div className='transaction-row'>> <b>NO RESULTS FOUND</b></div>
-            )
+            <div className='transaction-row'>> <b>NO RESULTS FOUND</b></div>
+        )
     }
 
     let displayItem;
@@ -183,7 +183,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
             return (
                 <React.Fragment>
                     <div className='transaction-row start'>> <b>{day}-{month}-{year}</b> - Unpacked by: <b>{toUsername}</b></div>
-                    {cardTransactions.length!=0?transactionsToDisplay:noResultsFound()}
+                    {cardTransactions.length != 0 ? transactionsToDisplay : noResultsFound()}
                 </React.Fragment>
             )
         }
@@ -191,7 +191,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
         displayItem = () => {
             return (
                 <React.Fragment>
-                    {activeListings.length!=0?listingsToDisplay:noResultsFound()}
+                    {activeListings.length != 0 ? listingsToDisplay : noResultsFound()}
                 </React.Fragment>
             )
         }
@@ -199,7 +199,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
         displayItem = () => {
             return (
                 <React.Fragment>
-                    {allCardTransactions.length!=0?allTransactionsToDisplay:noResultsFound()}
+                    {allCardTransactions.length != 0 ? allTransactionsToDisplay : noResultsFound()}
                 </React.Fragment>
             )
         }
@@ -227,7 +227,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
             }
             axios.post('/listcard', details)
                 .then(r => {
-                    alert('Your ' + capitalize(selectedCard.rarity) + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + ' has been listed for 🪙' + listingPrice +'.')
+                    alert('Your ' + capitalize(selectedCard.rarity) + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + ' has been listed for 🪙' + listingPrice + '.')
                     setSelectedCard(r.data)
                     setClickedList(false)
                     setListingPrice('')
@@ -248,7 +248,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
         }
         axios.post('/unlistcard', details)
             .then(r => {
-                alert('Your ' + capitalize(selectedCard.rarity) + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + 'has been taken off the market.')
+                alert('Your ' + capitalize(selectedCard.rarity) + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + ' has been taken off the market.')
                 setSelectedCard(r.data)
                 setClickedUnlist(false)
                 setListingPrice('')
@@ -266,17 +266,22 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
         setMarketSelectedRarity(selectedCard.rarity)
     }
 
-    function handleClickBuyCard(){
-        setClickedBuy(!clickedBuy)
+    function handleClickBuyCard() {
+        if (user.credits >= selectedCard.sale_price) {
+            setClickedBuy(!clickedBuy)
+        } else {
+            alert('You need atleast ' + selectedCard.sale_price + " credits to buy this card.")
+        }
+
     }
 
-    function handleClickConfirmBuy(){
+    function handleClickConfirmBuy() {
         let details = {
             'card_id': selectedCard.id,
         }
         axios.post('/buycard', details)
             .then(r => {
-                alert('You have purchased a '+ capitalize(selectedCard.rarity) + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + ' for 🪙' + selectedCard.sale_price + '.')
+                alert('You have purchased a ' + capitalize(selectedCard.rarity) + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + ' for 🪙' + selectedCard.sale_price + '.')
                 setSelectedCard(r.data)
                 setClickedBuy(false)
                 setListedByUser(true)
@@ -287,14 +292,16 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
                 let filteredMarketCards = marketCards.filter(card => card.id != selectedCard.id)
                 setMarketCards(filteredMarketCards)
                 fetch("/me")
-                .then((r) => {
-                  if (r.ok) {
-                    r.json().then((user) => {
-                      setUser(user)
-                    })}
-                })
+                    .then((r) => {
+                        if (r.ok) {
+                            r.json().then((user) => {
+                                setUser(user)
+                            })
+                        }
+                    })
             })
-        }
+
+    }
 
     return (
         <React.Fragment>
@@ -317,7 +324,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
                         <div className='history-summary'>
                             <div className='totalcardscount'>Owner: <b>{selectedCard.user.username}</b></div>
                             <div className='ownerscount'>Status: <b>{selectedCard.for_sale ? 'For Sale' : 'Not For Sale'}</b></div>
-                            <div className='avgsaleprice'>{selectedCard.for_sale ? 'Cost: 🪙' : ''} <b>{selectedCard.for_sale ? selectedCard.sale_price : ''}</b></div>
+                            <div className='avgsaleprice'>{selectedCard.for_sale ? 'Price: 🪙' : ''} <b>{selectedCard.for_sale ? selectedCard.sale_price : ''}</b></div>
                         </div>
                         <div className='history-summary'>
                             <div className='totalcardscount'>⧉ <b>{numOthercards}</b> Copies</div>
@@ -344,7 +351,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
                         </div> : <div className='button-wrapper'>
                             {clickedBuy ? <button className='cardInformation-button' onClick={handleClickBuyCard}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickBuyCard}>Buy Card</button>}
                             {clickedBuy ? <button className='cardInformation-button'>Are You Sure?</button> : null}
-                           {clickedBuy ? <button className='cardInformation-button' onClick={handleClickConfirmBuy}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
+                            {clickedBuy ? <button className='cardInformation-button' onClick={handleClickConfirmBuy}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
                         </div>}
 
 
