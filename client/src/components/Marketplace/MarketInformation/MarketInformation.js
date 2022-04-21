@@ -248,7 +248,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
         }
         axios.post('/unlistcard', details)
             .then(r => {
-                alert('Your ' + capitalize(selectedCard.rarity) + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + 'has been taken off the market.')
+                alert('Your ' + capitalize(selectedCard.rarity) + ' ' + selectedCard.character.first_name + ' ' + selectedCard.character.last_name + ' has been taken off the market.')
                 setSelectedCard(r.data)
                 setClickedUnlist(false)
                 setListingPrice('')
@@ -324,7 +324,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
                         <div className='history-summary'>
                             <div className='totalcardscount'>Owner: <b>{selectedCard.user.username}</b></div>
                             <div className='ownerscount'>Status: <b>{selectedCard.for_sale ? 'For Sale' : 'Not For Sale'}</b></div>
-                            <div className='avgsaleprice'>{selectedCard.for_sale ? 'Cost: 🪙' : ''} <b>{selectedCard.for_sale ? selectedCard.sale_price : ''}</b></div>
+                            <div className='avgsaleprice'>{selectedCard.for_sale ? 'Price: 🪙' : ''} <b>{selectedCard.for_sale ? selectedCard.sale_price : ''}</b></div>
                         </div>
                         <div className='history-summary'>
                             <div className='totalcardscount'>⧉ <b>{numOthercards}</b> Copies</div>

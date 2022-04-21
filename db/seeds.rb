@@ -25,13 +25,13 @@ User.create!([
         }
     },
     {
-        first_name: "Sir",
-        last_name: "Gawain",
-        username: "greenknight",
-        password: "giants",
+        first_name: "Merlin",
+        last_name: "The Wizard",
+        username: "Merlin",
+        password: "12345",
         last_log_in: Time.new,
         streak: 1,
-        credits: 25,
+        credits: 5000,
         packs: {
             "total": 1,
             "booster":1,
@@ -134,9 +134,9 @@ User.create!([
     },
     {
         first_name: "Sir",
-        last_name: "Kay",
-        username: "Kay",
-        password: "Kay",
+        last_name: "Gawain",
+        username: "Gawain",
+        password: "Gawain",
         last_log_in: Time.new,
         streak: 1,
         credits: 5000,
