@@ -78,6 +78,7 @@
 .yourCards-filter-container {
   position: fixed;
   z-index: 200;
+  margin-top: -.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,13 +89,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: rgba(102, 102, 102, 0.747);
+  color: rgba(138, 138, 138, 0.747);
   top: 5%;
   background-color: transparent;
   -webkit-transition: .5s ease;
   transition: .5s ease;
   padding-left: 3.25%;
   margin-left: 10%;
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 .yourCards-filter-container:hover {
@@ -102,7 +104,7 @@
   -webkit-transition: .5s ease;
   transition: .5s ease;
   border-radius: 10px;
-  color: rgba(127, 126, 126, 0.747);
+  color: rgba(168, 168, 168, 0.747);
 }
 
 .yourCards-tab {
@@ -111,7 +113,7 @@
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
-  font-size: larger;
+  font-size: 140%;
   -webkit-transition: .5s ease;
   transition: .5s ease;
   margin-right: 7.5%;
@@ -123,7 +125,7 @@
 }
 
 .yourCards-tab:active {
-  color: #45758C;
+  color: #575757;
 }
 
 .selected {
@@ -258,6 +260,7 @@
   background-color: transparent;
   padding-left: 1.25%;
   padding-right: 1.25%;
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 .yourCards-source-container:hover {
@@ -265,7 +268,7 @@
   -webkit-transition: .5s ease;
   transition: .5s ease;
   border-radius: 10px;
-  color: rgba(127, 126, 126, 0.747);
+  color: rgba(255, 255, 255, 0.747);
 }
 
 .yourCards-source-tab {
@@ -275,7 +278,7 @@
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
-  font-size: 145%;
+  font-size: 165%;
   -webkit-transition: .5s ease;
   transition: .5s ease;
   padding-top: 2.75%;
@@ -287,7 +290,7 @@
 }
 
 .yourCards-source-tab:active {
-  color: #45758C;
+  color: #575757;
 }
 
 .source-selected {
@@ -300,6 +303,7 @@
   position: relative;
   cursor: pointer;
   text-transform: uppercase;
+  font-size: larger;
 }
 
 .list-choice input[type="radio"] {
@@ -310,7 +314,6 @@
 .list-choice-title {
   width: 100%;
   display: block;
-  background-color: rgba(35, 35, 35, 0.288);
   text-align: center;
   padding: 0.55em .5em;
   -webkit-box-sizing: border-box;
