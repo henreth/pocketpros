@@ -231,301 +231,409 @@ Character.create!([
         first_name: "Vitalik",
         last_name: "Buterin",
         image_url: "vitalikbuterin.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Katherine",
         last_name: "Johnson",
         image_url: "katherinejohnson.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Alan",
         last_name: "Turing",
         image_url: "alanturing.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Steve",
         last_name: "Jobs",
         image_url: "stevejobs.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Bill",
         last_name: "Gates",
         image_url: "billgates.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Grace",
         last_name: "Hopper",
         image_url: "gracehopper.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Joan",
         last_name: "Clarke",
         image_url: "joanclarke.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Gavin",
         last_name: "Wood",
         image_url: "gavinwood.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Mary",
         last_name: "Jackson",
         image_url: "maryjackson.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Mary Kenneth",
         last_name: "Keller",
         image_url: "marykennethkeller.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Raj",
         last_name: "Reddy",
         image_url: "rajreddy.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Hedy",
         last_name: "Lamarr",
         image_url: "hedylamarr.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Margaret",
         last_name: "Hamilton",
         image_url: "margarethamilton.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Mark",
         last_name: "Zuckerberg",
         image_url: "markzuckerberg.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Anita",
         last_name: "Borg",
         image_url: "anitaborg.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Larry",
         last_name: "Page",
         image_url: "larrypage.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Yukihiro",
         last_name: "Matsumoto",
         image_url: "yukihiromatsumoto.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Jeff",
         last_name: "Bezos",
         image_url: "jeffbezos.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Annie",
         last_name: "Easley",
         image_url: "annieeasley.png",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Ada",
         last_name: "Lovelace",
         image_url: "adalovelace.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Clarence",
         last_name: "Ellis",
         image_url: "clarenceellis.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Tim",
         last_name: "Berners Lee",
         image_url: "timbernerslee.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "John",
         last_name: "Von Neumann",
         image_url: "johnvonneumann.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Steve",
         last_name: "Wozniak",
         image_url: "stevewozniak.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "J.C.R.",
         last_name: "Licklider",
         image_url: "jcrlicklider.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "John",
         last_name: "McCarthy",
         image_url: "johnmccarthy.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Stanislaw",
         last_name: "Ulam",
         image_url: "stanislawulam.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Heron",
         last_name: "of Alexandria",
-        image_url: "heronofalexandria.jpeg"
+        image_url: "heronofalexandria.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Guido",
         last_name: "Van Rossum",
-        image_url: "guidovanrossum.jpeg"
+        image_url: "guidovanrossum.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "John W.",
         last_name: "Tukey",
-        image_url: "johnwtukey.jpeg"
+        image_url: "johnwtukey.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Joseph Marie",
         last_name: "Jacquard",
-        image_url: "josephmariejacquard.jpeg"
+        image_url: "josephmariejacquard.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Charles",
         last_name: "Babbage",
-        image_url: "charlesbabbage.jpeg"
+        image_url: "charlesbabbage.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Dorothy",
         last_name: "Vaughan",
-        image_url: "dorothyvaughan.jpeg"
+        image_url: "dorothyvaughan.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Tommy",
         last_name: "Flowers",
-        image_url: "tommyflowers.jpeg"
+        image_url: "tommyflowers.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Linus",
         last_name: "Torvalds",
-        image_url: "linustorvalds.jpeg"
+        image_url: "linustorvalds.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "John",
         last_name: "Backus",
-        image_url: "johnbackus.jpeg"
+        image_url: "johnbackus.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Douglas",
         last_name: "Crockford",
-        image_url: "douglascrockford.jpeg"
+        image_url: "douglascrockford.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Miguel",
         last_name: "De Icaza",
-        image_url: "migueldeicaza.jpeg"
+        image_url: "migueldeicaza.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Carl",
         last_name: "Sassenrath",
-        image_url: "carlsassenrath.jpeg"
+        image_url: "carlsassenrath.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Barbara",
         last_name: "Liskov",
-        image_url: "barbaraliskov.jpeg"
+        image_url: "barbaraliskov.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "David",
         last_name: "Axmark",
-        image_url: "davidaxmark.jpeg"
+        image_url: "davidaxmark.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "David",
         last_name: "Knuth",
-        image_url: "davidknuth.jpeg"
+        image_url: "davidknuth.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Sergey",
         last_name: "Brin",
-        image_url: "sergeybrin.jpeg"
+        image_url: "sergeybrin.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Elizabeth",
         last_name: "Feinler",
-        image_url: "elizabethfeinler.jpeg"
+        image_url: "elizabethfeinler.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Alexey",
         last_name: "Pajitnov",
-        image_url: "alexeypajitnov.jpeg"
+        image_url: "alexeypajitnov.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Andrew",
         last_name: "Ng",
-        image_url: "andrewng.jpeg"
+        image_url: "andrewng.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Demis",
         last_name: "Hassabis",
-        image_url: "demishassabis.jpeg"
+        image_url: "demishassabis.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Karen",
         last_name: "Sparck Jones",
-        image_url: "karensparckjones.jpeg"
+        image_url: "karensparckjones.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
-        first_name: "Karen",
-        last_name: "Sparck Jones",
-        image_url: "karensparckjones.jpeg"
+        first_name: "Timnit",
+        last_name: "Gebru",
+        image_url: "timnitgebru.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Timnit_Gebru'
     },
     {
         first_name: "Max",
         last_name: "Levchin",
-        image_url: "maxlevchin.jpeg"
+        image_url: "maxlevchin.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Shafi",
         last_name: "Goldwasser",
-        image_url: "shafigoldwasser.jpeg"
+        image_url: "shafigoldwasser.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Lisa",
         last_name: "Su",
-        image_url: "lisasu.png"
+        image_url: "lisasu.png",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Sophie",
         last_name: "Wilson",
-        image_url: "sophiewilson.jpeg"
+        image_url: "sophiewilson.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Vint",
         last_name: "Cerf",
-        image_url: "vintcerf.jpeg"
+        image_url: "vintcerf.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Manuel",
         last_name: "Blum",
-        image_url: "manuelblum.jpeg"
+        image_url: "manuelblum.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Frances",
         last_name: "Allen",
-        image_url: "francesallen.jpeg"
+        image_url: "francesallen.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Edsger W.",
         last_name: "Dijkstra",
-        image_url: "edsgerwdijkstra.jpeg"
+        image_url: "edsgerwdijkstra.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Kunihiko",
         last_name: "Fukushima",
-        image_url: "kunihikofukushima.jpeg"
+        image_url: "kunihikofukushima.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "DJ",
         last_name: "Patil",
-        image_url: "djpatil.jpeg"
+        image_url: "djpatil.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
     },
     {
         first_name: "Fei Fei",
         last_name: "Li",
-        image_url: "feifeili.jpeg"
+        image_url: "feifeili.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
+    },
+    {
+        first_name: "Ken",
+        last_name: "Thompson",
+        image_url: "kenthompson.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Ken_Thompson'
+    },
+    {
+        first_name: "Dennis",
+        last_name: "Ritchie",
+        image_url: "dennisritchie.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Dennis_Ritchie'
+    },
+    {
+        first_name: "Tony",
+        last_name: "Hoare",
+        image_url: "tonyhoare.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Tony_Hoare'
+    },
+    {
+        first_name: "Alan",
+        last_name: "Kay",
+        image_url: "alankay.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Alan_Kay'
+    },
+    {
+        first_name: "Andrew",
+        last_name: "Yao",
+        image_url: "andrewyao.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Andrew_Yao'
+    },
+    {
+        first_name: "Marvin",
+        last_name: "Minsky",
+        image_url: "marvinminsky.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Marvin_Minsky'
+    },
+    {
+        first_name: "Adi",
+        last_name: "Shamir",
+        image_url: "adishamir.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Adi_Shamir'
+    },
+    {
+        first_name: "Kurt",
+        last_name: "Gödel",
+        image_url: "kurtgodel.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Kurt_G%C3%B6del'
     },
 ])
 

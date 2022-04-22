@@ -10,7 +10,7 @@ export default function QrCode(props) {
     quietZone: 0,
     bgColor: "transparent",
     fgColor: "#000000",
-    qrStyle: "square"
+    qrStyle: "dots"
   }
 
  const options = { ...defaultOptions, ...props.options }
