@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2022_04_06_180611) do
     t.bigint "user_id", null: false
     t.bigint "character_id", null: false
     t.integer "rarity"
+    t.integer "variant"
     t.boolean "for_sale"
     t.integer "sale_price"
     t.string "unique_id"
@@ -32,9 +33,15 @@ ActiveRecord::Schema.define(version: 2022_04_06_180611) do
   create_table "characters", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "image_url"
     t.string "link"
+    t.string "image_url"
+    t.string "image_url2"
+    t.string "image_url3"
+    t.string "image_url4"
     t.string "title"
+    t.string "title2"
+    t.string "title3"
+    t.string "title4"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
