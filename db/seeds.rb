@@ -585,7 +585,8 @@ Character.create!([
         first_name: "Fei Fei",
         last_name: "Li",
         image_url: "feifeili.jpeg",
-        link: 'https://en.wikipedia.org/wiki/Fei-Fei_Li'
+        link: 'https://en.wikipedia.org/wiki/Fei-Fei_Li',
+        title: 'Automated Intelligence'
     },
     {
         first_name: "Ken",
@@ -634,6 +635,48 @@ Character.create!([
         last_name: "Gödel",
         image_url: "kurtgodel.jpeg",
         link: 'https://en.wikipedia.org/wiki/Kurt_G%C3%B6del'
+    },
+    {
+        first_name: "Musa",
+        last_name: "al-Khwarizmi",
+        image_url: "musaalkhwarizmi.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi',
+        title: 'Mathematician'
+    },
+    {
+        first_name: "Pāṇini",
+        last_name: "",
+        image_url: "panini.jpeg",
+        link: 'https://en.wikipedia.org/wiki/P%C4%81%E1%B9%87ini',
+        title: 'Grammarian'
+    },
+    {
+        first_name: "Ismail",
+        last_name: "al-Jazari",
+        image_url: "ismailaljazari.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Ismail_al-Jazari',
+        title: 'Mechanical Engineer'
+    },
+    {
+        first_name: "Blaise",
+        last_name: "Pascal",
+        image_url: "blaisepascal.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Blaise_Pascal',
+        title: 'Mathematician'
+    },
+    {
+        first_name: "Gottfried",
+        last_name: "Leibniz",
+        image_url: "gottfriedleibniz.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz',
+        title: 'Mathematician'
+    },
+    {
+        first_name: "Blaise",
+        last_name: "Pascal",
+        image_url: "blaisepascal.jpeg",
+        link: 'https://en.wikipedia.org/wiki/Blaise_Pascal',
+        title: 'Mathematician'
     },
 ])
 
