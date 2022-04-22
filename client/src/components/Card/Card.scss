@@ -117,22 +117,6 @@
     }
 }
 
-.floppy-icon{
-    position: absolute;
-    height: 5.5vh;
-    filter: opacity(.25);
-    top: 83%;
-    left: 75%;
-    transition: .5s ease;
-
-    &:hover{
-        filter: opacity(90%);
-        transition: .5s ease;
-    }
-
-}
-
-
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
