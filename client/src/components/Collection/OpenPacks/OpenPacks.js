@@ -11,7 +11,6 @@ import buyIcon from '../../PackToOpen/img/bwbuyicon.png'
 
 export default function OpenPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn,openedCards, setOpenedCards,showModal, setShowModal, handleBuyPackClick, handleOpenPackClick }) {
     document.title = 'Pocket Pros - Open Packs';
-    const packLogos = require.context('../../../img/pack_logos', true);
 
     let packTypes = ["booster", "regular", "pro", "max", "ultra", "studio"]
     let navigate = useNavigate();

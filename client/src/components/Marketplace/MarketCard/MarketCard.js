@@ -2,6 +2,7 @@ import '../../Card/Card.css';
 import React, { useState } from 'react';
 import icon from '../../../img/clearpocketpros.png';
 import axios from 'axios';
+import QrCode from '../../Card/QRCode/QRCode';
 
 
 export default function MarketCard({ user, card, setShowModal, userOwned, setListedByUser, setSelectedCard, setNumCardOwners, setNumOtherCards, setAllCardTransactions, setActiveListings, setSelectedTab }) {
@@ -60,7 +61,9 @@ export default function MarketCard({ user, card, setShowModal, userOwned, setLis
                     <div className='charCard-id'> {card.unique_id}</div>
                 </div>
             </div>
-            <img className='floppy-icon' src={icon} />
+            <div className='qrcode'> 
+                <QrCode url={card.character.link}/>
+            </div>
 
         </div>
     )

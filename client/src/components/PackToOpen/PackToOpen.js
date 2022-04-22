@@ -59,7 +59,7 @@ export default function PackToOpen({ buying, user, packType, setUser, setUserCar
 
     let packClass = 'pack ' + packType
 
-    let costClass = parseInt(user.credits) < parseInt(packCost) ? 'pack-cost locked' : 'pack-cost'
+    let costClass = user.credits != null ? (parseInt(user.credits) < parseInt(packCost) ? 'pack-cost locked' : 'pack-cost'): ''
 
 
     return (
