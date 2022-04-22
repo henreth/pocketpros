@@ -639,7 +639,7 @@ Character.create!([
     {
         first_name: "Musa",
         last_name: "al-Khwarizmi",
-        image_url: "musaalKhwarizmi.jpeg",
+        image_url: "musaalkhwarizmi.jpeg",
         link: 'https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi',
         title: 'Mathematician'
     },
