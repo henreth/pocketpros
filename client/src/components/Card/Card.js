@@ -48,7 +48,6 @@ export default function Card({ card, setShowModal,setSelectedCard,setNumCardOwne
                     <div className='charCard-id'> {card.unique_id}</div>
                 </div>
             </div>
-            {/* <img className='floppy-icon' src={icon} /> */}
             <div className='qrcode'> 
                 <QrCode url={card.character.link}/>
             </div>
