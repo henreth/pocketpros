@@ -2,10 +2,11 @@
 import '../../../Card/Card.css'
 import React, { useState } from 'react';
 import icon from '../../../../img/cleargithubqr.png';
+import QrCode from '../../../Card/QRCode/QRCode';
 
 
 
-export default function NewCard({ char }) {
+export default function NewCard({ card }) {
     const charImages = require.context('../../../../img/characters', true);
 
 
@@ -14,21 +15,23 @@ export default function NewCard({ char }) {
     function handleClickCard() {
         setOpened(true)
     }
-    let rarity = char.rarity
+    let rarity = card.rarity
 
     let cardClass = opened ? `charCard ${rarity}` : 'charCard unopened'
 
     return (
         <div className={cardClass} onClick={handleClickCard}>
             <div className='charCard-info-container'>
-            <img src={charImages('./'+char.character.image_url)} className='charCard-image' />
+            <img src={charImages('./'+card.character.image_url)} className='charCard-image' />
                 <div className='charCard-text'>
-                    <div className='charCard-rarity'>{char.rarity[0].toUpperCase()+char.rarity.slice(1,)}</div>
-                    <div className='charCard-name'><b>{char.character.first_name} {char.character.last_name}</b></div>
-                    <div className='charCard-id'>{char.unique_id}</div>
+                    <div className='charCard-rarity'>{card.rarity}</div>
+                    <div className='charCard-name'><b>{card.character.first_name} {card.character.last_name}</b></div>
+                    <div className='charCard-id'>{card.unique_id}</div>
                 </div>
             </div>
-            <img className='floppy-icon' src={icon} />
+            <div className='qrcode'> 
+                <QrCode url={card.character.link}/>
+            </div>
         </div>
     )
 }

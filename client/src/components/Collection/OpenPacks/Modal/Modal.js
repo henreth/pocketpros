@@ -25,7 +25,7 @@ export default function Modal({ showModal, setShowModal, openedCards }) {
     // let openedCardsToDisplay = shuffle(openedCards).map(card => {
     let openedCardsToDisplay = openedCards.map(card => {
         return (
-            <NewCard key={card.id} char={card} />
+            <NewCard key={card.id} card={card} />
         )
     })
 

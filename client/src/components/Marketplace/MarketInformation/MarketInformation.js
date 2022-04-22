@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './MarketInformation.scss'
 import { useNavigate } from 'react-router-dom';
 import icon from '../../../img/clearpocketpros.png';
+import QrCode from '../../Card/QRCode/QRCode';
 
 import Graph from './Graph/Graph';
 import axios from 'axios';
@@ -316,7 +317,9 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
                                 <div className='charCard-id'> {selectedCard.unique_id}</div>
                             </div>
                         </div>
-                        <img className='floppy-icon' src={icon} />
+                        <div className='qrcode'>
+                            <QrCode url={selectedCard.character.link} />
+                        </div>
                     </div>
 
                     <div className='market-information-container'>
