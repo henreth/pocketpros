@@ -2,6 +2,7 @@ import './Card.css';
 import React, { useState } from 'react';
 import icon from '../../img/clearpocketpros.png';
 import axios from 'axios';
+import QrCode from './QRCode/QRCode';
 
 
 export default function Card({ card, setShowModal,setSelectedCard,setNumCardOwners, userOwned, setListedByUser, setNumOtherCards, setAllCardTransactions, setActiveListings, setSelectedTab }) {
@@ -47,7 +48,10 @@ export default function Card({ card, setShowModal,setSelectedCard,setNumCardOwne
                     <div className='charCard-id'> {card.unique_id}</div>
                 </div>
             </div>
-            <img className='floppy-icon' src={icon} />
+            {/* <img className='floppy-icon' src={icon} /> */}
+            <div className='qrcode'> 
+                <QrCode url='www.wikipedia.org' />
+            </div>
 
         </div>
     )

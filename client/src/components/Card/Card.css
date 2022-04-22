@@ -194,4 +194,23 @@
   text-decoration: line-through;
   color: #e76a6a;
 }
+
+.qrcode {
+  position: absolute;
+  -webkit-filter: opacity(0.25);
+          filter: opacity(0.25);
+  top: 75.5%;
+  left: 65%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  -webkit-transform: scale(55%);
+          transform: scale(55%);
+}
+
+.qrcode:hover {
+  -webkit-filter: opacity(90%);
+          filter: opacity(90%);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
 /*# sourceMappingURL=Card.css.map */
