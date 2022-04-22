@@ -578,8 +578,16 @@ Character.create!([
     {
         first_name: "DJ",
         last_name: "Patil",
-        image_url: "djpatil.jpeg",
         link: 'https://en.wikipedia.org/wiki/DJ_Patil'
+        image_url: "djpatil.jpeg",
+        title: "Data Scientist",
+        image_url2: "djpatil2.jpeg",
+        title2: "Mathematician",
+        image_url3: "djpatil3.jpeg",
+        title3: "Computer Scientist",
+        image_url4: "djpatil4.jpeg",
+        title4: "Data Analyst",
+
     },
     {
         first_name: "Fei Fei",
@@ -646,37 +654,67 @@ Character.create!([
     {
         first_name: "Pāṇini",
         last_name: "",
-        image_url: "panini.jpeg",
         link: 'https://en.wikipedia.org/wiki/P%C4%81%E1%B9%87ini',
+        image_url: "panini.jpeg",
         title: 'Grammarian'
+        image_url4: "panini.jpeg",
+        title4: 'Philologist'
+        image_url4: "panini.jpeg",
+        title4: 'Linguist'
+        image_url4: "panini.jpeg",
+        title4: 'Morphological Analyst'
     },
     {
         first_name: "Ismail",
         last_name: "al-Jazari",
-        image_url: "ismailaljazari.jpeg",
         link: 'https://en.wikipedia.org/wiki/Ismail_al-Jazari',
+        image_url: "ismailaljazari.jpeg",
         title: 'Mechanical Engineer'
+        image_url2: "ismailaljazari2.jpeg",
+        title2: 'Mathematician'
+        image_url3: "ismailaljazari3.jpeg",
+        title3: 'Machinery Architect'
+        image_url4: "ismailaljazari.jpeg",
+        title4: 'Polymath'
     },
     {
-        first_name: "Blaise",
-        last_name: "Pascal",
-        image_url: "blaisepascal.jpeg",
-        link: 'https://en.wikipedia.org/wiki/Blaise_Pascal',
-        title: 'Mathematician'
+        first_name: "Susan L.",
+        last_name: "Graham",
+        link: 'https://en.wikipedia.org/wiki/Susan_L._Graham',
+        image_url: "susanlgraham.jpeg",
+        title: 'Computer Scientist'
+        image_url2: "susanlgraham2.jpeg",
+        title2: 'Mathematician'
+        image_url3: "susanlgraham3.jpeg",
+        title3: 'Systems Developer'
+        image_url4: "susanlgraham4.jpeg",
+        title4: 'Language Design'
     },
     {
         first_name: "Gottfried",
         last_name: "Leibniz",
-        image_url: "gottfriedleibniz.jpeg",
         link: 'https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz',
+        image_url: "gottfriedleibniz.jpeg",
         title: 'Mathematician'
+        image_url2: "gottfriedleibniz2.jpeg",
+        title2: 'Philosopher'
+        image_url3: "gottfriedleibniz3.jpeg",
+        title3: 'Scientist'
+        image_url4: "gottfriedleibniz4.jpeg",
+        title4: 'Polymath'
     },
     {
         first_name: "Blaise",
         last_name: "Pascal",
-        image_url: "blaisepascal.jpeg",
         link: 'https://en.wikipedia.org/wiki/Blaise_Pascal',
+        image_url: "blaisepascal.jpeg",
         title: 'Mathematician'
+        image_url2: "blaisepascal2.jpeg",
+        title2: 'Physicist'
+        image_url3: "blaisepascal3.jpeg",
+        title3: 'Philosopher'
+        image_url4: "blaisepascal4.jpeg",
+        title4: 'Mechanical Engineer'
     },
 ])
 

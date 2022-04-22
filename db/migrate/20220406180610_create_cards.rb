@@ -4,6 +4,7 @@ class CreateCards < ActiveRecord::Migration[6.1]
       t.references :user, null: false, foreign_key: true
       t.references :character, null: false, foreign_key: true
       t.integer :rarity
+      t.integer :variant
       t.boolean :for_sale
       t.integer :sale_price
       t.string :unique_id
