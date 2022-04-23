@@ -518,24 +518,52 @@ Character.create!([
         last_name: "Von Neumann",
         link: 'https://en.wikipedia.org/wiki/John_von_Neumann'
         image_url1: "johnvonneumann.jpeg",
+        title1: "Mathematician",
+        image_url2: "johnvonneumann2.jpeg",
+        title2: "Physicist",
+        image_url3: "johnvonneumann3.jpeg",
+        title3: "Computer Scientist",
+        image_url4: "johnvonneumann4.jpeg",
+        title4: "Polymath",
     },
     {
         first_name: "Steve",
         last_name: "Wozniak",
         link: 'https://en.wikipedia.org/wiki/Steve_Wozniak'
         image_url1: "stevewozniak.jpeg",
+        title1: "Computer Programmer",
+        image_url2: "stevewozniak2.jpeg",
+        title2: "Apple Co-Founder",
+        image_url3: "stevewozniak3.jpeg",
+        title3: "Electronics Engineer",
+        image_url4: "stevewozniak4.jpeg",
+        title4: "Microcomputing",
     },
     {
         first_name: "J.C.R.",
         last_name: "Licklider",
         link: 'https://en.wikipedia.org/wiki/J._C._R._Licklider'
         image_url1: "jcrlicklider.jpeg",
+        title1: "Computer Scientist"
+        image_url2: "jcrlicklider2.jpeg",
+        title2: "Psychologist"
+        image_url3: "jcrlicklider3.jpeg",
+        title3: "Interactive Computing"
+        image_url4: "jcrlicklider4.jpeg",
+        title4: "Intergalactic Computer Network"
     },
     {
         first_name: "John",
         last_name: "McCarthy",
         link: 'https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)'
         image_url1: "johnmccarthy.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "johnmccarthy2.jpeg",
+        title2: "Cognitive Scientist",
+        image_url3: "johnmccarthy3.jpeg",
+        title3: "Artifical Intelligence",
+        image_url4: "johnmccarthy4.jpeg",
+        title4: "Language Developer",
     },
     {
         first_name: "Stanislaw",
@@ -805,11 +833,11 @@ Character.create!([
         image_url1: "musaalkhwarizmi.jpeg",
         title1: 'Mathematician',
         image_url2: "musaalkhwarizmi.jpeg",
-        title2: 'Mathematician',
-        image_url3: "musaalkhwarizmi.jpeg",
-        title3: 'Mathematician',
-        image_url4: "musaalkhwarizmi.jpeg",
-        title4: 'Mathematician',
+        title2: 'Algorithms',
+        image_url3: "musaalkhwarizmi2.jpeg",
+        title3: 'Astronomer',
+        image_url4: "musaalkhwarizmi2.jpeg",
+        title4: 'Polymath',
     },
     {
         first_name: "Pāṇini",
