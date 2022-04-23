@@ -388,19 +388,26 @@ Character.create!([
         last_name: "Hamilton",
         link: 'https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)'
         image_url1: "margarethamilton.jpeg",
-        title1: "",
+        title1: "Computer Scientist",
         image_url2: "margarethamilton2.jpeg",
-        title2: "",
+        title2: "Software Engineer",
         image_url3: "margarethamilton3.jpeg",
-        title3: "",
+        title3: "Systems Engineer",
         image_url4: "margarethamilton4.jpeg",
-        title4: "",
+        title4: "NASA Flight Engineer",
     },
     {
         first_name: "Mark",
         last_name: "Zuckerberg",
         link: 'https://en.wikipedia.org/wiki/Mark_Zuckerberg'
         image_url1: "markzuckerberg.jpeg",
+        title1: "Facebook Co-Founder"
+        image_url2: "markzuckerberg2.jpeg",
+        title2: "Software Engineer"
+        image_url3: "markzuckerberg3.jpeg",
+        title3: "Social Networking"
+        image_url4: "markzuckerberg4.jpeg",
+        title4: "Entrepreneur"
     },
     {
         first_name: "Anita",
