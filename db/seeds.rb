@@ -566,58 +566,121 @@ Character.create!([
         title4: "Language Developer",
     },
     {
-        first_name: "Stanislaw",
+        first_name: "Stanisław",
         last_name: "Ulam",
         link: 'https://en.wikipedia.org/wiki/Stanislaw_Ulam'
         image_url1: "stanislawulam.jpeg",
+        title1: "Mathematician",
+        image_url2: "stanislawulam2.jpeg",
+        title2: "Monte Carlo Methods",
+        image_url3: "stanislawulam3.jpeg",
+        title3: "Physicist",
+        image_url4: "stanislawulam4.jpeg",
+        title4: "Ergodic Theory",
     },
     {
         first_name: "Heron",
         last_name: "of Alexandria",
         link: 'https://en.wikipedia.org/wiki/Hero_of_Alexandria'
         image_url1: "heronofalexandria.jpeg",
+        title1: "Mathematician",
+        image_url2: "heronofalexandria.jpeg",
+        title2: "Physicist",
+        image_url3: "heronofalexandria.jpeg",
+        title3: "Mechanical Engineer",
+        image_url4: "heronofalexandria.jpeg",
+        title4: "Heron's Formula",
     },
     {
         first_name: "Guido",
         last_name: "Van Rossum",
         link: 'https://en.wikipedia.org/wiki/Guido_van_Rossum'
         image_url1: "guidovanrossum.jpeg",
+        title1: "Python Developer"
+        image_url2: "guidovanrossum2.jpeg",
+        title2: "Computer Scientist"
+        image_url3: "guidovanrossum3.jpeg",
+        title3: "Software Engineer"
+        image_url4: "guidovanrossum4.jpeg",
+        title4: "Language Design"
     },
     {
         first_name: "John",
         last_name: "Tukey",
         link: 'https://en.wikipedia.org/wiki/John_Tukey'
         image_url1: "johnwtukey.jpeg",
+        title1: "Mathematician",
+        image_url2: "johnwtukey2.jpeg",
+        title2: "Statistician",
+        image_url3: "johnwtukey3.jpeg",
+        title3: "Fast Fourier Transform",
+        image_url4: "johnwtukey4.jpeg",
+        title4: "Exploratory Data Analysis",
     },
     {
         first_name: "Joseph Marie",
         last_name: "Jacquard",
         link: 'https://en.wikipedia.org/wiki/Joseph_Marie_Jacquard'
         image_url1: "josephmariejacquard.jpeg",
+        title1: "Weaver",
+        image_url2: "josephmariejacquard2.jpeg",
+        title2: "Merchant",
+        image_url3: "josephmariejacquard3.jpeg",
+        title3: "Mechanical Engineer",
+        image_url4: "josephmariejacquard4.jpeg",
+        title4: "Programmable Loom",
     },
     {
         first_name: "Charles",
         last_name: "Babbage",
-        link: 'https://en.wikipedia.org/wiki/Charles_Babbageva'
+        link: 'https://en.wikipedia.org/wiki/Charles_Babbage'
         image_url1: "charlesbabbage.jpeg",
+        title1: "Mathematician",
+        image_url2: "charlesbabbage2.jpeg",
+        title2: "Mechanical Engineer",
+        image_url3: "charlesbabbage3.jpeg",
+        title3: "Difference Engine",
+        image_url4: "charlesbabbage4.jpeg",
+        title4: "Analytical Engine",
     },
     {
         first_name: "Dorothy",
         last_name: "Vaughan",
         link: 'https://en.wikipedia.org/wiki/Dorothy_Vaughan'
         image_url1: "dorothyvaughan.jpeg",
+        title1: "Mathematician"
+        image_url2: "dorothyvaughan.jpeg",
+        title2: "NASA Computer"
+        image_url3: "dorothyvaughan2.jpeg",
+        title3: "Computer Programmer"
+        image_url4: "dorothyvaughan2.jpeg",
+        title4: "Flight Mechanics"
     },
     {
         first_name: "Tommy",
         last_name: "Flowers",
         link: 'https://en.wikipedia.org/wiki/Tommy_Flowers'
         image_url1: "tommyflowers.jpeg",
+        title1: "Computer Engineer",
+        image_url2: "tommyflowers2.jpeg",
+        title2: "Codebreaker",
+        image_url3: "tommyflowers3.jpeg",
+        title3: "Cryptanalyst",
+        image_url4: "tommyflowers4.jpeg",
+        title4: "Collossus",
     },
     {
         first_name: "Linus",
         last_name: "Torvalds",
         link: 'https://en.wikipedia.org/wiki/Linus_Torvalds'
-        image_url1: "linustorvalds.jpeg",
+        image_url1: "linustorvalds1.jpeg",
+        title1: "Linux Developer"
+        image_url2: "linustorvalds2.jpeg",
+        title2: "Software Engineer"
+        image_url3: "linustorvalds1.jpeg",
+        title3: "Git Version Control"
+        image_url4: "linustorvalds1.jpeg",
+        title4: "Open Source Advocate"
     },
     {
         first_name: "John",
@@ -776,7 +839,7 @@ Character.create!([
         last_name: "Li",
         link: 'https://en.wikipedia.org/wiki/Fei-Fei_Li',
         image_url1: "feifeili.jpeg",
-        title1: 'Automated Intelligence'
+        title1: 'Artificial Intelligence'
     },
     {
         first_name: "Ken",
