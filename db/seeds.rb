@@ -234,7 +234,7 @@ Character.create!([
         image_url1: "vitalikbuterin.jpeg",
         title1: 'Ethereum Co-Founder',
         image_url2: "vitalikbuterin2.jpeg",
-        title2: 'Computer Scientist',
+        title2: 'Decentralized Networking',
         image_url3: "vitalikbuterin3.jpeg",
         title3: 'Ethereum Core Developer',
         image_url4: "vitalikbuterin4.jpeg",
@@ -518,186 +518,390 @@ Character.create!([
         last_name: "Von Neumann",
         link: 'https://en.wikipedia.org/wiki/John_von_Neumann'
         image_url1: "johnvonneumann.jpeg",
+        title1: "Mathematician",
+        image_url2: "johnvonneumann2.jpeg",
+        title2: "Physicist",
+        image_url3: "johnvonneumann3.jpeg",
+        title3: "Computer Scientist",
+        image_url4: "johnvonneumann4.jpeg",
+        title4: "Polymath",
     },
     {
         first_name: "Steve",
         last_name: "Wozniak",
         link: 'https://en.wikipedia.org/wiki/Steve_Wozniak'
         image_url1: "stevewozniak.jpeg",
+        title1: "Computer Programmer",
+        image_url2: "stevewozniak2.jpeg",
+        title2: "Apple Co-Founder",
+        image_url3: "stevewozniak3.jpeg",
+        title3: "Electronics Engineer",
+        image_url4: "stevewozniak4.jpeg",
+        title4: "Microcomputing",
     },
     {
         first_name: "J.C.R.",
         last_name: "Licklider",
         link: 'https://en.wikipedia.org/wiki/J._C._R._Licklider'
         image_url1: "jcrlicklider.jpeg",
+        title1: "Computer Scientist"
+        image_url2: "jcrlicklider2.jpeg",
+        title2: "Psychologist"
+        image_url3: "jcrlicklider3.jpeg",
+        title3: "Interactive Computing"
+        image_url4: "jcrlicklider4.jpeg",
+        title4: "Intergalactic Computer Network"
     },
     {
         first_name: "John",
         last_name: "McCarthy",
         link: 'https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)'
         image_url1: "johnmccarthy.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "johnmccarthy2.jpeg",
+        title2: "Cognitive Scientist",
+        image_url3: "johnmccarthy3.jpeg",
+        title3: "Artifical Intelligence",
+        image_url4: "johnmccarthy4.jpeg",
+        title4: "Language Developer",
     },
     {
-        first_name: "Stanislaw",
+        first_name: "Stanisław",
         last_name: "Ulam",
         link: 'https://en.wikipedia.org/wiki/Stanislaw_Ulam'
         image_url1: "stanislawulam.jpeg",
+        title1: "Mathematician",
+        image_url2: "stanislawulam2.jpeg",
+        title2: "Monte Carlo Methods",
+        image_url3: "stanislawulam3.jpeg",
+        title3: "Physicist",
+        image_url4: "stanislawulam4.jpeg",
+        title4: "Ergodic Theory",
     },
     {
         first_name: "Heron",
         last_name: "of Alexandria",
         link: 'https://en.wikipedia.org/wiki/Hero_of_Alexandria'
         image_url1: "heronofalexandria.jpeg",
+        title1: "Mathematician",
+        image_url2: "heronofalexandria.jpeg",
+        title2: "Physicist",
+        image_url3: "heronofalexandria.jpeg",
+        title3: "Mechanical Engineer",
+        image_url4: "heronofalexandria.jpeg",
+        title4: "Heron's Formula",
     },
     {
         first_name: "Guido",
         last_name: "Van Rossum",
         link: 'https://en.wikipedia.org/wiki/Guido_van_Rossum'
         image_url1: "guidovanrossum.jpeg",
+        title1: "Python Developer"
+        image_url2: "guidovanrossum2.jpeg",
+        title2: "Computer Scientist"
+        image_url3: "guidovanrossum3.jpeg",
+        title3: "Software Engineer"
+        image_url4: "guidovanrossum4.jpeg",
+        title4: "Language Design"
     },
     {
         first_name: "John",
         last_name: "Tukey",
         link: 'https://en.wikipedia.org/wiki/John_Tukey'
         image_url1: "johnwtukey.jpeg",
+        title1: "Mathematician",
+        image_url2: "johnwtukey2.jpeg",
+        title2: "Statistician",
+        image_url3: "johnwtukey3.jpeg",
+        title3: "Fast Fourier Transform",
+        image_url4: "johnwtukey4.jpeg",
+        title4: "Exploratory Data Analysis",
     },
     {
         first_name: "Joseph Marie",
         last_name: "Jacquard",
         link: 'https://en.wikipedia.org/wiki/Joseph_Marie_Jacquard'
         image_url1: "josephmariejacquard.jpeg",
+        title1: "Weaver",
+        image_url2: "josephmariejacquard2.jpeg",
+        title2: "Merchant",
+        image_url3: "josephmariejacquard3.jpeg",
+        title3: "Mechanical Engineer",
+        image_url4: "josephmariejacquard4.jpeg",
+        title4: "Programmable Loom",
     },
     {
         first_name: "Charles",
         last_name: "Babbage",
-        link: 'https://en.wikipedia.org/wiki/Charles_Babbageva'
+        link: 'https://en.wikipedia.org/wiki/Charles_Babbage'
         image_url1: "charlesbabbage.jpeg",
+        title1: "Mathematician",
+        image_url2: "charlesbabbage2.jpeg",
+        title2: "Mechanical Engineer",
+        image_url3: "charlesbabbage3.jpeg",
+        title3: "Difference Engine",
+        image_url4: "charlesbabbage4.jpeg",
+        title4: "Analytical Engine",
     },
     {
         first_name: "Dorothy",
         last_name: "Vaughan",
         link: 'https://en.wikipedia.org/wiki/Dorothy_Vaughan'
         image_url1: "dorothyvaughan.jpeg",
+        title1: "Mathematician"
+        image_url2: "dorothyvaughan.jpeg",
+        title2: "NASA Computer"
+        image_url3: "dorothyvaughan2.jpeg",
+        title3: "Computer Programmer"
+        image_url4: "dorothyvaughan2.jpeg",
+        title4: "Flight Mechanics"
     },
     {
         first_name: "Tommy",
         last_name: "Flowers",
         link: 'https://en.wikipedia.org/wiki/Tommy_Flowers'
         image_url1: "tommyflowers.jpeg",
+        title1: "Computer Engineer",
+        image_url2: "tommyflowers2.jpeg",
+        title2: "Codebreaker",
+        image_url3: "tommyflowers3.jpeg",
+        title3: "Cryptanalyst",
+        image_url4: "tommyflowers4.jpeg",
+        title4: "Collossus",
     },
     {
         first_name: "Linus",
         last_name: "Torvalds",
         link: 'https://en.wikipedia.org/wiki/Linus_Torvalds'
         image_url1: "linustorvalds.jpeg",
+        title1: "Linux Developer"
+        image_url2: "linustorvalds2.jpeg",
+        title2: "Software Engineer"
+        image_url3: "linustorvalds1.jpeg",
+        title3: "Git Version Control"
+        image_url4: "linustorvalds1.jpeg",
+        title4: "Open Source Advocate"
     },
     {
         first_name: "John",
         last_name: "Backus",
-        link: 'https://en.wikipedia.org/wiki/John_Back'
-        image_url1: "johnbackus.jpeg",
+        link: 'https://en.wikipedia.org/wiki/John_Backus'
+        image_url1: "johnbackus1.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "johnbackus.jpeg",
+        title2: "FORTRAN",
+        image_url3: "johnbackus.jpeg",
+        title3: "Language Design",
+        image_url4: "johnbackus.jpeg",
+        title4: "Backus-Naur Form",
     },
     {
         first_name: "Douglas",
         last_name: "Crockford",
         link: 'https://en.wikipedia.org/wiki/Douglas_Crockford'
         image_url1: "douglascrockford.jpeg",
+        title1: "Computer Scientist"
+        image_url2: "douglascrockford2.jpeg",
+        title2: "JSON"
+        image_url3: "douglascrockford3.jpeg",
+        title3: "Javascript Developer"
+        image_url4: "douglascrockford4.jpeg",
+        title4: "Language Design"
     },
     {
         first_name: "Miguel",
         last_name: "De Icaza",
         link: 'https://en.wikipedia.org/wiki/Miguel_de_Icaza'
         image_url1: "migueldeicaza.jpeg",
+        title1: "Software Developer"
+        image_url2: "migueldeicaza2.jpeg",
+        title2: "Open Source Advocate"
+        image_url3: "migueldeicaza3.jpeg",
+        title3: "Operating Systems"
+        image_url4: "migueldeicaza4.jpeg",
+        title4: "Frameworks"
     },
     {
         first_name: "Carl",
         last_name: "Sassenrath",
         link: 'https://en.wikipedia.org/wiki/Carl_Sassenrath'
         image_url1: "carlsassenrath.jpeg",
+        title1: "Software Engineer"
+        image_url2: "carlsassenrath.jpeg",
+        title2: "Operating Systems"
+        image_url3: "carlsassenrath.jpeg",
+        title3: "Language Design"
+        image_url4: "carlsassenrath.jpeg",
+        title4: "Computational Multitasking"
     },
     {
         first_name: "Barbara",
         last_name: "Liskov",
         link: 'https://en.wikipedia.org/wiki/Barbara_Liskov'
         image_url1: "barbaraliskov.jpeg",
+        title1: "Computer Scientist"
+        image_url2: "barbaraliskov2.jpeg",
+        title2: "Distributed Computing"
+        image_url3: "barbaraliskov3.jpeg",
+        title3: "Language Design"
+        image_url4: "barbaraliskov4.jpeg",
+        title4: "Type Theory"
     },
     {
         first_name: "David",
         last_name: "Axmark",
         link: 'https://en.wikipedia.org/wiki/David_Axmark'
         image_url1: "davidaxmark.jpeg",
+        title1: "Software Engineer",
+        image_url2: "davidaxmark.jpeg",
+        title2: "Open Source Advocate",
+        image_url3: "davidaxmark.jpeg",
+        title3: "MySQL Developer",
+        image_url4: "davidaxmark.jpeg",
+        title4: "Relational Databases",
     },
     {
         first_name: "Donald",
         last_name: "Knuth",
         link: 'https://en.wikipedia.org/wiki/Donald_Knuth'
         image_url1: "donaldknuth.jpeg",
+        title1: "Computer Scientist"
+        image_url2: "donaldknuth2.jpeg",
+        title2: "Mathematician"
+        image_url3: "donaldknuth3.jpeg",
+        title3: "Algorithm Analyst"
+        image_url4: "donaldknuth4.jpeg",
+        title4: "Literate Programming"
     },
     {
         first_name: "Sergey",
         last_name: "Brin",
         link: 'https://en.wikipedia.org/wiki/Sergey_Brin'
         image_url1: "sergeybrin.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "sergeybrin2.jpeg",
+        title2: "Google Co-Founder",
+        image_url3: "sergeybrin3.jpeg",
+        title3: "Entrepreneur",
+        image_url4: "sergeybrin4.jpeg",
+        title4: "Computer Scientist",
     },
     {
         first_name: "Elizabeth",
         last_name: "Feinler",
         link: 'https://en.wikipedia.org/wiki/Elizabeth_J._Feinler'
         image_url1: "elizabethfeinler.jpeg",
-    },
-    {
-        first_name: "Alexey",
-        last_name: "Pajitnov",
-        link: 'https://en.wikipedia.org/wiki/Alexey_Pajitnov'
-        image_url1: "alexeypajitnov.jpeg",
-    },
+        title1: "Computer Scientist"
+        image_url2: "elizabethfeinler2.jpeg",
+        title2: "Information Scientist"
+        image_url3: "elizabethfeinler3.jpeg",
+        title3: "Informational Networking"
+        image_url4: "elizabethfeinler.jpeg",
+        title4: "ARPANET"
+    }
     {
         first_name: "Andrew",
         last_name: "Ng",
         link: 'https://en.wikipedia.org/wiki/Andrew_Ng'
         image_url1: "andrewng.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "andrewng2.jpeg",
+        title2: "Artificial Intelligence",
+        image_url3: "andrewng3.jpeg",
+        title3: "Machine Learning",
+        image_url4: "andrewng4.jpeg",
+        title4: "Language Processing",
     },
     {
         first_name: "Demis",
         last_name: "Hassabis",
         link: 'https://en.wikipedia.org/wiki/Demis_Hassabis'
         image_url1: "demishassabis.jpeg",
+        title1: "Artificial Intelligence",
+        image_url2: "demishassabis2.jpeg",
+        title2: "Neuroscientist",
+        image_url3: "demishassabis3.jpeg",
+        title3: "Entrepreneur",
+        image_url4: "demishassabis4.jpeg",
+        title4: "Machine Learning",
     },
     {
         first_name: "Karen",
         last_name: "Spärck Jones",
         link: 'https://en.wikipedia.org/wiki/Karen_Sp%C3%A4rck_Jones'
         image_url1: "karensparckjones.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "karensparckjones2.jpeg",
+        title2: "Inverse Document Frequency",
+        image_url3: "karensparckjones3.jpeg",
+        title3: "Information Retrieval",
+        image_url4: "karensparckjones.jpeg",
+        title4: "Natural Language Processing",
     },
     {
         first_name: "Timnit",
         last_name: "Gebru",
         link: 'https://en.wikipedia.org/wiki/Timnit_Gebru'
         image_url1: "timnitgebru.jpeg",
+        title1: "Computer Scientist",
+        image_url1: "timnitgebru1.jpeg",
+        title1: "Algorithmic Bias",
+        image_url1: "timnitgebru1.jpeg",
+        title1: "Data Mining",
+        image_url1: "timnitgebru1.jpeg",
+        title1: "Artificial Intelligence",
     },
     {
         first_name: "Max",
         last_name: "Levchin",
         link: 'https://en.wikipedia.org/wiki/Max_Levchin'
         image_url1: "maxlevchin.jpeg",
+        title1: "Software Engineer",
+        image_url2: "maxlevchin2.jpeg",
+        title2: "Paypal Co-Founder",
+        image_url3: "maxlevchin3.jpeg",
+        title3: "Entrepreneur",
+        image_url4: "maxlevchin4.jpeg",
+        title4: "CAPTCHA",
     },
     {
         first_name: "Shafi",
         last_name: "Goldwasser",
         link: 'https://en.wikipedia.org/wiki/Shafi_Goldwasser'
         image_url1: "shafigoldwasser.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "shafigoldwasser2.jpeg",
+        title2: "Cryptologist",
+        image_url3: "shafigoldwasser3.jpeg",
+        title3: "Zero-Knowledge Proofs",
+        image_url4: "shafigoldwasser4.jpeg",
+        title4: "Cyber-Security",
     },
     {
         first_name: "Lisa",
         last_name: "Su",
         link: 'https://en.wikipedia.org/wiki/Lisa_Su'
-        image_url1: "lisasu.png",
+        image_url1: "lisasu.jpeg",
+        title1: "Electrical Engineer",
+        image_url2: "lisasu2.jpeg",
+        title2: "Hardware Design",
+        image_url3: "lisasu3.jpeg",
+        title3: "Computer Engineer",
+        image_url4: "lisasu4.jpeg",
+        title4: "High Performance Processors",
     },
     {
         first_name: "Sophie",
         last_name: "Wilson",
         link: 'https://en.wikipedia.org/wiki/Sophie_Wilson'
-        image_url1: "sophiewilson.jpeg",
+        image_url1: "sophiewilson1.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "sophiewilson2.jpeg",
+        title2: "Computer Engineer",
+        image_url3: "sophiewilson3.jpeg",
+        title3: "Computer Design",
+        image_url4: "sophiewilson4.jpeg",
+        title4: "Processor Architecture",
     },
     {
         first_name: "Vint",
@@ -748,7 +952,7 @@ Character.create!([
         last_name: "Li",
         link: 'https://en.wikipedia.org/wiki/Fei-Fei_Li',
         image_url1: "feifeili.jpeg",
-        title1: 'Automated Intelligence'
+        title1: 'Artificial Intelligence'
     },
     {
         first_name: "Ken",
@@ -805,11 +1009,11 @@ Character.create!([
         image_url1: "musaalkhwarizmi.jpeg",
         title1: 'Mathematician',
         image_url2: "musaalkhwarizmi.jpeg",
-        title2: 'Mathematician',
-        image_url3: "musaalkhwarizmi.jpeg",
-        title3: 'Mathematician',
-        image_url4: "musaalkhwarizmi.jpeg",
-        title4: 'Mathematician',
+        title2: 'Algorithms',
+        image_url3: "musaalkhwarizmi2.jpeg",
+        title3: 'Astronomer',
+        image_url4: "musaalkhwarizmi2.jpeg",
+        title4: 'Polymath',
     },
     {
         first_name: "Pāṇini",
