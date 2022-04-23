@@ -24,7 +24,7 @@ export default function NewCard({ card }) {
             <div className='charCard-info-container'>
             <img src={charImages('./'+card.character.image[0])} className='charCard-image' />
                 <div className='charCard-text'>
-                    <div className='charCard-rarity'>{card.rarity}</div>
+                <div className='charCard-rarity'>{card.character.title[0]}</div>
                     <div className='charCard-name'><b>{card.character.first_name} {card.character.last_name}</b></div>
                     <div className='charCard-id'>{card.unique_id}</div>
                 </div>
