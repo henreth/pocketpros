@@ -236,7 +236,7 @@ Character.create!([
         image_url2: "vitalikbuterin2.jpeg",
         title2: 'Computer Scientist',
         image_url3: "vitalikbuterin3.jpeg",
-        title3: 'Ethereum Co-Founder',
+        title3: 'Ethereum Core Developer',
         image_url4: "vitalikbuterin4.jpeg",
         title4: 'Ethereum Co-Founder',
     },
@@ -277,25 +277,46 @@ Character.create!([
         image_url3: "stevejobs3.jpeg",
         title3: "Entrepreneur",
         image_url4: "stevejobs4.jpeg",
-        title4: "Apple",
+        title4: "Apple Innovator",
     },
     {
         first_name: "Bill",
         last_name: "Gates",
         link: 'https://en.wikipedia.org/wiki/Bill_Gates'
         image_url1: "billgates.jpeg",
+        title1: "Microsoft Co-Founder",
+        image_url2: "billgates2.jpeg",
+        title2: "Software Engineer",
+        image_url3: "billgates3.jpeg",
+        title3: "Systems Designer",
+        image_url4: "billgates4.jpeg",
+        title4: "Entrepreneur",
     },
     {
         first_name: "Grace",
         last_name: "Hopper",
         link: 'https://en.wikipedia.org/wiki/Grace_Hopper'
         image_url1: "gracehopper.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "gracehopper2.jpeg",
+        title2: "Rear Admiral",
+        image_url3: "gracehopper3.jpeg",
+        title3: "Compilation Innovator",
+        image_url4: "gracehopper4.jpeg",
+        title4: "Mathematician",
     },
     {
         first_name: "Joan",
         last_name: "Clarke",
         link: 'https://en.wikipedia.org/wiki/Joan_Clarke'
         image_url1: "joanclarke.jpeg",
+        title1: "Cryptanalyst",
+        image_url2: "joanclarke.jpeg",
+        title2: "Numismatist",
+        image_url3: "joanclarke.jpeg",
+        title3: "Codebreaker",
+        image_url4: "joanclarke.jpeg",
+        title4: "Mathematician",
     },
     {
         first_name: "Gavin",
@@ -315,54 +336,117 @@ Character.create!([
         last_name: "Jackson",
         link: 'https://en.wikipedia.org/wiki/Mary_Jackson_(engineer)'
         image_url1: "maryjackson.jpeg",
+        title1: "Mathematician"
+        image_url2: "maryjackson2.jpeg",
+        title2: "Aerospace Engineer"
+        image_url3: "maryjackson3.jpeg",
+        title3: "Aeronautical Engineer"
+        image_url4: "maryjackson4.jpeg",
+        title4: "Aerospace Scientist"
     },
     {
         first_name: "Mary Kenneth",
         last_name: "Keller",
         link: 'https://en.wikipedia.org/wiki/Mary_Kenneth_Keller'
         image_url1: "marykennethkeller.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "marykennethkeller2.jpeg",
+        title2: "Religious Sister",
+        image_url3: "marykennethkeller3.jpeg",
+        title3: "Mathematician",
+        image_url4: "marykennethkeller4.jpeg",
+        title4: "Physicist",
     },
     {
         first_name: "Raj",
         last_name: "Reddy",
         link: 'https://en.wikipedia.org/wiki/Raj_Reddy'
         image_url1: "rajreddy.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "rajreddy2.jpeg",
+        title2: "Artifical Intelligence",
+        image_url3: "rajreddy3.jpeg",
+        title3: "Machine Learning",
+        image_url4: "rajreddy4.jpeg",
+        title4: "Speech Recognition",
     },
     {
         first_name: "Hedy",
         last_name: "Lamarr",
         link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
         image_url1: "hedylamarr.jpeg",
+        title1: "Frequency Hopping",
+        image_url2: "hedylamarr2.jpeg",
+        title2: "Radio Guidance",
+        image_url3: "hedylamarr3.jpeg",
+        title3: "Actress",
+        image_url4: "hedylamarr4.jpeg",
+        title4: "Spread Spectrum",
     },
     {
         first_name: "Margaret",
         last_name: "Hamilton",
         link: 'https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)'
         image_url1: "margarethamilton.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "margarethamilton2.jpeg",
+        title2: "Software Engineer",
+        image_url3: "margarethamilton3.jpeg",
+        title3: "Systems Engineer",
+        image_url4: "margarethamilton4.jpeg",
+        title4: "NASA Flight Engineer",
     },
     {
         first_name: "Mark",
         last_name: "Zuckerberg",
         link: 'https://en.wikipedia.org/wiki/Mark_Zuckerberg'
         image_url1: "markzuckerberg.jpeg",
+        title1: "Facebook Co-Founder"
+        image_url2: "markzuckerberg2.jpeg",
+        title2: "Software Engineer"
+        image_url3: "markzuckerberg3.jpeg",
+        title3: "Social Networking"
+        image_url4: "markzuckerberg4.jpeg",
+        title4: "Entrepreneur"
     },
     {
         first_name: "Anita",
         last_name: "Borg",
         link: 'https://en.wikipedia.org/wiki/Anita_Borg'
         image_url1: "anitaborg.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "anitaborg2.jpeg",
+        title2: "Systems Design",
+        image_url3: "anitaborg3.jpeg",
+        title3: "Operating Systems",
+        image_url4: "anitaborg4.jpeg",
+        title4: "Software Developer",
     },
     {
         first_name: "Larry",
         last_name: "Page",
         link: 'https://en.wikipedia.org/wiki/Larry_Page'
         image_url1: "larrypage.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "larrypage2.jpeg",
+        title2: "Google Co-Founder",
+        image_url3: "larrypage3.jpeg",
+        title3: "Search Algorithms",
+        image_url4: "larrypage4.jpeg",
+        title4: "Entrepreneur",
     },
     {
         first_name: "Yukihiro",
         last_name: "Matsumoto",
         link: 'https://en.wikipedia.org/wiki/Yukihiro_Matsumoto'
         image_url1: "yukihiromatsumoto.jpeg",
+        title1: "Ruby Developer",
+        image_url2: "yukihiromatsumoto2.jpeg",
+        title2: "Computer Scientist",
+        image_url3: "yukihiromatsumoto3.jpeg",
+        title3: "Language Programmer",
+        image_url4: "yukihiromatsumoto4.jpeg",
+        title4: "Open Source Advocate",
     },
     {
         first_name: "Jeff",
