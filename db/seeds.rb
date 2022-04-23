@@ -453,30 +453,65 @@ Character.create!([
         last_name: "Bezos",
         link: 'https://en.wikipedia.org/wiki/Jeff_Bezos'
         image_url1: "jeffbezos.jpeg",
+        title1: "Software Engineer",
+        image_url2: "jeffbezos2.jpeg",
+        title2: "Computer Engineer",
+        image_url3: "jeffbezos3.jpeg",
+        title3: "E-Commerce",
+        image_url4: "jeffbezos4.jpeg",
+        title4: "Entrepreneur",
     },
     {
         first_name: "Annie",
         last_name: "Easley",
         link: 'https://en.wikipedia.org/wiki/Annie_Easley'
         image_url1: "annieeasley.png",
+        title1: "Rocket Scientist",
+        image_url2: "annieeasley2.png",
+        title2: "Computer Scientist",
+        image_url3: "annieeasley3.png",
+        title3: "Mathematician",
+        image_url4: "annieeasley4.png",
+        title4: "Software Developer",
     },
     {
         first_name: "Ada",
         last_name: "Lovelace",
         link: 'https://en.wikipedia.org/wiki/Ada_Lovelace'
         image_url1: "adalovelace.jpeg",
+        title1: "Mathematician",
+        image_url2: "adalovelace2.jpeg",
+        title2: "Tech Visionary",
+        image_url3: "adalovelace3.jpeg",
+        title3: "Poetical Science",
+        image_url4: "adalovelace4.jpeg",
+        title4: "Metaphysician",
     },
     {
         first_name: "Clarence",
         last_name: "Ellis",
         link: 'https://en.wikipedia.org/wiki/Clarence_Ellis_(computer_scientist)'
         image_url1: "clarenceellis.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "clarenceellis.jpeg",
+        title2: "Software Engineer",
+        image_url3: "clarenceellis.jpeg",
+        title3: "Cognitive Science",
+        image_url4: "clarenceellis.jpeg",
+        title4: "Simultaneous Editing",
     },
     {
         first_name: "Tim",
         last_name: "Berners Lee",
         link: 'https://en.wikipedia.org/wiki/Tim_Berners-Lee'
         image_url1: "timbernerslee.jpeg",
+        title1: "Computer Scientist"
+        image_url2: "timbernerslee.jpeg",
+        title2: "World Wide Web"
+        image_url3: "timbernerslee.jpeg",
+        title3: "Information Management"
+        image_url4: "timbernerslee.jpeg",
+        title4: "Telecommunications"
     },
     {
         first_name: "John",
