@@ -230,357 +230,371 @@ Character.create!([
     {
         first_name: "Vitalik",
         last_name: "Buterin",
-        image_url: "vitalikbuterin.jpeg",
         link: 'https://en.wikipedia.org/wiki/Vitalik_Buterin'
+        image_url1: "vitalikbuterin.jpeg",
+        title1: 'Ethereum Co-Founder',
+        image_url2: "vitalikbuterin2.jpeg",
+        title2: 'Ethereum Co-Founder',
+        image_url3: "vitalikbuterin3.jpeg",
+        title3: 'Ethereum Co-Founder',
+        image_url4: "vitalikbuterin4.jpeg",
+        title4: 'Ethereum Co-Founder',
     },
     {
         first_name: "Katherine",
         last_name: "Johnson",
-        image_url: "katherinejohnson.jpeg",
         link: 'https://en.wikipedia.org/wiki/Katherine_Johnson'
+        image_url1: "katherinejohnson.jpeg",
     },
     {
         first_name: "Alan",
         last_name: "Turing",
-        image_url: "alanturing.jpeg",
         link: 'https://en.wikipedia.org/wiki/Alan_Turing'
+        image_url1: "alanturing.jpeg",
     },
     {
         first_name: "Steve",
         last_name: "Jobs",
-        image_url: "stevejobs.jpeg",
         link: 'https://en.wikipedia.org/wiki/Steve_Jobs'
+        image_url1: "stevejobs.jpeg",
     },
     {
         first_name: "Bill",
         last_name: "Gates",
-        image_url: "billgates.jpeg",
         link: 'https://en.wikipedia.org/wiki/Bill_Gates'
+        image_url1: "billgates.jpeg",
     },
     {
         first_name: "Grace",
         last_name: "Hopper",
-        image_url: "gracehopper.jpeg",
         link: 'https://en.wikipedia.org/wiki/Grace_Hopper'
+        image_url1: "gracehopper.jpeg",
     },
     {
         first_name: "Joan",
         last_name: "Clarke",
-        image_url: "joanclarke.jpeg",
         link: 'https://en.wikipedia.org/wiki/Joan_Clarke'
+        image_url1: "joanclarke.jpeg",
     },
     {
         first_name: "Gavin",
         last_name: "Wood",
-        image_url: "gavinwood.jpeg",
         link: 'https://en.wikipedia.org/wiki/Gavin_Wood'
+        image_url1: "gavinwood.jpeg",
+        title1: "Free-Trust Technologist"
+        image_url2: "gavinwood2.jpeg",
+        title2: "Computer Scientist",
+        image_url3: "gavinwood3.jpeg",
+        title3: "Open Source Advocate"
+        image_url4: "gavinwood4.jpeg",
+        title4: "Research Scientist",
     },
     {
         first_name: "Mary",
         last_name: "Jackson",
-        image_url: "maryjackson.jpeg",
         link: 'https://en.wikipedia.org/wiki/Mary_Jackson_(engineer)'
+        image_url1: "maryjackson.jpeg",
     },
     {
         first_name: "Mary Kenneth",
         last_name: "Keller",
-        image_url: "marykennethkeller.jpeg",
         link: 'https://en.wikipedia.org/wiki/Mary_Kenneth_Keller'
+        image_url1: "marykennethkeller.jpeg",
     },
     {
         first_name: "Raj",
         last_name: "Reddy",
-        image_url: "rajreddy.jpeg",
         link: 'https://en.wikipedia.org/wiki/Raj_Reddy'
+        image_url1: "rajreddy.jpeg",
     },
     {
         first_name: "Hedy",
         last_name: "Lamarr",
-        image_url: "hedylamarr.jpeg",
         link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
+        image_url1: "hedylamarr.jpeg",
     },
     {
         first_name: "Margaret",
         last_name: "Hamilton",
-        image_url: "margarethamilton.jpeg",
         link: 'https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)'
+        image_url1: "margarethamilton.jpeg",
     },
     {
         first_name: "Mark",
         last_name: "Zuckerberg",
-        image_url: "markzuckerberg.jpeg",
         link: 'https://en.wikipedia.org/wiki/Mark_Zuckerberg'
+        image_url1: "markzuckerberg.jpeg",
     },
     {
         first_name: "Anita",
         last_name: "Borg",
-        image_url: "anitaborg.jpeg",
         link: 'https://en.wikipedia.org/wiki/Anita_Borg'
+        image_url1: "anitaborg.jpeg",
     },
     {
         first_name: "Larry",
         last_name: "Page",
-        image_url: "larrypage.jpeg",
         link: 'https://en.wikipedia.org/wiki/Larry_Page'
+        image_url1: "larrypage.jpeg",
     },
     {
         first_name: "Yukihiro",
         last_name: "Matsumoto",
-        image_url: "yukihiromatsumoto.jpeg",
         link: 'https://en.wikipedia.org/wiki/Yukihiro_Matsumoto'
+        image_url1: "yukihiromatsumoto.jpeg",
     },
     {
         first_name: "Jeff",
         last_name: "Bezos",
-        image_url: "jeffbezos.jpeg",
         link: 'https://en.wikipedia.org/wiki/Jeff_Bezos'
+        image_url1: "jeffbezos.jpeg",
     },
     {
         first_name: "Annie",
         last_name: "Easley",
-        image_url: "annieeasley.png",
         link: 'https://en.wikipedia.org/wiki/Annie_Easley'
+        image_url1: "annieeasley.png",
     },
     {
         first_name: "Ada",
         last_name: "Lovelace",
-        image_url: "adalovelace.jpeg",
         link: 'https://en.wikipedia.org/wiki/Ada_Lovelace'
+        image_url1: "adalovelace.jpeg",
     },
     {
         first_name: "Clarence",
         last_name: "Ellis",
-        image_url: "clarenceellis.jpeg",
         link: 'https://en.wikipedia.org/wiki/Clarence_Ellis_(computer_scientist)'
+        image_url1: "clarenceellis.jpeg",
     },
     {
         first_name: "Tim",
         last_name: "Berners Lee",
-        image_url: "timbernerslee.jpeg",
         link: 'https://en.wikipedia.org/wiki/Tim_Berners-Lee'
+        image_url1: "timbernerslee.jpeg",
     },
     {
         first_name: "John",
         last_name: "Von Neumann",
-        image_url: "johnvonneumann.jpeg",
         link: 'https://en.wikipedia.org/wiki/John_von_Neumann'
+        image_url1: "johnvonneumann.jpeg",
     },
     {
         first_name: "Steve",
         last_name: "Wozniak",
-        image_url: "stevewozniak.jpeg",
         link: 'https://en.wikipedia.org/wiki/Steve_Wozniak'
+        image_url1: "stevewozniak.jpeg",
     },
     {
         first_name: "J.C.R.",
         last_name: "Licklider",
-        image_url: "jcrlicklider.jpeg",
         link: 'https://en.wikipedia.org/wiki/J._C._R._Licklider'
+        image_url1: "jcrlicklider.jpeg",
     },
     {
         first_name: "John",
         last_name: "McCarthy",
-        image_url: "johnmccarthy.jpeg",
         link: 'https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)'
+        image_url1: "johnmccarthy.jpeg",
     },
     {
         first_name: "Stanislaw",
         last_name: "Ulam",
-        image_url: "stanislawulam.jpeg",
         link: 'https://en.wikipedia.org/wiki/Stanislaw_Ulam'
+        image_url1: "stanislawulam.jpeg",
     },
     {
         first_name: "Heron",
         last_name: "of Alexandria",
-        image_url: "heronofalexandria.jpeg",
         link: 'https://en.wikipedia.org/wiki/Hero_of_Alexandria'
+        image_url1: "heronofalexandria.jpeg",
     },
     {
         first_name: "Guido",
         last_name: "Van Rossum",
-        image_url: "guidovanrossum.jpeg",
         link: 'https://en.wikipedia.org/wiki/Guido_van_Rossum'
+        image_url1: "guidovanrossum.jpeg",
     },
     {
         first_name: "John",
         last_name: "Tukey",
-        image_url: "johnwtukey.jpeg",
         link: 'https://en.wikipedia.org/wiki/John_Tukey'
+        image_url1: "johnwtukey.jpeg",
     },
     {
         first_name: "Joseph Marie",
         last_name: "Jacquard",
-        image_url: "josephmariejacquard.jpeg",
         link: 'https://en.wikipedia.org/wiki/Joseph_Marie_Jacquard'
+        image_url1: "josephmariejacquard.jpeg",
     },
     {
         first_name: "Charles",
         last_name: "Babbage",
-        image_url: "charlesbabbage.jpeg",
         link: 'https://en.wikipedia.org/wiki/Charles_Babbageva'
+        image_url1: "charlesbabbage.jpeg",
     },
     {
         first_name: "Dorothy",
         last_name: "Vaughan",
-        image_url: "dorothyvaughan.jpeg",
         link: 'https://en.wikipedia.org/wiki/Dorothy_Vaughan'
+        image_url1: "dorothyvaughan.jpeg",
     },
     {
         first_name: "Tommy",
         last_name: "Flowers",
-        image_url: "tommyflowers.jpeg",
         link: 'https://en.wikipedia.org/wiki/Tommy_Flowers'
+        image_url1: "tommyflowers.jpeg",
     },
     {
         first_name: "Linus",
         last_name: "Torvalds",
-        image_url: "linustorvalds.jpeg",
         link: 'https://en.wikipedia.org/wiki/Linus_Torvalds'
+        image_url1: "linustorvalds.jpeg",
     },
     {
         first_name: "John",
         last_name: "Backus",
-        image_url: "johnbackus.jpeg",
         link: 'https://en.wikipedia.org/wiki/John_Back'
+        image_url1: "johnbackus.jpeg",
     },
     {
         first_name: "Douglas",
         last_name: "Crockford",
-        image_url: "douglascrockford.jpeg",
         link: 'https://en.wikipedia.org/wiki/Douglas_Crockford'
+        image_url1: "douglascrockford.jpeg",
     },
     {
         first_name: "Miguel",
         last_name: "De Icaza",
-        image_url: "migueldeicaza.jpeg",
         link: 'https://en.wikipedia.org/wiki/Miguel_de_Icaza'
+        image_url1: "migueldeicaza.jpeg",
     },
     {
         first_name: "Carl",
         last_name: "Sassenrath",
-        image_url: "carlsassenrath.jpeg",
         link: 'https://en.wikipedia.org/wiki/Carl_Sassenrath'
+        image_url1: "carlsassenrath.jpeg",
     },
     {
         first_name: "Barbara",
         last_name: "Liskov",
-        image_url: "barbaraliskov.jpeg",
         link: 'https://en.wikipedia.org/wiki/Barbara_Liskov'
+        image_url1: "barbaraliskov.jpeg",
     },
     {
         first_name: "David",
         last_name: "Axmark",
-        image_url: "davidaxmark.jpeg",
         link: 'https://en.wikipedia.org/wiki/David_Axmark'
+        image_url1: "davidaxmark.jpeg",
     },
     {
         first_name: "Donald",
         last_name: "Knuth",
-        image_url: "donaldknuth.jpeg",
         link: 'https://en.wikipedia.org/wiki/Donald_Knuth'
+        image_url1: "donaldknuth.jpeg",
     },
     {
         first_name: "Sergey",
         last_name: "Brin",
-        image_url: "sergeybrin.jpeg",
         link: 'https://en.wikipedia.org/wiki/Sergey_Brin'
+        image_url1: "sergeybrin.jpeg",
     },
     {
         first_name: "Elizabeth",
         last_name: "Feinler",
-        image_url: "elizabethfeinler.jpeg",
         link: 'https://en.wikipedia.org/wiki/Elizabeth_J._Feinler'
+        image_url1: "elizabethfeinler.jpeg",
     },
     {
         first_name: "Alexey",
         last_name: "Pajitnov",
-        image_url: "alexeypajitnov.jpeg",
         link: 'https://en.wikipedia.org/wiki/Alexey_Pajitnov'
+        image_url1: "alexeypajitnov.jpeg",
     },
     {
         first_name: "Andrew",
         last_name: "Ng",
-        image_url: "andrewng.jpeg",
         link: 'https://en.wikipedia.org/wiki/Andrew_Ng'
+        image_url1: "andrewng.jpeg",
     },
     {
         first_name: "Demis",
         last_name: "Hassabis",
-        image_url: "demishassabis.jpeg",
         link: 'https://en.wikipedia.org/wiki/Demis_Hassabis'
+        image_url1: "demishassabis.jpeg",
     },
     {
         first_name: "Karen",
         last_name: "Spärck Jones",
-        image_url: "karensparckjones.jpeg",
         link: 'https://en.wikipedia.org/wiki/Karen_Sp%C3%A4rck_Jones'
+        image_url1: "karensparckjones.jpeg",
     },
     {
         first_name: "Timnit",
         last_name: "Gebru",
-        image_url: "timnitgebru.jpeg",
         link: 'https://en.wikipedia.org/wiki/Timnit_Gebru'
+        image_url1: "timnitgebru.jpeg",
     },
     {
         first_name: "Max",
         last_name: "Levchin",
-        image_url: "maxlevchin.jpeg",
         link: 'https://en.wikipedia.org/wiki/Max_Levchin'
+        image_url1: "maxlevchin.jpeg",
     },
     {
         first_name: "Shafi",
         last_name: "Goldwasser",
-        image_url: "shafigoldwasser.jpeg",
         link: 'https://en.wikipedia.org/wiki/Shafi_Goldwasser'
+        image_url1: "shafigoldwasser.jpeg",
     },
     {
         first_name: "Lisa",
         last_name: "Su",
-        image_url: "lisasu.png",
         link: 'https://en.wikipedia.org/wiki/Lisa_Su'
+        image_url1: "lisasu.png",
     },
     {
         first_name: "Sophie",
         last_name: "Wilson",
-        image_url: "sophiewilson.jpeg",
         link: 'https://en.wikipedia.org/wiki/Sophie_Wilson'
+        image_url1: "sophiewilson.jpeg",
     },
     {
         first_name: "Vint",
         last_name: "Cerf",
-        image_url: "vintcerf.jpeg",
         link: 'https://en.wikipedia.org/wiki/Vint_Cerf'
+        image_url1: "vintcerf.jpeg",
     },
     {
         first_name: "Manuel",
         last_name: "Blum",
-        image_url: "manuelblum.jpeg",
         link: 'https://en.wikipedia.org/wiki/Manuel_Blum'
+        image_url1: "manuelblum.jpeg",
     },
     {
         first_name: "Frances",
         last_name: "Allen",
-        image_url: "francesallen.jpeg",
         link: 'https://en.wikipedia.org/wiki/Frances_Allen'
+        image_url1: "francesallen.jpeg",
     },
     {
         first_name: "Edsger W.",
         last_name: "Dijkstra",
-        image_url: "edsgerwdijkstra.jpeg",
         link: 'https://en.wikipedia.org/wiki/Edsger_W._Dijkstra'
+        image_url1: "edsgerwdijkstra.jpeg",
     },
     {
         first_name: "Kunihiko",
         last_name: "Fukushima",
-        image_url: "kunihikofukushima.jpeg",
         link: 'https://en.wikipedia.org/wiki/Kunihiko_Fukushima'
+        image_url1: "kunihikofukushima.jpeg",
     },
     {
         first_name: "DJ",
         last_name: "Patil",
-        link: 'https://en.wikipedia.org/wiki/DJ_Patil'
-        image_url: "djpatil.jpeg",
-        title: "Data Scientist",
+        link: 'https://en.wikipedia.org/wiki/DJ_Patil',
+        image_url1: "djpatil.jpeg",
+        title1: "Data Scientist",
         image_url2: "djpatil2.jpeg",
         title2: "Mathematician",
         image_url3: "djpatil3.jpeg",
@@ -592,75 +606,81 @@ Character.create!([
     {
         first_name: "Fei Fei",
         last_name: "Li",
-        image_url: "feifeili.jpeg",
         link: 'https://en.wikipedia.org/wiki/Fei-Fei_Li',
-        title: 'Automated Intelligence'
+        image_url1: "feifeili.jpeg",
+        title1: 'Automated Intelligence'
     },
     {
         first_name: "Ken",
         last_name: "Thompson",
-        image_url: "kenthompson.jpeg",
         link: 'https://en.wikipedia.org/wiki/Ken_Thompson'
+        image_url1: "kenthompson.jpeg",
     },
     {
         first_name: "Dennis",
         last_name: "Ritchie",
-        image_url: "dennisritchie.jpeg",
         link: 'https://en.wikipedia.org/wiki/Dennis_Ritchie'
+        image_url1: "dennisritchie.jpeg",
     },
     {
         first_name: "Tony",
         last_name: "Hoare",
-        image_url: "tonyhoare.jpeg",
         link: 'https://en.wikipedia.org/wiki/Tony_Hoare'
+        image_url1: "tonyhoare.jpeg",
     },
     {
         first_name: "Alan",
         last_name: "Kay",
-        image_url: "alankay.jpeg",
         link: 'https://en.wikipedia.org/wiki/Alan_Kay'
+        image_url1: "alankay.jpeg",
     },
     {
         first_name: "Andrew",
         last_name: "Yao",
-        image_url: "andrewyao.jpeg",
         link: 'https://en.wikipedia.org/wiki/Andrew_Yao'
+        image_url1: "andrewyao.jpeg",
     },
     {
         first_name: "Marvin",
         last_name: "Minsky",
-        image_url: "marvinminsky.jpeg",
         link: 'https://en.wikipedia.org/wiki/Marvin_Minsky'
+        image_url1: "marvinminsky.jpeg",
     },
     {
         first_name: "Adi",
         last_name: "Shamir",
-        image_url: "adishamir.jpeg",
         link: 'https://en.wikipedia.org/wiki/Adi_Shamir'
+        image_url1: "adishamir.jpeg",
     },
     {
         first_name: "Kurt",
         last_name: "Gödel",
-        image_url: "kurtgodel.jpeg",
         link: 'https://en.wikipedia.org/wiki/Kurt_G%C3%B6del'
+        image_url1: "kurtgodel.jpeg",
     },
     {
         first_name: "Musa",
         last_name: "al-Khwarizmi",
-        image_url: "musaalkhwarizmi.jpeg",
         link: 'https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi',
-        title: 'Mathematician'
+        image_url1: "musaalkhwarizmi.jpeg",
+        title1: 'Mathematician',
+        image_url2: "musaalkhwarizmi.jpeg",
+        title2: 'Mathematician',
+        image_url3: "musaalkhwarizmi.jpeg",
+        title3: 'Mathematician',
+        image_url4: "musaalkhwarizmi.jpeg",
+        title4: 'Mathematician',
     },
     {
         first_name: "Pāṇini",
         last_name: "",
         link: 'https://en.wikipedia.org/wiki/P%C4%81%E1%B9%87ini',
-        image_url: "panini.jpeg",
-        title: 'Grammarian'
-        image_url4: "panini.jpeg",
-        title4: 'Philologist'
-        image_url4: "panini.jpeg",
-        title4: 'Linguist'
+        image_url1: "panini.jpeg",
+        title1: 'Grammarian',
+        image_url2: "panini.jpeg",
+        title2: 'Philologist',
+        image_url3: "panini.jpeg",
+        title3: 'Linguist',
         image_url4: "panini.jpeg",
         title4: 'Morphological Analyst'
     },
@@ -668,12 +688,12 @@ Character.create!([
         first_name: "Ismail",
         last_name: "al-Jazari",
         link: 'https://en.wikipedia.org/wiki/Ismail_al-Jazari',
-        image_url: "ismailaljazari.jpeg",
-        title: 'Mechanical Engineer'
+        image_url1: "ismailaljazari.jpeg",
+        title1: 'Mechanical Engineer',
         image_url2: "ismailaljazari2.jpeg",
-        title2: 'Mathematician'
+        title2: 'Mathematician',
         image_url3: "ismailaljazari3.jpeg",
-        title3: 'Machinery Architect'
+        title3: 'Machinery Architect',
         image_url4: "ismailaljazari.jpeg",
         title4: 'Polymath'
     },
@@ -681,25 +701,25 @@ Character.create!([
         first_name: "Susan L.",
         last_name: "Graham",
         link: 'https://en.wikipedia.org/wiki/Susan_L._Graham',
-        image_url: "susanlgraham.jpeg",
-        title: 'Computer Scientist'
+        image_url1: "susanlgraham.jpeg",
+        title1: 'Computer Scientist',
         image_url2: "susanlgraham2.jpeg",
-        title2: 'Mathematician'
+        title2: 'Mathematician',
         image_url3: "susanlgraham3.jpeg",
-        title3: 'Systems Developer'
+        title3: 'Systems Developer',
         image_url4: "susanlgraham4.jpeg",
-        title4: 'Language Design'
+        title4: 'Language Design',
     },
     {
         first_name: "Gottfried",
         last_name: "Leibniz",
         link: 'https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz',
-        image_url: "gottfriedleibniz.jpeg",
-        title: 'Mathematician'
+        image_url1: "gottfriedleibniz.jpeg",
+        title1: 'Mathematician',
         image_url2: "gottfriedleibniz2.jpeg",
-        title2: 'Philosopher'
+        title2: 'Philosopher',
         image_url3: "gottfriedleibniz3.jpeg",
-        title3: 'Scientist'
+        title3: 'Scientist',
         image_url4: "gottfriedleibniz4.jpeg",
         title4: 'Polymath'
     },
@@ -707,12 +727,12 @@ Character.create!([
         first_name: "Blaise",
         last_name: "Pascal",
         link: 'https://en.wikipedia.org/wiki/Blaise_Pascal',
-        image_url: "blaisepascal.jpeg",
-        title: 'Mathematician'
+        image_url1: "blaisepascal.jpeg",
+        title1: 'Mathematician',
         image_url2: "blaisepascal2.jpeg",
-        title2: 'Physicist'
+        title2: 'Physicist',
         image_url3: "blaisepascal3.jpeg",
-        title3: 'Philosopher'
+        title3: 'Philosopher',
         image_url4: "blaisepascal4.jpeg",
         title4: 'Mechanical Engineer'
     },
