@@ -232,12 +232,12 @@ Character.create!([
         last_name: "Buterin",
         link: 'https://en.wikipedia.org/wiki/Vitalik_Buterin'
         image_url1: "vitalikbuterin.jpeg",
-        title1: 'Ethereum Co-Founder',
         image_url2: "vitalikbuterin2.jpeg",
-        title2: 'Decentralized Networking',
         image_url3: "vitalikbuterin3.jpeg",
-        title3: 'Ethereum Core Developer',
         image_url4: "vitalikbuterin4.jpeg",
+        title1: 'Ethereum Co-Founder',
+        title2: 'Decentralized Networking',
+        title3: 'Ethereum Core Developer',
         title4: 'Ethereum Co-Founder',
     },
     {
@@ -245,12 +245,12 @@ Character.create!([
         last_name: "Johnson",
         link: 'https://en.wikipedia.org/wiki/Katherine_Johnson',
         image_url1: "katherinejohnson.jpeg",
-        title1: 'Mathematician',
         image_url2: "katherinejohnson2.jpeg",
-        title2: 'NASA Computer',
         image_url3: "katherinejohnson3.jpeg",
-        title3: 'Orbital Mechanics',
         image_url4: "katherinejohnson4.jpeg",
+        title1: 'Mathematician',
+        title2: 'NASA Computer',
+        title3: 'Orbital Mechanics',
         title4: 'Space Trajectory Calculator',
     },
     {
@@ -258,12 +258,12 @@ Character.create!([
         last_name: "Turing",
         link: 'https://en.wikipedia.org/wiki/Alan_Turing',
         image_url1: "alanturing.jpeg",
-        title1: "Computer Scientist",
         image_url2: "alanturing.jpeg",
-        title2: "Cryptanalyst",
         image_url3: "alanturing.jpeg",
-        title3: "Mathematician",
         image_url4: "alanturing.jpeg",
+        title1: "Computer Scientist",
+        title2: "Cryptanalyst",
+        title3: "Mathematician",
         title4: "Logician",
     },
     {
@@ -271,12 +271,12 @@ Character.create!([
         last_name: "Jobs",
         link: 'https://en.wikipedia.org/wiki/Steve_Jobs'
         image_url1: "stevejobs.jpeg",
-        title1: "Apple Co-Founder",
         image_url2: "stevejobs2.jpeg",
-        title2: "Industrial Designer",
         image_url3: "stevejobs3.jpeg",
-        title3: "Entrepreneur",
         image_url4: "stevejobs4.jpeg",
+        title1: "Apple Co-Founder",
+        title2: "Industrial Designer",
+        title3: "Entrepreneur",
         title4: "Apple Innovator",
     },
     {
@@ -284,12 +284,12 @@ Character.create!([
         last_name: "Gates",
         link: 'https://en.wikipedia.org/wiki/Bill_Gates'
         image_url1: "billgates.jpeg",
-        title1: "Microsoft Co-Founder",
         image_url2: "billgates2.jpeg",
-        title2: "Software Engineer",
         image_url3: "billgates3.jpeg",
-        title3: "Systems Designer",
         image_url4: "billgates4.jpeg",
+        title1: "Microsoft Co-Founder",
+        title2: "Software Engineer",
+        title3: "Systems Designer",
         title4: "Entrepreneur",
     },
     {
@@ -297,12 +297,12 @@ Character.create!([
         last_name: "Hopper",
         link: 'https://en.wikipedia.org/wiki/Grace_Hopper'
         image_url1: "gracehopper.jpeg",
-        title1: "Computer Scientist",
         image_url2: "gracehopper2.jpeg",
-        title2: "Rear Admiral",
         image_url3: "gracehopper3.jpeg",
-        title3: "Compilation Innovator",
         image_url4: "gracehopper4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Rear Admiral",
+        title3: "Compilation Innovator",
         title4: "Mathematician",
     },
     {
@@ -310,12 +310,12 @@ Character.create!([
         last_name: "Clarke",
         link: 'https://en.wikipedia.org/wiki/Joan_Clarke'
         image_url1: "joanclarke.jpeg",
-        title1: "Cryptanalyst",
         image_url2: "joanclarke.jpeg",
-        title2: "Numismatist",
         image_url3: "joanclarke.jpeg",
-        title3: "Codebreaker",
         image_url4: "joanclarke.jpeg",
+        title1: "Cryptanalyst",
+        title2: "Numismatist",
+        title3: "Codebreaker",
         title4: "Mathematician",
     },
     {
@@ -323,12 +323,12 @@ Character.create!([
         last_name: "Wood",
         link: 'https://en.wikipedia.org/wiki/Gavin_Wood'
         image_url1: "gavinwood.jpeg",
-        title1: "Free-Trust Technologist"
         image_url2: "gavinwood2.jpeg",
-        title2: "Computer Scientist",
         image_url3: "gavinwood3.jpeg",
-        title3: "Open Source Advocate"
         image_url4: "gavinwood4.jpeg",
+        title1: "Free-Trust Technologist"
+        title2: "Computer Scientist",
+        title3: "Open Source Advocate"
         title4: "Ethereum Co-Founder",
     },
     {
@@ -336,12 +336,12 @@ Character.create!([
         last_name: "Jackson",
         link: 'https://en.wikipedia.org/wiki/Mary_Jackson_(engineer)'
         image_url1: "maryjackson.jpeg",
-        title1: "Mathematician"
         image_url2: "maryjackson2.jpeg",
-        title2: "Aerospace Engineer"
         image_url3: "maryjackson3.jpeg",
-        title3: "Aeronautical Engineer"
         image_url4: "maryjackson4.jpeg",
+        title1: "Mathematician"
+        title2: "Aerospace Engineer"
+        title3: "Aeronautical Engineer"
         title4: "Aerospace Scientist"
     },
     {
@@ -349,12 +349,12 @@ Character.create!([
         last_name: "Keller",
         link: 'https://en.wikipedia.org/wiki/Mary_Kenneth_Keller'
         image_url1: "marykennethkeller.jpeg",
-        title1: "Computer Scientist",
         image_url2: "marykennethkeller2.jpeg",
-        title2: "Religious Sister",
         image_url3: "marykennethkeller3.jpeg",
-        title3: "Mathematician",
         image_url4: "marykennethkeller4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Religious Sister",
+        title3: "Mathematician",
         title4: "Physicist",
     },
     {
@@ -362,12 +362,12 @@ Character.create!([
         last_name: "Reddy",
         link: 'https://en.wikipedia.org/wiki/Raj_Reddy'
         image_url1: "rajreddy.jpeg",
-        title1: "Computer Scientist",
         image_url2: "rajreddy2.jpeg",
-        title2: "Artifical Intelligence",
         image_url3: "rajreddy3.jpeg",
-        title3: "Machine Learning",
         image_url4: "rajreddy4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Artifical Intelligence",
+        title3: "Machine Learning",
         title4: "Speech Recognition",
     },
     {
@@ -375,12 +375,12 @@ Character.create!([
         last_name: "Lamarr",
         link: 'https://en.wikipedia.org/wiki/Hedy_Lamarr'
         image_url1: "hedylamarr.jpeg",
-        title1: "Frequency Hopping",
         image_url2: "hedylamarr2.jpeg",
-        title2: "Radio Guidance",
         image_url3: "hedylamarr3.jpeg",
-        title3: "Actress",
         image_url4: "hedylamarr4.jpeg",
+        title1: "Frequency Hopping",
+        title2: "Radio Guidance",
+        title3: "Actress",
         title4: "Spread Spectrum",
     },
     {
@@ -388,12 +388,12 @@ Character.create!([
         last_name: "Hamilton",
         link: 'https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)'
         image_url1: "margarethamilton.jpeg",
-        title1: "Computer Scientist",
         image_url2: "margarethamilton2.jpeg",
-        title2: "Software Engineer",
         image_url3: "margarethamilton3.jpeg",
-        title3: "Systems Engineer",
         image_url4: "margarethamilton4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Software Engineer",
+        title3: "Systems Engineer",
         title4: "NASA Flight Engineer",
     },
     {
@@ -401,12 +401,12 @@ Character.create!([
         last_name: "Zuckerberg",
         link: 'https://en.wikipedia.org/wiki/Mark_Zuckerberg'
         image_url1: "markzuckerberg.jpeg",
-        title1: "Facebook Co-Founder"
         image_url2: "markzuckerberg2.jpeg",
-        title2: "Software Engineer"
         image_url3: "markzuckerberg3.jpeg",
-        title3: "Social Networking"
         image_url4: "markzuckerberg4.jpeg",
+        title1: "Facebook Co-Founder"
+        title2: "Software Engineer"
+        title3: "Social Networking"
         title4: "Entrepreneur"
     },
     {
@@ -414,12 +414,12 @@ Character.create!([
         last_name: "Borg",
         link: 'https://en.wikipedia.org/wiki/Anita_Borg'
         image_url1: "anitaborg.jpeg",
-        title1: "Computer Scientist",
         image_url2: "anitaborg2.jpeg",
-        title2: "Systems Design",
         image_url3: "anitaborg3.jpeg",
-        title3: "Operating Systems",
         image_url4: "anitaborg4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Systems Design",
+        title3: "Operating Systems",
         title4: "Software Developer",
     },
     {
@@ -427,12 +427,12 @@ Character.create!([
         last_name: "Page",
         link: 'https://en.wikipedia.org/wiki/Larry_Page'
         image_url1: "larrypage.jpeg",
-        title1: "Computer Scientist",
         image_url2: "larrypage2.jpeg",
-        title2: "Google Co-Founder",
         image_url3: "larrypage3.jpeg",
-        title3: "Search Algorithms",
         image_url4: "larrypage4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Google Co-Founder",
+        title3: "Search Algorithms",
         title4: "Entrepreneur",
     },
     {
@@ -440,12 +440,12 @@ Character.create!([
         last_name: "Matsumoto",
         link: 'https://en.wikipedia.org/wiki/Yukihiro_Matsumoto'
         image_url1: "yukihiromatsumoto.jpeg",
-        title1: "Ruby Developer",
         image_url2: "yukihiromatsumoto2.jpeg",
-        title2: "Computer Scientist",
         image_url3: "yukihiromatsumoto3.jpeg",
-        title3: "Language Programmer",
         image_url4: "yukihiromatsumoto4.jpeg",
+        title1: "Ruby Developer",
+        title2: "Computer Scientist",
+        title3: "Language Programmer",
         title4: "Open Source Advocate",
     },
     {
@@ -453,12 +453,12 @@ Character.create!([
         last_name: "Bezos",
         link: 'https://en.wikipedia.org/wiki/Jeff_Bezos'
         image_url1: "jeffbezos.jpeg",
-        title1: "Software Engineer",
         image_url2: "jeffbezos2.jpeg",
-        title2: "Computer Engineer",
         image_url3: "jeffbezos3.jpeg",
-        title3: "E-Commerce",
         image_url4: "jeffbezos4.jpeg",
+        title1: "Software Engineer",
+        title2: "Computer Engineer",
+        title3: "E-Commerce",
         title4: "Entrepreneur",
     },
     {
@@ -466,12 +466,12 @@ Character.create!([
         last_name: "Easley",
         link: 'https://en.wikipedia.org/wiki/Annie_Easley'
         image_url1: "annieeasley.png",
-        title1: "Rocket Scientist",
         image_url2: "annieeasley2.png",
-        title2: "Computer Scientist",
         image_url3: "annieeasley3.png",
-        title3: "Mathematician",
         image_url4: "annieeasley4.png",
+        title1: "Rocket Scientist",
+        title2: "Computer Scientist",
+        title3: "Mathematician",
         title4: "Software Developer",
     },
     {
@@ -479,12 +479,12 @@ Character.create!([
         last_name: "Lovelace",
         link: 'https://en.wikipedia.org/wiki/Ada_Lovelace'
         image_url1: "adalovelace.jpeg",
-        title1: "Mathematician",
         image_url2: "adalovelace2.jpeg",
-        title2: "Tech Visionary",
         image_url3: "adalovelace3.jpeg",
-        title3: "Poetical Science",
         image_url4: "adalovelace4.jpeg",
+        title1: "Mathematician",
+        title2: "Tech Visionary",
+        title3: "Poetical Science",
         title4: "Metaphysician",
     },
     {
@@ -492,12 +492,12 @@ Character.create!([
         last_name: "Ellis",
         link: 'https://en.wikipedia.org/wiki/Clarence_Ellis_(computer_scientist)'
         image_url1: "clarenceellis.jpeg",
-        title1: "Computer Scientist",
         image_url2: "clarenceellis.jpeg",
-        title2: "Software Engineer",
         image_url3: "clarenceellis.jpeg",
-        title3: "Cognitive Science",
         image_url4: "clarenceellis.jpeg",
+        title1: "Computer Scientist",
+        title2: "Software Engineer",
+        title3: "Cognitive Science",
         title4: "Simultaneous Editing",
     },
     {
@@ -505,12 +505,12 @@ Character.create!([
         last_name: "Berners Lee",
         link: 'https://en.wikipedia.org/wiki/Tim_Berners-Lee'
         image_url1: "timbernerslee.jpeg",
-        title1: "Computer Scientist"
         image_url2: "timbernerslee.jpeg",
-        title2: "World Wide Web"
         image_url3: "timbernerslee.jpeg",
-        title3: "Information Management"
         image_url4: "timbernerslee.jpeg",
+        title1: "Computer Scientist"
+        title2: "World Wide Web"
+        title3: "Information Management"
         title4: "Telecommunications"
     },
     {
@@ -518,12 +518,12 @@ Character.create!([
         last_name: "Von Neumann",
         link: 'https://en.wikipedia.org/wiki/John_von_Neumann'
         image_url1: "johnvonneumann.jpeg",
-        title1: "Mathematician",
         image_url2: "johnvonneumann2.jpeg",
-        title2: "Physicist",
         image_url3: "johnvonneumann3.jpeg",
-        title3: "Computer Scientist",
         image_url4: "johnvonneumann4.jpeg",
+        title1: "Mathematician",
+        title2: "Physicist",
+        title3: "Computer Scientist",
         title4: "Polymath",
     },
     {
@@ -531,12 +531,12 @@ Character.create!([
         last_name: "Wozniak",
         link: 'https://en.wikipedia.org/wiki/Steve_Wozniak'
         image_url1: "stevewozniak.jpeg",
-        title1: "Computer Programmer",
         image_url2: "stevewozniak2.jpeg",
-        title2: "Apple Co-Founder",
         image_url3: "stevewozniak3.jpeg",
-        title3: "Electronics Engineer",
         image_url4: "stevewozniak4.jpeg",
+        title1: "Computer Programmer",
+        title2: "Apple Co-Founder",
+        title3: "Electronics Engineer",
         title4: "Microcomputing",
     },
     {
@@ -544,12 +544,12 @@ Character.create!([
         last_name: "Licklider",
         link: 'https://en.wikipedia.org/wiki/J._C._R._Licklider'
         image_url1: "jcrlicklider.jpeg",
-        title1: "Computer Scientist"
         image_url2: "jcrlicklider2.jpeg",
-        title2: "Psychologist"
         image_url3: "jcrlicklider3.jpeg",
-        title3: "Interactive Computing"
         image_url4: "jcrlicklider4.jpeg",
+        title1: "Computer Scientist"
+        title2: "Psychologist"
+        title3: "Interactive Computing"
         title4: "Intergalactic Computer Network"
     },
     {
@@ -557,12 +557,12 @@ Character.create!([
         last_name: "McCarthy",
         link: 'https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)'
         image_url1: "johnmccarthy.jpeg",
-        title1: "Computer Scientist",
         image_url2: "johnmccarthy2.jpeg",
-        title2: "Cognitive Scientist",
         image_url3: "johnmccarthy3.jpeg",
-        title3: "Artifical Intelligence",
         image_url4: "johnmccarthy4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Cognitive Scientist",
+        title3: "Artifical Intelligence",
         title4: "Language Developer",
     },
     {
@@ -570,12 +570,12 @@ Character.create!([
         last_name: "Ulam",
         link: 'https://en.wikipedia.org/wiki/Stanislaw_Ulam'
         image_url1: "stanislawulam.jpeg",
-        title1: "Mathematician",
         image_url2: "stanislawulam2.jpeg",
-        title2: "Monte Carlo Methods",
         image_url3: "stanislawulam3.jpeg",
-        title3: "Physicist",
         image_url4: "stanislawulam4.jpeg",
+        title1: "Mathematician",
+        title2: "Monte Carlo Methods",
+        title3: "Physicist",
         title4: "Ergodic Theory",
     },
     {
@@ -583,12 +583,12 @@ Character.create!([
         last_name: "of Alexandria",
         link: 'https://en.wikipedia.org/wiki/Hero_of_Alexandria'
         image_url1: "heronofalexandria.jpeg",
-        title1: "Mathematician",
         image_url2: "heronofalexandria.jpeg",
-        title2: "Physicist",
         image_url3: "heronofalexandria.jpeg",
-        title3: "Mechanical Engineer",
         image_url4: "heronofalexandria.jpeg",
+        title1: "Mathematician",
+        title2: "Physicist",
+        title3: "Mechanical Engineer",
         title4: "Heron's Formula",
     },
     {
@@ -596,12 +596,12 @@ Character.create!([
         last_name: "Van Rossum",
         link: 'https://en.wikipedia.org/wiki/Guido_van_Rossum'
         image_url1: "guidovanrossum.jpeg",
-        title1: "Python Developer"
         image_url2: "guidovanrossum2.jpeg",
-        title2: "Computer Scientist"
         image_url3: "guidovanrossum3.jpeg",
-        title3: "Software Engineer"
         image_url4: "guidovanrossum4.jpeg",
+        title1: "Python Developer"
+        title2: "Computer Scientist"
+        title3: "Software Engineer"
         title4: "Language Design"
     },
     {
@@ -609,12 +609,12 @@ Character.create!([
         last_name: "Tukey",
         link: 'https://en.wikipedia.org/wiki/John_Tukey'
         image_url1: "johnwtukey.jpeg",
-        title1: "Mathematician",
         image_url2: "johnwtukey2.jpeg",
-        title2: "Statistician",
         image_url3: "johnwtukey3.jpeg",
-        title3: "Fast Fourier Transform",
         image_url4: "johnwtukey4.jpeg",
+        title1: "Mathematician",
+        title2: "Statistician",
+        title3: "Fast Fourier Transform",
         title4: "Exploratory Data Analysis",
     },
     {
@@ -622,12 +622,12 @@ Character.create!([
         last_name: "Jacquard",
         link: 'https://en.wikipedia.org/wiki/Joseph_Marie_Jacquard'
         image_url1: "josephmariejacquard.jpeg",
-        title1: "Weaver",
         image_url2: "josephmariejacquard2.jpeg",
-        title2: "Merchant",
         image_url3: "josephmariejacquard3.jpeg",
-        title3: "Mechanical Engineer",
         image_url4: "josephmariejacquard4.jpeg",
+        title1: "Weaver",
+        title2: "Merchant",
+        title3: "Mechanical Engineer",
         title4: "Programmable Loom",
     },
     {
@@ -635,12 +635,12 @@ Character.create!([
         last_name: "Babbage",
         link: 'https://en.wikipedia.org/wiki/Charles_Babbage'
         image_url1: "charlesbabbage.jpeg",
-        title1: "Mathematician",
         image_url2: "charlesbabbage2.jpeg",
-        title2: "Mechanical Engineer",
         image_url3: "charlesbabbage3.jpeg",
-        title3: "Difference Engine",
         image_url4: "charlesbabbage4.jpeg",
+        title1: "Mathematician",
+        title2: "Mechanical Engineer",
+        title3: "Difference Engine",
         title4: "Analytical Engine",
     },
     {
@@ -648,12 +648,12 @@ Character.create!([
         last_name: "Vaughan",
         link: 'https://en.wikipedia.org/wiki/Dorothy_Vaughan'
         image_url1: "dorothyvaughan.jpeg",
-        title1: "Mathematician"
         image_url2: "dorothyvaughan.jpeg",
-        title2: "NASA Computer"
         image_url3: "dorothyvaughan2.jpeg",
-        title3: "Computer Programmer"
         image_url4: "dorothyvaughan2.jpeg",
+        title1: "Mathematician"
+        title2: "NASA Computer"
+        title3: "Computer Programmer"
         title4: "Flight Mechanics"
     },
     {
@@ -661,12 +661,12 @@ Character.create!([
         last_name: "Flowers",
         link: 'https://en.wikipedia.org/wiki/Tommy_Flowers'
         image_url1: "tommyflowers.jpeg",
-        title1: "Computer Engineer",
         image_url2: "tommyflowers2.jpeg",
-        title2: "Codebreaker",
         image_url3: "tommyflowers3.jpeg",
-        title3: "Cryptanalyst",
         image_url4: "tommyflowers4.jpeg",
+        title1: "Computer Engineer",
+        title2: "Codebreaker",
+        title3: "Cryptanalyst",
         title4: "Collossus",
     },
     {
@@ -674,12 +674,12 @@ Character.create!([
         last_name: "Torvalds",
         link: 'https://en.wikipedia.org/wiki/Linus_Torvalds'
         image_url1: "linustorvalds.jpeg",
-        title1: "Linux Developer"
         image_url2: "linustorvalds2.jpeg",
-        title2: "Software Engineer"
         image_url3: "linustorvalds1.jpeg",
-        title3: "Git Version Control"
         image_url4: "linustorvalds1.jpeg",
+        title1: "Linux Developer"
+        title2: "Software Engineer"
+        title3: "Git Version Control"
         title4: "Open Source Advocate"
     },
     {
@@ -687,12 +687,12 @@ Character.create!([
         last_name: "Backus",
         link: 'https://en.wikipedia.org/wiki/John_Backus'
         image_url1: "johnbackus1.jpeg",
-        title1: "Computer Scientist",
         image_url2: "johnbackus.jpeg",
-        title2: "FORTRAN",
         image_url3: "johnbackus.jpeg",
-        title3: "Language Design",
         image_url4: "johnbackus.jpeg",
+        title1: "Computer Scientist",
+        title2: "FORTRAN",
+        title3: "Language Design",
         title4: "Backus-Naur Form",
     },
     {
@@ -700,12 +700,12 @@ Character.create!([
         last_name: "Crockford",
         link: 'https://en.wikipedia.org/wiki/Douglas_Crockford'
         image_url1: "douglascrockford.jpeg",
-        title1: "Computer Scientist"
         image_url2: "douglascrockford2.jpeg",
-        title2: "JSON"
         image_url3: "douglascrockford3.jpeg",
-        title3: "Javascript Developer"
         image_url4: "douglascrockford4.jpeg",
+        title1: "Computer Scientist"
+        title2: "JSON"
+        title3: "Javascript Developer"
         title4: "Language Design"
     },
     {
@@ -713,12 +713,12 @@ Character.create!([
         last_name: "De Icaza",
         link: 'https://en.wikipedia.org/wiki/Miguel_de_Icaza'
         image_url1: "migueldeicaza.jpeg",
-        title1: "Software Developer"
         image_url2: "migueldeicaza2.jpeg",
-        title2: "Open Source Advocate"
         image_url3: "migueldeicaza3.jpeg",
-        title3: "Operating Systems"
         image_url4: "migueldeicaza4.jpeg",
+        title1: "Software Developer"
+        title2: "Open Source Advocate"
+        title3: "Operating Systems"
         title4: "Frameworks"
     },
     {
@@ -726,12 +726,12 @@ Character.create!([
         last_name: "Sassenrath",
         link: 'https://en.wikipedia.org/wiki/Carl_Sassenrath'
         image_url1: "carlsassenrath.jpeg",
-        title1: "Software Engineer"
         image_url2: "carlsassenrath.jpeg",
-        title2: "Operating Systems"
         image_url3: "carlsassenrath.jpeg",
-        title3: "Language Design"
         image_url4: "carlsassenrath.jpeg",
+        title1: "Software Engineer"
+        title2: "Operating Systems"
+        title3: "Language Design"
         title4: "Computational Multitasking"
     },
     {
@@ -739,12 +739,12 @@ Character.create!([
         last_name: "Liskov",
         link: 'https://en.wikipedia.org/wiki/Barbara_Liskov'
         image_url1: "barbaraliskov.jpeg",
-        title1: "Computer Scientist"
         image_url2: "barbaraliskov2.jpeg",
-        title2: "Distributed Computing"
         image_url3: "barbaraliskov3.jpeg",
-        title3: "Language Design"
         image_url4: "barbaraliskov4.jpeg",
+        title1: "Computer Scientist"
+        title2: "Distributed Computing"
+        title3: "Language Design"
         title4: "Type Theory"
     },
     {
@@ -752,12 +752,12 @@ Character.create!([
         last_name: "Axmark",
         link: 'https://en.wikipedia.org/wiki/David_Axmark'
         image_url1: "davidaxmark.jpeg",
-        title1: "Software Engineer",
         image_url2: "davidaxmark.jpeg",
-        title2: "Open Source Advocate",
         image_url3: "davidaxmark.jpeg",
-        title3: "MySQL Developer",
         image_url4: "davidaxmark.jpeg",
+        title1: "Software Engineer",
+        title2: "Open Source Advocate",
+        title3: "MySQL Developer",
         title4: "Relational Databases",
     },
     {
@@ -765,12 +765,12 @@ Character.create!([
         last_name: "Knuth",
         link: 'https://en.wikipedia.org/wiki/Donald_Knuth'
         image_url1: "donaldknuth.jpeg",
-        title1: "Computer Scientist"
         image_url2: "donaldknuth2.jpeg",
-        title2: "Mathematician"
         image_url3: "donaldknuth3.jpeg",
-        title3: "Algorithm Analyst"
         image_url4: "donaldknuth4.jpeg",
+        title1: "Computer Scientist"
+        title2: "Mathematician"
+        title3: "Algorithm Analyst"
         title4: "Literate Programming"
     },
     {
@@ -778,12 +778,12 @@ Character.create!([
         last_name: "Brin",
         link: 'https://en.wikipedia.org/wiki/Sergey_Brin'
         image_url1: "sergeybrin.jpeg",
-        title1: "Computer Scientist",
         image_url2: "sergeybrin2.jpeg",
-        title2: "Google Co-Founder",
         image_url3: "sergeybrin3.jpeg",
-        title3: "Entrepreneur",
         image_url4: "sergeybrin4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Google Co-Founder",
+        title3: "Entrepreneur",
         title4: "Computer Scientist",
     },
     {
@@ -791,12 +791,12 @@ Character.create!([
         last_name: "Feinler",
         link: 'https://en.wikipedia.org/wiki/Elizabeth_J._Feinler'
         image_url1: "elizabethfeinler.jpeg",
-        title1: "Computer Scientist"
         image_url2: "elizabethfeinler2.jpeg",
-        title2: "Information Scientist"
         image_url3: "elizabethfeinler3.jpeg",
-        title3: "Informational Networking"
         image_url4: "elizabethfeinler.jpeg",
+        title1: "Computer Scientist"
+        title2: "Information Scientist"
+        title3: "Informational Networking"
         title4: "ARPANET"
     }
     {
@@ -804,12 +804,12 @@ Character.create!([
         last_name: "Ng",
         link: 'https://en.wikipedia.org/wiki/Andrew_Ng'
         image_url1: "andrewng.jpeg",
-        title1: "Computer Scientist",
         image_url2: "andrewng2.jpeg",
-        title2: "Artificial Intelligence",
         image_url3: "andrewng3.jpeg",
-        title3: "Machine Learning",
         image_url4: "andrewng4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Artificial Intelligence",
+        title3: "Machine Learning",
         title4: "Language Processing",
     },
     {
@@ -817,12 +817,12 @@ Character.create!([
         last_name: "Hassabis",
         link: 'https://en.wikipedia.org/wiki/Demis_Hassabis'
         image_url1: "demishassabis.jpeg",
-        title1: "Artificial Intelligence",
         image_url2: "demishassabis2.jpeg",
-        title2: "Neuroscientist",
         image_url3: "demishassabis3.jpeg",
-        title3: "Entrepreneur",
         image_url4: "demishassabis4.jpeg",
+        title1: "Artificial Intelligence",
+        title2: "Neuroscientist",
+        title3: "Entrepreneur",
         title4: "Machine Learning",
     },
     {
@@ -830,12 +830,12 @@ Character.create!([
         last_name: "Spärck Jones",
         link: 'https://en.wikipedia.org/wiki/Karen_Sp%C3%A4rck_Jones'
         image_url1: "karensparckjones.jpeg",
-        title1: "Computer Scientist",
         image_url2: "karensparckjones2.jpeg",
-        title2: "Inverse Document Frequency",
         image_url3: "karensparckjones3.jpeg",
-        title3: "Information Retrieval",
         image_url4: "karensparckjones.jpeg",
+        title1: "Computer Scientist",
+        title2: "Inverse Document Frequency",
+        title3: "Information Retrieval",
         title4: "Natural Language Processing",
     },
     {
@@ -843,25 +843,25 @@ Character.create!([
         last_name: "Gebru",
         link: 'https://en.wikipedia.org/wiki/Timnit_Gebru'
         image_url1: "timnitgebru.jpeg",
+        image_url1: "timnitgebru1.jpeg",
+        image_url1: "timnitgebru1.jpeg",
+        image_url1: "timnitgebru1.jpeg",
         title1: "Computer Scientist",
-        image_url1: "timnitgebru1.jpeg",
-        title1: "Algorithmic Bias",
-        image_url1: "timnitgebru1.jpeg",
-        title1: "Data Mining",
-        image_url1: "timnitgebru1.jpeg",
-        title1: "Artificial Intelligence",
     },
+    title1: "Algorithmic Bias",
     {
+        title1: "Data Mining",
         first_name: "Max",
+        title1: "Artificial Intelligence",
         last_name: "Levchin",
         link: 'https://en.wikipedia.org/wiki/Max_Levchin'
         image_url1: "maxlevchin.jpeg",
-        title1: "Software Engineer",
         image_url2: "maxlevchin2.jpeg",
-        title2: "Paypal Co-Founder",
         image_url3: "maxlevchin3.jpeg",
-        title3: "Entrepreneur",
         image_url4: "maxlevchin4.jpeg",
+        title1: "Software Engineer",
+        title2: "Paypal Co-Founder",
+        title3: "Entrepreneur",
         title4: "CAPTCHA",
     },
     {
@@ -869,12 +869,12 @@ Character.create!([
         last_name: "Goldwasser",
         link: 'https://en.wikipedia.org/wiki/Shafi_Goldwasser'
         image_url1: "shafigoldwasser.jpeg",
-        title1: "Computer Scientist",
         image_url2: "shafigoldwasser2.jpeg",
-        title2: "Cryptologist",
         image_url3: "shafigoldwasser3.jpeg",
-        title3: "Zero-Knowledge Proofs",
         image_url4: "shafigoldwasser4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Cryptologist",
+        title3: "Zero-Knowledge Proofs",
         title4: "Cyber-Security",
     },
     {
@@ -882,12 +882,12 @@ Character.create!([
         last_name: "Su",
         link: 'https://en.wikipedia.org/wiki/Lisa_Su'
         image_url1: "lisasu.jpeg",
-        title1: "Electrical Engineer",
         image_url2: "lisasu2.jpeg",
-        title2: "Hardware Design",
         image_url3: "lisasu3.jpeg",
-        title3: "Computer Engineer",
         image_url4: "lisasu4.jpeg",
+        title1: "Electrical Engineer",
+        title2: "Hardware Design",
+        title3: "Computer Engineer",
         title4: "High Performance Processors",
     },
     {
@@ -895,12 +895,12 @@ Character.create!([
         last_name: "Wilson",
         link: 'https://en.wikipedia.org/wiki/Sophie_Wilson'
         image_url1: "sophiewilson1.jpeg",
-        title1: "Computer Scientist",
         image_url2: "sophiewilson2.jpeg",
-        title2: "Computer Engineer",
         image_url3: "sophiewilson3.jpeg",
-        title3: "Computer Design",
         image_url4: "sophiewilson4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Computer Engineer",
+        title3: "Computer Design",
         title4: "Processor Architecture",
     },
     {
@@ -908,12 +908,12 @@ Character.create!([
         last_name: "Cerf",
         link: 'https://en.wikipedia.org/wiki/Vint_Cerf'
         image_url1: "vintcerf.jpeg",
-        title1: "Telecommunications",
         image_url2: "vintcerf2.jpeg",
-        title2: "Systems Engineer",
         image_url3: "vintcerf3.jpeg",
-        title3: "Internet Protocol Suite",
         image_url4: "vintcerf4.jpeg",
+        title1: "Telecommunications",
+        title2: "Systems Engineer",
+        title3: "Internet Protocol Suite",
         title4: "Telecommunications",
     },
     {
@@ -921,12 +921,12 @@ Character.create!([
         last_name: "Blum",
         link: 'https://en.wikipedia.org/wiki/Manuel_Blum'
         image_url1: "manuelblum.jpeg",
-        title1: "Computer Scientist",
         image_url2: "manuelblum.jpeg",
-        title2: "Cryptography",
         image_url3: "manuelblum.jpeg",
-        title3: "Program Checking",
         image_url4: "manuelblum.jpeg",
+        title1: "Computer Scientist",
+        title2: "Cryptography",
+        title3: "Program Checking",
         title4: "Complex Computational Theory",
     },
     {
@@ -934,12 +934,12 @@ Character.create!([
         last_name: "Allen",
         link: 'https://en.wikipedia.org/wiki/Frances_Allen'
         image_url1: "francesallen.jpeg",
-        title1: "Computer Scientist",
         image_url2: "francesallen2.jpeg",
-        title2: "Optimizing Compilation",
         image_url3: "francesallen3.jpeg",
-        title3: "Parallel Computing",
         image_url4: "francesallen4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Optimizing Compilation",
+        title3: "Parallel Computing",
         title4: "Program Optimization",
     },
     {
@@ -947,12 +947,12 @@ Character.create!([
         last_name: "Dijkstra",
         link: 'https://en.wikipedia.org/wiki/Edsger_W._Dijkstra'
         image_url1: "edsgerwdijkstra.jpeg",
-        title1: "Computer Scientist",
         image_url2: "edsgerwdijkstra2.jpeg",
-        title2: "Software Engineer",
         image_url3: "edsgerwdijkstra3.jpeg",
-        title3: "Systems Scientist",
         image_url4: "edsgerwdijkstra4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Software Engineer",
+        title3: "Systems Scientist",
         title4: "Theoretical Physicist",
     },
     {
@@ -960,12 +960,12 @@ Character.create!([
         last_name: "Fukushima",
         link: 'https://en.wikipedia.org/wiki/Kunihiko_Fukushima'
         image_url1: "kunihikofukushima.jpeg",
-        title1: "Computer Scientist",
         image_url2: "kunihikofukushima.jpeg",
-        title2: "Neural Networks",
         image_url3: "kunihikofukushima.jpeg",
-        title3: "Deep Learning",
         image_url4: "kunihikofukushima.jpeg",
+        title1: "Computer Scientist",
+        title2: "Neural Networks",
+        title3: "Deep Learning",
         title4: "Neocognitron",
     },
     {
@@ -973,12 +973,12 @@ Character.create!([
         last_name: "Patil",
         link: 'https://en.wikipedia.org/wiki/DJ_Patil',
         image_url1: "djpatil.jpeg",
-        title1: "Data Scientist",
         image_url2: "djpatil2.jpeg",
-        title2: "Mathematician",
         image_url3: "djpatil3.jpeg",
-        title3: "Computer Scientist",
         image_url4: "djpatil4.jpeg",
+        title1: "Data Scientist",
+        title2: "Mathematician",
+        title3: "Computer Scientist",
         title4: "Data Analyst",
     },
     {
@@ -986,12 +986,12 @@ Character.create!([
         last_name: "Li",
         link: 'https://en.wikipedia.org/wiki/Fei-Fei_Li',
         image_url1: "feifeili.jpeg",
-        title1: 'Computer Scientist'
         image_url2: "feifeili2.jpeg",
-        title2: 'Artificial Intelligence'
         image_url3: "feifeili3.jpeg",
-        title3: 'Machine Learning'
         image_url4: "feifeili4.jpeg",
+        title1: 'Computer Scientist'
+        title2: 'Artificial Intelligence'
+        title3: 'Machine Learning'
         title4: 'Cognitive Neuroscience'
     },
     {
@@ -999,12 +999,12 @@ Character.create!([
         last_name: "Thompson",
         link: 'https://en.wikipedia.org/wiki/Ken_Thompson'
         image_url1: "kenthompson.jpeg",
-        title1: "Computer Scientist",
         image_url2: "kenthompson.jpeg",
-        title2: "UNIX Developer",
         image_url3: "kenthompson2.jpeg",
-        title3: "Go Developer",
         image_url4: "kenthompson2.jpeg",
+        title1: "Computer Scientist",
+        title2: "UNIX Developer",
+        title3: "Go Developer",
         title4: "Language Design",
     },
     {
@@ -1012,12 +1012,12 @@ Character.create!([
         last_name: "Ritchie",
         link: 'https://en.wikipedia.org/wiki/Dennis_Ritchie'
         image_url1: "dennisritchie.jpeg",
-        title1: "Computer Scientist",
         image_url2: "dennisritchie2.jpeg",
-        title2: "UNIX Developer",
         image_url3: "dennisritchie3.jpeg",
-        title3: "C Developer",
         image_url4: "dennisritchie3.jpeg",
+        title1: "Computer Scientist",
+        title2: "UNIX Developer",
+        title3: "C Developer",
         title4: "Language Design",
     },
     {
@@ -1025,12 +1025,12 @@ Character.create!([
         last_name: "Hoare",
         link: 'https://en.wikipedia.org/wiki/Tony_Hoare'
         image_url1: "tonyhoare.jpeg",
-        title1: "Computer Scientist",
         image_url2: "tonyhoare2.jpeg",
-        title2: "Language Design",
         image_url3: "tonyhoare3.jpeg",
-        title3: "Operating Systems",
         image_url4: "tonyhoare4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Language Design",
+        title3: "Operating Systems",
         title4: "Algorithmic Design",
     },
     {
@@ -1038,12 +1038,12 @@ Character.create!([
         last_name: "Kay",
         link: 'https://en.wikipedia.org/wiki/Alan_Kay'
         image_url1: "alankay1.jpeg",
-        title1: "Computer Scientist",
         image_url2: "alankay2.jpeg",
-        title2: "Object Oriented",
         image_url3: "alankay3.jpeg",
-        title3: "Graphical User Interface",
         image_url4: "alankay4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Object Oriented",
+        title3: "Graphical User Interface",
         title4: "Message Passing",
     },
     {
@@ -1051,12 +1051,12 @@ Character.create!([
         last_name: "Yao",
         link: 'https://en.wikipedia.org/wiki/Andrew_Yao'
         image_url1: "andrewyao.jpeg",
-        title1: "Computer Scientist",
         image_url2: "andrewyao.jpeg",
-        title2: "Computational Theorist",
         image_url3: "andrewyao.jpeg",
-        title3: "Cryptography",
         image_url4: "andrewyao.jpeg",
+        title1: "Computer Scientist",
+        title2: "Computational Theorist",
+        title3: "Cryptography",
         title4: "Minimax Theorem",
     },
     {
@@ -1064,12 +1064,12 @@ Character.create!([
         last_name: "Minsky",
         link: 'https://en.wikipedia.org/wiki/Marvin_Minsky'
         image_url1: "marvinminsky.jpeg",
-        title1: "Computer Scientist",
         image_url2: "marvinminsky2.jpeg",
-        title2: "Cognitive Scientist",
         image_url3: "marvinminsky3.jpeg",
-        title3: "Artifical Intelligence",
         image_url4: "marvinminsky4.jpeg",
+        title1: "Computer Scientist",
+        title2: "Cognitive Scientist",
+        title3: "Artifical Intelligence",
         title4: "Neural Networking",
     },
     {
@@ -1077,12 +1077,12 @@ Character.create!([
         last_name: "Shamir",
         link: 'https://en.wikipedia.org/wiki/Adi_Shamir'
         image_url1: "adishamir.jpeg",
-        title1: "Cryographer",
         image_url2: "adishamir.jpeg",
-        title2: "Computer Scientist",
         image_url3: "adishamir.jpeg",
-        title3: "Cryptanalyst",
         image_url4: "adishamir.jpeg",
+        title1: "Cryographer",
+        title2: "Computer Scientist",
+        title3: "Cryptanalyst",
         title4: "Zero Knowledge Proofs",
     },
     {
@@ -1090,12 +1090,12 @@ Character.create!([
         last_name: "Gödel",
         link: 'https://en.wikipedia.org/wiki/Kurt_G%C3%B6del'
         image_url1: "kurtgodel.jpeg",
-        title1: "Mathematician",
         image_url2: "kurtgodel.jpeg",
-        title2: "Logician",
         image_url3: "kurtgodel2.jpeg",
-        title3: "Physicist",
         image_url4: "kurtgodel2.jpeg",
+        title1: "Mathematician",
+        title2: "Logician",
+        title3: "Physicist",
         title4: "Analytical Philosophy",
     },
     {
@@ -1103,12 +1103,12 @@ Character.create!([
         last_name: "al-Khwarizmi",
         link: 'https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi',
         image_url1: "musaalkhwarizmi.jpeg",
-        title1: 'Mathematician',
         image_url2: "musaalkhwarizmi.jpeg",
-        title2: 'Algorithms',
         image_url3: "musaalkhwarizmi2.jpeg",
-        title3: 'Astronomer',
         image_url4: "musaalkhwarizmi2.jpeg",
+        title1: 'Mathematician',
+        title2: 'Algorithms',
+        title3: 'Astronomer',
         title4: 'Polymath',
     },
     {
@@ -1116,12 +1116,12 @@ Character.create!([
         last_name: "",
         link: 'https://en.wikipedia.org/wiki/P%C4%81%E1%B9%87ini',
         image_url1: "panini.jpeg",
-        title1: 'Grammarian',
         image_url2: "panini.jpeg",
-        title2: 'Philologist',
         image_url3: "panini.jpeg",
-        title3: 'Linguist',
         image_url4: "panini.jpeg",
+        title1: 'Grammarian',
+        title2: 'Philologist',
+        title3: 'Linguist',
         title4: 'Morphological Analyst'
     },
     {
@@ -1129,12 +1129,12 @@ Character.create!([
         last_name: "al-Jazari",
         link: 'https://en.wikipedia.org/wiki/Ismail_al-Jazari',
         image_url1: "ismailaljazari.jpeg",
-        title1: 'Mechanical Engineer',
         image_url2: "ismailaljazari.jpeg",
-        title2: 'Mathematician',
         image_url3: "ismailaljazari2.jpeg",
-        title3: 'Machinery Architect',
         image_url4: "ismailaljazar3.jpeg",
+        title1: 'Mechanical Engineer',
+        title2: 'Mathematician',
+        title3: 'Machinery Architect',
         title4: 'Polymath'
     },
     {
@@ -1142,12 +1142,12 @@ Character.create!([
         last_name: "Graham",
         link: 'https://en.wikipedia.org/wiki/Susan_L._Graham',
         image_url1: "susanlgraham.jpeg",
-        title1: 'Computer Scientist',
         image_url2: "susanlgraham2.jpeg",
-        title2: 'Mathematician',
         image_url3: "susanlgraham3.jpeg",
-        title3: 'Systems Developer',
         image_url4: "susanlgraham4.jpeg",
+        title1: 'Computer Scientist',
+        title2: 'Mathematician',
+        title3: 'Systems Developer',
         title4: 'Language Design',
     },
     {
@@ -1155,12 +1155,12 @@ Character.create!([
         last_name: "Leibniz",
         link: 'https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz',
         image_url1: "gottfriedleibniz.jpeg",
-        title1: 'Mathematician',
         image_url2: "gottfriedleibniz2.jpeg",
-        title2: 'Philosopher',
         image_url3: "gottfriedleibniz3.jpeg",
-        title3: 'Scientist',
         image_url4: "gottfriedleibniz4.jpeg",
+        title1: 'Mathematician',
+        title2: 'Philosopher',
+        title3: 'Scientist',
         title4: 'Polymath'
     },
     {
@@ -1168,12 +1168,12 @@ Character.create!([
         last_name: "Pascal",
         link: 'https://en.wikipedia.org/wiki/Blaise_Pascal',
         image_url1: "blaisepascal.jpeg",
-        title1: 'Mathematician',
         image_url2: "blaisepascal2.jpeg",
-        title2: 'Physicist',
         image_url3: "blaisepascal3.jpeg",
-        title3: 'Philosopher',
         image_url4: "blaisepascal4.jpeg",
+        title1: 'Mathematician',
+        title2: 'Physicist',
+        title3: 'Philosopher',
         title4: 'Mechanical Engineer'
     },
 ])
