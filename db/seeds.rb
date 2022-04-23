@@ -301,15 +301,22 @@ Character.create!([
         image_url2: "gracehopper2.jpeg",
         title2: "Rear Admiral",
         image_url3: "gracehopper3.jpeg",
-        title3: "Computer Scientist",
+        title3: "Compilation Innovator",
         image_url4: "gracehopper4.jpeg",
-        title4: "Computer Scientist",
+        title4: "Mathematician",
     },
     {
         first_name: "Joan",
         last_name: "Clarke",
         link: 'https://en.wikipedia.org/wiki/Joan_Clarke'
         image_url1: "joanclarke.jpeg",
+        title1: "Cryptanalyst",
+        image_url2: "joanclarke.jpeg",
+        title2: "Numismatist",
+        image_url3: "joanclarke.jpeg",
+        title3: "Codebreaker",
+        image_url4: "joanclarke.jpeg",
+        title4: "Mathematician",
     },
     {
         first_name: "Gavin",
@@ -329,12 +336,26 @@ Character.create!([
         last_name: "Jackson",
         link: 'https://en.wikipedia.org/wiki/Mary_Jackson_(engineer)'
         image_url1: "maryjackson.jpeg",
+        title1: "Mathematician"
+        image_url2: "maryjackson2.jpeg",
+        title2: "Aerospace Engineer"
+        image_url3: "maryjackson3.jpeg",
+        title3: "Aeronautical Engineer"
+        image_url4: "maryjackson4.jpeg",
+        title4: "Aerospace Scientist"
     },
     {
         first_name: "Mary Kenneth",
         last_name: "Keller",
         link: 'https://en.wikipedia.org/wiki/Mary_Kenneth_Keller'
         image_url1: "marykennethkeller.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "marykennethkeller.jpeg",
+        title2: "Religious Sister",
+        image_url3: "marykennethkeller.jpeg",
+        title3: "Mathematician",
+        image_url4: "marykennethkeller.jpeg",
+        title4: "Physicist",
     },
     {
         first_name: "Raj",
