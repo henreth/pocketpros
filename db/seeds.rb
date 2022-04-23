@@ -234,7 +234,7 @@ Character.create!([
         image_url1: "vitalikbuterin.jpeg",
         title1: 'Ethereum Co-Founder',
         image_url2: "vitalikbuterin2.jpeg",
-        title2: 'Ethereum Co-Founder',
+        title2: 'Computer Scientist',
         image_url3: "vitalikbuterin3.jpeg",
         title3: 'Ethereum Co-Founder',
         image_url4: "vitalikbuterin4.jpeg",
@@ -243,20 +243,41 @@ Character.create!([
     {
         first_name: "Katherine",
         last_name: "Johnson",
-        link: 'https://en.wikipedia.org/wiki/Katherine_Johnson'
+        link: 'https://en.wikipedia.org/wiki/Katherine_Johnson',
         image_url1: "katherinejohnson.jpeg",
+        title1: 'Mathematician',
+        image_url2: "katherinejohnson2.jpeg",
+        title2: 'NASA Computer',
+        image_url3: "katherinejohnson3.jpeg",
+        title3: 'Orbital Mechanics',
+        image_url4: "katherinejohnson4.jpeg",
+        title4: 'Space Trajectory Calculator',
     },
     {
         first_name: "Alan",
         last_name: "Turing",
-        link: 'https://en.wikipedia.org/wiki/Alan_Turing'
+        link: 'https://en.wikipedia.org/wiki/Alan_Turing',
         image_url1: "alanturing.jpeg",
+        title1: "Computer Scientist",
+        image_url2: "alanturing.jpeg",
+        title2: "Cryptanalyst",
+        image_url3: "alanturing.jpeg",
+        title3: "Mathematician",
+        image_url4: "alanturing.jpeg",
+        title4: "Logician",
     },
     {
         first_name: "Steve",
         last_name: "Jobs",
         link: 'https://en.wikipedia.org/wiki/Steve_Jobs'
         image_url1: "stevejobs.jpeg",
+        title1: "Apple Co-Founder",
+        image_url2: "stevejobs2.jpeg",
+        title2: "Industrial Designer",
+        image_url3: "stevejobs3.jpeg",
+        title3: "Entrepreneur",
+        image_url4: "stevejobs4.jpeg",
+        title4: "Apple",
     },
     {
         first_name: "Bill",
@@ -287,7 +308,7 @@ Character.create!([
         image_url3: "gavinwood3.jpeg",
         title3: "Open Source Advocate"
         image_url4: "gavinwood4.jpeg",
-        title4: "Research Scientist",
+        title4: "Ethereum Co-Founder",
     },
     {
         first_name: "Mary",
