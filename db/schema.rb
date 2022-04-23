@@ -34,14 +34,8 @@ ActiveRecord::Schema.define(version: 2022_04_06_180611) do
     t.string "first_name"
     t.string "last_name"
     t.string "link"
-    t.string "image_url"
-    t.string "image_url2"
-    t.string "image_url3"
-    t.string "image_url4"
-    t.string "title"
-    t.string "title2"
-    t.string "title3"
-    t.string "title4"
+    t.string "image", default: [], array: true
+    t.string "title", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
