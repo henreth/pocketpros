@@ -22,9 +22,9 @@ export default function NewCard({ card }) {
     return (
         <div className={cardClass} onClick={handleClickCard}>
             <div className='charCard-info-container'>
-            <img src={charImages('./'+card.character.image[0])} className='charCard-image' />
+            <img src={charImages('./'+card.character.image[card.variant])} className='charCard-image' />
                 <div className='charCard-text'>
-                <div className='charCard-rarity'>{card.character.title[0]}</div>
+                <div className='charCard-rarity'>{card.character.title[card.variant]}</div>
                     <div className='charCard-name'><b>{card.character.first_name} {card.character.last_name}</b></div>
                     <div className='charCard-id'>{card.unique_id}</div>
                 </div>

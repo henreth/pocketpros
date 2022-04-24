@@ -71,7 +71,7 @@ class CardsController < ApplicationController
         @id = params[:id]
 
         @card = Card.find_by(id: @id)
-        @card.update!(for_sale: false, sale_price: nil)
+        @card.update!(for_sale: false, variant: rand(4), sale_price: nil)
         render json: @card
     end
 
@@ -90,7 +90,7 @@ class CardsController < ApplicationController
         @current_user.update!(credits: @newbuyercredits)
         @newsellercredits = @card_seller.credits + @sale_price
         @card_seller.update!(credits: @newsellercredits)
-        @card.update!(for_sale: false, sale_price: nil, user: @current_user)
+        @card.update!(for_sale: false, variant: rand(4), sale_price: nil, user: @current_user)
 
         Transaction.create(card_id: @card_id, from_id: @card_seller.id, to_id: @current_user.id, sale_price: @sale_price)
 
@@ -122,20 +122,20 @@ class CardsController < ApplicationController
         cards = [];
 
         # Bronze
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:0)
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:0)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:0)
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:0)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:0)
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:0)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
 
         # Silver
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:1)
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:1)
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         # Gold
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)        
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)        
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         cards = cards.shuffle
         CardSerializer.new(cards)
@@ -168,39 +168,39 @@ class CardsController < ApplicationController
         # Gold 
         rand_gold1 = rand() * 100
         if rand_gold1 < 10
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+ rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+ rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         rand_gold2 = rand() * 100
         if rand_gold2 < 2.5
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+ rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+ rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         # Silver
         rand_silver1 = rand() * 100
         if rand_silver1 < 25
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+ rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:1)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+ rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         rand_silver2 = rand() * 100
         if rand_silver2 < 20
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:1)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         rand_silver3 = rand() * 100
         if rand_silver3 < 10
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:1)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         # Bronze
         newLength = len - cards.length;
         newLength.times {|i| 
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:0)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:0)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         }
         cards = cards.shuffle
@@ -234,45 +234,45 @@ class CardsController < ApplicationController
         # Holo
         rand_holo = rand() * 100
         if rand_holo < 1
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:3)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:3)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         # Gold 
         rand_gold1 = rand() * 100
         if rand_gold1 < 20
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         rand_gold2 = rand() * 100
         if rand_gold2 < 18.5
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         # Silver
         rand_silver1 = rand() * 100
         if rand_silver1 < 55
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:1)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         rand_silver2 = rand() * 100
         if rand_silver2 < 50
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:1)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:1)
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:1)
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
 
         # Bronze
         newLength = len - cards.length;
         newLength.times {|i| 
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:0)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:0)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         }
         cards = cards.shuffle
@@ -304,30 +304,30 @@ class CardsController < ApplicationController
         # Holo
         rand_holo = rand() * 100
         if rand_holo < 5
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:3)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:3)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         # Gold 
         rand_gold1 = rand() * 100
         if rand_gold1 < 15
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         rand_gold2 = rand() * 100
         if rand_gold2 < 30
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         
         # Silver
         newLength = len - cards.length;
         newLength.times {|i| 
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:1)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         }
         cards = cards.shuffle
@@ -360,32 +360,32 @@ class CardsController < ApplicationController
         # Holo
         rand_holo = rand() * 100
         if rand_holo < 15
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:3)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:3)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         # Gold 
         rand_gold1 = rand() * 100
         if rand_gold1 < 35
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         rand_gold2 = rand() * 100
         if rand_gold2 < 30
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
         
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
-        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)
+        cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         
         # Silver
         newLength = len - cards.length;
         newLength.times {|i| 
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:1)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         }
         cards = cards.shuffle
@@ -417,20 +417,20 @@ class CardsController < ApplicationController
         # Holo
         rand_holo = rand() * 100
         if rand_holo < 25
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:3)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:3)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         rand_holo = rand() * 100
         if rand_holo < 1
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:3)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:3)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
         # Gold
         newLength = len - cards.length;
         newLength.times {|i| 
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, rarity:2)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         }
         cards = cards.shuffle
