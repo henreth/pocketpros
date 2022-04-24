@@ -54,7 +54,7 @@ export default function MarketCard({ user, card, setShowModal, userOwned, setLis
                 <div className='seller-name'>👤 <b>{card.user.username} - {dateMsg}</b></div>
             </div>
             <div className='charCard-info-container' onClick={handleClickCard}>
-                <img src={charImages('./' + card.character.image[0])} className='charCard-image' />
+                <img src={charImages('./' + card.character.image[1])} className='charCard-image' />
                 <div className='charCard-text'>
                     <div className='charCard-rarity'>{card.character.title[0]}</div>
                     <div className='charCard-name'><b>{card.character.first_name} {card.character.last_name}</b></div>
