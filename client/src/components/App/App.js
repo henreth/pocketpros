@@ -288,6 +288,7 @@ export default function App() {
           setMarketSelectedRarity={setMarketSelectedRarity}
         />} />
         <Route path="/openpacks" element={<OpenPacks
+          userCredits={userCredits}
           user={user}
           setUser={setUser}
           setUserCards={setUserCards}

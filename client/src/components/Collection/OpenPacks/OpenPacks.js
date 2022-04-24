@@ -9,7 +9,7 @@ import Pack from '../../PackToOpen/PackToOpen';
 import buyIcon from '../../PackToOpen/img/bwbuyicon.png'
 
 
-export default function OpenPacks({ user, setUser, setUserCards, userPacks, setUserPacks, signedIn, openedCards, setOpenedCards,showModal, setShowModal, handleBuyPackClick, handleOpenPackClick }) {
+export default function OpenPacks({ userCredits, user, setUser, setUserCards, userPacks, setUserPacks, signedIn, openedCards, setOpenedCards,showModal, setShowModal, handleBuyPackClick, handleOpenPackClick }) {
     document.title = 'Pocket Pros - Open Packs';
 
     let packTypes = ["booster", "regular", "pro", "max", "ultra", "studio"]
@@ -23,7 +23,7 @@ export default function OpenPacks({ user, setUser, setUserCards, userPacks, setU
 
     let packsToDisplay = packTypes.map(packType => {
         return (
-            userPacks[packType] == 0 ? null : <Pack buying={false} packType={packType} signedIn={signedIn} user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks} setOpenedCards={setOpenedCards} setShowModal={setShowModal} handleOpenPackClick={handleOpenPackClick} />
+            userPacks[packType] == 0 ? null : <Pack userCredits={userCredits} buying={false} packType={packType} signedIn={signedIn} user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks} setOpenedCards={setOpenedCards} setShowModal={setShowModal} handleOpenPackClick={handleOpenPackClick} />
         )
     })
 

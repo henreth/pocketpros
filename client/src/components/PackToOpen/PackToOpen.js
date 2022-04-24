@@ -2,7 +2,7 @@ import './PackToOpen.css';
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 
-export default function PackToOpen({ buying, packType, signedIn, user, setUser, setUserCards, userPacks, setUserPacks, setOpenedCards, setShowModal, handleOpenPackClick, handleBuyPackClick }) {
+export default function PackToOpen({ userCredits, buying, packType, signedIn, user, setUser, setUserCards, userPacks, setUserPacks, setOpenedCards, setShowModal, handleOpenPackClick, handleBuyPackClick }) {
     const packLogos = require.context('../../img/pack_logos', true);
 
     let navigate = useNavigate();
@@ -68,7 +68,7 @@ export default function PackToOpen({ buying, packType, signedIn, user, setUser, 
     let packClass = 'pack ' + packType
 
     // if price is greater than user credit balance, display alternative cost styling
-    let costClass = parseInt(user.credits) < parseInt(packCost) ? 'pack-cost locked' : 'pack-cost'
+    let costClass = parseInt(userCredits) < parseInt(packCost) ? 'pack-cost locked' : 'pack-cost'
     
     // price to purchase pack will only display if on the buy packs page
     let marketCost = buying ? <div className='pack-information'>
