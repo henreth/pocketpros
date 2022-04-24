@@ -2,8 +2,15 @@ import './PackToOpen.css';
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 
-export default function PackToOpen({ buying, user, packType, setUser, setUserCards, userPacks, setUserPacks, setOpenedCards, setShowModal, handleOpenPackClick, handleBuyPackClick }) {
+export default function PackToOpen({ buying, packType, signedIn, user, setUser, setUserCards, userPacks, setUserPacks, setOpenedCards, setShowModal, handleOpenPackClick, handleBuyPackClick }) {
     const packLogos = require.context('../../img/pack_logos', true);
+
+    let navigate = useNavigate();
+    useEffect(() => {
+        if (signedIn == false) {
+          navigate('/');
+        } 
+      }, [])
 
     let logo;
     let packCost;
@@ -48,6 +55,7 @@ export default function PackToOpen({ buying, user, packType, setUser, setUserCar
             break
     }
 
+    //differentiate action upon clicking pack
     function handlePackClick(){
         if (buying===true){
             handleBuyPackClick(packCost,packType)
@@ -59,14 +67,18 @@ export default function PackToOpen({ buying, user, packType, setUser, setUserCar
 
     let packClass = 'pack ' + packType
 
-    let costClass = user.credits != null ? (parseInt(user.credits) < parseInt(packCost) ? 'pack-cost locked' : 'pack-cost'): ''
-
+    // if price is greater than user credit balance, display alternative cost styling
+    let costClass = parseInt(user.credits) < parseInt(packCost) ? 'pack-cost locked' : 'pack-cost'
+    
+    // price to purchase pack will only display if on the buy packs page
+    let marketCost = buying ? <div className='pack-information'>
+                                <div className={costClass}>🪙 <b>{packCost}</b>
+                                </div>
+                            </div> : null
 
     return (
         <div className={packClass} onClick={handlePackClick}>
-            {buying ? <div className='pack-information'>
-                <div className={costClass}>🪙 <b>{packCost}</b></div>
-            </div> : null}
+            {marketCost}
             <div className='pack-info-container'>
                 <img className='pack-logo' src={packLogos(logo)} />
                 <div className='pack-title top inverse'>POCKET PROGRAMMERS</div>
