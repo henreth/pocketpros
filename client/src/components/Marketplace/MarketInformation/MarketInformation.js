@@ -304,6 +304,37 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
 
     }
 
+    //Buttons
+
+    // buttons to display if the card is not owned by the user 
+    let buttonsToBuy = <div className='button-wrapper'>
+    {clickedBuy ? <button className='cardInformation-button' onClick={handleClickBuyCard}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickBuyCard}>Buy Card</button>}
+    {clickedBuy ? <button className='cardInformation-button'>Are You Sure?</button> : null}
+    {clickedBuy ? <button className='cardInformation-button' onClick={handleClickConfirmBuy}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
+</div>
+
+    // buttons to display if the card is user owned and not listed for sale
+    let buttonsToList = <React.Fragment>
+    {clickedList ? <button className='cardInformation-button' onClick={handleClickListForSale}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickListForSale}>List For Sale</button>}
+    {clickedList ? <input className='saleprice-input' type='number' value={listingPrice} onChange={handleChangeListingPrice} min='1' placeholder='Listing Price'></input> : null}
+    {clickedList ? <button className='cardInformation-button' onClick={handleClickConfirmList}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
+</React.Fragment>
+
+    // buttons to display if the card is user owned and is currently listed for sale
+    let buttonsToUnList = <React.Fragment>
+    {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Take Off Market</button>}
+    {clickedUnlist ? <button className='cardInformation-button'>Are You Sure?</button> : null}
+    {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickConfirmUnlist}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
+</React.Fragment>
+
+    // buttons to display if the card is owned by the current user
+    let userOwnedButtons = <div className='button-wrapper'>
+    {selectedCard.for_sale ? buttonsToUnList : buttonsToList}
+</div>
+
+    // buttons to display depending on if the card is owned by the user or not
+    let buttonstoDisplay = listedByUser ? userOwnedButtons : buttonsToBuy
+
     return (
         <React.Fragment>
             <div className="overlay" >
@@ -341,21 +372,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
                         <div className='history-tabs-container'>
                             {tabsToDisplay}
                         </div>
-                        {listedByUser ? <div className='button-wrapper'>
-                            {selectedCard.for_sale === true ? <React.Fragment>
-                                {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Take Off Market</button>}
-                                {clickedUnlist ? <button className='cardInformation-button'>Are You Sure?</button> : null}
-                                {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickConfirmUnlist}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
-                            </React.Fragment> : <React.Fragment>
-                                {clickedList ? <button className='cardInformation-button' onClick={handleClickListForSale}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickListForSale}>List For Sale</button>}
-                                {clickedList ? <input className='saleprice-input' type='number' value={listingPrice} onChange={handleChangeListingPrice} min='1' placeholder='Listing Price'></input> : null}
-                                {clickedList ? <button className='cardInformation-button' onClick={handleClickConfirmList}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
-                            </React.Fragment>}
-                        </div> : <div className='button-wrapper'>
-                            {clickedBuy ? <button className='cardInformation-button' onClick={handleClickBuyCard}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickBuyCard}>Buy Card</button>}
-                            {clickedBuy ? <button className='cardInformation-button'>Are You Sure?</button> : null}
-                            {clickedBuy ? <button className='cardInformation-button' onClick={handleClickConfirmBuy}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
-                        </div>}
+                        {buttonstoDisplay}
 
 
                     </div>
