@@ -4,15 +4,8 @@ class CreateCharacters < ActiveRecord::Migration[6.1]
       t.string :first_name
       t.string :last_name
       t.string :link
-      t.string :image_url
-      t.string :image_url2
-      t.string :image_url3
-      t.string :image_url4
-      t.string :title
-      t.string :title2
-      t.string :title3
-      t.string :title4
-
+      t.string :image, array: true, default: []
+      t.string :title, array: true, default: []
       t.timestamps
     end
   end

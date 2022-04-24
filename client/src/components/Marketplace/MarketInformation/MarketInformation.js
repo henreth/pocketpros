@@ -310,7 +310,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
                 <div className='cardInformation-container'>
                     <div className={cardClass}>
                         <div className='charCard-info-container' onClick={handleClickCard} >
-                            <img src={charImages('./' + selectedCard.character.image_url)} className='charCard-image' />
+                            <img src={charImages('./' + selectedCard.character.image[0])} className='charCard-image' />
                             <div className='charCard-text'>
                                 <div className='charCard-rarity'>{selectedCard.rarity}</div>
                                 <div className='charCard-name'><b>{selectedCard.character.first_name} {selectedCard.character.last_name}</b></div>
