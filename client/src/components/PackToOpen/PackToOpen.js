@@ -2,8 +2,10 @@ import './PackToOpen.css';
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 
-export default function PackToOpen({ userCredits, buying, packType, signedIn, user, setUser, setUserCards, userPacks, setUserPacks, setOpenedCards, setShowModal, handleOpenPackClick, handleBuyPackClick }) {
+export default function PackToOpen({ userCredits, buying, packType, signedIn, userPacks, handleOpenPackClick, handleBuyPackClick }) {
     const packLogos = require.context('../../img/pack_logos', true);
+
+    //try usercredits with user.credits by passing user to packtoopen
 
     let navigate = useNavigate();
     useEffect(() => {

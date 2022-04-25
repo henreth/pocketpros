@@ -4,7 +4,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 
-export default function LogIn({ username, setUsername, password, setPassword, signedIn, setSignedIn, handleLogInSubmit, handleBackClick }) {
+export default function LogIn({ username, setUsername, password, setPassword, signedIn, handleLogInSubmit }) {
   document.title = 'Pocket Pros - Authorization Required';
   let navigate = useNavigate();
 

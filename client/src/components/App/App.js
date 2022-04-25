@@ -189,9 +189,6 @@ export default function App() {
 
   }
 
-  function handleBackClick() {
-    navigate(-1);
-  }
 
   // ? Pack Functions
 
@@ -272,8 +269,8 @@ export default function App() {
 
       {user ? <div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div> : null}
       <Routes>
-        <Route exact path="/" element={signedIn ? <Home /> : <Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
-        <Route path="/collection" element={<Collection user={user} signedIn={signedIn} handleBackClick={handleBackClick} />} />
+        <Route exact path="/" element={signedIn ? <Home /> : <Auth signedIn={signedIn}/>} />
+        <Route path="/collection" element={<Collection signedIn={signedIn} />} />
         <Route path="/cards" element={<YourCards
           user={user}
           setUser={setUser}
@@ -281,7 +278,6 @@ export default function App() {
           setUserCards={setUserCards}
           marketCards={marketCards}
           setMarketCards={setMarketCards}
-          handleClick={handleClick}
           signedIn={signedIn}
           users={users}
           setMarketSearchTerm={setMarketSearchTerm}
@@ -329,8 +325,15 @@ export default function App() {
           marketSelectedRarity={marketSelectedRarity}
           setMarketSelectedRarity={setMarketSelectedRarity}
         />} />
-        <Route path="/auth" element={<Auth setSignedIn={setSignedIn} signedIn={signedIn} />} />
-        <Route path="/logIn" element={<LogIn setSignedIn={setSignedIn} signedIn={signedIn} username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogInSubmit={handleLogInSubmit} handleBackClick={handleBackClick} />} />
+        <Route path="/auth" element={<Auth setSignedIn={setSignedIn} />} />
+        <Route path="/logIn" element={<LogIn 
+          signedIn={signedIn} 
+          username={username} 
+          setUsername={setUsername} 
+          password={password} 
+          setPassword={setPassword} 
+          handleLogInSubmit={handleLogInSubmit} 
+           />} />
         <Route path="/signup" element={<SignUp
           setSignedIn={setSignedIn}
           signedIn={signedIn}
@@ -345,28 +348,21 @@ export default function App() {
           signUpLastName={signUpLastName}
           setSignUpLastName={setSignUpLastName}
           handleSignUpSubmit={handleSignUpSubmit}
-          handleBackClick={handleBackClick} />} />
+          />} />
         <Route path="/about" element={<About
           signedIn={signedIn}
-          userCards={userCards} />} />
+        />} />
         <Route path="/profile" element={<Profile
           handleLogOut={handleLogOut}
           signedIn={signedIn}
           setSignedIn={setSignedIn} l
-          handleBackClick={handleBackClick} />} />
+           />} />
         <Route path="/edit" element={<Edit
           user={user}
           setUser={setUser}
           signedIn={signedIn}
-          username={username}
-          setUsername={setUsername}
-          signUpFirstName={signUpFirstName}
-          setSignUpFirstName={setSignUpFirstName}
-          signUpLastName={signUpLastName}
-          setSignUpLastName={setSignUpLastName}
-          handleLogOut={handleLogOut}
         />} />
-        <Route path="/*" element={signedIn ? <Home /> : <Auth signedIn={signedIn} setSignedIn={setSignedIn} />} />
+        <Route path="/*" element={signedIn ? <Home /> : <Auth signedIn={signedIn} />} />
       </Routes>
     </React.Fragment>
   );
