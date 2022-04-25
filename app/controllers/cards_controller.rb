@@ -360,7 +360,7 @@ class CardsController < ApplicationController
         # Holo
         rand_holo = rand() * 100
         if rand_holo < 15
-            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:3)
+            cards << Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + f, for_sale: false, variant: rand(4), rarity:3)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         end
 
