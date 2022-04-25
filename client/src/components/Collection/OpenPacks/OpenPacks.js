@@ -23,7 +23,7 @@ export default function OpenPacks({ userCredits, user, setUser, setUserCards, us
 
     let packsToDisplay = packTypes.map(packType => {
         return (
-            userPacks[packType] == 0 ? null : <Pack userCredits={userCredits} buying={false} packType={packType} signedIn={signedIn} user={user} setUser={setUser} setUserCards={setUserCards} signedIn={signedIn} userPacks={userPacks} setUserPacks={setUserPacks} setOpenedCards={setOpenedCards} setShowModal={setShowModal} handleOpenPackClick={handleOpenPackClick} />
+            userPacks[packType] == 0 ? null : <Pack userCredits={userCredits} buying={false} packType={packType} signedIn={signedIn} user={user} userPacks={userPacks} handleOpenPackClick={handleOpenPackClick} handleBuyPackClick={handleBuyPackClick}/>
         )
     })
 

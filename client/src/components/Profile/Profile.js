@@ -4,7 +4,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 
-export default function Profile({signedIn,setSignedIn,handleLogOut,handleBackClick}) {
+export default function Profile({signedIn,setSignedIn,handleLogOut}) {
   document.title = 'Pocket Pros - Profile';
 
   let navigate = useNavigate();
@@ -18,6 +18,11 @@ export default function Profile({signedIn,setSignedIn,handleLogOut,handleBackCli
       navigate('/');
     }
   },[])
+
+  function handleBackClick() {
+    navigate(-1);
+  }
+
 
   return (
     <React.Fragment>

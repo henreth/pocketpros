@@ -4,7 +4,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 
-export default function SignUp({ username, setUsername, password, setPassword, signedIn, setSignedIn, signUpFirstName, setSignUpFirstName, signUpLastName, setSignUpLastName, signUpPasswordConfirmation, setSignUpPasswordConfirmation, handleSignUpSubmit, handleBackClick }) {
+export default function SignUp({ username, setUsername, password, setPassword, signedIn, setSignedIn, signUpFirstName, setSignUpFirstName, signUpLastName, setSignUpLastName, signUpPasswordConfirmation, setSignUpPasswordConfirmation, handleSignUpSubmit }) {
   document.title = 'Pocket Pros - Sign Up';
   let navigate = useNavigate();
 

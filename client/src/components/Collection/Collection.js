@@ -4,7 +4,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 
-export default function Collection({ user, signedIn, handleBackClick }) {
+export default function Collection({signedIn }) {
   document.title = 'Pocket Pros - Collection';
 
   let navigate = useNavigate();

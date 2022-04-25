@@ -10,7 +10,7 @@ import linkedinqr from '../../img/linkedinqr.png';
 
 import './About.css'
 
-export default function About({ signedIn, }) {
+export default function About({ signedIn }) {
 
     let navigate = useNavigate();
 
