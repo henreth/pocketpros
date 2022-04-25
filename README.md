@@ -1,24 +1,6 @@
-# README
+Digital trading card experience themed around software engineers where users can open packs, unlock cards, and trade with other users 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Collect roughly 1200+ unique variations of cards
+* Generate randomly generated assortments of cards upon pack open
+* Track cards transaction history 
+* Visualize market data associated with cards
