@@ -575,5 +575,21 @@ class CardsController < ApplicationController
         render json: cards
     end
 
-
+    def all_cards
+        cards = []
+        Character.all.map{|i|
+            (0..3).map{|num|
+            Card.create!(user_id:@current_user.id,character_id: i.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: num.to_i, rarity:1)
+            Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
+            newCard = Card.all[Card.all.size-1]
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            newCard.update!(unique_id: @unique_id)
+            cards << newCard
+        }
+    }
+        cards = cards.shuffle
+        CardSerializer.new(cards)
+        render json: cards
+    end
+        
 end     

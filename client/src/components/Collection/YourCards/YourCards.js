@@ -39,12 +39,14 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
   .filter(card => card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || searchTerm.toLowerCase().includes(card.character.last_name.toLowerCase()) || searchTerm === '')
   .sort((card1, card2) => { 
     if (sortTerm==='1'){
-      return card1.character.first_name.localeCompare(card2.character.first_name) 
+      return card1.character.last_name.localeCompare(card2.character.last_name) 
     } else if (sortTerm==='2'){
-      return card2.character.first_name.localeCompare(card1.character.first_name) 
+      return card2.character.last_name.localeCompare(card1.character.last_name) 
     } 
   })
-
+  // .sort((card1, card2) => { 
+  //   return card1.variant - card2.variant
+  // })
   let navigate = useNavigate();
 
   useEffect(() => {
