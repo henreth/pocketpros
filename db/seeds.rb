@@ -282,9 +282,9 @@ Character.create!([
                      "stevejobs4.jpeg",
         ],
         title: [ "Apple Co-Founder",
-         "Industrial Designer",
+        "Industrial Designer",
         "Entrepreneur",
-         "Apple Innovator",
+        "Personal Devices",
     ],
     },
     {
