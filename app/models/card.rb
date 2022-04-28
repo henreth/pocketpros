@@ -9,4 +9,16 @@ class Card < ApplicationRecord
   validates :unique_id, presence: true, uniqueness: true
   validates :variant, presence: true, :numericality => {greater_than_or_equal_to: 0, less_than_or_equal_to: 4}
 
+  def rarityNum
+    if self.rarity == 'bronze'
+      '0'
+    elsif self.rarity == 'silver'
+      '1'
+    elsif self.rarity == 'gold'
+      '2'
+    elsif self.rarity == 'holo'
+      '3'
+    end
+  end
+
 end
