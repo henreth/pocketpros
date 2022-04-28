@@ -125,19 +125,19 @@ class CardsController < ApplicationController
         Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:0)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:0)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:0)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
 
@@ -145,20 +145,20 @@ class CardsController < ApplicationController
         Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         # Gold
         Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)        
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         cards = cards.shuffle
@@ -195,7 +195,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+ rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -205,7 +205,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+ rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -216,7 +216,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+ rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -226,7 +226,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -236,7 +236,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -247,7 +247,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:0)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         }
@@ -285,7 +285,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:3)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -296,7 +296,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -306,7 +306,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -317,7 +317,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -327,7 +327,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -335,13 +335,13 @@ class CardsController < ApplicationController
         Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
 
@@ -351,7 +351,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:0)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         }
@@ -387,7 +387,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:3)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -398,7 +398,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -408,7 +408,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -416,7 +416,7 @@ class CardsController < ApplicationController
         Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         
@@ -426,7 +426,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         }
@@ -463,7 +463,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + f, for_sale: false, variant: rand(4), rarity:3)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -474,7 +474,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -484,7 +484,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -492,13 +492,13 @@ class CardsController < ApplicationController
         Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
         Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
         newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         
@@ -508,7 +508,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:1)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         }
@@ -544,7 +544,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:3)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -554,7 +554,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:3)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         end
@@ -565,7 +565,7 @@ class CardsController < ApplicationController
             Card.create!(user_id:@current_user.id,character_id: Character.all.sample.id, unique_id: 'c'+rand(9).to_s + SecureRandom.alphanumeric(10), for_sale: false, variant: rand(4), rarity:2)
             Transaction.create(card_id: Card.all[Card.all.size-1].id, to_id: @current_user.id)
             newCard = Card.all[Card.all.size-1]
-            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + '0' + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
+            @unique_id = 'c'+newCard.variant.to_s + newCard.rarityNum + [*('a'..'z')].shuffle[0] + @current_user.id.to_s + [*('a'..'z')].shuffle[0] + newCard.character_id.to_s  + [*('a'..'z')].shuffle[0] + (newCard.id).to_s + [*('a'..'z')].shuffle[0] + rand(9).to_s
             newCard.update!(unique_id: @unique_id)
             cards << newCard
         }
