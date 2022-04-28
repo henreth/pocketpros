@@ -1,5 +1,5 @@
 {
-  "name": "devdeck",
+  "name": "pocketprogrammers",
   "description": "Build scripts for Heroku",
   "engines": {
     "node": ">= 14"
