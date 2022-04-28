@@ -37,12 +37,12 @@ A digital trading card experience themed around software engineers where users c
 * Run the following commands in two seperate terminals:
 
 ```
-// starts the server
+// start the server
 rails s 
 ```
 
 ```
-// starts the frontend interface
+// start the frontend interface
 npm start --prefix client 
 ```
 
