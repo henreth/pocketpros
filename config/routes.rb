@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   get "/pro_pack", to: "cards#pro_pack"
   get "/max_pack", to: "cards#max_pack"
   get "/ultra_pack", to: "cards#ultra_pack"
-  get "studio_pack", to: "cards#studio_pack"
+  get "/studio_pack", to: "cards#studio_pack"
+  get "/allcards", to: "cards#all_cards"
 
   # Card Marketplace
   post "/listcard", to: "cards#list_card"
