@@ -9,7 +9,7 @@ export default function LogIn({ username, setUsername, password, setPassword, si
   let navigate = useNavigate();
 
   useEffect(() => {
-    if (signedIn === true) {
+    if (signedIn == true) {
       navigate('/');
     }
   }, [])

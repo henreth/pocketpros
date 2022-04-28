@@ -8,6 +8,12 @@ export default function SignUp({ username, setUsername, password, setPassword, s
   document.title = 'Pocket Pros - Sign Up';
   let navigate = useNavigate();
 
+  useEffect(() => {
+    if (signedIn == true) {
+      navigate('/');
+    }
+  }, [])
+
   function clickLogIn() {
     setUsername('');
     setPassword('');
