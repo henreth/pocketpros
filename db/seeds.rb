@@ -1319,6 +1319,21 @@ Character.create!([
          'Mechanical Engineer'
     ],
     },
+    {
+        first_name: "Claude",
+        last_name: "Shannon",
+        link: 'https://en.wikipedia.org/wiki/Claude_Shannon',
+        image: [ "claudeshannon.jpeg",
+                    "claudeshannon2.jpeg",
+                    "claudeshannon3.jpeg",
+                     "claudeshannon4.jpeg",
+        ],
+        title: [ 'Mathematician',
+         'Electrical Enginner',
+        'Information Theory',
+         'Cryptographer'
+    ],
+    },
 ],)
 
 puts 'Seeding Cards + Transactions'
