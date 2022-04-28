@@ -213,3 +213,19 @@
         text-align: center;
     }
 }
+
+.qrcode-info{
+    position: absolute;
+    filter: opacity(.25);
+    top: 75.5%;
+    left: 65%;
+    transition: .5s ease;
+    transform: scale(55%);
+
+    &:hover{
+        filter: opacity(90%);
+        transition: .5s ease;
+        transform: scale(55%);
+    }
+
+}

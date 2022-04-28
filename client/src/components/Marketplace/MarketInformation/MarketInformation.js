@@ -348,7 +348,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
                                 <div className='charCard-id'> {selectedCard.unique_id}</div>
                             </div>
                         </div>
-                        <div className='qrcode'>
+                        <div className='qrcode-info'>
                             <QrCode url={selectedCard.character.link} />
                         </div>
                     </div>
