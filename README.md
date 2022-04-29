@@ -10,7 +10,7 @@ A digital trading card experience themed around software engineers where users c
 
 **Demo**: [COMING SOON]
 
-**APP**: [COMING SOON]
+**APP**: [Pocket Programmers](https://pocketprogrammers.herokuapp.com/)
 
 #
 ## Technical Accomplishments
