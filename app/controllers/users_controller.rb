@@ -21,7 +21,7 @@ class UsersController < ApplicationController
             "max":0,
             "ultra":0,
             "studio":0}, 
-            credits: 25,
+            credits: 500,
             last_log_in: Time.new,
             streak: 1)
         session[:user_id] = user.id
