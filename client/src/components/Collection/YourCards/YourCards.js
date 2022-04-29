@@ -36,7 +36,7 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
 
 
   let filteredCards = userCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all')
-  .filter(card => card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || searchTerm.toLowerCase().includes(card.character.last_name.toLowerCase()) || searchTerm === '')
+  .filter(card => card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || searchTerm === '')
   .sort((card1, card2) => { 
     if (sortTerm==='1'){
       return card1.character.last_name.localeCompare(card2.character.last_name) 

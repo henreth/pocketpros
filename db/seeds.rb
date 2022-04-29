@@ -1339,7 +1339,7 @@ Character.create!([
 puts 'Seeding Cards + Transactions'
 
 User.all[2,User.all.size].each{|user| 
-    60.times {|i|
+    70.times {|i|
         cardRarity = rand(4)
         variantRarity = rand(4)
         Card.create!(user_id:user.id, character_id: Character.all.sample.id, unique_id: rand(9).to_s + 'x' + SecureRandom.alphanumeric(10), for_sale: false, rarity:cardRarity, variant: variantRarity)
@@ -1397,10 +1397,10 @@ User.all[2,User.all.size].each{|user|
         end
 
 
-        randNum = rand() * 100
-        if randNum > 85
-            Card.all[Card.all.size-1].update!(for_sale: true, sale_price: salePrice)
-        end
+        # randNum = rand() * 100
+        # if randNum > 90
+        #     Card.all[Card.all.size-1].update!(for_sale: true, sale_price: salePrice)
+        # end
 
     }
 }

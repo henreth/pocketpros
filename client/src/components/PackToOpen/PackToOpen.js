@@ -5,7 +5,6 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 export default function PackToOpen({ userCredits, buying, packType, signedIn, userPacks, handleOpenPackClick, handleBuyPackClick }) {
     const packLogos = require.context('../../img/pack_logos', true);
 
-    //try usercredits with user.credits by passing user to packtoopen
 
     let navigate = useNavigate();
     useEffect(() => {
@@ -27,31 +26,31 @@ export default function PackToOpen({ userCredits, buying, packType, signedIn, us
             break
         case ('regular'):
             logo = './bwfloppy.png'
-            packCost = 15;
+            packCost = 50;
             cardsPerPack = 8;
             packProb = 'Low'
             break
         case ('pro'):
             logo = './bwfork.png';
-            packCost = 30;
+            packCost = 100;
             cardsPerPack = 7;
             packProb = 'Medium'
             break
         case ('max'):
             logo = './bwglass.png';
-            packCost = 55;
+            packCost = 175;
             cardsPerPack = 6;
             packProb = 'High'
             break
         case ('ultra'):
             logo = './bwcode.png';
-            packCost = 100;
+            packCost = 275;
             cardsPerPack = 4;
             packProb = 'Very High'
             break
         case ('studio'):
             logo = './bwcubes.png';
-            packCost = 350;
+            packCost = 450;
             cardsPerPack = 2;
             packProb = '100%'
             break
