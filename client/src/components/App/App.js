@@ -275,7 +275,7 @@ export default function App() {
       </video>
       <div id="video-overlay"></div>
 
-      {user ? <div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div> : null}
+      {user ? <div className='user-id-bar'><div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div></div> : null}
       <Routes>
         <Route exact path="/" element={signedIn ? <Home /> : <Auth signedIn={signedIn}/>} />
         <Route path="/collection" element={<Collection signedIn={signedIn} />} />

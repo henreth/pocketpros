@@ -1,11 +1,19 @@
+.user-id-bar{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .user-identification{
     position: fixed;
     opacity: 100;
     color: #bbbbbb;
     z-index: 150000;
-    margin-left: 75.5%;
+    // margin-left: 75.5%;
     cursor: default;
     font-family: 'Ubuntu Mono', monospace;
+    // align-self: center;
+    margin-right: .5%;
 }
 
 .hidden{
