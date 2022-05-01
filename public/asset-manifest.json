@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.58be1062.css",
-    "main.js": "/static/js/main.01c14b9a.js",
+    "main.js": "/static/js/main.35b30866.js",
     "static/media/rainbowrain.mp4": "/static/media/rainbowrain.ea0cbdcc2c1debecf612.mp4",
     "static/media/adishamir3.jpeg": "/static/media/adishamir3.4b07b0b4bade41f5fe0f.jpeg",
     "static/media/charlesbabbage2.jpeg": "/static/media/charlesbabbage2.a8be840daca275a6dac2.jpeg",
@@ -76,7 +76,6 @@
     "static/media/shafigoldwasser4.jpeg": "/static/media/shafigoldwasser4.7e40d0504c6a427062c9.jpeg",
     "static/media/demishassabis2.jpeg": "/static/media/demishassabis2.43504f235bcefbabb471.jpeg",
     "static/media/guidovanrossum.jpeg": "/static/media/guidovanrossum.434e2ad15b8e120ca25a.jpeg",
-    "static/media/donaldknuth2.jpeg": "/static/media/donaldknuth2.e2e09abf14f3eadd866c.jpeg",
     "static/media/gracehopper.jpeg": "/static/media/gracehopper.543afc966262abfdcbcf.jpeg",
     "static/media/alanturing2.jpeg": "/static/media/alanturing2.a17337c3cd10b1b07c86.jpeg",
     "static/media/djpatil3.jpeg": "/static/media/djpatil3.45b5d278e2f459e80496.jpeg",
@@ -121,7 +120,6 @@
     "static/media/billgates.jpeg": "/static/media/billgates.ac8b9f1f7297a106ed03.jpeg",
     "static/media/matsumoto.png": "/static/media/matsumoto.4b43025abe5ce19f466b.png",
     "static/media/kjohnson.png": "/static/media/kjohnson.5622372e3cf490a46a37.png",
-    "static/media/donaldknuth3.jpeg": "/static/media/donaldknuth3.97f7cf85b25cc632ba3a.jpeg",
     "static/media/sergeybrin.jpeg": "/static/media/sergeybrin.1b4f30da122b49046234.jpeg",
     "static/media/barbaraliskov.jpeg": "/static/media/barbaraliskov.18c79dcd8fb66b301638.jpeg",
     "static/media/billgates3.jpeg": "/static/media/billgates3.bda10fc217a0bdf56340.jpeg",
@@ -142,7 +140,6 @@
     "static/media/lisasu4.jpeg": "/static/media/lisasu4.25febf459919903818fd.jpeg",
     "static/media/kurtgodel2.jpeg": "/static/media/kurtgodel2.ef75e4ba2635cb2a3baa.jpeg",
     "static/media/clearclaude.png": "/static/media/clearclaude.fd6861c4bc1e0b1b2d15.png",
-    "static/media/donaldknuth4.jpeg": "/static/media/donaldknuth4.fa58a7a40f720a3e785c.jpeg",
     "static/media/francesallen.jpeg": "/static/media/francesallen.8918df493710f9960c7c.jpeg",
     "static/media/douglascrockford4.jpeg": "/static/media/douglascrockford4.a047882c633e3eb816af.jpeg",
     "static/media/elizabethfeinler.jpeg": "/static/media/elizabethfeinler.c3b099d1a26814a1cf93.jpeg",
@@ -202,7 +199,6 @@
     "static/media/katherinejohnson3.jpeg": "/static/media/katherinejohnson3.e0bd8228cc639eec8a6b.jpeg",
     "static/media/barbaraliskov2.jpeg": "/static/media/barbaraliskov2.b41ded6407110b2f4778.jpeg",
     "static/media/susanlhgraham4.jpeg": "/static/media/susanlhgraham4.f2a56bc65a1de540156e.jpeg",
-    "static/media/donaldknuth.jpeg": "/static/media/donaldknuth.2fc3731a1a25a6b259e4.jpeg",
     "static/media/karensparckjones3.jpeg": "/static/media/karensparckjones3.931f8a122353a783739a.jpeg",
     "static/media/margarethamilton3.jpeg": "/static/media/margarethamilton3.8365d8aff995f609b4c8.jpeg",
     "static/media/timbernerslee2.jpeg": "/static/media/timbernerslee2.16eb9a0fe2a8089b70a8.jpeg",
@@ -292,10 +288,10 @@
     "static/media/johnwtukey3.jpeg": "/static/media/johnwtukey3.c78b46a21cf1f96e240a.jpeg",
     "index.html": "/index.html",
     "main.58be1062.css.map": "/static/css/main.58be1062.css.map",
-    "main.01c14b9a.js.map": "/static/js/main.01c14b9a.js.map"
+    "main.35b30866.js.map": "/static/js/main.35b30866.js.map"
   },
   "entrypoints": [
     "static/css/main.58be1062.css",
-    "static/js/main.01c14b9a.js"
+    "static/js/main.35b30866.js"
   ]
 }
