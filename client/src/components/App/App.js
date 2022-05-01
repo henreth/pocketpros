@@ -98,12 +98,14 @@ export default function App() {
         setSignUpFirstName('');
         setSignUpLastName('');
         navigate('/login')
-        alert('Please sign in with your provided details')
+        alert('Account Created!\nPlease sign in with your provided details')
       })
       .catch(function (error) {
         if (error.response) {
           console.log(error.response.data.errors);
-          alert(error.response.data.errors)
+          let msg ='';
+          error.response.data.errors.map(error=>{msg+=error+'\n'})
+          alert(msg)
         } else if (error.request) {
           console.log(error.request);
         } else {
@@ -155,7 +157,9 @@ export default function App() {
       .catch(function (error) {
         if (error.response) {
           console.log(error.response.data.errors);
-          alert(error.response.data.errors)
+          let msg ='';
+          error.response.data.errors.map(error=>{msg+=error+'\n'})
+          alert(msg)
         } else if (error.request) {
           console.log(error.request);
         } else {
@@ -179,7 +183,9 @@ export default function App() {
       .catch(function (error) {
         if (error.response) {
           console.log(error.response.data.errors);
-          alert(error.response.data.errors)
+          let msg ='';
+          error.response.data.errors.map(error=>{msg+=error+'\n'})
+          alert(msg)
         } else if (error.request) {
           console.log(error.request);
         } else {
@@ -220,8 +226,10 @@ export default function App() {
         .catch(function (error) {
           if (error.response) {
             console.log(error.response.data.errors);
-            alert(error.response.data.errors)
-          } else if (error.request) {
+            let msg ='';
+            error.response.data.errors.map(error=>{msg+=error+'\n'})
+            alert(msg)
+            } else if (error.request) {
             console.log(error.request);
           } else {
             console.log('Error', error.message);

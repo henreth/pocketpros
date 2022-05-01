@@ -19,11 +19,6 @@ export default function Profile({signedIn,setSignedIn,handleLogOut}) {
     }
   },[])
 
-  function handleBackClick() {
-    navigate(-1);
-  }
-
-
   return (
     <React.Fragment>
       <div id="menu">

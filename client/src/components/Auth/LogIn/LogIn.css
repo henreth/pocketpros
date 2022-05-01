@@ -24,7 +24,7 @@
   margin-top: 45vh;
 }
 
-.log-in-container {
+.auth-log-in-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,6 +37,9 @@
           justify-content: space-evenly;
   -ms-flex-line-pack: space-evenly;
       align-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .login__slot h3 {
@@ -62,21 +65,37 @@
   color: #f4f4f4;
 }
 
-.login-input {
+.auth-login-input {
   background-color: #353333;
   border: none;
-  padding: 12px 15px;
-  margin: 8px 0;
-  width: 60%;
+  padding: 2.5%;
+  margin-bottom: 1.5%;
+  width: 50%;
   z-index: 100;
   color: #fff;
-  font-size: larger;
+  font-size: 175%;
+  font-weight: 200;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-radius: 4.5px;
 }
 
-.login-button {
+.auth-login-input.auth-username {
+  margin-top: 10%;
+}
+
+.auth-login-input.auth-password {
+  width: 50%;
+}
+
+.auth-login-input:focus {
+  background-color: #101010;
+}
+
+.auth-login-button {
   border: 1px solid transparent;
   background-color: #353333;
-  color: #FFFFFF;
+  color: white;
   font-size: 12px;
   font-weight: bold;
   padding: 12px 45px;
@@ -91,19 +110,21 @@
   -webkit-transition: .25s ease;
   transition: .25s ease;
   font-size: larger;
+  border-radius: 4.5px;
 }
 
-.login-button:hover {
+.auth-login-button:hover {
   border: 1px solid transparent;
-  color: #f4f4f4;
+  color: #79D9FF;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
 
-.login-button:active {
+.auth-login-button:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-  background-color: #45758C;
+  background-color: #101010;
+  color: white;
 }
 
 .login-forgot {
