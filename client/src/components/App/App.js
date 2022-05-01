@@ -17,6 +17,7 @@ import Edit from '../Auth/Edit/Edit';
 
 import video from '../../video/rainbowrain.mp4'
 import Marketplace from '../Marketplace/Marketplace';
+import LogOut from '../Auth/LogOut/LogOut';
 
 export default function App() {
 
@@ -369,6 +370,12 @@ export default function App() {
           user={user}
           setUser={setUser}
           signedIn={signedIn}
+        />} />
+        <Route path="/logout" element={<LogOut
+          user={user}
+          setUser={setUser}
+          signedIn={signedIn}
+          handleLogOut={handleLogOut}
         />} />
         <Route path="/*" element={signedIn ? <Home /> : <Auth signedIn={signedIn} />} />
       </Routes>

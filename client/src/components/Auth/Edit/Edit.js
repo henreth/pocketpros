@@ -77,10 +77,18 @@ export default function Edit({ user, setUser, signedIn }) {
             <button className='auth-login-button' onClick={handleSubmitChanges} >Submit Changes</button>
           </form>
         </div>
+        <div className="menu__slot" onClick={()=>{navigate('/logout')}}>
+          <div className="blackscreen"></div>
+          <div className="char claude"></div>
+          <div className="slot-item-2">
+            <h3>Log Out</h3>
+            <p></p>
+          </div>
+        </div>
           <div className="menu__slot" onClick={()=>{navigate('/profile')}}>
             <div className="blackscreen"></div>
             <div className="char zuckerberg"></div>
-            <div className="slot-item-2">
+            <div className="slot-item-3">
               <h3>Cancel</h3>
               <p></p>
             </div>
