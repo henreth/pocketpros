@@ -37,9 +37,9 @@ export default function About({ signedIn }) {
                     <div className='aboutCard-info-container'>
                         <img src={me} className='aboutCard-image' />
                         <div className='aboutCard-text'>
-                            <div className='aboutCard-rarity'>Core Dev</div>
+                            <div className='aboutCard-rarity'>Created By:</div>
                             <div className='aboutCard-name'>Henry Miller</div>
-                            <div className='aboutCard-id'>Ω</div>
+                            <div className='aboutCard-id'>Software Engineer</div>
                         </div>
                     </div>
                     <img className='about-icon' src={linkedinqr} onClick={() => { window.open('https://www.linkedin.com/in/henrym01/') }}  />
