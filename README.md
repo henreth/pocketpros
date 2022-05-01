@@ -8,9 +8,11 @@ A digital trading card experience themed around software engineers where users c
 * Track cards transaction history 
 * Visualize market data associated with cards
 
-**Demo**: [COMING SOON]
-
 **Try it out here:** [Pocket Programmers](https://pocketprogrammers.herokuapp.com/)
+
+# Demos:
+
+<img src="pocket-demo.gif" width="1000">
 
 #
 ## Technical Accomplishments
