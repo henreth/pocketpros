@@ -19,11 +19,6 @@ export default function Profile({signedIn,setSignedIn,handleLogOut}) {
     }
   },[])
 
-  function handleBackClick() {
-    navigate(-1);
-  }
-
-
   return (
     <React.Fragment>
       <div id="menu">
@@ -35,7 +30,7 @@ export default function Profile({signedIn,setSignedIn,handleLogOut}) {
             <p></p>
           </div>
         </div>
-        <div className="menu__slot" onClick={handleLogOut}>
+        <div className="menu__slot" onClick={()=>{navigate('/logout')}}>
           <div className="blackscreen"></div>
           <div className="char claude"></div>
           <div className="slot-item-2">

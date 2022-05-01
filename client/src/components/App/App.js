@@ -17,6 +17,7 @@ import Edit from '../Auth/Edit/Edit';
 
 import video from '../../video/rainbowrain.mp4'
 import Marketplace from '../Marketplace/Marketplace';
+import LogOut from '../Auth/LogOut/LogOut';
 
 export default function App() {
 
@@ -98,12 +99,14 @@ export default function App() {
         setSignUpFirstName('');
         setSignUpLastName('');
         navigate('/login')
-        alert('Please sign in with your provided details')
+        alert('Account Created!\nPlease sign in with your provided details')
       })
       .catch(function (error) {
         if (error.response) {
           console.log(error.response.data.errors);
-          alert(error.response.data.errors)
+          let msg ='';
+          error.response.data.errors.map(error=>{msg+=error+'\n'})
+          alert(msg)
         } else if (error.request) {
           console.log(error.request);
         } else {
@@ -155,7 +158,9 @@ export default function App() {
       .catch(function (error) {
         if (error.response) {
           console.log(error.response.data.errors);
-          alert(error.response.data.errors)
+          let msg ='';
+          error.response.data.errors.map(error=>{msg+=error+'\n'})
+          alert(msg)
         } else if (error.request) {
           console.log(error.request);
         } else {
@@ -179,7 +184,9 @@ export default function App() {
       .catch(function (error) {
         if (error.response) {
           console.log(error.response.data.errors);
-          alert(error.response.data.errors)
+          let msg ='';
+          error.response.data.errors.map(error=>{msg+=error+'\n'})
+          alert(msg)
         } else if (error.request) {
           console.log(error.request);
         } else {
@@ -220,8 +227,10 @@ export default function App() {
         .catch(function (error) {
           if (error.response) {
             console.log(error.response.data.errors);
-            alert(error.response.data.errors)
-          } else if (error.request) {
+            let msg ='';
+            error.response.data.errors.map(error=>{msg+=error+'\n'})
+            alert(msg)
+            } else if (error.request) {
             console.log(error.request);
           } else {
             console.log('Error', error.message);
@@ -267,7 +276,7 @@ export default function App() {
       </video>
       <div id="video-overlay"></div>
 
-      {user ? <div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div> : null}
+      {user ? <div className='user-id-bar'><div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div></div> : null}
       <Routes>
         <Route exact path="/" element={signedIn ? <Home /> : <Auth signedIn={signedIn}/>} />
         <Route path="/collection" element={<Collection signedIn={signedIn} />} />
@@ -361,6 +370,12 @@ export default function App() {
           user={user}
           setUser={setUser}
           signedIn={signedIn}
+        />} />
+        <Route path="/logout" element={<LogOut
+          user={user}
+          setUser={setUser}
+          signedIn={signedIn}
+          handleLogOut={handleLogOut}
         />} />
         <Route path="/*" element={signedIn ? <Home /> : <Auth signedIn={signedIn} />} />
       </Routes>

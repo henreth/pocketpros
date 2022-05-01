@@ -13,7 +13,7 @@
 
 }
 
-  
+
 .slot-item-1 {
   margin-top: 45vh;
 }
@@ -24,9 +24,7 @@
   text-transform: uppercase;
   position: relative;
   text-align: center;
-  // color: #45758C;
-  // color: #bbbbbb;
-  color: #f4f4f4; 
+  color: #f4f4f4;
 
 
   background-color: rgba(45, 51, 61, 0.8);
@@ -38,71 +36,78 @@
   background-size: cover;
 }
 
-.signup__slot > div > h3 {
+.signup__slot>div>h3 {
   font-size: 2.45em;
   font-weight: bold;
   min-width: 80%;
   max-width: 80%;
   text-align: left;
-  // color: #79D9FF;
-  // color: #bbbbbb;
-  color: #f4f4f4; 
+  color: #f4f4f4;
 
 }
 
 
 .signup-input {
-	background-color: rgb(53, 51, 51);
-	border: none;
-	padding: 12px 15px;
-	margin: 8px 0;
-	width: 100%;
+  background-color: rgb(53, 51, 51);
+  border: none;
+  padding: 2.5%;
+  margin-bottom: 1.5%;
+  width: 50%;
   z-index: 100;
   color: #fff;
-  font-size: larger;
+  font-size: 175%;
+  font-weight: 200;
+  transition: .5s;
+  border-radius: 4.5px;
+
+  &.auth-name {
+    width: 37.5%;
+
+    &:nth-child(1){
+      margin-right: 1%;
+    }
+  }
+
+  &:focus {
+    background-color: rgb(16, 16, 16);
+  }
 }
 
 .signup-button {
-	// border-radius: 20px;
-	border: 1px solid transparent;
-	background-color: rgb(53, 51, 51);
-	color: #FFFFFF;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
-	cursor: pointer;
+  // border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: rgb(53, 51, 51);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
   width: 30%;
   transition: .25s ease;
 
-  &:hover{
-	border: 1px solid transparent;
-  color: #79D9FF;
-  transition: .5s ease;
-}
- &:active{
-	transform: scale(0.95);
-  background-color: #45758C;
+  &:hover {
+    border: 1px solid transparent;
+    color: #79D9FF;
+    transition: .5s ease;
+  }
 
- }
-}
+  &:active {
+    transform: scale(0.95);
+    background-color: #45758C;
 
-.signup-input-fullname{
-	flex-direction: row;
-	justify-content: center;
-}
+  }
 
-.signup-input-name {
-	background-color: rgb(53, 51, 51);
-	border: none;
-	padding: 12px 15px;
-	width: 45%;
-  color: #fff;
-  font-size: larger;
+
+
 }
 
-.signup-input-name:nth-child(1) {
-  margin-right: .5%;
+.signup-input-fullname {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+  max-width: 63.75%;
 }
