@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f8e89422.css",
-    "main.js": "/static/js/main.cd041f8f.js",
+    "main.css": "/static/css/main.58be1062.css",
+    "main.js": "/static/js/main.01c14b9a.js",
     "static/media/rainbowrain.mp4": "/static/media/rainbowrain.ea0cbdcc2c1debecf612.mp4",
     "static/media/adishamir3.jpeg": "/static/media/adishamir3.4b07b0b4bade41f5fe0f.jpeg",
     "static/media/charlesbabbage2.jpeg": "/static/media/charlesbabbage2.a8be840daca275a6dac2.jpeg",
@@ -38,7 +38,7 @@
     "static/media/bwquestion.png": "/static/media/bwquestion.7f79d85f47312e57f9e8.png",
     "static/media/annieeasley3.jpeg": "/static/media/annieeasley3.3b63244d1fa05a0e602f.jpeg",
     "static/media/markzuckerberg.jpeg": "/static/media/markzuckerberg.e0f7f42c4d1c16deaa8b.jpeg",
-    "static/media/claudeshannon.webp": "/static/media/claudeshannon.3f7138b9d1ac2b3e62b5.webp",
+    "static/media/claudeshannon.jpeg": "/static/media/claudeshannon.3f7138b9d1ac2b3e62b5.jpeg",
     "static/media/yukihiromatsumoto2.jpeg": "/static/media/yukihiromatsumoto2.3042a8c6cc94db9ca3ad.jpeg",
     "static/media/lisasu.jpeg": "/static/media/lisasu.39fb46374d432d5fa505.jpeg",
     "static/media/adalovelace2.jpeg": "/static/media/adalovelace2.67f8e0ce8b16298a1dde.jpeg",
@@ -60,6 +60,7 @@
     "static/media/marvinminsky.jpeg": "/static/media/marvinminsky.52e5a5126afc1998d8d7.jpeg",
     "static/media/andrewng.jpeg": "/static/media/andrewng.e3834c45d12cbc259a47.jpeg",
     "static/media/maryjackson3.jpeg": "/static/media/maryjackson3.0e38ddae6bb8bcc847cb.jpeg",
+    "static/media/vitalikbuterin3.jpeg": "/static/media/vitalikbuterin3.6dc041a7fc8867a47c55.jpeg",
     "static/media/dorothyvaughan2.jpeg": "/static/media/dorothyvaughan2.ef1e93fb5cb02c44eb5a.jpeg",
     "static/media/gavinwood.jpeg": "/static/media/gavinwood.22078071f4010866e129.jpeg",
     "static/media/gracehopper2.jpeg": "/static/media/gracehopper2.d3ea1cb3d222e753a925.jpeg",
@@ -68,7 +69,6 @@
     "static/media/andrewng2.jpeg": "/static/media/andrewng2.d3515af55b97407b7ede.jpeg",
     "static/media/maxlevchin4.jpeg": "/static/media/maxlevchin4.2fa353b491688ee5ca7e.jpeg",
     "static/media/jeffbezos4.jpeg": "/static/media/jeffbezos4.af78739a5f1e434f7b7e.jpeg",
-    "static/media/alanturing2.jpeg": "/static/media/alanturing2.975c98f0dc549dc00654.jpeg",
     "static/media/musaalkhwarizmi.jpeg": "/static/media/musaalkhwarizmi.e7fe1f74dfe162b4b810.jpeg",
     "static/media/linustorvalds3.jpeg": "/static/media/linustorvalds3.610322e766ef063a5c08.jpeg",
     "static/media/marykennethkeller2.jpeg": "/static/media/marykennethkeller2.d96d7875affc3f725b1c.jpeg",
@@ -78,6 +78,7 @@
     "static/media/guidovanrossum.jpeg": "/static/media/guidovanrossum.434e2ad15b8e120ca25a.jpeg",
     "static/media/donaldknuth2.jpeg": "/static/media/donaldknuth2.e2e09abf14f3eadd866c.jpeg",
     "static/media/gracehopper.jpeg": "/static/media/gracehopper.543afc966262abfdcbcf.jpeg",
+    "static/media/alanturing2.jpeg": "/static/media/alanturing2.a17337c3cd10b1b07c86.jpeg",
     "static/media/djpatil3.jpeg": "/static/media/djpatil3.45b5d278e2f459e80496.jpeg",
     "static/media/alankay.jpeg": "/static/media/alankay.c47e1679858e6a7d72dc.jpeg",
     "static/media/clearshafi.png": "/static/media/clearshafi.1e5946c08d1cb91a1b4f.png",
@@ -120,7 +121,6 @@
     "static/media/billgates.jpeg": "/static/media/billgates.ac8b9f1f7297a106ed03.jpeg",
     "static/media/matsumoto.png": "/static/media/matsumoto.4b43025abe5ce19f466b.png",
     "static/media/kjohnson.png": "/static/media/kjohnson.5622372e3cf490a46a37.png",
-    "static/media/vitalikbuterin3.jpeg": "/static/media/vitalikbuterin3.2cf95ffedb50d59f2ac7.jpeg",
     "static/media/donaldknuth3.jpeg": "/static/media/donaldknuth3.97f7cf85b25cc632ba3a.jpeg",
     "static/media/sergeybrin.jpeg": "/static/media/sergeybrin.1b4f30da122b49046234.jpeg",
     "static/media/barbaraliskov.jpeg": "/static/media/barbaraliskov.18c79dcd8fb66b301638.jpeg",
@@ -168,7 +168,7 @@
     "static/media/johnmccarthy.jpeg": "/static/media/johnmccarthy.ea3daf530be78750e0d4.jpeg",
     "static/media/stanislawulam2.jpeg": "/static/media/stanislawulam2.58ce68170c102d46173c.jpeg",
     "static/media/douglascrockford2.jpeg": "/static/media/douglascrockford2.57adc9cbd1a6b0dc308e.jpeg",
-    "static/media/vitalikbuterin4.jpeg": "/static/media/vitalikbuterin4.977faae1a478a19d05bf.jpeg",
+    "static/media/vitalikbuterin2.jpeg": "/static/media/vitalikbuterin2.977faae1a478a19d05bf.jpeg",
     "static/media/shafigoldwasser3.jpeg": "/static/media/shafigoldwasser3.77999e1c97cb55723ccd.jpeg",
     "static/media/stevejobs.jpeg": "/static/media/stevejobs.e07c546e2e873b49f1a9.jpeg",
     "static/media/stanislawulam4.jpeg": "/static/media/stanislawulam4.44124e6048c4e498916d.jpeg",
@@ -291,11 +291,11 @@
     "static/media/joanclarke.jpeg": "/static/media/joanclarke.36151acf4e7eca2a15b1.jpeg",
     "static/media/johnwtukey3.jpeg": "/static/media/johnwtukey3.c78b46a21cf1f96e240a.jpeg",
     "index.html": "/index.html",
-    "main.f8e89422.css.map": "/static/css/main.f8e89422.css.map",
-    "main.cd041f8f.js.map": "/static/js/main.cd041f8f.js.map"
+    "main.58be1062.css.map": "/static/css/main.58be1062.css.map",
+    "main.01c14b9a.js.map": "/static/js/main.01c14b9a.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8e89422.css",
-    "static/js/main.cd041f8f.js"
+    "static/css/main.58be1062.css",
+    "static/js/main.01c14b9a.js"
   ]
 }
