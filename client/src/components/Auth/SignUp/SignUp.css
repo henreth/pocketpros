@@ -47,12 +47,28 @@
 .signup-input {
   background-color: #353333;
   border: none;
-  padding: 12px 15px;
-  margin: 8px 0;
-  width: 100%;
+  padding: 2.5%;
+  margin-bottom: 1.5%;
+  width: 50%;
   z-index: 100;
   color: #fff;
-  font-size: larger;
+  font-size: 175%;
+  font-weight: 200;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-radius: 4.5px;
+}
+
+.signup-input.auth-name {
+  width: 37.5%;
+}
+
+.signup-input.auth-name:nth-child(1) {
+  margin-right: 1%;
+}
+
+.signup-input:focus {
+  background-color: #101010;
 }
 
 .signup-button {
@@ -88,6 +104,9 @@
 }
 
 .signup-input-fullname {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -95,18 +114,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.signup-input-name {
-  background-color: #353333;
-  border: none;
-  padding: 12px 15px;
-  width: 45%;
-  color: #fff;
-  font-size: larger;
-}
-
-.signup-input-name:nth-child(1) {
-  margin-right: .5%;
+  margin-top: 10%;
+  max-width: 63.75%;
 }
 /*# sourceMappingURL=SignUp.css.map */
