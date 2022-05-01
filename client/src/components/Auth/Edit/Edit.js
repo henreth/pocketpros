@@ -48,8 +48,10 @@ export default function Edit({ user, setUser, signedIn }) {
         .catch(function (error) {
             if (error.response) {
                 console.log(error.response.data.errors);
-                alert(error.response.data.errors)
-            } else if (error.request) {
+                let msg ='';
+                error.response.data.errors.map(error=>{msg+=error+'\n'})
+                alert(msg)
+                  } else if (error.request) {
                 console.log(error.request);
             } else {
                 console.log('Error', error.message);
@@ -66,23 +68,15 @@ export default function Edit({ user, setUser, signedIn }) {
           <div className="log-in-title">
             <h3>Edit Details</h3>
           </div>
-          <form className="log-in-container">
+          <form className="auth-log-in-container">
             <div className='signup-input-fullname'>
-              <input className='signup-input-name' type="text" placeholder="First Name" value={firstName} onChange={(e) => { setFirstName(e.target.value) }} />
-              <input className='signup-input-name last' type="text" placeholder="Last Name" value={lastName} onChange={(e) => { setLastName(e.target.value) }} />
+              <input className='signup-input auth-name' type="text" placeholder="First Name" value={firstName} onChange={(e) => { setFirstName(e.target.value) }} />
+              <input className='signup-input auth-name' type="text" placeholder="Last Name" value={lastName} onChange={(e) => { setLastName(e.target.value) }} />
             </div>
-            <input className='signup-input' type="email" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-            <button className='signup-button' onClick={handleSubmitChanges} >Submit Changes</button>
+            <input className='signup-input' type="username" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <button className='auth-login-button' onClick={handleSubmitChanges} >Submit Changes</button>
           </form>
         </div>
-        {/* <div className="menu__slot" onClick={handleLogOut}>
-            <div className="blackscreen"></div>
-            <div className="char miguel"></div>
-            <div className="slot-item-3">
-              <h3>Log Out</h3>
-              <p></p>
-            </div>
-          </div> */}
           <div className="menu__slot" onClick={()=>{navigate('/profile')}}>
             <div className="blackscreen"></div>
             <div className="char zuckerberg"></div>

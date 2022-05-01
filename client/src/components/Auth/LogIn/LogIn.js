@@ -36,7 +36,7 @@ export default function LogIn({ username, setUsername, password, setPassword, si
             <h3>Log In</h3>
           </div>
           <form className="auth-log-in-container">
-            <input className='auth-login-input auth-username' type="email" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input className='auth-login-input auth-username' type="username" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
             <input className='auth-login-input auth-password' type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
             <button className='auth-login-button' onClick={handleLogInSubmit}>Sign In</button>
             {/* <div className='login-forgot' href="#">Forgot your password?</div> */}
