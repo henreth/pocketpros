@@ -34,17 +34,17 @@ A digital trading card experience themed around software engineers where users c
 
 #
 ## How to Run This Application:
-* Install Ruby Gems with via the "Bundle Install" command
-* Install required NPM nodes with the command "npm install --prefix client"
 * Run the following commands in two seperate terminals:
 
 ```
-// start the server
+// install and start the server
+bundle install
 rails s 
 ```
 
 ```
-// start the frontend interface
+// install start the frontend interface
+npm install --prefix client
 npm start --prefix client 
 ```
 
