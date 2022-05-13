@@ -12,7 +12,7 @@ A digital trading card experience themed around software engineers where users c
 
 # Demos:
 
-<img src="pocket-demo.gif" width="1000">
+<img src="pocket-demo.gif" width="850">
 
 #
 ## Technical Accomplishments
