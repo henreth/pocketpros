@@ -6,6 +6,8 @@ import QrCode from '../../Card/QRCode/QRCode';
 
 import Graph from './Graph/Graph';
 import axios from 'axios';
+import Tilt from 'react-tilt'
+
 
 
 export default function MarketInformation({ selectedCard, setSelectedCard, showModal, setShowModal, user, setUser, users, userCards, setUserCards, marketCards, setMarketCards, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab, setMarketSearchTerm, setMarketSelectedRarity, listedByUser, setListedByUser }) {
@@ -339,6 +341,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
         <React.Fragment>
             <div className="overlay" >
                 <div className='cardInformation-container'>
+                <Tilt className="Tilt" options={{ max: 50, scale: 1}} >
                     <div className={cardClass}>
                         <div className='charCard-info-container' onClick={handleClickCard} >
                             <img src={charImages('./' + selectedCard.character.image[selectedCard.variant])} className='charCard-image' />
@@ -352,6 +355,8 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
                             <QrCode url={selectedCard.character.link} />
                         </div>
                     </div>
+                            </Tilt>
+
 
                     <div className='market-information-container'>
                         <div className='history-title'><b>{selectedCard.character.first_name} {selectedCard.character.last_name}</b> ({selectedCard.rarity})</div>
