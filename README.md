@@ -21,24 +21,24 @@ A digital trading card experience themed around software engineers where users c
 * Each person has 4 potential variations that display a different image or title.
 
 <p align='center'>
-  <img src='steve-jobs-1.png' width='150'>
-  <img src='steve-jobs-2.png' width='150'>
-  <img src='steve-jobs-3.png' width='150'>
-  <img src='steve-jobs-4.png' width='150'>
+  <img src='steve-jobs-1.png' width='200'>
+  <img src='steve-jobs-2.png' width='200'>
+  <img src='steve-jobs-3.png' width='200'>
+  <img src='steve-jobs-4.png' width='200'>
 </p>
 
 * In addition there are 4 different rarities that cards can found as, each decreasing in prevalence.
 <p align='center'>
-  <img src='hedy-lamarr-1.png' width='150'>
-  <img src='hedy-lamarr-2.png' width='150'>
-  <img src='hedy-lamarr-3.png' width='150'>
-  <img src='hedy-lamarr-4.png' width='150'>
+  <img src='hedy-lamarr-1.png' width='200'>
+  <img src='hedy-lamarr-2.png' width='200'>
+  <img src='hedy-lamarr-3.png' width='200'>
+  <img src='hedy-lamarr-4.png' width='200'>
 </p>
 
 * While there can be duplicates of the same card qualities, every card is completely unique as signified by the card id which is found at the bottom of each card face.
 <p align='center'>
-  <img src='annie-easley-1.png' width='150'>
-  <img src='annie-easley-2.png' width='150'>
+  <img src='annie-easley-1.png' width='200'>
+  <img src='annie-easley-2.png' width='200'>
 </p>
 
 * To learn more about each person of interest, you can use your personal device to scan the QR code that is displayed on every card face.
