@@ -3,6 +3,7 @@ import '../../../Card/Card.css'
 import React, { useState } from 'react';
 import icon from '../../../../img/cleargithubqr.png';
 import QrCode from '../../../Card/QRCode/QRCode';
+import Tilt from 'react-tilt'
 
 
 
@@ -20,6 +21,7 @@ export default function NewCard({ card }) {
     let cardClass = opened ? `charCard ${rarity}` : 'charCard unopened'
 
     return (
+        <Tilt className="Tilt" options={{ max: 50, scale: 1}} >
         <div className={cardClass} onClick={handleClickCard}>
             <div className='charCard-info-container'>
             <img src={charImages('./'+card.character.image[card.variant])} className='charCard-image' />
@@ -33,5 +35,6 @@ export default function NewCard({ card }) {
                 <QrCode url={card.character.link}/>
             </div>
         </div>
+        </Tilt>
     )
 }
