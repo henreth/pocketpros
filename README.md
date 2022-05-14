@@ -15,6 +15,36 @@ A digital trading card experience themed around software engineers where users c
 <img src="pocket-demo.gif" width="850">
 
 #
+## Card Rarities and Variants:
+
+* There are nearly 100 unique persons of interests featured in this application.
+* Each person has 4 potential variations that display a different image or title.
+
+<p align='center'>
+  <img src='steve-jobs-1.png' width='150'>
+  <img src='steve-jobs-2.png' width='150'>
+  <img src='steve-jobs-3.png' width='150'>
+  <img src='steve-jobs-4.png' width='150'>
+</p>
+
+* In addition there are 4 different rarities that cards can found as, each decreasing in prevalence.
+<p align='center'>
+  <img src='hedy-lamarr-1.png' width='150'>
+  <img src='hedy-lamarr-2.png' width='150'>
+  <img src='hedy-lamarr-3.png' width='150'>
+  <img src='hedy-lamarr-4.png' width='150'>
+</p>
+
+* While there can be duplicates of the same card qualities, every card is completely unique as signified by the card id which is found at the bottom of each card face.
+<p align='center'>
+  <img src='annie-easley-1.png' width='150'>
+  <img src='annie-easley-2.png' width='150'>
+</p>
+
+* To learn more about each person of interest, you can use your personal device to scan the QR code that is displayed on every card face.
+
+
+#
 ## Technical Accomplishments
 
 * Created a backend database used to generate 1200+ possible unique card variations.
