@@ -1,6 +1,10 @@
 
 # <img src="title.gif" width="1000">
 
+### Developed By:
+
+ * ![https://github.com/henreth/](https://badges.pufler.dev/contributors/henreth/pocketpros) [Henry Miller](https://github.com/henreth/)
+
 A digital trading card experience themed around software engineers where users can open packs, unlock cards, and trade with other users 
 
 * Collect 1200+ unique variations of cards
@@ -15,7 +19,7 @@ A digital trading card experience themed around software engineers where users c
 <img src="pocket-demo.gif" width="850">
 
 #
-## Card Rarities and Variants:
+### Card Rarities and Variants:
 
 * There are nearly 100 unique persons of interests featured in this application.
 * Each person has 4 potential variations that display a different image or title.
