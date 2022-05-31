@@ -1,9 +1,7 @@
 
 # <img src="title.gif" width="1000">
 
-### Developed By:
 
- * ![https://github.com/henreth/](https://badges.pufler.dev/contributors/henreth/pocketpros) [Henry Miller](https://github.com/henreth/)
 
 A digital trading card experience themed around software engineers where users can open packs, unlock cards, and trade with other users 
 
@@ -13,6 +11,10 @@ A digital trading card experience themed around software engineers where users c
 * Visualize market data associated with cards
 
 **Try it out here:** [Pocket Programmers](https://pocketprogrammers.herokuapp.com/)
+
+### Developed By:
+
+ * ![https://github.com/henreth/](https://badges.pufler.dev/contributors/henreth/pocketpros) [Henry Miller](https://github.com/henreth/)
 
 # Demos:
 
@@ -81,6 +83,3 @@ rails s
 npm install --prefix client
 npm start --prefix client 
 ```
-
-
-
