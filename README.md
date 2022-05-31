@@ -3,9 +3,9 @@
 
 
 
-A digital trading card experience themed around software engineers where users can open packs, unlock cards, and trade with other users 
+A digital trading card experience where users can open packs, unlock cards, and trade with other users. 
 
-* Collect 1200+ unique variations of cards
+* Collect 1200+ unique variations of cards themed around famous and influential software engineers
 * Generate randomly generated assortments of cards upon pack open
 * Track individual card transaction history 
 * Visualize market data associated with cards
