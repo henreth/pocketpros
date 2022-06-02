@@ -14,7 +14,9 @@ A digital trading card experience where users can open packs, unlock cards, and 
 
 ### Developed By:
 
- * ![https://github.com/henreth/](https://badges.pufler.dev/contributors/henreth/pocketpros) [Henry Miller](https://github.com/henreth/)
+<a href="https://github.com/henreth" target="_blank" title="henreth">
+  <img src="https://github.com/henreth.png?size=50" height="45" width="45" alt="henreth"/>
+</a>
 
 # Demos:
 
