@@ -81,7 +81,7 @@ rails s
 ```
 
 ```
-// install start the frontend interface
+// install and start the frontend interface
 npm install --prefix client
 npm start --prefix client 
 ```
