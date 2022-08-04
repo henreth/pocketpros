@@ -1,6 +1,4 @@
-import './Card.css';
-import React, { useState } from 'react';
-import icon from '../../img/clearpocketpros.png';
+import React from 'react';
 import axios from 'axios';
 import QrCode from './QRCode/QRCode';
 
@@ -39,19 +37,19 @@ export default function Card({ card, setShowModal, setSelectedCard, setNumCardOw
     }
 
     return (
-            <div className={cardClass}>
-                <div className='charCard-info-container' onClick={handleClickCard}>
-                    <img src={charImages('./' + card.character.image[card.variant])} className='charCard-image' />
-                    <div className='charCard-text'>
-                        <div className='charCard-rarity'>{card.character.title[card.variant]}</div>
-                        <div className='charCard-name'><b>{card.character.first_name} {card.character.last_name}</b></div>
-                        <div className='charCard-id'> {card.unique_id[0] + card.variant + card.unique_id.slice(1,)}</div>
-                    </div>
+        <div className={cardClass}>
+            <div className='charCard-info-container' onClick={handleClickCard}>
+                <img src={charImages('./' + card.character.image[card.variant])} className='charCard-image' />
+                <div className='charCard-text'>
+                    <div className='charCard-rarity'>{card.character.title[card.variant]}</div>
+                    <div className='charCard-name'><b>{card.character.first_name} {card.character.last_name}</b></div>
+                    <div className='charCard-id'> {card.unique_id[0] + card.variant + card.unique_id.slice(1,)}</div>
                 </div>
-                <div className='qrcode'>
-                    <QrCode url={card.character.link} />
-                </div>
-
             </div>
+            <div className='qrcode'>
+                <QrCode url={card.character.link} />
+            </div>
+
+        </div>
     )
 }

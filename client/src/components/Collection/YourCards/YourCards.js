@@ -1,8 +1,5 @@
-import './YourCards.css';
 import React, { useState, useEffect } from 'react';
-import { Route, Routes, useNavigate } from "react-router-dom";
-import axios from 'axios';
-
+import { useNavigate } from "react-router-dom";
 import Card from '../../Card/Card'
 import MarketInformation from '../../Marketplace/MarketInformation/MarketInformation';
 
@@ -13,7 +10,7 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
   let [selectedCard, setSelectedCard] = useState(userCards[0])
   let [selectedRarity, setSelectedRarity] = useState('all')
   let [searchTerm, setSearchTerm] = useState('');
-  let [sortTerm,setSortTerm] = useState('A-Z')
+  let [sortTerm, setSortTerm] = useState('A-Z')
 
   //  * for additional information 
   let [numCardOwners, setNumCardOwners] = useState(0)
@@ -36,14 +33,14 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
 
 
   let filteredCards = userCards.filter(card => card.rarity === selectedRarity || selectedRarity === 'all')
-  .filter(card => card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || searchTerm === '')
-  .sort((card1, card2) => { 
-    if (sortTerm==='1'){
-      return card1.character.last_name.localeCompare(card2.character.last_name) 
-    } else if (sortTerm==='2'){
-      return card2.character.last_name.localeCompare(card1.character.last_name) 
-    } 
-  })
+    .filter(card => card.character.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || searchTerm === '')
+    .sort((card1, card2) => {
+      if (sortTerm === '1') {
+        return card1.character.last_name.localeCompare(card2.character.last_name)
+      } else if (sortTerm === '2') {
+        return card2.character.last_name.localeCompare(card1.character.last_name)
+      }
+    })
   // .sort((card1, card2) => { 
   //   return card1.variant - card2.variant
   // })
@@ -78,7 +75,7 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
     setSelectedRarity(e.target.textContent.toLowerCase())
   }
 
-  function handleSortChange(e){
+  function handleSortChange(e) {
     setSortTerm(e.target.value)
   }
 
@@ -95,7 +92,7 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
           <div className='yourCards-Cards-Count'>Total:<b>{filteredCards.length}</b></div>
           <div className='yourCards-Cards-Count'>UNIQUE:<b>{uniqueCards.length}</b></div>
         </div>
-        
+
         <div className='yourCards-filter-container'>
           {raritiesToDisplay}
           <div className="list-choice">
@@ -145,9 +142,6 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
         listedByUser={listedByUser}
         setListedByUser={setListedByUser}
       /> : null}
-
     </React.Fragment>
-
-
   )
 }
