@@ -1,3 +1,11 @@
+@use './components/About/About';
+@use './components/App/App';
+@use './components/Auth/Auth';
+@use './components/Auth/Edit/Edit';
+@use './components/Auth/LogIn/LogIn';
+@use './components/Auth/LogOut/LogOut';
+@use './components/Auth/SignUp/SignUp';
+
 body {
     font-family: sans-serif;
     margin: 0;
