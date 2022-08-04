@@ -5,6 +5,13 @@
 @use './components/Auth/LogIn/LogIn';
 @use './components/Auth/LogOut/LogOut';
 @use './components/Auth/SignUp/SignUp';
+@use './components/BuyPacks/BuyPacks';
+@use './components/Card/Card';
+@use './components/Collection/Collection';
+@use './components/Collection/OpenPacks/OpenPacks';
+@use './components/Collection/OpenPacks/Modal/Modal';
+@use './components/Collection/OpenPacks/NewCard/NewCard';
+@use './components/Collection/OpenPacks/NewCard/NewCard';
 
 body {
     font-family: sans-serif;
