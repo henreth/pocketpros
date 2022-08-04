@@ -21,7 +21,7 @@
   left: 0;
   z-index: -1;
   background-color: rgba(45, 51, 61, 0.5);
-  background-image: url('./gridiron.png');
+  background-image: url('./img/gridiron.png');
   background-size: cover;
 }
 
@@ -177,124 +177,124 @@
 }
 
 .menu__slot:hover .turing {
-  background-image: url('./turing.png');
+  background-image: url('./img/menu/turing.png');
   background-position: 40% -100px;
 
 }
 
 .menu__slot:hover .hopper {
-  background-image: url('./hopper.png');
+  background-image: url('./img/menu/hopper.png');
   background-position: 50% 20px;
 }
 
 .menu__slot:hover .larry {
-  background-image: url('./larry.png');
+  background-image: url('./img/menu/larry.png');
   background-position: 40% 10px;
 }
 
 .menu__slot:hover .hamilton {
-  background-image: url('./hamilton.png');
+  background-image: url('./img/menu/hamilton.png');
   background-position: 50% 0px;
 }
 
 .menu__slot:hover .tukey {
-  background-image: url('./tukey.png');
+  background-image: url('./img/menu/tukey.png');
   background-position: 40% -50px;
 }
 
 .menu__slot:hover .zuckerberg {
-  background-image: url('./zuckerberg.png');
+  background-image: url('./img/menu/zuckerberg.png');
   background-position: 57.5% -30px;
   filter: grayscale(100%);
 }
 
 .menu__slot:hover .borg {
-  background-image: url('./borg.png');
+  background-image: url('./img/menu/borg.png');
   background-position: 40% -100px;
 }
 
 .menu__slot:hover .vitalik {
-  background-image: url('./vitalik.png');
+  background-image: url('./img/menu/vitalik.png');
   background-position: 40% -50px;
 }
 
 .menu__slot:hover .lamarr {
-  background-image: url('./lamarr.png');
+  background-image: url('./img/menu/lamarr.png');
   background-position: 40% -50px;
 }
 
 .menu__slot:hover .jobs {
-  background-image: url('./jobs.png');
+  background-image: url('./img/menu/jobs.png');
   background-position: 40% -50px;
 }
 
 .menu__slot:hover .vanrossum {
-  background-image: url('./vanrossum.png');
+  background-image: url('./img/menu/vanrossum.png');
   background-position: 50% 0px;
   filter: grayscale(100%);
 }
 
 .menu__slot:hover .matsumoto {
-  background-image: url('./matsumoto.png');
+  background-image: url('./img/menu/matsumoto.png');
   background-position: 45% -70px;
   filter: grayscale(100%);
 }
 
 .menu__slot:hover .kjohnson {
-  background-image: url('./kjohnson.png');
+  background-image: url('./img/menu/kjohnson.png');
   background-position: 40% -50px;
 }
 
 .menu__slot:hover .reddy {
-  background-image: url('./reddy.png');
+  background-image: url('./img/menu/reddy.png');
   background-position: 47.5% -50px;
   filter: grayscale(100%);
 }
 
 .menu__slot:hover .tommy {
-  background-image: url('./tommyflowersclear.png');
+  background-image: url('./img/menu/tommyflowersclear.png');
   background-position: 55% -60px;
   filter: grayscale(100%);
 }
 
 .menu__slot:hover .annie {
-  background-image: url('./annie.png');
+  background-image: url('./img/menu/annie.png');
   background-position: 70% -40px;
   filter: grayscale(100%);
 }
 
 .menu__slot:hover .clarence {
-  background-image: url('./clarence.png');
+  background-image: url('./img/menu/clarence.png');
   background-position: 70% -40px;
   filter: grayscale(100%);
 }
 
 .menu__slot:hover .guido {
-  background-image: url('./guido.png');
+  background-image: url('./img/menu/guido.png');
   background-position: 70% -40px;
   filter: grayscale(100%);
 }
 
 .menu__slot:hover .miguel {
-  background-image: url('./miguel.png');
+  background-image: url('./img/menu/miguel.png');
   background-position: 25% -10px;
   filter: grayscale(100%);
 }
 
 .menu__slot:hover .andrew {
-  background-image: url('./andrewngclear.png');
+  background-image: url('./img/menu/andrewngclear.png');
   background-position: 60% -70px;
   filter: grayscale(100%);
 }
 
 .menu__slot:hover .claude {
-  background-image: url('./clearclaude.png');
+  background-image: url('./img/menu/clearclaude.png');
   background-position: 50% -70px;
   filter: grayscale(100%);
 }
 
 .menu__slot:hover .shafi {
-  background-image: url('./clearshafi.png');
+  background-image: url('./img/menu/clearshafi.png');
   background-position: 60% -70px;
   filter: grayscale(100%);
 }
@@ -318,7 +318,7 @@
   font-size: 2em;
   font-weight: 300;
   z-index: 1;
-  background-image: url('./led-grid.png');
+  background-image: url('./img/led-grid.png');
   background-size: cover;
   font-family: 'Ubuntu Mono', monospace;
 
