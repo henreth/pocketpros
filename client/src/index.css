@@ -1718,8 +1718,8 @@
   perspective: 600px;
   cursor: pointer;
   background-color: rgb(109, 109, 109);
-  width: 18vw;
-  height: 43vh;
+  width: 325px;
+  height: 435px;
   border-radius: 10px;
   transition: 0.5s ease;
   font-family: "Ubuntu Mono", monospace;
@@ -1866,6 +1866,10 @@
 .locked b {
   text-decoration: line-through;
   color: rgb(231, 106, 106);
+}
+
+.lower {
+  margin-bottom: 1.75vh;
 }
 
 body {

@@ -35,7 +35,7 @@ export default function OpenPacks({ userCredits, user, setUser, userPacks, setUs
                     <div className='pack-title top inverse'>POCKET PROGRAMMERS</div>
                     <div className='buy-more-text inverse' >BUY MORE</div>
                     <div className={'pack-count buy-more-text'}>+</div>
-                    <div className='buy-more-text'>BUY MORE</div>
+                    <div className='buy-more-text lower'>BUY MORE</div>
                     <div className='pack-title bottom' >POCKET PROGRAMMERS</div>
                 </div>
             </div>
