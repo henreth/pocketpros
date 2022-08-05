@@ -1,5 +1,5 @@
 
-# <img src="title.gif" width="1000">
+# <img src="./images/title.gif" width="1000">
 
 
 
@@ -20,7 +20,7 @@ A digital trading card experience where users can open packs, unlock cards, and 
 
 # Demos:
 
-<img src="pocket-demo.gif" width="850">
+<img src="./images/pocket-demo.gif" width="850">
 
 #
 ### Card Rarities and Variants:
@@ -29,24 +29,24 @@ A digital trading card experience where users can open packs, unlock cards, and 
 * Each person has 4 potential variations that display a different image or title.
 
 <p align='center'>
-  <img src='steve-jobs-1.png' width='200'>
-  <img src='steve-jobs-2.png' width='200'>
-  <img src='steve-jobs-3.png' width='200'>
-  <img src='steve-jobs-4.png' width='200'>
+  <img src='./images/steve-jobs-1.png' width='200'>
+  <img src='./images/steve-jobs-2.png' width='200'>
+  <img src='./images/steve-jobs-3.png' width='200'>
+  <img src='./images/steve-jobs-4.png' width='200'>
 </p>
 
 * In addition there are 4 different rarities that cards can found as, each decreasing in prevalence.
 <p align='center'>
-  <img src='hedy-lamarr-1.png' width='200'>
-  <img src='hedy-lamarr-2.png' width='200'>
-  <img src='hedy-lamarr-3.png' width='200'>
-  <img src='hedy-lamarr-4.png' width='200'>
+  <img src='./images/hedy-lamarr-1.png' width='200'>
+  <img src='./images/hedy-lamarr-2.png' width='200'>
+  <img src='./images/hedy-lamarr-3.png' width='200'>
+  <img src='./images/hedy-lamarr-4.png' width='200'>
 </p>
 
 * While there can be duplicates of the same card qualities, every card is completely unique as signified by the card id which is found at the bottom of each card face.
 <p align='center'>
-  <img src='annie-easley-1.png' width='200'>
-  <img src='annie-easley-2.png' width='200'>
+  <img src='./images/annie-easley-1.png' width='200'>
+  <img src='./images/annie-easley-2.png' width='200'>
 </p>
 
 * To learn more about each person of interest, you can use your personal device to scan the QR code that is displayed on every card face.
