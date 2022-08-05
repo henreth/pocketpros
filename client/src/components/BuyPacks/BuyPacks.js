@@ -29,7 +29,7 @@ export default function BuyPacks({ user, setUser, setUserCards, userPacks, setUs
     return (
         <React.Fragment>
             <div className='yourCards-overlay'></div>
-            <div className='yourPacks-container' >
+            <div className='packs-container' >
                 {packsToDisplay}
             </div>
             <div className="back_button" onClick={handleClickBack}>

@@ -45,7 +45,7 @@ export default function OpenPacks({ userCredits, user, setUser, userPacks, setUs
     return (
         <React.Fragment>
             <div className='yourCards-overlay'></div>
-            <div className='yourPacks-container'>
+            <div className='packs-container'>
                 {packsToDisplay}
                 {buyMorePack()}
             </div>
