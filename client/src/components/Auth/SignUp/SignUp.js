@@ -1,8 +1,5 @@
-import './SignUp.css';
-import React, { useState, useEffect } from 'react';
-import { Route, Routes, useNavigate } from "react-router-dom";
-import axios from 'axios';
-
+import React, { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 export default function SignUp({ username, setUsername, password, setPassword, signedIn, setSignedIn, signUpFirstName, setSignUpFirstName, signUpLastName, setSignUpLastName, signUpPasswordConfirmation, setSignUpPasswordConfirmation, handleSignUpSubmit }) {
   document.title = 'Pocket Pros - Sign Up';

@@ -1,0 +1,107 @@
+.login__slot {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  position: relative;
+  overflow: hidden;
+  // cursor: pointer;
+  background-color: whitesmoke;
+  background: linear-gradient(140deg, rgb(51, 143, 200), rgb(247, 238, 238), rgb(255, 105, 180));
+  background-size: 300% 300%;
+  animation: gradient 7.5s ease infinite;
+
+  display: flex;
+  flex-direction: column;
+
+}
+  
+.slot-item-1 {
+  margin-top: 45vh;
+}
+
+.log-in-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+
+}
+
+
+.login__slot h3 {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  // color: #45758C;
+  // color: #bbbbbb;
+  color: #f4f4f4; 
+
+
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 3.6% 5%;
+  font-size: 2em;
+  font-weight: 300;
+  z-index: 1;
+  background-image: url('./img/led-grid.png');
+  background-size: cover;
+}
+
+.login__slot > div > h3 {
+  font-size: 2.45em;
+  font-weight: bold;
+  min-width: 80%;
+  max-width: 80%;
+  text-align: left;
+  // color: #79D9FF;
+  // color: #bbbbbb;
+  color: #f4f4f4; 
+
+}
+
+
+.login-input {
+	background-color: rgb(53, 51, 51);
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+  z-index: 100;
+  color: #fff
+}
+
+.login-button {
+	// border-radius: 20px;
+	border: 1px solid transparent;
+	background-color: rgb(53, 51, 51);
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	cursor: pointer;
+  width: 30%;
+  transition: .25s ease;
+
+  &:hover{
+	border: 1px solid transparent;
+  color: #79D9FF;
+  transition: .5s ease;
+}
+ &:active{
+	transform: scale(0.95);
+  background-color: #45758C;
+
+ }
+}
+
+.login-forgot{
+  margin-top: 1%;
+  margin-bottom: 2%;
+  margin-left: 1%;
+  color: rgba(255, 255, 255, 0.348);
+  cursor: pointer;
+}
+

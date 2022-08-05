@@ -1,26 +1,23 @@
-import './Auth.css';
-import React, { useState, useEffect } from 'react';
-import { Route, Routes, useNavigate } from "react-router-dom";
-import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
-
-export default function Auth({signedIn}) {
+export default function Auth({ signedIn }) {
   document.title = 'Pocket Pros - Log In Required';
   let navigate = useNavigate();
 
-  useEffect(()=>{
-    if (signedIn===true){
+  useEffect(() => {
+    if (signedIn === true) {
       navigate('/');
     }
-  },[])
+  }, [])
 
   // navigate('/login')
 
-  function handleLogInClick(){
+  function handleLogInClick() {
     navigate('/login')
   }
 
-  function handleSignUpClick(){
+  function handleSignUpClick() {
     navigate('/signup')
   }
 

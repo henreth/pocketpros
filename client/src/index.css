@@ -1,3 +1,1878 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,100;0,700;1,400;1,700&display=swap");
+.about-page-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.qr-container {
+  height: 42.525vh;
+  width: 24.3vw;
+  background-color: rgb(57, 57, 57);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  transition: 0.5s ease;
+  color: transparent;
+  font-family: "Ubuntu Mono", monospace;
+  z-index: 6;
+}
+.qr-container:hover {
+  cursor: pointer;
+  transition: 0.5s ease;
+  color: #fff;
+}
+.qr-container:active {
+  color: #3d3d3d;
+  transition: 0.5s ease;
+}
+
+.qr-code {
+  height: 36.45vh;
+  align-self: center;
+}
+
+.aboutCard {
+  margin: 4px;
+  transform: scale(1);
+  perspective: 600px;
+  background-color: rgb(109, 109, 109);
+  width: 22.5vw;
+  height: 57.1875vh;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  text-transform: uppercase;
+  transform: scale(1.35);
+}
+.aboutCard .aboutCard-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.584);
+}
+.aboutCard .aboutCard-image {
+  height: 45.28125vh;
+  width: 22.5vw;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 5%;
+  filter: grayscale(100%);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.584);
+}
+.aboutCard .aboutCard-text {
+  align-self: flex-start;
+  margin-left: 2.5%;
+  font-size: larger;
+  cursor: default;
+}
+.aboutCard .aboutCard-name {
+  font-size: larger;
+  margin-top: 2%;
+  margin-bottom: 0.75%;
+}
+.aboutCard .aboutCard-rarity {
+  font-size: small;
+  margin-top: 2%;
+  margin-bottom: 0.75%;
+}
+.aboutCard .aboutCard-id {
+  font-size: small;
+  margin-top: 2%;
+  margin-bottom: 0.75%;
+}
+
+.about-holo {
+  background-image: linear-gradient(90deg, rgb(162, 209, 255), rgb(182, 163, 255), rgb(221, 169, 255), rgb(182, 163, 255), rgb(162, 209, 255));
+  background-size: 400% 400%;
+  -webkit-animation: gradient 20s ease infinite;
+          animation: gradient 20s ease infinite;
+}
+
+.unopened {
+  background-color: rgb(8, 8, 8);
+  cursor: pointer;
+}
+.unopened .aboutCard-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(8, 8, 8);
+  visibility: hidden;
+}
+
+.about-icon {
+  position: absolute;
+  height: 8.25vh;
+  filter: opacity(0.25);
+  top: 83%;
+  left: 75%;
+  transition: 0.5s ease;
+}
+.about-icon:hover {
+  filter: opacity(90%);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.qrlink {
+  position: absolute;
+  top: 24.5%;
+  font-weight: bolder;
+  font-size: 3.5vh;
+  text-transform: uppercase;
+}
+
+.user-id-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-identification {
+  position: fixed;
+  opacity: 100;
+  color: #bbbbbb;
+  z-index: 150000;
+  cursor: default;
+  font-family: "Ubuntu Mono", monospace;
+  margin-right: 0.5%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.title__slot {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 28%;
+  position: relative;
+  overflow: hidden;
+}
+
+.title__slot h3 {
+  text-transform: lowercase;
+  position: relative;
+  color: #f4f4f4;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 3.6% 5%;
+  font-size: 3.5em;
+  font-weight: 100;
+  z-index: 1;
+  background-image: url("./img/led-grid.png");
+  background-size: cover;
+  font-family: "Ubuntu Mono", monospace;
+}
+.title__slot h3 :nth-of-type(1) {
+  margin-left: -5.5%;
+}
+
+.first {
+  text-align: right;
+}
+
+.second {
+  text-align: left;
+}
+
+.t-eight {
+  -webkit-animation: blink 1.45s linear infinite;
+          animation: blink 1.45s linear infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.login__slot {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  position: relative;
+  overflow: hidden;
+  background-color: whitesmoke;
+  background: linear-gradient(140deg, rgb(51, 143, 200), rgb(247, 238, 238), rgb(255, 105, 180));
+  background-size: 300% 300%;
+  -webkit-animation: gradient 7.5s ease infinite;
+          animation: gradient 7.5s ease infinite;
+  display: flex;
+  flex-direction: column;
+}
+
+.slot-item-1 {
+  margin-top: 45vh;
+}
+
+.log-in-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+
+.login__slot h3 {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  color: #f4f4f4;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 3.6% 5%;
+  font-size: 2em;
+  font-weight: 300;
+  z-index: 1;
+  background-image: url("./img/led-grid.png");
+  background-size: cover;
+}
+
+.login__slot > div > h3 {
+  font-size: 2.45em;
+  font-weight: bold;
+  min-width: 80%;
+  max-width: 80%;
+  text-align: left;
+  color: #f4f4f4;
+}
+
+.login-input {
+  background-color: rgb(53, 51, 51);
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  z-index: 100;
+  color: #fff;
+}
+
+.login-button {
+  border: 1px solid transparent;
+  background-color: rgb(53, 51, 51);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+  width: 30%;
+  transition: 0.25s ease;
+}
+.login-button:hover {
+  border: 1px solid transparent;
+  color: #79D9FF;
+  transition: 0.5s ease;
+}
+.login-button:active {
+  transform: scale(0.95);
+  background-color: #45758C;
+}
+
+.login-forgot {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  margin-left: 1%;
+  color: rgba(255, 255, 255, 0.348);
+  cursor: pointer;
+}
+
+.login__slot {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  position: relative;
+  overflow: hidden;
+  background-color: whitesmoke;
+  background: linear-gradient(140deg, rgb(135, 206, 250), rgb(255, 105, 180), rgb(0, 255, 174));
+  background-size: 300% 300%;
+  -webkit-animation: gradient 7.5s ease infinite;
+          animation: gradient 7.5s ease infinite;
+  display: flex;
+  flex-direction: column;
+}
+
+.slot-item-1 {
+  margin-top: 45vh;
+}
+
+.auth-log-in-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+.login__slot h3 {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  color: #f4f4f4;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 3.6% 5%;
+  font-size: 2em;
+  font-weight: 300;
+  z-index: 1;
+  background-image: url("./img/led-grid.png");
+  background-size: cover;
+}
+
+.login__slot > div > h3 {
+  font-size: 2.45em;
+  font-weight: bold;
+  min-width: 80%;
+  max-width: 80%;
+  text-align: left;
+  color: #f4f4f4;
+}
+
+.auth-login-input {
+  background-color: rgb(53, 51, 51);
+  border: none;
+  padding: 2.5%;
+  margin-bottom: 1.5%;
+  width: 50%;
+  z-index: 100;
+  color: #fff;
+  font-size: 175%;
+  font-weight: 200;
+  transition: 0.5s;
+  border-radius: 4.5px;
+}
+.auth-login-input.auth-username {
+  margin-top: 10%;
+}
+.auth-login-input.auth-password {
+  width: 50%;
+}
+.auth-login-input:focus {
+  background-color: rgb(16, 16, 16);
+}
+
+.auth-login-button {
+  border: 1px solid transparent;
+  background-color: rgb(53, 51, 51);
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+  width: 30%;
+  transition: 0.25s ease;
+  font-size: larger;
+  border-radius: 4.5px;
+}
+.auth-login-button:hover {
+  border: 1px solid transparent;
+  color: #79D9FF;
+  transition: 0.5s ease;
+}
+.auth-login-button:active {
+  transform: scale(0.95);
+  background-color: rgb(16, 16, 16);
+  color: rgb(255, 255, 255);
+}
+
+.login-forgot {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  margin-left: 1%;
+  color: rgba(255, 255, 255, 0.348);
+  cursor: pointer;
+}
+
+.logout-button {
+  margin-bottom: 2.5%;
+  border: 1px solid transparent;
+  background-color: rgb(53, 51, 51);
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+  width: 40%;
+  transition: 0.25s ease;
+  font-size: 150%;
+  border-radius: 4.5px;
+  text-align: center;
+}
+.logout-button:hover {
+  border: 1px solid transparent;
+  color: #79D9FF;
+  transition: 0.5s ease;
+}
+.logout-button:active {
+  transform: scale(0.95);
+  background-color: rgb(16, 16, 16);
+  color: rgb(255, 255, 255);
+}
+
+.logout-confirm {
+  margin-top: 10%;
+  margin-bottom: 2.5%;
+  border: 1px solid transparent;
+  background-color: rgb(53, 51, 51);
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  width: 30%;
+  transition: 0.25s ease;
+  font-size: 150%;
+  border-radius: 4.5px;
+  text-align: center;
+}
+
+.signup__slot {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  position: relative;
+  overflow: hidden;
+  background-color: whitesmoke;
+  background: linear-gradient(100deg, rgb(242, 163, 202), rgb(203, 226, 233), rgb(77, 148, 241));
+  display: flex;
+  flex-direction: column;
+}
+
+.slot-item-1 {
+  margin-top: 45vh;
+}
+
+.signup__slot h3 {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  color: #f4f4f4;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 3.6% 5%;
+  font-size: 2em;
+  font-weight: 300;
+  z-index: 1;
+  background-image: url("./img/led-grid.png");
+  background-size: cover;
+}
+
+.signup__slot > div > h3 {
+  font-size: 2.45em;
+  font-weight: bold;
+  min-width: 80%;
+  max-width: 80%;
+  text-align: left;
+  color: #f4f4f4;
+}
+
+.signup-input {
+  background-color: rgb(53, 51, 51);
+  border: none;
+  padding: 2.5%;
+  margin-bottom: 1.5%;
+  width: 50%;
+  z-index: 100;
+  color: #fff;
+  font-size: 175%;
+  font-weight: 200;
+  transition: 0.5s;
+  border-radius: 4.5px;
+}
+.signup-input.auth-name {
+  width: 37.5%;
+}
+.signup-input.auth-name:nth-child(1) {
+  margin-right: 1%;
+}
+.signup-input:focus {
+  background-color: rgb(16, 16, 16);
+}
+
+.signup-button {
+  border: 1px solid transparent;
+  background-color: rgb(53, 51, 51);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+  width: 30%;
+  transition: 0.25s ease;
+}
+.signup-button:hover {
+  border: 1px solid transparent;
+  color: #79D9FF;
+  transition: 0.5s ease;
+}
+.signup-button:active {
+  transform: scale(0.95);
+  background-color: #45758C;
+}
+
+.signup-input-fullname {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+  max-width: 63.75%;
+}
+
+.packs-container {
+  position: absolute;
+  margin-left: 20%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  min-height: 100vh;
+  width: 60%;
+}
+
+.back_button {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.back_button h3 {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 2% 2%;
+  font-size: 1em;
+  font-weight: 300;
+  z-index: -1;
+  background-image: url("./img/led-grid.png");
+  background-size: cover;
+}
+.back_button > div > h3 {
+  font-size: 2em;
+  font-weight: bold;
+  min-width: 20%;
+  max-width: 20%;
+  text-align: left;
+  color: #bbbbbb;
+  transition: 0.5s ease;
+}
+.back_button > div > h3:hover {
+  color: #f4f4f4;
+  transition: 0.5s ease;
+}
+
+.charCard {
+  margin: 4px;
+  transform: scale(1);
+  perspective: 600px;
+  cursor: pointer;
+  background-color: rgb(109, 109, 109);
+  width: 275px;
+  height: 375px;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  text-transform: uppercase;
+  transform-origin: top center;
+}
+.charCard:hover {
+  z-index: 10;
+  transform: scale(1.5);
+  outline: 1px solid rgba(0, 0, 0, 0.103);
+  transition: 0.5s ease;
+}
+.charCard .charCard-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.584);
+}
+.charCard .charCard-image {
+  height: 305px;
+  width: 275px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 5%;
+  filter: grayscale(100%);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.584);
+}
+.charCard .charCard-text {
+  align-self: flex-start;
+  margin-left: 2.5%;
+  font-size: smaller;
+  cursor: default;
+}
+.charCard .charCard-name {
+  font-size: small;
+  margin-top: 2%;
+  margin-bottom: 0.75%;
+}
+.charCard .charCard-rarity {
+  font-size: x-small;
+  margin-top: 2%;
+  margin-bottom: 0.75%;
+  font-weight: 200;
+}
+.charCard .charCard-id {
+  font-size: x-small;
+  margin-top: 2%;
+  margin-bottom: 0.75%;
+  text-transform: none;
+  font-weight: 200;
+}
+
+.bronze {
+  background-color: #cd7f32;
+}
+
+.silver {
+  background-color: rgb(175, 174, 171);
+}
+
+.gold {
+  background-color: rgb(214, 172, 110);
+}
+
+.holo {
+  background-image: linear-gradient(90deg, rgb(194, 255, 182), rgb(255, 163, 182), rgb(221, 169, 255), rgb(162, 209, 255));
+  background-size: 400% 400%;
+  -webkit-animation: gradient 20s ease infinite;
+          animation: gradient 20s ease infinite;
+}
+
+.unopened {
+  background-color: rgb(8, 8, 8);
+  cursor: pointer;
+}
+.unopened .charCard-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(8, 8, 8);
+  visibility: hidden;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.listing-information {
+  position: absolute;
+  text-align: center;
+  font-family: "Ubuntu Mono", monospace;
+  z-index: 15;
+  top: 61%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.88);
+}
+
+.card-cost {
+  width: 15vw;
+  font-size: 3.5vh;
+}
+
+.seller-name {
+  font-size: 1.25vh;
+  margin-bottom: 2%;
+}
+.seller-name b {
+  font-size: 1.5vh;
+}
+
+.locked b {
+  text-decoration: line-through;
+  color: rgb(231, 106, 106);
+}
+
+.qrcode {
+  position: absolute;
+  filter: opacity(0.3);
+  top: 77.5%;
+  left: 67.5%;
+  transition: 0.5s ease;
+  transform: scale(55%);
+}
+.qrcode:hover {
+  filter: opacity(90%);
+  transition: 0.5s ease;
+}
+
+.back_button {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.back_button h3 {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  color: #45758C;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 2% 2%;
+  font-size: 1em;
+  font-weight: 300;
+  z-index: -1;
+  background-image: url("./img/led-grid.png");
+  background-size: cover;
+}
+.back_button > div > h3 {
+  font-size: 2em;
+  font-weight: bold;
+  min-width: 20%;
+  max-width: 20%;
+  text-align: left;
+  color: #bbbbbb;
+  transition: 0.5s ease;
+}
+.back_button > div > h3:hover {
+  color: #f4f4f4;
+  transition: 0.5s ease;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.406);
+  z-index: 100;
+  transition: 1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  z-index: 1000;
+  background-color: white;
+}
+
+.openedCards-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  min-height: 100vh;
+  width: 70%;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-evenly;
+  align-items: space-around;
+  position: absolute;
+  cursor: pointer;
+  background-color: rgba(45, 51, 61, 0.8);
+  background-image: url("./img/led-grid.png");
+  color: #bbbbbb;
+  border: none;
+  transition: 0.5s;
+  padding: 3% 4%;
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-top: 45%;
+}
+.button.openPacks {
+  margin-left: 72.5%;
+}
+.button.goToDeck {
+  margin-left: -72.5%;
+}
+.button:hover {
+  color: #f4f4f4;
+  transition: 0.5s ease;
+}
+
+.displayCards-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.yourCards-container {
+  margin-top: 6%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  width: 70%;
+  z-index: 99;
+}
+
+.back_button-yc {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 98;
+  top: -0.5vh;
+  left: 0vw;
+}
+.back_button-yc h3 {
+  text-transform: uppercase;
+  position: fixed;
+  text-align: center;
+  color: #45758C;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 2% 2%;
+  font-size: 1em;
+  font-weight: 300;
+  z-index: -1;
+  background-image: url("./img/led-grid.png");
+  background-size: cover;
+}
+.back_button-yc > div > h3 {
+  font-size: 2em;
+  font-weight: bold;
+  min-width: 20%;
+  max-width: 20%;
+  text-align: left;
+  color: #bbbbbb;
+  transition: 0.5s ease;
+}
+.back_button-yc > div > h3:hover {
+  color: #f4f4f4;
+  transition: 0.5s ease;
+}
+
+.yourCards-filter-container {
+  position: fixed;
+  z-index: 200;
+  margin-top: -0.5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgba(138, 138, 138, 0.747);
+  top: 5%;
+  background-color: transparent;
+  transition: 0.5s ease;
+  padding-left: 3.25%;
+  margin-left: 10%;
+  font-family: "Ubuntu Mono", monospace;
+}
+.yourCards-filter-container:hover {
+  background-color: rgba(35, 35, 35, 0.898);
+  transition: 0.5s ease;
+  border-radius: 10px;
+  color: rgba(168, 168, 168, 0.747);
+}
+
+.yourCards-tab {
+  align-self: center;
+  justify-self: center;
+  font-size: 140%;
+  transition: 0.5s ease;
+  margin-right: 7.5%;
+}
+.yourCards-tab:hover {
+  cursor: pointer;
+  color: rgb(209, 209, 209);
+}
+.yourCards-tab:active {
+  color: rgb(87, 87, 87);
+}
+
+.selected {
+  color: #fff;
+}
+
+.count-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 15%;
+  left: 10%;
+  align-items: center;
+  transition: 0.5 ease;
+  color: rgba(102, 102, 102, 0.747);
+}
+.count-container:hover {
+  color: rgba(148, 148, 148, 0.747);
+  background-color: rgba(35, 35, 35, 0.898);
+  transition: 0.5 ease;
+}
+.count-container:nth-child(1) {
+  margin-bottom: -5%;
+}
+
+.yourCards-Cards-Count {
+  text-transform: uppercase;
+  align-self: center;
+  justify-self: center;
+  height: 5vh;
+  font-size: 110%;
+  transition: 0.5s ease;
+  padding-top: 0.75%;
+}
+.yourCards-Cards-Count:nth-of-type(1) {
+  margin-bottom: -32.75%;
+}
+.yourCards-Cards-Count b {
+  margin-left: 5%;
+  color: rgba(213, 213, 213, 0.857);
+}
+
+.search-input {
+  background-color: rgba(54, 54, 54, 0.709);
+  border: none;
+  border-radius: 6px;
+  font-size: larger;
+  margin-left: 5%;
+  color: #fff;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 1.5%;
+  padding-right: -2%;
+  transition: 0.5s ease;
+}
+.search-input:focus {
+  transition: 0.5s ease;
+  background-color: rgba(35, 35, 35, 0.898);
+}
+
+.yourCards-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(56, 55, 55, 0.406);
+  transition: 1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardsource {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+.yourCards-source-container {
+  position: fixed;
+  z-index: 201;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(102, 102, 102, 0.747);
+  top: 2.5%;
+  left: 43%;
+  background-color: transparent;
+  padding-left: 1.25%;
+  padding-right: 1.25%;
+  font-family: "Ubuntu Mono", monospace;
+}
+.yourCards-source-container:hover {
+  background-color: rgba(35, 35, 35, 0.898);
+  transition: 0.5s ease;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.747);
+}
+
+.yourCards-source-tab {
+  text-transform: uppercase;
+  align-self: center;
+  justify-self: center;
+  font-size: 165%;
+  transition: 0.5s ease;
+  padding-top: 2.75%;
+  padding-bottom: 2.75%;
+}
+.yourCards-source-tab:hover {
+  cursor: pointer;
+}
+.yourCards-source-tab:active {
+  color: rgb(87, 87, 87);
+}
+
+.source-selected {
+  color: rgb(196, 127, 127);
+}
+
+.list-choice {
+  width: 45vw;
+  margin: 1em auto;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: larger;
+}
+
+.list-choice input[type=radio] {
+  position: absolute;
+  left: -9999px;
+}
+
+.list-choice-title {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 0.55em 0.5em;
+  box-sizing: border-box;
+  color: rgba(127, 126, 126, 0.747);
+  border-radius: 0.2em;
+}
+
+.list-choice:hover .list-choice-title {
+  border-radius: 0.2em 0.2em 0 0;
+}
+
+.list-choice-objects label:nth-last-of-type(1) span {
+  border-radius: 0 0 0.2em 0.2em;
+}
+
+.list-choice input[type=radio] + span {
+  color: rgba(102, 102, 102, 0.747);
+  background-color: rgba(35, 35, 35, 0.99);
+  padding: 0.55em 1em;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 100%;
+}
+
+.list-choice-objects {
+  position: absolute;
+  top: 0;
+  padding-top: 2.1em;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.5s ease;
+}
+
+.list-choice:hover .list-choice-objects input[type=radio] + span {
+  position: relative;
+  top: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.list-choice:hover input[type=radio] + span:hover {
+  background: #BBB;
+}
+
+.list-choice:hover input[type=radio]:checked + span:hover {
+  background: #202121;
+}
+
+.list-choice input[type=radio]:checked + span {
+  background-color: rgba(54, 54, 54, 0.85);
+  color: rgba(255, 255, 255, 0.74);
+  position: absolute;
+  top: 0em;
+  border-radius: 0.2em;
+}
+
+.list-choice:hover input[type=radio]:checked + span {
+  border-radius: 0;
+}
+
+.list-choice:hover .list-choice-objects label:nth-last-of-type(1) input[type=radio]:checked + span {
+  border-radius: 0 0 0.2em 0.2em;
+}
+
+.list-choice:hover .list-choice-objects {
+  max-height: 540px;
+}
+
+#bg-video {
+  position: fixed;
+  overflow: hidden;
+  height: auto;
+  width: 120%;
+  height: 120%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  margin-top: -7.5%;
+}
+
+#video-overlay {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(45, 51, 61, 0.5);
+  background-image: url("./img/gridiron.png");
+  background-size: cover;
+}
+
+#menu {
+  width: 93%;
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  margin: 0 auto;
+}
+
+.blackscreen {
+  position: absolute;
+  z-index: 2;
+  background-color: rgb(43, 43, 43);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.menu__slot {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 28%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.menu__slot:hover {
+  background-color: rgb(245, 245, 245);
+}
+.menu__slot:nth-child(1):hover {
+  background-image: linear-gradient(90deg, rgb(197, 249, 186), rgb(253, 195, 207), rgb(236, 210, 254), rgb(189, 218, 248));
+  background-size: 300% 300%;
+  -webkit-animation: gradient 10s ease infinite;
+          animation: gradient 10s ease infinite;
+}
+.menu__slot:nth-child(2):hover {
+  background-image: linear-gradient(90deg, rgb(236, 210, 254), rgb(189, 218, 248), rgb(197, 249, 186), rgb(253, 195, 207));
+  background-size: 300% 300%;
+  -webkit-animation: gradient 7.5s ease infinite;
+          animation: gradient 7.5s ease infinite;
+}
+.menu__slot:nth-child(3):hover {
+  background-image: linear-gradient(90deg, rgb(197, 249, 186), rgb(189, 218, 248), rgb(236, 210, 254), rgb(253, 195, 207));
+  background-size: 300% 300%;
+  -webkit-animation: gradient 7.5s ease infinite;
+          animation: gradient 7.5s ease infinite;
+}
+.menu__slot:nth-child(4):hover {
+  background-image: linear-gradient(90deg, rgb(253, 195, 207), rgb(197, 249, 186), rgb(236, 210, 254), rgb(189, 218, 248));
+  background-size: 300% 300%;
+  -webkit-animation: gradient 7.5s ease infinite;
+          animation: gradient 7.5s ease infinite;
+}
+.menu__slot:nth-child(5):hover {
+  background-image: linear-gradient(90deg, rgb(189, 218, 248), rgb(253, 195, 207), rgb(197, 249, 186), rgb(236, 210, 254));
+  background-size: 300% 300%;
+  -webkit-animation: gradient 7.5s ease infinite;
+          animation: gradient 7.5s ease infinite;
+}
+
+.slot-item-1 {
+  margin-top: 45vh;
+}
+
+.slot-item-2 {
+  margin-top: 25vh;
+}
+
+.slot-item-3 {
+  margin-top: 42vh;
+}
+
+.slot-item-4 {
+  margin-top: 60vh;
+}
+
+.slot-item-5 {
+  margin-top: 42vh;
+}
+
+.slot-item-one {
+  margin-top: 15vh;
+}
+
+.slot-item-two {
+  margin-top: 30vh;
+}
+
+.slot-item-three {
+  margin-top: 45vh;
+}
+
+.slot-item-four {
+  margin-top: 60vh;
+}
+
+.slot-item-five {
+  margin-top: 75vh;
+}
+
+.menu__slot:hover div.blackscreen {
+  animation: fadeOut 0.5s ease-in reverse;
+}
+
+.menu__slot:hover,
+.menu__slot:hover div[class^=slot-item-] {
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 18vh;
+  flex-basis: 37vw;
+  justify-content: center;
+  transition: flex-basis 100ms ease-in-out;
+}
+
+.menu__slot:hover div.char {
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.5);
+  transition: transform 10s ease-in;
+}
+
+.menu__slot:hover .turing {
+  background-image: url("./img/menu/turing.png");
+  background-position: 40% -100px;
+}
+
+.menu__slot:hover .hopper {
+  background-image: url("./img/menu/hopper.png");
+  background-position: 50% 20px;
+}
+
+.menu__slot:hover .larry {
+  background-image: url("./img/menu/larry.png");
+  background-position: 40% 10px;
+}
+
+.menu__slot:hover .hamilton {
+  background-image: url("./img/menu/hamilton.png");
+  background-position: 50% 0px;
+}
+
+.menu__slot:hover .tukey {
+  background-image: url("./img/menu/tukey.png");
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .zuckerberg {
+  background-image: url("./img/menu/zuckerberg.png");
+  background-position: 57.5% -30px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .borg {
+  background-image: url("./img/menu/borg.png");
+  background-position: 40% -100px;
+}
+
+.menu__slot:hover .vitalik {
+  background-image: url("./img/menu/vitalik.png");
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .lamarr {
+  background-image: url("./img/menu/lamarr.png");
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .jobs {
+  background-image: url("./img/menu/jobs.png");
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .vanrossum {
+  background-image: url("./img/menu/vanrossum.png");
+  background-position: 50% 0px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .matsumoto {
+  background-image: url("./img/menu/matsumoto.png");
+  background-position: 45% -70px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .kjohnson {
+  background-image: url("./img/menu/kjohnson.png");
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .reddy {
+  background-image: url("./img/menu/reddy.png");
+  background-position: 47.5% -50px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .tommy {
+  background-image: url("./img/menu/tommyflowersclear.png");
+  background-position: 55% -60px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .annie {
+  background-image: url("./img/menu/annie.png");
+  background-position: 70% -40px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .clarence {
+  background-image: url("./img/menu/clarence.png");
+  background-position: 70% -40px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .guido {
+  background-image: url("./img/menu/guido.png");
+  background-position: 70% -40px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .miguel {
+  background-image: url("./img/menu/miguel.png");
+  background-position: 25% -10px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .andrew {
+  background-image: url("./img/menu/andrewngclear.png");
+  background-position: 60% -70px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .claude {
+  background-image: url("./img/menu/clearclaude.png");
+  background-position: 50% -70px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .shafi {
+  background-image: url("./img/menu/clearshafi.png");
+  background-position: 60% -70px;
+  filter: grayscale(100%);
+}
+
+.char {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.menu__slot h3 {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  color: #bbbbbb;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 3.6% 5%;
+  font-size: 2em;
+  font-weight: 300;
+  z-index: 1;
+  background-image: url("./img/led-grid.png");
+  background-size: cover;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.menu__slot:hover > div > h3 {
+  font-size: 2.45em;
+  font-weight: bold;
+  min-width: 80%;
+  max-width: 80%;
+  text-align: left;
+  color: #f4f4f4;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.menu__slot:active > div > h3 {
+  color: rgb(45, 46, 45);
+  transition: 0.25s ease;
+}
+
+.menu__slot p {
+  opacity: 0;
+  position: relative;
+  z-index: 1;
+  line-height: 1.5em;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 110%;
+  text-shadow: 0 2px 5px rgb(0, 0, 0);
+}
+
+.menu__slot:hover > div > p {
+  opacity: 1;
+  padding: 0 8% 0 8%;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.573);
+  z-index: 100;
+  transition: 1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  z-index: 1000;
+  background-color: white;
+}
+
+.cardInformation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: -5%;
+}
+
+.selectedCard {
+  transform: scale(1.75);
+}
+.selectedCard :hover {
+  transform: scale(1);
+}
+
+.market-information-container {
+  margin-left: -25%;
+  width: 27vw;
+  height: 38.125vh;
+  background-color: rgb(81, 81, 81);
+  transform: scale(1.75);
+  perspective: 600px;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-title {
+  align-self: center;
+  color: rgb(30, 30, 30);
+  color: rgb(40, 40, 40);
+  text-transform: uppercase;
+  font-size: large;
+  margin-bottom: 0.5%;
+}
+.history-title b {
+  color: rgb(175, 175, 175);
+}
+
+.history-summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: rgb(30, 30, 30);
+  text-transform: uppercase;
+  font-size: 70%;
+  font-weight: 400;
+  border-top: 2px solid rgb(40, 40, 40);
+  margin-top: 0.25%;
+  margin-bottom: 0.25%;
+}
+.history-summary b {
+  color: rgb(175, 175, 175);
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  height: 62%;
+  width: 100%;
+  background-color: rgb(29, 29, 29);
+  color: rgb(56, 56, 56);
+  text-transform: uppercase;
+}
+
+.tx-graph {
+  overflow-x: hidden;
+  margin-left: -32.5%;
+}
+
+.history-tabs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  background-color: rgb(47, 47, 47);
+}
+
+.history-tab {
+  align-self: center;
+  justify-self: center;
+  height: 2vh;
+  font-size: 60%;
+  transition: 0.5s ease;
+  padding-top: 0.75%;
+  background-color: rgb(47, 47, 47);
+  color: rgb(114, 113, 113);
+}
+.history-tab:hover {
+  cursor: pointer;
+}
+.history-tab:active {
+  color: #111111;
+}
+
+.selected {
+  color: rgba(255, 255, 255, 0.823);
+}
+
+.transaction-row {
+  font-size: 85%;
+  margin-left: 2.5%;
+  font-family: "Ubuntu Mono", monospace !important;
+}
+.transaction-row b {
+  color: rgb(130, 130, 130);
+}
+.transaction-row:nth-of-type(1) {
+  margin-top: 1%;
+}
+
+.button-wrapper {
+  margin-top: 0.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cardInformation-button {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  background-color: rgba(28, 28, 28, 0.8);
+  color: #bbbbbb;
+  border: none;
+  transition: 0.5s;
+  font-family: "Ubuntu Mono", monospace;
+  text-transform: uppercase;
+  padding: 3% 4%;
+  font-size: 1.75vh;
+  font-weight: 300;
+}
+.cardInformation-button:hover {
+  color: #f4f4f4;
+  transition: 0.5s ease;
+}
+
+.saleprice-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+  cursor: pointer;
+  background-color: rgba(28, 28, 28, 0.8);
+  color: #bbbbbb;
+  border: none;
+  transition: 0.5s;
+  font-family: "Ubuntu Mono", monospace;
+  text-transform: uppercase;
+  padding: 3% 4%;
+  font-weight: 300;
+  text-align: center;
+}
+.saleprice-input:hover {
+  color: #f4f4f4;
+  transition: 0.5s ease;
+}
+.saleprice-input::-moz-placeholder {
+  text-align: center;
+}
+.saleprice-input:-ms-input-placeholder {
+  text-align: center;
+}
+.saleprice-input::placeholder {
+  text-align: center;
+}
+
+.qrcode-info {
+  position: absolute;
+  filter: opacity(0.3);
+  top: 77.5%;
+  left: 67.5%;
+  transition: 0.5s ease;
+  transform: scale(55%);
+}
+.qrcode-info:hover {
+  filter: opacity(90%);
+  transition: 0.5s ease;
+  transform: scale(55%);
+}
+
+.pack {
+  margin: 4px;
+  transform: scale(1);
+  perspective: 600px;
+  cursor: pointer;
+  background-color: rgb(109, 109, 109);
+  width: 325px;
+  height: 435px;
+  border-radius: 10px;
+  transition: 0.5s ease;
+  font-family: "Ubuntu Mono", monospace;
+}
+.pack:hover {
+  z-index: 10;
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}
+.pack:active {
+  z-index: 10;
+  transform: scale(0.95) !important;
+  transition: 0.5s ease;
+}
+
+.booster {
+  background-color: rgb(49, 69, 116);
+}
+
+.regular {
+  background-color: #cd7f32;
+}
+
+.pro {
+  background-color: rgb(175, 174, 171);
+}
+
+.max {
+  background-color: rgb(214, 172, 110);
+}
+
+.ultra {
+  background-color: rgb(110, 207, 214);
+}
+
+.studio {
+  background-color: rgb(172, 110, 214);
+}
+
+.buy-more {
+  background-color: rgb(104, 178, 135);
+}
+
+.pack-info-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.pack-count {
+  font-size: 13.5vh;
+  margin-bottom: 7.5vh;
+  margin-top: 4.75vh;
+  font-weight: bold;
+  transition: 0.5s ease;
+  z-index: 10;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.pack-title {
+  font-size: 2.75vh;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.384);
+}
+
+.top {
+  margin-top: 2.5%;
+  margin-bottom: 7.5%;
+}
+
+.bottom {
+  margin-top: 7.5%;
+}
+
+.inverse {
+  transform: scale(-1, -1);
+}
+
+.booster-text {
+  color: rgb(2, 28, 88);
+  text-transform: uppercase;
+}
+
+.regular-text {
+  color: #b05901;
+  text-transform: uppercase;
+}
+
+.pro-text {
+  color: rgb(131, 130, 127);
+  text-transform: uppercase;
+}
+
+.max-text {
+  color: rgb(155, 117, 3);
+  text-transform: uppercase;
+}
+
+.ultra-text {
+  color: rgb(1, 149, 159);
+  text-transform: uppercase;
+}
+
+.studio-text {
+  color: rgb(108, 8, 175);
+  text-transform: uppercase;
+}
+
+.buy-more-text {
+  color: rgb(9, 133, 61);
+  text-transform: uppercase;
+}
+
+.pack-logo {
+  height: 30vh;
+  filter: opacity(0.25);
+  margin-top: 0%;
+  position: absolute;
+}
+
+.pack-information {
+  position: absolute;
+  text-align: center;
+  font-family: "Ubuntu Mono", monospace;
+  z-index: 15;
+  top: 63%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.88);
+}
+
+.pack-cost {
+  width: 18vw;
+  font-size: 4.5vh;
+}
+.pack-cost:active {
+  color: #606060;
+}
+
+.locked b {
+  text-decoration: line-through;
+  color: rgb(231, 106, 106);
+}
+
+.lower {
+  margin-bottom: 1.75vh;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -10,8 +1885,6 @@ body {
       -ms-user-select: none;
           user-select: none;
 }
-
 body::-webkit-scrollbar {
   display: none;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

@@ -1,10 +1,7 @@
-import './Collection.css';
-import React, { useState, useEffect } from 'react';
-import { Route, Routes, useNavigate } from "react-router-dom";
-import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
-
-export default function Collection({signedIn }) {
+export default function Collection({ signedIn }) {
   document.title = 'Pocket Pros - Collection';
 
   let navigate = useNavigate();
@@ -15,11 +12,11 @@ export default function Collection({signedIn }) {
     }
   }, [])
 
-  function handleOpenPacksClick(){
+  function handleOpenPacksClick() {
     navigate('/openpacks');
   }
 
-  function handleYourCardsClick(){
+  function handleYourCardsClick() {
     navigate('/cards');
   }
 
@@ -43,7 +40,7 @@ export default function Collection({signedIn }) {
             <p>Open any available packs to unlock more cards.</p>
           </div>
         </div>
-        <div className="menu__slot" onClick={()=>navigate('/')}>
+        <div className="menu__slot" onClick={() => navigate('/')}>
           <div className="blackscreen"></div>
           <div className="char larry"></div>
           <div className="slot-item-3">

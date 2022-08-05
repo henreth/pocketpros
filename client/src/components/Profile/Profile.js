@@ -1,28 +1,27 @@
 import './Profile.css';
-import React, { useState, useEffect } from 'react';
-import { Route, Routes, useNavigate } from "react-router-dom";
-import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 
-export default function Profile({signedIn,setSignedIn,handleLogOut}) {
+export default function Profile({ signedIn }) {
   document.title = 'Pocket Pros - Profile';
 
   let navigate = useNavigate();
 
-  function handleBackClick(){
+  function handleBackClick() {
     navigate('/');
   }
 
-  useEffect(()=>{
-    if (signedIn==false){
+  useEffect(() => {
+    if (signedIn == false) {
       navigate('/');
     }
-  },[])
+  }, [])
 
   return (
     <React.Fragment>
       <div id="menu">
-        <div className="menu__slot" onClick={()=>{navigate('/edit')}}>
+        <div className="menu__slot" onClick={() => { navigate('/edit') }}>
           <div className="blackscreen"></div>
           <div className="char andrew"></div>
           <div className="slot-item-1">
@@ -30,7 +29,7 @@ export default function Profile({signedIn,setSignedIn,handleLogOut}) {
             <p></p>
           </div>
         </div>
-        <div className="menu__slot" onClick={()=>{navigate('/logout')}}>
+        <div className="menu__slot" onClick={() => { navigate('/logout') }}>
           <div className="blackscreen"></div>
           <div className="char claude"></div>
           <div className="slot-item-2">
@@ -46,7 +45,6 @@ export default function Profile({signedIn,setSignedIn,handleLogOut}) {
             <p></p>
           </div>
         </div>
-
       </div>
     </React.Fragment>
   );

@@ -1,15 +1,11 @@
-import './OpenPacks.css';
-import React, { useState, useEffect } from 'react';
-import { Route, Routes, useNavigate } from "react-router-dom";
-import axios from 'axios';
-
+import React, { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import Modal from "./Modal/Modal";
 
 import Pack from '../../PackToOpen/PackToOpen';
-import buyIcon from '../../PackToOpen/img/bwbuyicon.png'
 
 
-export default function OpenPacks({ userCredits, user, setUser, setUserCards, userPacks, setUserPacks, signedIn, openedCards, setOpenedCards,showModal, setShowModal, handleBuyPackClick, handleOpenPackClick }) {
+export default function OpenPacks({ userCredits, user, setUser, userPacks, setUserPacks, signedIn, openedCards, setOpenedCards, showModal, setShowModal, handleBuyPackClick, handleOpenPackClick }) {
     document.title = 'Pocket Pros - Open Packs';
 
     let packTypes = ["booster", "regular", "pro", "max", "ultra", "studio"]
@@ -23,7 +19,7 @@ export default function OpenPacks({ userCredits, user, setUser, setUserCards, us
 
     let packsToDisplay = packTypes.map(packType => {
         return (
-            userPacks[packType] == 0 ? null : <Pack userCredits={userCredits} buying={false} packType={packType} signedIn={signedIn} user={user} userPacks={userPacks} handleOpenPackClick={handleOpenPackClick} handleBuyPackClick={handleBuyPackClick}/>
+            userPacks[packType] == 0 ? null : <Pack key='packType' userCredits={userCredits} buying={false} packType={packType} signedIn={signedIn} user={user} userPacks={userPacks} handleOpenPackClick={handleOpenPackClick} handleBuyPackClick={handleBuyPackClick} />
         )
     })
 
@@ -31,31 +27,25 @@ export default function OpenPacks({ userCredits, user, setUser, setUserCards, us
         navigate('/buypacks')
     }
 
-    function buyMorePack(){
+    function buyMorePack() {
         return (
             <div className='pack buy-more' onClick={handleBuyPackClick}>
-            <img className='pack-logo' />
-            <div className='pack-info-container'>
-
-                <div className='pack-title top inverse'>POCKET PROGRAMMERS</div>
-
-                <div className='buy-more-text inverse' >BUY MORE</div>
-                <div className={'pack-count buy-more-text'}>+</div>
-
-                <div className='buy-more-text'>BUY MORE</div>
-
-                <div className='pack-title bottom' >POCKET PROGRAMMERS</div>
-
+                <img className='pack-logo' />
+                <div className='pack-info-container'>
+                    <div className='pack-title top inverse'>POCKET PROGRAMMERS</div>
+                    <div className='buy-more-text inverse' >BUY MORE</div>
+                    <div className={'pack-count buy-more-text'}>+</div>
+                    <div className='buy-more-text lower'>BUY MORE</div>
+                    <div className='pack-title bottom' >POCKET PROGRAMMERS</div>
+                </div>
             </div>
-
-        </div>
         )
     }
 
     return (
         <React.Fragment>
             <div className='yourCards-overlay'></div>
-            <div className='yourPacks-container'>
+            <div className='packs-container'>
                 {packsToDisplay}
                 {buyMorePack()}
             </div>

@@ -1,6 +1,5 @@
-import './PackToOpen.css';
-import React, { useState, useEffect } from 'react';
-import { Route, Routes, useNavigate } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 export default function PackToOpen({ userCredits, buying, packType, signedIn, userPacks, handleOpenPackClick, handleBuyPackClick }) {
     const packLogos = require.context('../../img/pack_logos', true);

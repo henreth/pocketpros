@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Routes, useNavigate } from "react-router-dom";
-import axios from 'axios';
-
+import { useNavigate } from "react-router-dom";
 import MarketCard from './MarketCard/MarketCard';
-import '../Collection/YourCards/YourCards.css';
-
 import MarketInformation from './MarketInformation/MarketInformation';
 
 
@@ -36,7 +32,7 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
     setMarketSearchTerm(e.target.value);
   }
 
-  let filteredCards = marketCards.filter(card => card.rarity === marketSelectedRarity || marketSelectedRarity === 'all')
+  let filteredCards = marketCards.filter(card => card.rarity === marketSelectedRarity | marketSelectedRarity === 'all')
     .filter(card => card.character.first_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || card.character.last_name.toLowerCase().includes(marketSearchTerm.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.first_name.toLowerCase()) || marketSearchTerm.toLowerCase().includes(card.character.last_name.toLowerCase()) || marketSearchTerm === '')
     .filter(card => card.user.id === user.id || sourceFilter === false)
     .sort((card1, card2) => {

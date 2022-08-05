@@ -1,8 +1,6 @@
-import './Edit.css';
 import React, { useState, useEffect } from 'react';
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-
 
 export default function Edit({ user, setUser, signedIn }) {
   document.title = 'Pocket Pros - Edit Account Details';
@@ -12,52 +10,52 @@ export default function Edit({ user, setUser, signedIn }) {
     if (signedIn === false) {
       navigate('/');
     }
-  }, [])  
+  }, [])
 
 
-    const [username,setUsername] = useState(signedIn?user.username:null)
-    const [firstName, setFirstName] = useState(signedIn?user.first_name:null)
-    const [lastName, setLastName] = useState(signedIn?user.last_name:null)
+  const [username, setUsername] = useState(signedIn ? user.username : null)
+  const [firstName, setFirstName] = useState(signedIn ? user.first_name : null)
+  const [lastName, setLastName] = useState(signedIn ? user.last_name : null)
 
 
   function handleSubmitChanges(e) {
     e.preventDefault();
     if (username === '') {
-        setUsername(user.username)
+      setUsername(user.username)
     }
 
     if (firstName === '') {
-        setFirstName(user.first_name)
+      setFirstName(user.first_name)
     }
 
     if (lastName === '') {
-        setLastName(user.last_name)
+      setLastName(user.last_name)
     }
 
     let updatedDetails = {
-        "first_name": firstName,
-        "last_name": lastName,
-        username
+      "first_name": firstName,
+      "last_name": lastName,
+      username
     }
 
     axios.patch('/users/' + user.id, updatedDetails)
-        .then(r => {
-            setUser(r.data)
-            alert('Your account has been updated!')
-        })
-        .catch(function (error) {
-            if (error.response) {
-                console.log(error.response.data.errors);
-                let msg ='';
-                error.response.data.errors.map(error=>{msg+=error+'\n'})
-                alert(msg)
-                  } else if (error.request) {
-                console.log(error.request);
-            } else {
-                console.log('Error', error.message);
-            }
-        });
-}
+      .then(r => {
+        setUser(r.data)
+        alert('Your account has been updated!')
+      })
+      .catch(function (error) {
+        if (error.response) {
+          console.log(error.response.data.errors);
+          let msg = '';
+          error.response.data.errors.map(error => { msg += error + '\n' })
+          alert(msg)
+        } else if (error.request) {
+          console.log(error.request);
+        } else {
+          console.log('Error', error.message);
+        }
+      });
+  }
 
 
   return (
@@ -77,7 +75,7 @@ export default function Edit({ user, setUser, signedIn }) {
             <button className='auth-login-button' onClick={handleSubmitChanges} >Submit Changes</button>
           </form>
         </div>
-        <div className="menu__slot" onClick={()=>{navigate('/logout')}}>
+        <div className="menu__slot" onClick={() => { navigate('/logout') }}>
           <div className="blackscreen"></div>
           <div className="char claude"></div>
           <div className="slot-item-2">
@@ -85,14 +83,14 @@ export default function Edit({ user, setUser, signedIn }) {
             <p></p>
           </div>
         </div>
-          <div className="menu__slot" onClick={()=>{navigate('/profile')}}>
-            <div className="blackscreen"></div>
-            <div className="char zuckerberg"></div>
-            <div className="slot-item-3">
-              <h3>Cancel</h3>
-              <p></p>
-            </div>
+        <div className="menu__slot" onClick={() => { navigate('/profile') }}>
+          <div className="blackscreen"></div>
+          <div className="char zuckerberg"></div>
+          <div className="slot-item-3">
+            <h3>Cancel</h3>
+            <p></p>
           </div>
+        </div>
 
 
       </div>

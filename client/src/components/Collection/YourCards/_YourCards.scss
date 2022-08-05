@@ -1,0 +1,345 @@
+@use '../../../styles';
+
+.displayCards-page {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+}
+
+.yourCards-container {
+    margin-top: 6%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    // min-height: 100vh;
+    width: 70%;
+    z-index: 99;
+}
+
+.back_button-yc {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    // margin-top: -307%;
+    z-index: 98;
+    top: -.5vh;
+    left: 0vw;
+
+
+    h3 {
+        text-transform: uppercase;
+        position: fixed;
+        text-align: center;
+        color: #45758C;
+        background-color: rgba(45, 51, 61, 0.8);
+        padding: 2% 2%;
+        font-size: 1em;
+        font-weight: 300;
+        z-index: -1;
+        background-image: url('./img/led-grid.png');
+        background-size: cover;
+    }
+
+    >div>h3 {
+        font-size: 2em;
+        font-weight: bold;
+        min-width: 20%;
+        max-width: 20%;
+        text-align: left;
+        color: #bbbbbb;
+        transition: .5s ease;
+
+
+        &:hover {
+            color: #f4f4f4;
+            transition: .5s ease;
+        }
+
+    }
+
+}
+
+.yourCards-filter-container {
+    position: fixed;
+    z-index: 200;
+    margin-top: -.5%;
+    // margin-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // color: rgba(65, 65, 65, 0.729);
+    color: rgba(138, 138, 138, 0.747);
+    top: 5%;
+    background-color: transparent;
+    transition: .5s ease;
+    padding-left: 3.25%;
+    margin-left: 10%;
+    font-family: 'Ubuntu Mono', monospace;
+
+
+
+    &:hover {
+        background-color: styles.$focusText;
+        transition: .5s ease;
+        border-radius: 10px;
+        color: rgba(168, 168, 168, 0.747);
+
+    }
+}
+
+
+.yourCards-tab {
+    align-self: center;
+    justify-self: center;
+    // height: 5vh;
+    font-size: 140%;
+    transition: .5s ease;
+    // padding-top: .75%;
+    margin-right: 7.5%;
+
+    &:hover {
+        cursor: pointer;
+        color: rgba(209, 209, 209, 1);
+    }
+
+    &:active {
+        color: rgb(87, 87, 87);
+    }
+}
+
+.selected {
+    color: #fff
+}
+
+.count-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 10%;
+    align-items: center;
+    transition: .5 ease;
+    color: styles.$altText;
+
+    &:hover {
+        color: rgba(148, 148, 148, 0.747);
+        background-color: styles.$focusText;
+        transition: .5 ease;
+    }
+
+
+    &:nth-child(1) {
+        // margin-top: -5%;
+        margin-bottom: -5%;
+    }
+}
+
+.yourCards-Cards-Count {
+    text-transform: uppercase;
+    align-self: center;
+    justify-self: center;
+    height: 5vh;
+    font-size: 110%;
+    transition: .5s ease;
+    padding-top: .75%;
+    // margin-right: 7.5%;
+
+    &:nth-of-type(1) {
+        margin-bottom: -32.75%;
+    }
+
+    b {
+        margin-left: 5%;
+        color: rgba(213, 213, 213, 0.857);
+    }
+}
+
+.search-input {
+    background-color: rgba(54, 54, 54, 0.709);
+    border: none;
+    border-radius: 6px;
+    // margin-bottom: 2.75%;
+    font-size: larger;
+    margin-left: 5%;
+    color: #fff;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    padding-left: 1.5%;
+    padding-right: -2%;
+    transition: .5s ease;
+
+    &:focus {
+        transition: .5s ease;
+        background-color: styles.$focusText;
+
+    }
+}
+
+
+.yourCards-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(56, 55, 55, 0.406);
+    transition: 1s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cardsource {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.yourCards-source-container {
+    position: fixed;
+    z-index: 201;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: styles.$altText;
+    top: 2.5%;
+    left: 43%;
+    background-color: transparent;
+    // transition: .5s ease;
+    padding-left: 1.25%;
+    padding-right: 1.25%;
+    // width: 110%;
+    font-family: 'Ubuntu Mono', monospace;
+
+    &:hover {
+        background-color: styles.$focusText;
+        transition: .5s ease;
+        border-radius: 10px;
+        color: rgba(255, 255, 255, 0.747);
+
+    }
+
+}
+
+.yourCards-source-tab {
+    text-transform: uppercase;
+    align-self: center;
+    justify-self: center;
+    font-size: 165%;
+    transition: .5s ease;
+    padding-top: 2.75%;
+    padding-bottom: 2.75%;
+    // width: 130%;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        color: rgb(87, 87, 87);
+    }
+}
+
+.source-selected {
+    color: rgb(196, 127, 127);
+}
+
+
+
+.list-choice {
+    width: 45vw;
+    margin: 1em auto;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+.list-choice input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+.list-choice-title {
+    width: 100%;
+    display: block;
+    // background-color: rgba(35, 35, 35, 0.288);
+    text-align: center;
+    padding: 0.55em .5em;
+    box-sizing: border-box;
+    color: rgba(127, 126, 126, 0.747);
+    border-radius: 0.2em;
+}
+
+.list-choice:hover .list-choice-title {
+    border-radius: 0.2em 0.2em 0 0;
+}
+
+.list-choice-objects label:nth-last-of-type(1) span {
+    border-radius: 0 0 0.2em 0.2em;
+}
+
+.list-choice input[type="radio"]+span {
+    color: styles.$altText;
+    background-color: rgba(35, 35, 35, 0.99);
+    padding: 0.55em 1em;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+}
+
+.list-choice-objects {
+    position: absolute;
+    top: 0;
+    padding-top: 2.1em;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .5s ease;
+}
+
+.list-choice:hover .list-choice-objects input[type="radio"]+span {
+    position: relative;
+    top: 0;
+    transition: all 250ms ease-in-out;
+}
+
+.list-choice:hover input[type="radio"]+span:hover {
+    background: #BBB;
+}
+
+.list-choice:hover input[type="radio"]:checked+span:hover {
+    background: #202121;
+}
+
+.list-choice input[type="radio"]:checked+span {
+    background-color: rgba(54, 54, 54, 0.850);
+    color: rgba(255, 255, 255, 0.74);
+    position: absolute;
+    top: 0em;
+    border-radius: 0.2em;
+}
+
+.list-choice:hover input[type="radio"]:checked+span {
+    border-radius: 0;
+}
+
+.list-choice:hover .list-choice-objects label:nth-last-of-type(1) input[type="radio"]:checked+span {
+    border-radius: 0 0 0.2em 0.2em;
+}
+
+.list-choice:hover .list-choice-objects {
+    max-height: 540px;
+}
+
+

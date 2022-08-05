@@ -1,3 +1,20 @@
+@use './components/About/About';
+@use './components/App/App';
+@use './components/Auth/Auth';
+@use './components/Auth/Edit/Edit';
+@use './components/Auth/LogIn/LogIn';
+@use './components/Auth/LogOut/LogOut';
+@use './components/Auth/SignUp/SignUp';
+@use './components/BuyPacks/BuyPacks';
+@use './components/Card/Card';
+@use './components/Collection/Collection';
+@use './components/Collection/OpenPacks/OpenPacks';
+@use './components/Collection/OpenPacks/Modal/Modal';
+@use './components/Collection/YourCards/YourCards';
+@use './components/Home/Home';
+@use './components/Marketplace/MarketInformation/MarketInformation';
+@use './components/PackToOpen/PackToOpen';
+
 body {
     font-family: sans-serif;
     margin: 0;

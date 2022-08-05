@@ -1,9 +1,7 @@
-import './Home.css';
-import React, { useState, useEffect } from 'react';
-import { Route, Routes, useNavigate } from "react-router-dom";
-import axios from 'axios';
+import React from 'react';
+import { useNavigate } from "react-router-dom";
 
-export default function Home({ handleClick }) {
+export default function Home() {
   document.title = 'Pocket Pros - Home';
 
   let navigate = useNavigate();

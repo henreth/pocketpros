@@ -5,9 +5,6 @@ import me from '../../img/me.jpeg'
 import gitqr from '../../img/githubqr.png';
 import linkedinqr from '../../img/clearlinkedinqr.png';
 
-
-import './About.css'
-
 export default function About({ signedIn }) {
 
     let navigate = useNavigate();

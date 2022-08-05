@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import './MarketInformation.scss'
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import icon from '../../../img/clearpocketpros.png';
 import QrCode from '../../Card/QRCode/QRCode';
-
 import Graph from './Graph/Graph';
 import axios from 'axios';
 import Tilt from 'react-tilt'
-
-
 
 export default function MarketInformation({ selectedCard, setSelectedCard, showModal, setShowModal, user, setUser, users, userCards, setUserCards, marketCards, setMarketCards, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab, setMarketSearchTerm, setMarketSelectedRarity, listedByUser, setListedByUser }) {
     let navigate = useNavigate();
@@ -310,29 +305,29 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
 
     // buttons to display if the card is not owned by the user 
     let buttonsToBuy = <div className='button-wrapper'>
-    {clickedBuy ? <button className='cardInformation-button' onClick={handleClickBuyCard}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickBuyCard}>Buy Card</button>}
-    {clickedBuy ? <button className='cardInformation-button'>Are You Sure?</button> : null}
-    {clickedBuy ? <button className='cardInformation-button' onClick={handleClickConfirmBuy}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
-</div>
+        {clickedBuy ? <button className='cardInformation-button' onClick={handleClickBuyCard}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickBuyCard}>Buy Card</button>}
+        {clickedBuy ? <button className='cardInformation-button'>Are You Sure?</button> : null}
+        {clickedBuy ? <button className='cardInformation-button' onClick={handleClickConfirmBuy}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
+    </div>
 
     // buttons to display if the card is user owned and not listed for sale
     let buttonsToList = <React.Fragment>
-    {clickedList ? <button className='cardInformation-button' onClick={handleClickListForSale}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickListForSale}>List For Sale</button>}
-    {clickedList ? <input className='saleprice-input' type='number' value={listingPrice} onChange={handleChangeListingPrice} min='1' placeholder='Listing Price'></input> : null}
-    {clickedList ? <button className='cardInformation-button' onClick={handleClickConfirmList}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
-</React.Fragment>
+        {clickedList ? <button className='cardInformation-button' onClick={handleClickListForSale}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickListForSale}>List For Sale</button>}
+        {clickedList ? <input className='saleprice-input' type='number' value={listingPrice} onChange={handleChangeListingPrice} min='1' placeholder='Listing Price'></input> : null}
+        {clickedList ? <button className='cardInformation-button' onClick={handleClickConfirmList}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
+    </React.Fragment>
 
     // buttons to display if the card is user owned and is currently listed for sale
     let buttonsToUnList = <React.Fragment>
-    {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Take Off Market</button>}
-    {clickedUnlist ? <button className='cardInformation-button'>Are You Sure?</button> : null}
-    {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickConfirmUnlist}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
-</React.Fragment>
+        {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Cancel</button> : <button className='cardInformation-button' onClick={handleClickTakeOffMarket}>Take Off Market</button>}
+        {clickedUnlist ? <button className='cardInformation-button'>Are You Sure?</button> : null}
+        {clickedUnlist ? <button className='cardInformation-button' onClick={handleClickConfirmUnlist}>Confirm</button> : <button className='cardInformation-button' onClick={clickViewAll}>View All</button>}
+    </React.Fragment>
 
     // buttons to display if the card is owned by the current user
     let userOwnedButtons = <div className='button-wrapper'>
-    {selectedCard.for_sale ? buttonsToUnList : buttonsToList}
-</div>
+        {selectedCard.for_sale ? buttonsToUnList : buttonsToList}
+    </div>
 
     // buttons to display depending on if the card is owned by the user or not
     let buttonstoDisplay = listedByUser ? userOwnedButtons : buttonsToBuy
@@ -341,21 +336,21 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
         <React.Fragment>
             <div className="overlay" >
                 <div className='cardInformation-container'>
-                <Tilt className="Tilt" options={{ max: 50, scale: 1}} >
-                    <div className={cardClass}>
-                        <div className='charCard-info-container' onClick={handleClickCard} >
-                            <img src={charImages('./' + selectedCard.character.image[selectedCard.variant])} className='charCard-image' />
-                            <div className='charCard-text'>
-                            <div className='charCard-rarity'>{selectedCard.character.title[selectedCard.variant]}</div>
-                                <div className='charCard-name'><b>{selectedCard.character.first_name} {selectedCard.character.last_name}</b></div>
-                                <div className='charCard-id'> {selectedCard.unique_id}</div>
+                    <Tilt className="Tilt" options={{ max: 50, scale: 1 }} >
+                        <div className={cardClass}>
+                            <div className='charCard-info-container' onClick={handleClickCard} >
+                                <img src={charImages('./' + selectedCard.character.image[selectedCard.variant])} className='charCard-image' />
+                                <div className='charCard-text'>
+                                    <div className='charCard-rarity'>{selectedCard.character.title[selectedCard.variant]}</div>
+                                    <div className='charCard-name'><b>{selectedCard.character.first_name} {selectedCard.character.last_name}</b></div>
+                                    <div className='charCard-id'> {selectedCard.unique_id}</div>
+                                </div>
+                            </div>
+                            <div className='qrcode-info' onClick={() => window.open(selectedCard.character.link)}>
+                                <QrCode url={selectedCard.character.link} />
                             </div>
                         </div>
-                        <div className='qrcode-info' onClick={()=>window.open(selectedCard.character.link)}>
-                            <QrCode url={selectedCard.character.link} />
-                        </div>
-                    </div>
-                            </Tilt>
+                    </Tilt>
 
 
                     <div className='market-information-container'>

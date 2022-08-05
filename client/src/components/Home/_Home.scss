@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,100;0,700;1,400;1,700&display=swap');
+
+#bg-video {
+  position: fixed;
+  overflow: hidden;
+  height: auto;
+  width: 120%;
+  height: 120%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  margin-top: -7.5%
+}
+
+#video-overlay {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(45, 51, 61, 0.5);
+  background-image: url('./img/gridiron.png');
+  background-size: cover;
+}
+
+#menu {
+  width: 93%;
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  margin: 0 auto;
+}
+
+.blackscreen {
+  position: absolute;
+  z-index: 2;
+  background-color: rgb(43, 43, 43);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.menu__slot {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 28%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+
+  &:hover {
+    background-color: rgb(245, 245, 245);
+  }
+
+  &:nth-child(1):hover {
+    background-image: linear-gradient(90deg,
+        rgb(197, 249, 186),
+        rgb(253, 195, 207),
+        rgb(236, 210, 254),
+        rgb(189, 218, 248));
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
+  }
+
+  &:nth-child(2):hover {
+    background-image: linear-gradient(90deg,
+        rgb(236, 210, 254),
+        rgb(189, 218, 248),
+      rgb(197, 249, 186),
+      rgb(253, 195, 207));
+    background-size: 300% 300%;
+    animation: gradient 7.5s ease infinite;
+  }
+
+  &:nth-child(3):hover {
+    background-image: linear-gradient(90deg,
+        rgb(197, 249, 186),
+        rgb(189, 218, 248),
+      rgb(236, 210, 254),
+      rgb(253, 195, 207));
+    background-size: 300% 300%;
+    animation: gradient 7.5s ease infinite;
+  }
+
+  &:nth-child(4):hover {
+    background-image: linear-gradient(90deg,
+    rgb(253, 195, 207),
+        rgb(197, 249, 186),
+      rgb(236, 210, 254),
+      rgb(189, 218, 248)); 
+      background-size: 300% 300%;
+    animation: gradient 7.5s ease infinite;
+  }
+
+  &:nth-child(5):hover {
+    background-image: linear-gradient(90deg,
+    rgb(189, 218, 248),
+    rgb(253, 195, 207),
+      rgb(197, 249, 186),
+      rgb(236, 210, 254)
+      ); 
+    background-size: 300% 300%;
+    animation: gradient 7.5s ease infinite;
+  }
+
+
+}
+
+
+.slot-item-1 {
+  margin-top: 45vh;
+}
+
+.slot-item-2 {
+  margin-top: 25vh;
+}
+
+.slot-item-3 {
+  margin-top: 42vh;
+}
+
+.slot-item-4 {
+  margin-top: 60vh;
+}
+
+.slot-item-5 {
+  margin-top: 42vh;
+}
+
+
+.slot-item-one {
+  margin-top: 15vh;
+}
+
+.slot-item-two {
+  margin-top: 30vh;
+}
+
+.slot-item-three {
+  margin-top: 45vh;
+}
+
+.slot-item-four {
+  margin-top: 60vh;
+}
+
+.slot-item-five {
+  margin-top: 75vh;
+}
+
+.menu__slot:hover div.blackscreen {
+  animation: fadeOut .5s ease-in reverse;
+}
+
+.menu__slot:hover,
+.menu__slot:hover div[class^="slot-item-"] {
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 18vh;
+  flex-basis: 37vw;
+  justify-content: center;
+  transition: flex-basis 100ms ease-in-out;
+}
+
+.menu__slot:hover div.char {
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.5);
+  transition: transform 10s ease-in;
+}
+
+.menu__slot:hover .turing {
+  background-image: url('./img/menu/turing.png');
+  background-position: 40% -100px;
+
+}
+
+.menu__slot:hover .hopper {
+  background-image: url('./img/menu/hopper.png');
+  background-position: 50% 20px;
+}
+
+.menu__slot:hover .larry {
+  background-image: url('./img/menu/larry.png');
+  background-position: 40% 10px;
+}
+
+.menu__slot:hover .hamilton {
+  background-image: url('./img/menu/hamilton.png');
+  background-position: 50% 0px;
+}
+
+.menu__slot:hover .tukey {
+  background-image: url('./img/menu/tukey.png');
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .zuckerberg {
+  background-image: url('./img/menu/zuckerberg.png');
+  background-position: 57.5% -30px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .borg {
+  background-image: url('./img/menu/borg.png');
+  background-position: 40% -100px;
+}
+
+.menu__slot:hover .vitalik {
+  background-image: url('./img/menu/vitalik.png');
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .lamarr {
+  background-image: url('./img/menu/lamarr.png');
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .jobs {
+  background-image: url('./img/menu/jobs.png');
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .vanrossum {
+  background-image: url('./img/menu/vanrossum.png');
+  background-position: 50% 0px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .matsumoto {
+  background-image: url('./img/menu/matsumoto.png');
+  background-position: 45% -70px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .kjohnson {
+  background-image: url('./img/menu/kjohnson.png');
+  background-position: 40% -50px;
+}
+
+.menu__slot:hover .reddy {
+  background-image: url('./img/menu/reddy.png');
+  background-position: 47.5% -50px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .tommy {
+  background-image: url('./img/menu/tommyflowersclear.png');
+  background-position: 55% -60px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .annie {
+  background-image: url('./img/menu/annie.png');
+  background-position: 70% -40px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .clarence {
+  background-image: url('./img/menu/clarence.png');
+  background-position: 70% -40px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .guido {
+  background-image: url('./img/menu/guido.png');
+  background-position: 70% -40px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .miguel {
+  background-image: url('./img/menu/miguel.png');
+  background-position: 25% -10px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .andrew {
+  background-image: url('./img/menu/andrewngclear.png');
+  background-position: 60% -70px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .claude {
+  background-image: url('./img/menu/clearclaude.png');
+  background-position: 50% -70px;
+  filter: grayscale(100%);
+}
+
+.menu__slot:hover .shafi {
+  background-image: url('./img/menu/clearshafi.png');
+  background-position: 60% -70px;
+  filter: grayscale(100%);
+}
+
+.char {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+
+.menu__slot h3 {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  // color: #45758C;
+  color: #bbbbbb;
+  background-color: rgba(45, 51, 61, 0.8);
+  padding: 3.6% 5%;
+  font-size: 2em;
+  font-weight: 300;
+  z-index: 1;
+  background-image: url('./img/led-grid.png');
+  background-size: cover;
+  font-family: 'Ubuntu Mono', monospace;
+
+}
+
+.menu__slot:hover>div>h3 {
+  font-size: 2.45em;
+  font-weight: bold;
+  min-width: 80%;
+  max-width: 80%;
+  text-align: left;
+  // color: #79D9FF;
+  color: #f4f4f4;
+  font-family: 'Ubuntu Mono', monospace;
+
+}
+.menu__slot:active>div>h3 {
+  color: rgb(45, 46, 45);
+  // color: rgb(86, 198, 86);
+  transition: 0.25s ease;
+
+}
+
+.menu__slot p {
+  opacity: 0;
+  position: relative;
+  z-index: 1;
+  line-height: 1.5em;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 110%;
+  text-shadow: 0 2px 5px rgb(0, 0, 0);
+  // -webkit-text-stroke-width: 2px;
+  // -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.menu__slot:hover>div>p {
+  opacity: 1;
+  padding: 0 8% 0 8%;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

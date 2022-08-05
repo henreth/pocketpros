@@ -1,6 +1,4 @@
-import '../../Card/Card.css';
-import React, { useState } from 'react';
-import icon from '../../../img/clearpocketpros.png';
+import React from 'react';
 import axios from 'axios';
 import QrCode from '../../Card/QRCode/QRCode';
 
@@ -54,15 +52,15 @@ export default function MarketCard({ user, card, setShowModal, userOwned, setLis
                 <div className='seller-name'>👤 <b>{card.user.username} - {dateMsg}</b></div>
             </div>
             <div className='charCard-info-container' onClick={handleClickCard}>
-            <img src={charImages('./'+card.character.image[card.variant])} className='charCard-image' />
+                <img src={charImages('./' + card.character.image[card.variant])} className='charCard-image' />
                 <div className='charCard-text'>
-                <div className='charCard-rarity'>{card.character.title[card.variant]}</div>
+                    <div className='charCard-rarity'>{card.character.title[card.variant]}</div>
                     <div className='charCard-name'><b>{card.character.first_name} {card.character.last_name}</b></div>
                     <div className='charCard-id'> {card.unique_id}</div>
                 </div>
             </div>
-            <div className='qrcode'> 
-                <QrCode url={card.character.link}/>
+            <div className='qrcode'>
+                <QrCode url={card.character.link} />
             </div>
 
         </div>
