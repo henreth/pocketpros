@@ -1,9 +1,12 @@
+@use '../../styles/';
+
+
 .pack {
     margin: 4px;
     transform: scale(1);
     perspective: 600px;
     cursor: pointer;
-    background-color: rgb(109, 109, 109);
+    background-color: styles.$bg;
     width: 325px;
     height: 435px;
     border-radius: 10px;
