@@ -754,9 +754,9 @@
 
 .qrcode {
   position: absolute;
-  filter: opacity(0.25);
-  top: 75.5%;
-  left: 65%;
+  filter: opacity(0.3);
+  top: 77.5%;
+  left: 67.5%;
   transition: 0.5s ease;
   transform: scale(55%);
 }
@@ -1700,9 +1700,9 @@
 
 .qrcode-info {
   position: absolute;
-  filter: opacity(0.25);
-  top: 75.5%;
-  left: 65%;
+  filter: opacity(0.3);
+  top: 77.5%;
+  left: 67.5%;
   transition: 0.5s ease;
   transform: scale(55%);
 }
