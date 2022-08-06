@@ -1615,7 +1615,7 @@
 .history-tab {
   align-self: center;
   justify-self: center;
-  height: 2vh;
+  height: 15px;
   font-size: 60%;
   transition: 0.5s ease;
   padding-top: 0.75%;
@@ -1663,7 +1663,7 @@
   font-family: "Ubuntu Mono", monospace;
   text-transform: uppercase;
   padding: 3% 4%;
-  font-size: 1.75vh;
+  font-size: 13px;
   font-weight: 300;
 }
 .cardInformation-button:hover {
