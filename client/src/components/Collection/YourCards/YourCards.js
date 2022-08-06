@@ -10,7 +10,7 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
   let [selectedCard, setSelectedCard] = useState(userCards[0])
   let [selectedRarity, setSelectedRarity] = useState('all')
   let [searchTerm, setSearchTerm] = useState('');
-  let [sortTerm, setSortTerm] = useState('A-Z')
+  let [sortTerm, setSortTerm] = useState('')
 
   //  * for additional information 
   let [numCardOwners, setNumCardOwners] = useState(0)
@@ -79,14 +79,19 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
     setSortTerm(e.target.value)
   }
 
+  const sortTitleClass = sortTerm !== '' ? "list-choice-title sort-active" : "list-choice-title"
 
+  const sortDefault = sortTerm === '' ? null : <label>
+    <input type="radio" name='month' value='' />
+    <span>Sort</span>
+  </label>;
 
   return (
     <React.Fragment>
       <div className='displayCards-page'>
         <div className='yourCards-overlay'></div>
         <div className='yourCards-source-container'>
-          <div className='yourCards-source-tab' >Your Cards</div>
+          {/* <div className='yourCards-source-tab' >Your Cards</div> */}
         </div>
         <div className='count-container'>
           <div className='yourCards-Cards-Count'>Total:<b>{filteredCards.length}</b></div>
@@ -96,14 +101,15 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
         <div className='yourCards-filter-container'>
           {raritiesToDisplay}
           <div className="list-choice">
-            <div className="list-choice-title">Sort</div>
+            <div className={sortTitleClass} >Sort</div>
             <div className="list-choice-objects" onChange={handleSortChange}>
+              {sortDefault}
               <label>
-                <input type="radio" name='month' value={'1'} />
+                <input type="radio" name='month' value='1' />
                 <span>A-Z</span>
               </label>
               <label>
-                <input type="radio" name='month' value={'2'} />
+                <input type="radio" name='month' value='2' />
                 <span>Z-A</span>
               </label>
             </div>

@@ -8,7 +8,7 @@
 }
 
 .yourCards-container {
-    margin-top: 6%;
+    margin-top: 120px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -78,13 +78,13 @@
     background-color: transparent;
     transition: .5s ease;
     padding-left: 3.25%;
-    margin-left: 10%;
+    margin-left: 25%;
     font-family: 'Ubuntu Mono', monospace;
 
 
 
+    background-color: styles.$focusText;
     &:hover {
-        background-color: styles.$focusText;
         transition: .5s ease;
         border-radius: 10px;
         color: rgba(168, 168, 168, 0.747);
@@ -100,7 +100,7 @@
     font-size: 140%;
     transition: .5s ease;
     // padding-top: .75%;
-    margin-right: 7.5%;
+    margin-right: 4.5%;
 
     &:hover {
         cursor: pointer;
@@ -165,7 +165,7 @@
     border-radius: 6px;
     // margin-bottom: 2.75%;
     font-size: larger;
-    margin-left: 5%;
+    // margin-left: 5%;
     color: #fff;
     padding-top: .5%;
     padding-bottom: .5%;
@@ -217,12 +217,12 @@
     padding-right: 1.25%;
     // width: 110%;
     font-family: 'Ubuntu Mono', monospace;
-
+    color: rgba(255, 255, 255, 0.747);
+    
     &:hover {
         background-color: styles.$focusText;
         transition: .5s ease;
         border-radius: 10px;
-        color: rgba(255, 255, 255, 0.747);
 
     }
 
@@ -254,12 +254,13 @@
 
 
 .list-choice {
-    width: 45vw;
-    margin: 1em auto;
+    width: 300px;
+    margin: 15px;
     position: relative;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: larger;
+    font-size: 140%;
+    margin-right: 4.5%;
 }
 
 .list-choice input[type="radio"] {
@@ -342,4 +343,8 @@
     max-height: 540px;
 }
 
+
+.sort-active {
+    color:transparent;
+}
 

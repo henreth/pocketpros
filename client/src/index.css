@@ -874,7 +874,7 @@
 }
 
 .yourCards-container {
-  margin-top: 6%;
+  margin-top: 120px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -933,11 +933,11 @@
   background-color: transparent;
   transition: 0.5s ease;
   padding-left: 3.25%;
-  margin-left: 10%;
+  margin-left: 25%;
   font-family: "Ubuntu Mono", monospace;
+  background-color: rgba(35, 35, 35, 0.898);
 }
 .yourCards-filter-container:hover {
-  background-color: rgba(35, 35, 35, 0.898);
   transition: 0.5s ease;
   border-radius: 10px;
   color: rgba(168, 168, 168, 0.747);
@@ -948,7 +948,7 @@
   justify-self: center;
   font-size: 140%;
   transition: 0.5s ease;
-  margin-right: 7.5%;
+  margin-right: 4.5%;
 }
 .yourCards-tab:hover {
   cursor: pointer;
@@ -1003,7 +1003,6 @@
   border: none;
   border-radius: 6px;
   font-size: larger;
-  margin-left: 5%;
   color: #fff;
   padding-top: 0.5%;
   padding-bottom: 0.5%;
@@ -1049,12 +1048,12 @@
   padding-left: 1.25%;
   padding-right: 1.25%;
   font-family: "Ubuntu Mono", monospace;
+  color: rgba(255, 255, 255, 0.747);
 }
 .yourCards-source-container:hover {
   background-color: rgba(35, 35, 35, 0.898);
   transition: 0.5s ease;
   border-radius: 10px;
-  color: rgba(255, 255, 255, 0.747);
 }
 
 .yourCards-source-tab {
@@ -1078,12 +1077,13 @@
 }
 
 .list-choice {
-  width: 45vw;
-  margin: 1em auto;
+  width: 300px;
+  margin: 15px;
   position: relative;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: larger;
+  font-size: 140%;
+  margin-right: 4.5%;
 }
 
 .list-choice input[type=radio] {
@@ -1163,6 +1163,10 @@
 
 .list-choice:hover .list-choice-objects {
   max-height: 540px;
+}
+
+.sort-active {
+  color: transparent;
 }
 
 #bg-video {
