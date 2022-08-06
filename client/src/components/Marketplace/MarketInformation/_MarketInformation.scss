@@ -26,14 +26,16 @@
 .cardInformation-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
-    margin-top: -5%;
+    margin-top: 5%;
 }
 
 
 .selectedCard {
-    transform: scale(1.75);
+    transform: scale(1.55);
+    transform-origin: center;
 
     :hover {
         transform: scale(1);
@@ -42,9 +44,8 @@
 
 
 .market-information-container {
-    margin-left: -25%;
-    width: 27vw;
-    height: 38.125vh;
+    width: 425px;
+    height: 335px;
     background-color: rgb(81, 81, 81);
     transform: scale(1.75);
     perspective: 600px;
@@ -52,9 +53,6 @@
     transition: .5s ease;
     display: flex;
     flex-direction: column;
-    // font-family: 'Ubuntu Mono', monospace;
-    // justify-content: center;
-    // align-items: center;
 }
 
 .history-title {
@@ -120,7 +118,7 @@
 .history-tab {
     align-self: center;
     justify-self: center;
-    height: 2vh;
+    height: 15px;
     font-size: 60%;
     transition: .5s ease;
     padding-top: .75%;
@@ -178,7 +176,7 @@
     text-transform: uppercase;
 
     padding: 3% 4%;
-    font-size: 1.75vh;
+    font-size: 13px;
     font-weight: 300;
 
     &:hover {

@@ -122,23 +122,29 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
     }
 
     let cardTransactions = selectedCard.transactions;
-    let date = typeof cardTransactions != 'undefined' ? cardTransactions[0].created_at.slice(0, 10) : ""
+    let date = !cardTransactions ? cardTransactions[0].created_at.slice(0, 10) : ""
     let year = date.slice(0, 4)
     let month = date.slice(5, 7);
     let day = date.slice(8, 10)
-    let toId = typeof cardTransactions != 'undefined' ? cardTransactions[0].to_id : ""
-    let toUsername = typeof cardTransactions != 'undefined' ? users.filter(user => user.id == toId)[0].username : ""
+    let toId = !cardTransactions ? cardTransactions[0].to_id : ""
+    let toUsername = !cardTransactions ? users.filter(user => user.id == toId)[0].username : ""
 
     let transactionsToDisplay = cardTransactions.filter(tx => tx.from_id != null).map(tx => {
-        let date = tx.created_at.slice(0, 10)
-        let year = date.slice(0, 4)
-        let month = date.slice(5, 7);
-        let day = date.slice(8, 10)
-        let toId = tx.to_id
-        let toUsername = users.filter(user => user.id === toId)[0].username
-        let fromId = tx.from_id
-        let fromUsername = users.filter(user => user.id === fromId)[0].username
-        return (<div key={'tx-' + tx.id} className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
+        if (tx.created_at) {
+            let date = tx.created_at.slice(0, 10)
+            let year = date.slice(0, 4)
+            let month = date.slice(5, 7);
+            let day = date.slice(8, 10)
+            let toId = tx.to_id
+            let toUsername = users.filter(user => user.id === toId)[0].username
+            let fromId = tx.from_id
+            let fromUsername = users.filter(user => user.id === fromId)[0].username
+            return (<div key={'tx-' + tx.id} className='transaction-row'>{'>'} <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
+        }
+        else {
+            return (<div key={'tx-' + tx.id} className='transaction-row'>{'>'}ERROR </div>)
+
+        }
     })
 
     let listingsToDisplay = activeListings.map(card => {
@@ -147,7 +153,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
         let month = date.slice(5, 7);
         let day = date.slice(8, 10)
 
-        return (<div key={'listing-' + card.id} className='transaction-row'>> <b>{day}-{month}-{year}</b> - Seller: <b>{card.user.username}</b> - 🪙 <b>{card.sale_price}</b> </div>)
+        return (<div key={'listing-' + card.id} className='transaction-row'>{'>'}<b>{day}-{month}-{year}</b> - Seller: <b>{card.user.username}</b> - 🪙 <b>{card.sale_price}</b> </div>)
     })
 
 
@@ -160,12 +166,12 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
         let toUsername = users.filter(user => user.id === toId)[0].username
         let fromId = tx.from_id
         let fromUsername = users.filter(user => user.id === fromId)[0].username
-        return (<div key={'atx-' + tx.id} className='transaction-row'>> <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
+        return (<div key={'atx-' + tx.id} className='transaction-row'>{'>'} <b>{day}-{month}-{year}</b> - From: <b>{fromUsername}</b> - To: <b>{toUsername}</b> - <b>🪙 {tx.sale_price}</b></div>)
     })
 
     let noResultsFound = () => {
         return (
-            <div className='transaction-row'>> <b>NO RESULTS FOUND</b></div>
+            <div className='transaction-row'>{'>'} <b>NO RESULTS FOUND</b></div>
         )
     }
 
@@ -180,7 +186,7 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
         displayItem = () => {
             return (
                 <React.Fragment>
-                    <div className='transaction-row start'>> <b>{day}-{month}-{year}</b> - Unpacked by: <b>{toUsername}</b></div>
+                    <div className='transaction-row start'>{'>'} <b>{day}-{month}-{year}</b> - Unpacked by: <b>{toUsername}</b></div>
                     {cardTransactions.length != 0 ? transactionsToDisplay : noResultsFound()}
                 </React.Fragment>
             )
