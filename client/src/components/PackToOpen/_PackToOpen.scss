@@ -1,12 +1,13 @@
 @use '../../styles';
+
 .pack {
     margin: 4px;
     transform: scale(1);
     perspective: 600px;
     cursor: pointer;
     background-color: styles.$bg;
-    width: 325px;
-    height: 435px;
+    width: 305px;
+    height: 415px;
     border-radius: 10px;
     transition: .5s ease;
     font-family: 'Ubuntu Mono', monospace;
@@ -65,32 +66,30 @@
 }
 
 .pack-count {
-    font-size: 13.5vh;
-    margin-bottom: 7.5vh;
-    margin-top: 4.75vh;
+    font-size: 125px;
+    margin-bottom: 60px;
+    margin-top: 40px;
     font-weight: bold;
     transition: .5s ease;
-    z-index:10;
     font-family: 'Ubuntu Mono', monospace;
     // color: rgba(60, 60, 60, 0.925) !important;
 }
 
 
 .pack-title {
-    font-size: 2.75vh;
+    font-size: 24px;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.384);
 }
 
 
 .top {
-    margin-top: 2.5%;
-    // transform: scale(-1, -1);
-    margin-bottom: 7.5%;
+    margin-top: 10px;
+    margin-bottom: 35px;
 }
 
 .bottom {
-    margin-top: 7.5%;
+    margin-top: 45px;
 }
 
 
@@ -140,27 +139,27 @@
 }
 
 .pack-logo {
-    height: 30vh;
+    height: 275px;
     filter: opacity(.25);
-    margin-top: 0%;
+    margin-top: 25px;
     position: absolute;
 }
 
-.pack-information{
+.pack-information {
     position: absolute;
     text-align: center;
     font-family: 'Ubuntu Mono', monospace;
     z-index: 15;
     top: 63%;
     color: #fff;
-    display:flex;
+    display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.88);
 }
 
 
 .pack-cost {
-    width: 18vw;
+    width: 325px;
     font-size: 4.5vh;
 
     &:active {
@@ -178,5 +177,5 @@
 }
 
 .lower {
-    margin-bottom: 1.75vh;
+    margin-bottom: 10px;
 }

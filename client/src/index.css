@@ -576,14 +576,15 @@
 }
 
 .packs-container {
+  margin-top: 1.5%;
   position: absolute;
-  margin-left: 20%;
+  margin-left: 10%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   align-content: space-evenly;
   min-height: 100vh;
-  width: 60%;
+  width: 80%;
 }
 
 .back_button {
@@ -736,7 +737,7 @@
 }
 
 .card-cost {
-  width: 15vw;
+  width: 275px;
   font-size: 3.5vh;
 }
 
@@ -1533,22 +1534,23 @@
 .cardInformation-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
-  margin-top: -5%;
+  margin-top: 5%;
 }
 
 .selectedCard {
-  transform: scale(1.75);
+  transform: scale(1.55);
+  transform-origin: center;
 }
 .selectedCard :hover {
   transform: scale(1);
 }
 
 .market-information-container {
-  margin-left: -25%;
-  width: 27vw;
-  height: 38.125vh;
+  width: 425px;
+  height: 335px;
   background-color: rgb(81, 81, 81);
   transform: scale(1.75);
   perspective: 600px;
@@ -1719,8 +1721,8 @@
   perspective: 600px;
   cursor: pointer;
   background-color: rgb(109, 109, 109);
-  width: 325px;
-  height: 435px;
+  width: 305px;
+  height: 415px;
   border-radius: 10px;
   transition: 0.5s ease;
   font-family: "Ubuntu Mono", monospace;
@@ -1774,28 +1776,27 @@
 }
 
 .pack-count {
-  font-size: 13.5vh;
-  margin-bottom: 7.5vh;
-  margin-top: 4.75vh;
+  font-size: 125px;
+  margin-bottom: 60px;
+  margin-top: 40px;
   font-weight: bold;
   transition: 0.5s ease;
-  z-index: 10;
   font-family: "Ubuntu Mono", monospace;
 }
 
 .pack-title {
-  font-size: 2.75vh;
+  font-size: 24px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.384);
 }
 
 .top {
-  margin-top: 2.5%;
-  margin-bottom: 7.5%;
+  margin-top: 10px;
+  margin-bottom: 35px;
 }
 
 .bottom {
-  margin-top: 7.5%;
+  margin-top: 45px;
 }
 
 .inverse {
@@ -1838,9 +1839,9 @@
 }
 
 .pack-logo {
-  height: 30vh;
+  height: 275px;
   filter: opacity(0.25);
-  margin-top: 0%;
+  margin-top: 25px;
   position: absolute;
 }
 
@@ -1857,7 +1858,7 @@
 }
 
 .pack-cost {
-  width: 18vw;
+  width: 325px;
   font-size: 4.5vh;
 }
 .pack-cost:active {
@@ -1870,7 +1871,7 @@
 }
 
 .lower {
-  margin-bottom: 1.75vh;
+  margin-bottom: 10px;
 }
 
 body {
