@@ -253,22 +253,22 @@
 
 
 
-.list-choice {
-    width: 300px;
+.sort-choice {
+    width: 315px;
     margin: 15px;
     position: relative;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 140%;
+    font-size: 23px;
     margin-right: 4.5%;
 }
 
-.list-choice input[type="radio"] {
+.sort-choice input[type="radio"] {
     position: absolute;
     left: -9999px;
 }
 
-.list-choice-title {
+.sort-choice-title {
     width: 100%;
     display: block;
     // background-color: rgba(35, 35, 35, 0.288);
@@ -279,18 +279,18 @@
     border-radius: 0.2em;
 }
 
-.list-choice:hover .list-choice-title {
+.sort-choice:hover .sort-choice-title {
     border-radius: 0.2em 0.2em 0 0;
 }
 
-.list-choice-objects label:nth-last-of-type(1) span {
+.sort-choice-objects label:nth-last-of-type(1) span {
     border-radius: 0 0 0.2em 0.2em;
 }
 
-.list-choice input[type="radio"]+span {
+.sort-choice input[type="radio"]+span {
     color: styles.$altText;
     background-color: rgba(35, 35, 35, 0.99);
-    padding: 0.55em 1em;
+    padding: 10px 15px;
     display: block;
     text-align: center;
     box-sizing: border-box;
@@ -298,7 +298,7 @@
     width: 100%;
 }
 
-.list-choice-objects {
+.sort-choice-objects {
     position: absolute;
     top: 0;
     padding-top: 2.1em;
@@ -307,44 +307,46 @@
     overflow: hidden;
     max-height: 0;
     transition: all .5s ease;
+    text-align: center;
 }
 
-.list-choice:hover .list-choice-objects input[type="radio"]+span {
+.sort-choice:hover .sort-choice-objects input[type="radio"]+span {
     position: relative;
     top: 0;
     transition: all 250ms ease-in-out;
 }
 
-.list-choice:hover input[type="radio"]+span:hover {
+.sort-choice:hover input[type="radio"]+span:hover {
     background: #BBB;
 }
 
-.list-choice:hover input[type="radio"]:checked+span:hover {
-    background: #202121;
+.sort-choice:hover input[type="radio"]:checked+span:hover {
+    background: #121313;
 }
 
-.list-choice input[type="radio"]:checked+span {
+.sort-choice input[type="radio"]:checked+span {
     background-color: rgba(54, 54, 54, 0.850);
     color: rgba(255, 255, 255, 0.74);
     position: absolute;
-    top: 0em;
+    // top: 0em;
     border-radius: 0.2em;
 }
 
-.list-choice:hover input[type="radio"]:checked+span {
+.sort-choice:hover input[type="radio"]:checked+span {
     border-radius: 0;
 }
 
-.list-choice:hover .list-choice-objects label:nth-last-of-type(1) input[type="radio"]:checked+span {
+.sort-choice:hover .sort-choice-objects label:nth-last-of-type(1) input[type="radio"]:checked+span {
     border-radius: 0 0 0.2em 0.2em;
 }
 
-.list-choice:hover .list-choice-objects {
+.sort-choice:hover .sort-choice-objects {
     max-height: 540px;
 }
 
 
 .sort-active {
-    color:transparent;
+    // color:transparent;
+    cursor:none;
+    // visibility: hidden;
 }
-

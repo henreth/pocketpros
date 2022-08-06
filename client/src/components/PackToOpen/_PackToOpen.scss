@@ -67,10 +67,11 @@
 
 .pack-count {
     font-size: 125px;
-    margin-bottom: 60px;
-    margin-top: 40px;
+    margin-bottom: 55px;
+    margin-top: 55px;
     font-weight: bold;
     transition: .5s ease;
+    z-index: 10;
     font-family: 'Ubuntu Mono', monospace;
     // color: rgba(60, 60, 60, 0.925) !important;
 }
@@ -85,11 +86,11 @@
 
 .top {
     margin-top: 10px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .bottom {
-    margin-top: 45px;
+    margin-top: 40px;
 }
 
 
@@ -141,7 +142,7 @@
 .pack-logo {
     height: 275px;
     filter: opacity(.25);
-    margin-top: 25px;
+    margin-top: 30px;
     position: absolute;
 }
 

@@ -79,11 +79,11 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
     setSortTerm(e.target.value)
   }
 
-  const sortTitleClass = sortTerm !== '' ? "list-choice-title sort-active" : "list-choice-title"
+  const sortTitleClass = sortTerm !== '' ? "sort-choice-title sort-active" : "sort-choice-title"
 
   const sortDefault = sortTerm === '' ? null : <label>
     <input type="radio" name='month' value='' />
-    <span>Sort</span>
+    <span className='reset-sort'>Reset</span>
   </label>;
 
   return (
@@ -100,9 +100,9 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
 
         <div className='yourCards-filter-container'>
           {raritiesToDisplay}
-          <div className="list-choice">
+          <div className="sort-choice">
             <div className={sortTitleClass} >Sort</div>
-            <div className="list-choice-objects" onChange={handleSortChange}>
+            <div className="sort-choice-objects" onChange={handleSortChange}>
               {sortDefault}
               <label>
                 <input type="radio" name='month' value='1' />
