@@ -19,7 +19,7 @@ export default function OpenPacks({ userCredits, user, setUser, userPacks, setUs
 
     let packsToDisplay = packTypes.map(packType => {
         return (
-            userPacks[packType] == 0 ? null : <Pack key='packType' userCredits={userCredits} buying={false} packType={packType} signedIn={signedIn} user={user} userPacks={userPacks} handleOpenPackClick={handleOpenPackClick} handleBuyPackClick={handleBuyPackClick} />
+            userPacks[packType] == 0 ? null : <Pack key={packType} userCredits={userCredits} buying={false} packType={packType} signedIn={signedIn} user={user} userPacks={userPacks} handleOpenPackClick={handleOpenPackClick} handleBuyPackClick={handleBuyPackClick} />
         )
     })
 
@@ -50,7 +50,7 @@ export default function OpenPacks({ userCredits, user, setUser, userPacks, setUs
                 {buyMorePack()}
             </div>
             <div className="back_button" onClick={() => navigate('/collection')}>
-                <div className></div>
+                <div></div>
                 <div className="log-in-title" >
                     <h3>Back</h3>
                 </div>

@@ -970,7 +970,7 @@
   display: flex;
   flex-direction: column;
   top: 15%;
-  left: 10%;
+  left: 4%;
   align-items: center;
   transition: 0.5 ease;
   color: rgba(102, 102, 102, 0.747);
@@ -1715,6 +1715,7 @@
 .qrcode-info:hover {
   filter: opacity(90%);
   transition: 0.5s ease;
+  transform: scale(41.5%);
 }
 
 .pack {

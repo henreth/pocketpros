@@ -20,7 +20,7 @@ A digital trading card experience where users can open packs, unlock cards, and 
 
 # Demos:
 
-<img src="./images/pocket-demo.gif" width="850">
+<img src="./images/pocket-gif.gif" width="850">
 
 #
 ### Card Rarities and Variants:
