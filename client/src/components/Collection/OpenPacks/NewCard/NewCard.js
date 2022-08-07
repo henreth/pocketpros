@@ -13,7 +13,7 @@ export default function NewCard({ card }) {
     }
     let rarity = card.rarity
 
-    let cardClass = opened ? `charCard ${rarity}` : 'charCard unopened'
+    let cardClass = opened ? `charCard ${rarity} new` : 'charCard unopened new'
 
     return (
         <Tilt className="Tilt" options={{ max: 50, scale: 1 }} >

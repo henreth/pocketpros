@@ -19,6 +19,13 @@
         transform: scale(1.5);
         outline: 1px solid rgba(0, 0, 0, 0.103);
         transition: .5s ease;
+
+        &.new, &.unopened {
+            transform-origin: top;
+            transform: scale(1);
+        }
+
+        
     }
 
     .charCard-info-container {
@@ -39,7 +46,7 @@
         border-bottom: 3px solid rgba(255, 255, 255, 0.584);
     }
 
-    .charCard-text{
+    .charCard-text {
         align-self: flex-start;
         margin-left: 2.5%;
         font-size: smaller;
@@ -68,7 +75,7 @@
         margin-top: 2%;
         margin-bottom: 0.75%;
         text-transform: none;
-                font-weight: 200;
+        font-weight: 200;
 
     }
 
@@ -94,7 +101,7 @@
             rgb(255, 163, 182),
             rgb(221, 169, 255),
             rgb(162, 209, 255));
-            background-size: 400% 400%;
+    background-size: 400% 400%;
 
     animation: gradient 20s ease infinite;
 
@@ -119,49 +126,52 @@
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
 
-.listing-information{
+.listing-information {
     position: absolute;
     text-align: center;
     font-family: 'Ubuntu Mono', monospace;
     z-index: 15;
     top: 61%;
     color: #fff;
-    display:flex;
+    display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.88);
 }
 
-.card-cost{
+.card-cost {
     width: 275px;
     font-size: 3.5vh;
 }
 
-.seller-name{
+.seller-name {
     font-size: 1.25vh;
     margin-bottom: 2%;
-    b{
+
+    b {
         font-size: 1.5vh;
     }
 }
 
-.locked{
+.locked {
 
-    b{
+    b {
         text-decoration: line-through;
-        color: rgb(231, 106, 106);    
+        color: rgb(231, 106, 106);
     }
 }
 
 
-.qrcode{
+.qrcode {
     position: absolute;
     filter: opacity(.30);
     top: 77.5%;
@@ -169,11 +179,10 @@
     transition: .5s ease;
     transform: scale(55%);
 
-    &:hover{
+    &:hover {
         filter: opacity(90%);
         transition: .5s ease;
     }
 
-    
-}
 
+}

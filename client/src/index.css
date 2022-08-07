@@ -642,6 +642,10 @@
   outline: 1px solid rgba(0, 0, 0, 0.103);
   transition: 0.5s ease;
 }
+.charCard:hover.new, .charCard:hover.unopened {
+  transform-origin: top;
+  transform: scale(1);
+}
 .charCard .charCard-info-container {
   display: flex;
   flex-direction: column;
