@@ -91,6 +91,36 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
     setMarketSelectedRarity('all')
   }
 
+  const sortTitleClass = sortTerm !== '' ? "sort-choice-title sort-active" : "sort-choice-title"
+
+  const sortDefault = sortTerm === '' ? null : <label>
+    <input type="radio" name='month' value='' />
+    <span className='reset-sort'>Reset</span>
+  </label>;
+
+  const displaySelectedCard = selectedCard != {} ? <MarketInformation
+    selectedCard={selectedCard}
+    setSelectedCard={setSelectedCard}
+    showModal={showModal}
+    setShowModal={setShowModal}
+    user={user}
+    setUser={setUser}
+    users={users}
+    userCards={userCards}
+    setUserCards={setUserCards}
+    marketCards={marketCards}
+    setMarketCards={setMarketCards}
+    numCardOwners={numCardOwners}
+    numOthercards={numOthercards}
+    allCardTransactions={allCardTransactions}
+    activeListings={activeListings}
+    selectedTab={selectedTab}
+    setSelectedTab={setSelectedTab}
+    setMarketSearchTerm={setMarketSearchTerm}
+    setMarketSelectedRarity={setMarketSelectedRarity}
+    listedByUser={listedByUser}
+    setListedByUser={setListedByUser} /> : null;
+
   return (
     <React.Fragment>
       <div className='displayCards-page'>
@@ -103,31 +133,32 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
         </div>
         <div className='yourCards-filter-container'>
           {raritiesToDisplay}
-          <div className="list-choice">
-            <div className="list-choice-title">Sort</div>
-            <div className="list-choice-objects" onChange={handleSortChange}>
+          <div className="sort-choice">
+            <div className={sortTitleClass} >Sort</div>
+            <div className="sort-choice-objects" onChange={handleSortChange}>
+              {sortDefault}
               <label>
-                <input type="radio" name='month' value={'1'} />
+                <input type="radio" name='month' value='1' />
                 <span>A-Z</span>
               </label>
               <label>
-                <input type="radio" name='month' value={'2'} />
+                <input type="radio" name='month' value='2' />
                 <span>Z-A</span>
               </label>
               <label>
-                <input type="radio" name='month' value={'3'} />
+                <input type="radio" name='month' value='3' />
                 <span>Price ↑</span>
               </label>
               <label>
-                <input type="radio" name='month' value={'4'} />
+                <input type="radio" name='month' value='4' />
                 <span>Price ↓</span>
               </label>
               <label>
-                <input type="radio" name='month' value={'5'} />
+                <input type="radio" name='month' value='5' />
                 <span>List Date ↑</span>
               </label>
               <label>
-                <input type="radio" name='month' value={'6'} />
+                <input type="radio" name='month' value='6' />
                 <span>List Date ↓</span>
               </label>
             </div>
@@ -143,29 +174,7 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
           </div>
         </div>
       </div>
-      {selectedCard != {} ? <MarketInformation
-        selectedCard={selectedCard}
-        setSelectedCard={setSelectedCard}
-        showModal={showModal}
-        setShowModal={setShowModal}
-        user={user}
-        setUser={setUser}
-        users={users}
-        userCards={userCards}
-        setUserCards={setUserCards}
-        marketCards={marketCards}
-        setMarketCards={setMarketCards}
-        numCardOwners={numCardOwners}
-        numOthercards={numOthercards}
-        allCardTransactions={allCardTransactions}
-        activeListings={activeListings}
-        selectedTab={selectedTab}
-        setSelectedTab={setSelectedTab}
-        setMarketSearchTerm={setMarketSearchTerm}
-        setMarketSelectedRarity={setMarketSelectedRarity}
-        listedByUser={listedByUser}
-        setListedByUser={setListedByUser}
-      /> : null}
+      {displaySelectedCard}
 
     </React.Fragment>
 

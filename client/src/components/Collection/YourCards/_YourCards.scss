@@ -84,6 +84,7 @@
 
 
     background-color: styles.$focusText;
+
     &:hover {
         transition: .5s ease;
         border-radius: 10px;
@@ -218,7 +219,7 @@
     // width: 110%;
     font-family: 'Ubuntu Mono', monospace;
     color: rgba(255, 255, 255, 0.747);
-    
+
     &:hover {
         background-color: styles.$focusText;
         transition: .5s ease;
@@ -328,7 +329,6 @@
     background-color: rgba(54, 54, 54, 0.850);
     color: rgba(255, 255, 255, 0.74);
     position: absolute;
-    // top: 0em;
     border-radius: 0.2em;
 }
 
@@ -344,9 +344,8 @@
     max-height: 540px;
 }
 
-
 .sort-active {
     // color:transparent;
-    cursor:none;
+    cursor: none;
     // visibility: hidden;
 }
