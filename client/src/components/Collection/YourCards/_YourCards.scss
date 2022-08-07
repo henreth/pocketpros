@@ -14,7 +14,7 @@
     flex-wrap: wrap;
     align-content: space-evenly;
     // min-height: 100vh;
-    width: 70%;
+    width: 80%;
     z-index: 99;
 }
 
@@ -78,12 +78,14 @@
     background-color: transparent;
     transition: .5s ease;
     padding-left: 3.25%;
-    margin-left: 25%;
+    padding-right: 3.25%;
+    margin-left: 9.25%;
     font-family: 'Ubuntu Mono', monospace;
 
 
 
     background-color: styles.$focusText;
+
     &:hover {
         transition: .5s ease;
         border-radius: 10px;
@@ -135,7 +137,7 @@
 
     &:nth-child(1) {
         // margin-top: -5%;
-        margin-bottom: -5%;
+        // margin-bottom: -5%;
     }
 }
 
@@ -150,7 +152,7 @@
     // margin-right: 7.5%;
 
     &:nth-of-type(1) {
-        margin-bottom: -32.75%;
+        margin-bottom: -25.75%;
     }
 
     b {
@@ -170,7 +172,7 @@
     padding-top: .5%;
     padding-bottom: .5%;
     padding-left: 1.5%;
-    padding-right: -2%;
+    padding-right: 2%;
     transition: .5s ease;
 
     &:focus {
@@ -218,7 +220,7 @@
     // width: 110%;
     font-family: 'Ubuntu Mono', monospace;
     color: rgba(255, 255, 255, 0.747);
-    
+
     &:hover {
         background-color: styles.$focusText;
         transition: .5s ease;
@@ -259,8 +261,9 @@
     position: relative;
     cursor: pointer;
     text-transform: uppercase;
+    margin-left:5%;
     font-size: 23px;
-    margin-right: 4.5%;
+    // margin-right: 10%;
 }
 
 .sort-choice input[type="radio"] {
@@ -273,7 +276,7 @@
     display: block;
     // background-color: rgba(35, 35, 35, 0.288);
     text-align: center;
-    padding: 0.55em .5em;
+    padding: 10px 25px;
     box-sizing: border-box;
     color: rgba(127, 126, 126, 0.747);
     border-radius: 0.2em;
@@ -328,7 +331,6 @@
     background-color: rgba(54, 54, 54, 0.850);
     color: rgba(255, 255, 255, 0.74);
     position: absolute;
-    // top: 0em;
     border-radius: 0.2em;
 }
 
@@ -344,9 +346,8 @@
     max-height: 540px;
 }
 
-
 .sort-active {
     // color:transparent;
-    cursor:none;
+    cursor: none;
     // visibility: hidden;
 }

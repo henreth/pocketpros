@@ -1,13 +1,16 @@
 @use '../../styles';
 
+$cardWidth : 235px;
+$cardHeight : 340px;
+
 .charCard {
     margin: 4px;
     transform: scale(1);
     perspective: 600px;
     cursor: pointer;
     background-color: styles.$bg;
-    width: 275px;
-    height: 375px;
+    width: $cardWidth;
+    height: $cardHeight;
     border-radius: 5px;
     transition: .5s ease;
     text-transform: uppercase;
@@ -19,6 +22,13 @@
         transform: scale(1.5);
         outline: 1px solid rgba(0, 0, 0, 0.103);
         transition: .5s ease;
+
+        &.new, &.unopened {
+            transform-origin: top;
+            transform: scale(1);
+        }
+
+        
     }
 
     .charCard-info-container {
@@ -29,47 +39,44 @@
     }
 
     .charCard-image {
-        height: 305px;
-        width: 275px;
-
+        height: 285px;
+        width: $cardWidth;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
-        margin-bottom: 5%;
+        margin-bottom: 3.25%;
         filter: grayscale(100%);
         border-bottom: 3px solid rgba(255, 255, 255, 0.584);
     }
 
-    .charCard-text{
+    .charCard-text {
         align-self: flex-start;
         margin-left: 2.5%;
-        font-size: smaller;
+        // font-size: smaller; //10px
         cursor: default;
-
     }
 
     .charCard-name {
         // margin-right: 2.5%;
-        font-size: small;
-        margin-top: 2%;
+        font-size: 13px; // 13px
+        margin-top: 1%;
         margin-bottom: 0.75%;
     }
 
     .charCard-rarity {
         // margin-right: 2.5%;
-        font-size: x-small;
-        margin-top: 2%;
+        font-size: 9px; // 10 px
+        // margin-top: 1%;
         margin-bottom: 0.75%;
         font-weight: 200;
     }
 
     .charCard-id {
         // margin-right: 2.5%;
-        font-size: x-small;
-        margin-top: 2%;
+        font-size: 9px; // 10 px 
+        margin-top: 1%;
         margin-bottom: 0.75%;
         text-transform: none;
-                font-weight: 200;
-
+        font-weight: 200;
     }
 
 }
@@ -94,7 +101,7 @@
             rgb(255, 163, 182),
             rgb(221, 169, 255),
             rgb(162, 209, 255));
-            background-size: 400% 400%;
+    background-size: 400% 400%;
 
     animation: gradient 20s ease infinite;
 
@@ -119,61 +126,61 @@
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
 
-.listing-information{
+.listing-information {
     position: absolute;
     text-align: center;
     font-family: 'Ubuntu Mono', monospace;
     z-index: 15;
     top: 61%;
     color: #fff;
-    display:flex;
+    display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.88);
 }
 
-.card-cost{
-    width: 275px;
+.card-cost {
+    width: $cardWidth;
     font-size: 3.5vh;
 }
 
-.seller-name{
+.seller-name {
     font-size: 1.25vh;
     margin-bottom: 2%;
-    b{
+
+    b {
         font-size: 1.5vh;
     }
 }
 
-.locked{
+.locked {
 
-    b{
+    b {
         text-decoration: line-through;
-        color: rgb(231, 106, 106);    
+        color: rgb(231, 106, 106);
     }
 }
 
 
-.qrcode{
+.qrcode {
     position: absolute;
     filter: opacity(.30);
     top: 77.5%;
     left: 67.5%;
     transition: .5s ease;
-    transform: scale(55%);
+    transform: scale(41.5%);
 
-    &:hover{
+    &:hover {
         filter: opacity(90%);
         transition: .5s ease;
     }
-
-    
 }
-
