@@ -1230,21 +1230,6 @@ Character.create!([
     ],
     },
     {
-        first_name: "Pāṇini",
-        last_name: "",
-        link: 'https://en.wikipedia.org/wiki/P%C4%81%E1%B9%87ini',
-        image: [ "panini.jpeg",
-                    "panini.jpeg",
-                    "panini.jpeg",
-                     "panini.jpeg",
-        ],
-        title: [ 'Grammarian',
-         'Philologist',
-        'Linguist',
-         'Morphological Analyst'
-    ],
-    },
-    {
         first_name: "Ismail",
         last_name: "al-Jazari",
         link: 'https://en.wikipedia.org/wiki/Ismail_al-Jazari',
