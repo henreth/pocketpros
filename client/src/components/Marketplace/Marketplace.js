@@ -4,7 +4,7 @@ import MarketCard from './MarketCard/MarketCard';
 import MarketInformation from './MarketInformation/MarketInformation';
 
 
-export default function Marketplace({ user, setUser, users, userCards, setUserCards, marketCards, setMarketCards, signedIn, marketSelectedRarity, setMarketSelectedRarity, marketSearchTerm, setMarketSearchTerm }) {
+export default function Marketplace({ user, setUser, users, userCards, setUserCards, marketCards, setMarketCards, marketSelectedRarity, setMarketSelectedRarity, marketSearchTerm, setMarketSearchTerm }) {
   document.title = 'Pocket Pros - Marketplace';
 
   let [showModal, setShowModal] = useState(false);

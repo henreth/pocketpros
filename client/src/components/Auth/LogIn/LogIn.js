@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
-export default function LogIn({ user, username, setUsername, password, setPassword, signedIn, handleLogInSubmit }) {
+export default function LogIn({ user, username, setUsername, password, setPassword, handleLogInSubmit }) {
   document.title = 'Pocket Pros - Authorization Required';
   let navigate = useNavigate();
 

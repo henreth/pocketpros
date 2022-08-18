@@ -4,7 +4,7 @@ import Card from '../../Card/Card'
 import MarketInformation from '../../Marketplace/MarketInformation/MarketInformation';
 
 
-export default function YourCards({ user, setUser, userCards, setUserCards, marketCards, setMarketCards, signedIn, users, setMarketSearchTerm, setMarketSelectedRarity }) {
+export default function YourCards({ user, setUser, userCards, setUserCards, marketCards, setMarketCards, users, setMarketSearchTerm, setMarketSelectedRarity }) {
   document.title = 'Pocket Pros - Your Cards';
   let [showModal, setShowModal] = useState(false);
   let [selectedCard, setSelectedCard] = useState(userCards[0])

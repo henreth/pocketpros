@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
-export default function Edit({ user, setUser, signedIn }) {
+export default function Edit({ user, setUser }) {
   document.title = 'Pocket Pros - Edit Account Details';
   let navigate = useNavigate();
 

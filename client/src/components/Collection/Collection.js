@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
-export default function Collection({ user, signedIn }) {
+export default function Collection({ user }) {
   document.title = 'Pocket Pros - Collection';
 
   let navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
-export default function PackToOpen({ user, userCredits, buying, packType, signedIn, userPacks, handleOpenPackClick, handleBuyPackClick }) {
+export default function PackToOpen({ user, userCredits, buying, packType,userPacks, handleOpenPackClick, handleBuyPackClick }) {
     const packLogos = require.context('../../img/pack_logos', true);
 
 

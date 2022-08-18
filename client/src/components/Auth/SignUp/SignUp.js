@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
-export default function SignUp({ user, username, setUsername, password, setPassword, signedIn, setSignedIn, signUpFirstName, setSignUpFirstName, signUpLastName, setSignUpLastName, signUpPasswordConfirmation, setSignUpPasswordConfirmation, handleSignUpSubmit }) {
+export default function SignUp({ user, username, setUsername, password, setPassword, signUpFirstName, setSignUpFirstName, signUpLastName, setSignUpLastName, signUpPasswordConfirmation, setSignUpPasswordConfirmation, handleSignUpSubmit }) {
   document.title = 'Pocket Pros - Sign Up';
   let navigate = useNavigate();
 

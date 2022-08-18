@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
 
-export default function Profile({ user, signedIn }) {
+export default function Profile({ user }) {
   document.title = 'Pocket Pros - Profile';
 
   let navigate = useNavigate();

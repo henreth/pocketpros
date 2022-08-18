@@ -35,7 +35,6 @@ export default function App() {
   const [userCards, setUserCards] = useState([]);
   const [userPacks, setUserPacks] = useState({});
   const [userCredits, setUserCredits] = useState(0);
-  const [signedIn, setSignedIn] = useState(false)
 
   // Market
   let [marketCards, setMarketCards] = useState([]);
@@ -57,7 +56,7 @@ export default function App() {
             setUser(user)
             setUserPacks(user.packs)
             setUserCredits(user.credits)
-            setSignedIn(true)
+
           })
         }
         else {
@@ -135,7 +134,7 @@ export default function App() {
                 setUserCards(user.cards)
                 setUserPacks(user.packs)
                 setUserCredits(user.credits)
-                setSignedIn(true)
+
 
                 let marketCardsReq = axios.get('/marketcards')
                 let userCardsReq = axios.get('/usercards')
@@ -174,9 +173,8 @@ export default function App() {
     axios.delete('/logout')
       .then(r => {
         alert('You have now been logged out.')
-        setSignedIn(false);
         navigate('/');
-        setUser(null);
+        setUser({});
         setUserCards(null);
         setUserPacks(null);
         setUserCredits(null)
@@ -263,7 +261,6 @@ export default function App() {
               }
             })
         }
-
         )
     }
 
@@ -279,8 +276,8 @@ export default function App() {
 
       {user.username ? <div className='user-id-bar'><div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div></div> : null}
       <Routes>
-        <Route exact path="/" element={user.username ? <Home /> : <Auth user={user} signedIn={signedIn} />} />
-        <Route path="/collection" element={<Collection user={user} signedIn={signedIn} />} />
+        <Route exact path="/" element={user.username ? <Home /> : <Auth user={user} />} />
+        <Route path="/collection" element={<Collection user={user} />} />
         <Route path="/cards" element={<YourCards
           user={user}
           setUser={setUser}
@@ -288,7 +285,6 @@ export default function App() {
           setUserCards={setUserCards}
           marketCards={marketCards}
           setMarketCards={setMarketCards}
-          signedIn={signedIn}
           users={users}
           setMarketSearchTerm={setMarketSearchTerm}
           setMarketSelectedRarity={setMarketSelectedRarity}
@@ -298,7 +294,6 @@ export default function App() {
           user={user}
           setUser={setUser}
           setUserCards={setUserCards}
-          signedIn={signedIn}
           userPacks={userPacks}
           setUserPacks={setUserPacks}
           handleOpenPackClick={handleOpenPackClick}
@@ -314,7 +309,6 @@ export default function App() {
           setUserCredits={setUserCredits}
           setUser={setUser}
           setUserCards={setUserCards}
-          signedIn={signedIn}
           userPacks={userPacks}
           setUserPacks={setUserPacks}
           handleOpenPackClick={handleOpenPackClick}
@@ -328,17 +322,15 @@ export default function App() {
           marketCards={marketCards}
           setMarketCards={setMarketCards}
           handleClick={handleClick}
-          signedIn={signedIn}
           users={users}
           marketSearchTerm={marketSearchTerm}
           setMarketSearchTerm={setMarketSearchTerm}
           marketSelectedRarity={marketSelectedRarity}
           setMarketSelectedRarity={setMarketSelectedRarity}
         />} />
-        <Route path="/auth" element={<Auth user={user} setSignedIn={setSignedIn} />} />
+        <Route path="/auth" element={<Auth user={user} />} />
         <Route path="/logIn" element={<LogIn
           user={user}
-          signedIn={signedIn}
           username={username}
           setUsername={setUsername}
           password={password}
@@ -347,8 +339,6 @@ export default function App() {
         />} />
         <Route path="/signup" element={<SignUp
           user={user}
-          setSignedIn={setSignedIn}
-          signedIn={signedIn}
           username={username}
           setUsername={setUsername}
           password={password}
@@ -363,25 +353,21 @@ export default function App() {
         />} />
         <Route path="/about" element={<About
           user={user}
-          signedIn={signedIn}
+
         />} />
         <Route path="/profile" element={<Profile
           handleLogOut={handleLogOut}
-          signedIn={signedIn}
-          setSignedIn={setSignedIn} l
         />} />
         <Route path="/edit" element={<Edit
           user={user}
           setUser={setUser}
-          signedIn={signedIn}
         />} />
         <Route path="/logout" element={<LogOut
           user={user}
           setUser={setUser}
-          signedIn={signedIn}
           handleLogOut={handleLogOut}
         />} />
-        <Route path="/*" element={signedIn ? <Home /> : <Auth user={user} signedIn={signedIn} />} />
+        <Route path="/*" element={user.username ? <Home /> : <Auth user={user} />} />
       </Routes>
     </React.Fragment>
   );
