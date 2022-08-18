@@ -5,7 +5,7 @@ import Modal from "./Modal/Modal";
 import Pack from '../../PackToOpen/PackToOpen';
 
 
-export default function OpenPacks({user, setUser, userPacks, setUserPacks, openedCards, setOpenedCards, showModal, setShowModal, handleBuyPackClick, handleOpenPackClick }) {
+export default function OpenPacks({ user, setUser, openedCards, setOpenedCards, showModal, setShowModal, handleBuyPackClick, handleOpenPackClick }) {
     document.title = 'Pocket Pros - Open Packs';
 
     let packTypes = ["booster", "regular", "pro", "max", "ultra", "studio"]
@@ -18,9 +18,13 @@ export default function OpenPacks({user, setUser, userPacks, setUserPacks, opene
     }, [])
 
     let packsToDisplay = packTypes.map(packType => {
-        return (
-            userPacks[packType] == 0 ? null : <Pack key={packType} buying={false} packType={packType} user={user} userPacks={userPacks} handleOpenPackClick={handleOpenPackClick} handleBuyPackClick={handleBuyPackClick} />
-        )
+        if (user.packs) {
+            return (
+                user.packs[packType] == 0 ? null : <Pack key={packType} buying={false} packType={packType} user={user} handleOpenPackClick={handleOpenPackClick} handleBuyPackClick={handleBuyPackClick} />
+            )
+        } else{
+            return null
+        }
     })
 
     function handleBuyPackClick() {

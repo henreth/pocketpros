@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
-export default function PackToOpen({ user, buying, packType,userPacks, handleOpenPackClick, handleBuyPackClick }) {
+export default function PackToOpen({ user, buying, packType, handleOpenPackClick, handleBuyPackClick }) {
     const packLogos = require.context('../../img/pack_logos', true);
 
 
     let navigate = useNavigate();
     useEffect(() => {
         if (!user.username) {
-          navigate('/');
-        } 
-      }, [])
+            navigate('/');
+        }
+    }, [])
 
     let logo;
     let packCost;
@@ -56,10 +56,10 @@ export default function PackToOpen({ user, buying, packType,userPacks, handleOpe
     }
 
     //differentiate action upon clicking pack
-    function handlePackClick(){
-        if (buying===true){
-            handleBuyPackClick(packCost,packType)
-        } else if (buying===false){
+    function handlePackClick() {
+        if (buying === true) {
+            handleBuyPackClick(packCost, packType)
+        } else if (buying === false) {
             handleOpenPackClick(packType)
         }
     }
@@ -69,13 +69,14 @@ export default function PackToOpen({ user, buying, packType,userPacks, handleOpe
 
     // if price is greater than user credit balance, display alternative cost styling
     let costClass = parseInt(user.credits) < parseInt(packCost) ? 'pack-cost locked' : 'pack-cost'
-    
+
     // price to purchase pack will only display if on the buy packs page
     let marketCost = buying ? <div className='pack-information'>
-                                <div className={costClass}>🪙 <b>{packCost}</b>
-                                </div>
-                            </div> : null
+        <div className={costClass}>🪙 <b>{packCost}</b>
+        </div>
+    </div> : null
 
+    const packCountText = user.username ? user.packs[packType] : null;
     return (
         <div className={packClass} onClick={handlePackClick}>
             {marketCost}
@@ -85,7 +86,7 @@ export default function PackToOpen({ user, buying, packType,userPacks, handleOpe
                 {/* <div className={packType + '-text'} >{packType.toUpperCase()}</div> */}
                 <div className={packType + '-text'} >{cardsPerPack} Cards</div>
                 <div className={packType + '-text'}><b>{packProb}</b> CHANCE</div>
-                <div className={'pack-count ' + packType + '-text'}>{userPacks[packType]}</div>
+                <div className={'pack-count ' + packType + '-text'}>{packCountText}</div>
                 <div className={packType + '-text'} >{packType.toUpperCase()}</div>
                 <div className='pack-title bottom' >POCKET PROGRAMMERS</div>
             </div>

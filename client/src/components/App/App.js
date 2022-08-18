@@ -20,7 +20,7 @@ import LogOut from '../Auth/LogOut/LogOut';
 
 export default function App() {
 
-  //Sign Up
+  //Sign Up:
   const [signUpFirstName, setSignUpFirstName] = useState("");
   const [signUpLastName, setSignUpLastName] = useState("");
   const [signUpPasswordConfirmation, setSignUpPasswordConfirmation] = useState("");
@@ -29,31 +29,25 @@ export default function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-
+  // Users:
   const [user, setUser] = useState({});
   const [users, setUsers] = useState([]);
-  const [userPacks, setUserPacks] = useState({});
 
-  // Market
+  // Market:
   let [marketCards, setMarketCards] = useState([]);
   let [marketSelectedRarity, setMarketSelectedRarity] = useState('all')
   let [marketSearchTerm, setMarketSearchTerm] = useState('');
 
-
-  // Packs
+  // Packs:
   const [openedCards, setOpenedCards] = useState([]);
   const [showModal, setShowModal] = useState(false);
-
 
 
   useEffect(() => {
     fetch("/me")
       .then((r) => {
         if (r.ok) {
-          r.json().then((user) => {
-            setUser(user)
-            setUserPacks(user.packs)
-          })
+          r.json().then((user) => setUser(user))
         }
         else {
           navigate("/");
@@ -110,7 +104,6 @@ export default function App() {
 
   }
 
-
   function handleLogInSubmit(e) {
     e.preventDefault();
     const logInDetails = {
@@ -125,7 +118,6 @@ export default function App() {
             if (r.ok) {
               r.json().then((user) => {
                 setUser(user)
-                setUserPacks(user.packs)
 
                 let marketCardsReq = axios.get('/marketcards')
                 let usersReq = axios.get('/users')
@@ -199,11 +191,8 @@ export default function App() {
           fetch("/me")
             .then((r) => {
               if (r.ok) {
-                r.json().then((user) => {
-                  setUser(user)
-                  setUserPacks(user.packs)
-
-                })
+                r.json().then((user) => setUser(user)
+                )
               }
             })
         }
@@ -227,7 +216,7 @@ export default function App() {
   }
 
   function handleOpenPackClick(packType) {
-    if (userPacks[packType] == 0) {
+    if (user.packs[packType] == 0) {
       alert(`ERROR: You have no ${packType[0].toUpperCase() + packType.slice(1, packType.length)} Packs left!`)
     } else {
       axios.get(`/${packType}_pack`)
@@ -241,7 +230,6 @@ export default function App() {
               if (r.ok) {
                 r.json().then((user) => {
                   setUser(user)
-                  setUserPacks(user.packs)
                 })
               }
             })
@@ -275,8 +263,6 @@ export default function App() {
         <Route path="/openpacks" element={<OpenPacks
           user={user}
           setUser={setUser}
-          userPacks={userPacks}
-          setUserPacks={setUserPacks}
           handleOpenPackClick={handleOpenPackClick}
           handleBuyPackClick={handleBuyPackClick}
           openedCards={openedCards}
@@ -287,8 +273,6 @@ export default function App() {
         <Route path="/buypacks" element={<BuyPacks
           user={user}
           setUser={setUser}
-          userPacks={userPacks}
-          setUserPacks={setUserPacks}
           handleOpenPackClick={handleOpenPackClick}
           handleBuyPackClick={handleBuyPackClick}
         />} />

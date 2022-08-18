@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Pack from '../PackToOpen/PackToOpen'
 
 
-export default function BuyPacks({ user, setUser, userPacks, setUserPacks, handleBuyPackClick, handleOpenPackClick }) {
+export default function BuyPacks({ user, setUser, handleBuyPackClick, handleOpenPackClick }) {
     document.title = 'Pocket Pros - Open Packs';
 
     let packTypes = ["regular", "pro", "max", "ultra", "studio"]
@@ -17,7 +17,7 @@ export default function BuyPacks({ user, setUser, userPacks, setUserPacks, handl
 
     let packsToDisplay = packTypes.map(packType => {
         return (
-            <Pack key={packType} buying={true} packType={packType} user={user} setUser={setUser} userPacks={userPacks} setUserPacks={setUserPacks} handleBuyPackClick={handleBuyPackClick} handleOpenPackClick={handleOpenPackClick} />
+            <Pack key={packType} buying={true} packType={packType} user={user} setUser={setUser} handleBuyPackClick={handleBuyPackClick} handleOpenPackClick={handleOpenPackClick} />
         )
     })
 
