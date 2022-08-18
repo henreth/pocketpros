@@ -240,6 +240,7 @@ export default function App() {
   }
 
 
+  const userIDBar = user.username ? <div className='user-id-bar'><div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div></div> : null;
   return (
     <React.Fragment>
       <video width="400" autoPlay={true} muted playsInline loop id="bg-video">
@@ -247,7 +248,7 @@ export default function App() {
       </video>
       <div id="video-overlay"></div>
 
-      {user.username ? <div className='user-id-bar'><div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div></div> : null}
+      {userIDBar}
       <Routes>
         <Route exact path="/" element={user.username ? <Home /> : <Auth user={user} />} />
         <Route path="/collection" element={<Collection user={user} />} />
