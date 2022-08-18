@@ -20,7 +20,7 @@ import LogOut from '../Auth/LogOut/LogOut';
 
 export default function App() {
 
-  //Sign Up
+  //Sign Up:
   const [signUpFirstName, setSignUpFirstName] = useState("");
   const [signUpLastName, setSignUpLastName] = useState("");
   const [signUpPasswordConfirmation, setSignUpPasswordConfirmation] = useState("");
@@ -29,50 +29,39 @@ export default function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const [user, setUser] = useState(null);
+  // Users:
+  const [user, setUser] = useState({});
   const [users, setUsers] = useState([]);
-  const [userCards, setUserCards] = useState([]);
-  const [userPacks, setUserPacks] = useState({});
-  const [userCredits, setUserCredits] = useState(0);
-  const [signedIn, setSignedIn] = useState(false)
 
-  // Market
+  // Market:
   let [marketCards, setMarketCards] = useState([]);
   let [marketSelectedRarity, setMarketSelectedRarity] = useState('all')
   let [marketSearchTerm, setMarketSearchTerm] = useState('');
 
-
-  // Packs
+  // Packs:
   const [openedCards, setOpenedCards] = useState([]);
   const [showModal, setShowModal] = useState(false);
-
 
 
   useEffect(() => {
     fetch("/me")
       .then((r) => {
         if (r.ok) {
-          r.json().then((user) => {
-            setUser(user)
-            setUserPacks(user.packs)
-            setUserCredits(user.credits)
-            setSignedIn(true)
-          })
+          r.json().then((user) => setUser(user))
         }
         else {
           navigate("/");
         }
       })
 
-    axios.get('/marketcards')
-      .then(r => setMarketCards(r.data))
+    let marketCardsReq = axios.get('/marketcards')
+    let usersReq = axios.get('/users')
+    axios.all([marketCardsReq, usersReq])
+      .then(axios.spread((res1,res2) => {
+        setMarketCards(res1.data)
+        setUsers(res2.data)
+      }))
 
-    axios.get('/usercards')
-      .then(r => {
-        setUserCards(r.data)
-      })
-    axios.get('/users')
-      .then(r => { setUsers(r.data) })
   }, [])
 
 
@@ -103,8 +92,8 @@ export default function App() {
       .catch(function (error) {
         if (error.response) {
           console.log(error.response.data.errors);
-          let msg ='';
-          error.response.data.errors.map(error=>{msg+=error+'\n'})
+          let msg = '';
+          error.response.data.errors.map(error => { msg += error + '\n' })
           alert(msg)
         } else if (error.request) {
           console.log(error.request);
@@ -114,7 +103,6 @@ export default function App() {
       });
 
   }
-
 
   function handleLogInSubmit(e) {
     e.preventDefault();
@@ -130,20 +118,14 @@ export default function App() {
             if (r.ok) {
               r.json().then((user) => {
                 setUser(user)
-                setUserCards(user.cards)
-                setUserPacks(user.packs)
-                setUserCredits(user.credits)
-                setSignedIn(true)
 
-                axios.get('/marketcards')
-                  .then(r => setMarketCards(r.data))
-
-                axios.get('/usercards')
-                  .then(r => {
-                    setUserCards(r.data)
-                  })
-                axios.get('/users')
-                  .then(r => { setUsers(r.data) })
+                let marketCardsReq = axios.get('/marketcards')
+                let usersReq = axios.get('/users')
+                axios.all([marketCardsReq, usersReq])
+                  .then(axios.spread((res1,res2) => {
+                    setMarketCards(res1.data)
+                    setUsers(res2.data)
+                  }))
 
               })
             }
@@ -157,8 +139,8 @@ export default function App() {
       .catch(function (error) {
         if (error.response) {
           console.log(error.response.data.errors);
-          let msg ='';
-          error.response.data.errors.map(error=>{msg+=error+'\n'})
+          let msg = '';
+          error.response.data.errors.map(error => { msg += error + '\n' })
           alert(msg)
         } else if (error.request) {
           console.log(error.request);
@@ -172,19 +154,15 @@ export default function App() {
     axios.delete('/logout')
       .then(r => {
         alert('You have now been logged out.')
-        setSignedIn(false);
         navigate('/');
-        setUser(null);
-        setUserCards(null);
-        setUserPacks(null);
-        setUserCredits(null)
+        setUser({});
         window.location.reload();
       })
       .catch(function (error) {
         if (error.response) {
           console.log(error.response.data.errors);
-          let msg ='';
-          error.response.data.errors.map(error=>{msg+=error+'\n'})
+          let msg = '';
+          error.response.data.errors.map(error => { msg += error + '\n' })
           alert(msg)
         } else if (error.request) {
           console.log(error.request);
@@ -213,11 +191,8 @@ export default function App() {
           fetch("/me")
             .then((r) => {
               if (r.ok) {
-                r.json().then((user) => {
-                  setUser(user)
-                  setUserPacks(user.packs)
-                  setUserCredits(user.credits)
-                })
+                r.json().then((user) => setUser(user)
+                )
               }
             })
         }
@@ -226,10 +201,10 @@ export default function App() {
         .catch(function (error) {
           if (error.response) {
             console.log(error.response.data.errors);
-            let msg ='';
-            error.response.data.errors.map(error=>{msg+=error+'\n'})
+            let msg = '';
+            error.response.data.errors.map(error => { msg += error + '\n' })
             alert(msg)
-            } else if (error.request) {
+          } else if (error.request) {
             console.log(error.request);
           } else {
             console.log('Error', error.message);
@@ -241,7 +216,7 @@ export default function App() {
   }
 
   function handleOpenPackClick(packType) {
-    if (userPacks[packType] == 0) {
+    if (user.packs[packType] == 0) {
       alert(`ERROR: You have no ${packType[0].toUpperCase() + packType.slice(1, packType.length)} Packs left!`)
     } else {
       axios.get(`/${packType}_pack`)
@@ -255,19 +230,17 @@ export default function App() {
               if (r.ok) {
                 r.json().then((user) => {
                   setUser(user)
-                  setUserCards(user.cards)
-                  setUserPacks(user.packs)
                 })
               }
             })
         }
-
         )
     }
 
   }
 
 
+  const userIDBar = user.username ? <div className='user-id-bar'><div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div></div> : null;
   return (
     <React.Fragment>
       <video width="400" autoPlay={true} muted playsInline loop id="bg-video">
@@ -275,30 +248,22 @@ export default function App() {
       </video>
       <div id="video-overlay"></div>
 
-      {user ? <div className='user-id-bar'><div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div></div> : null}
+      {userIDBar}
       <Routes>
-        <Route exact path="/" element={signedIn ? <Home /> : <Auth signedIn={signedIn}/>} />
-        <Route path="/collection" element={<Collection signedIn={signedIn} />} />
+        <Route exact path="/" element={user.username ? <Home /> : <Auth user={user} />} />
+        <Route path="/collection" element={<Collection user={user} />} />
         <Route path="/cards" element={<YourCards
           user={user}
           setUser={setUser}
-          userCards={userCards}
-          setUserCards={setUserCards}
           marketCards={marketCards}
           setMarketCards={setMarketCards}
-          signedIn={signedIn}
           users={users}
           setMarketSearchTerm={setMarketSearchTerm}
           setMarketSelectedRarity={setMarketSelectedRarity}
         />} />
         <Route path="/openpacks" element={<OpenPacks
-          userCredits={userCredits}
           user={user}
           setUser={setUser}
-          setUserCards={setUserCards}
-          signedIn={signedIn}
-          userPacks={userPacks}
-          setUserPacks={setUserPacks}
           handleOpenPackClick={handleOpenPackClick}
           handleBuyPackClick={handleBuyPackClick}
           openedCards={openedCards}
@@ -308,43 +273,33 @@ export default function App() {
         />} />
         <Route path="/buypacks" element={<BuyPacks
           user={user}
-          userCredits={userCredits}
-          setUserCredits={setUserCredits}
           setUser={setUser}
-          setUserCards={setUserCards}
-          signedIn={signedIn}
-          userPacks={userPacks}
-          setUserPacks={setUserPacks}
           handleOpenPackClick={handleOpenPackClick}
           handleBuyPackClick={handleBuyPackClick}
         />} />
         <Route path="/marketplace" element={<Marketplace
           user={user}
           setUser={setUser}
-          userCards={userCards}
-          setUserCards={setUserCards}
           marketCards={marketCards}
           setMarketCards={setMarketCards}
           handleClick={handleClick}
-          signedIn={signedIn}
           users={users}
           marketSearchTerm={marketSearchTerm}
           setMarketSearchTerm={setMarketSearchTerm}
           marketSelectedRarity={marketSelectedRarity}
           setMarketSelectedRarity={setMarketSelectedRarity}
         />} />
-        <Route path="/auth" element={<Auth setSignedIn={setSignedIn} />} />
-        <Route path="/logIn" element={<LogIn 
-          signedIn={signedIn} 
-          username={username} 
-          setUsername={setUsername} 
-          password={password} 
-          setPassword={setPassword} 
-          handleLogInSubmit={handleLogInSubmit} 
-           />} />
+        <Route path="/auth" element={<Auth user={user} />} />
+        <Route path="/logIn" element={<LogIn
+          user={user}
+          username={username}
+          setUsername={setUsername}
+          password={password}
+          setPassword={setPassword}
+          handleLogInSubmit={handleLogInSubmit}
+        />} />
         <Route path="/signup" element={<SignUp
-          setSignedIn={setSignedIn}
-          signedIn={signedIn}
+          user={user}
           username={username}
           setUsername={setUsername}
           password={password}
@@ -356,27 +311,24 @@ export default function App() {
           signUpLastName={signUpLastName}
           setSignUpLastName={setSignUpLastName}
           handleSignUpSubmit={handleSignUpSubmit}
-          />} />
+        />} />
         <Route path="/about" element={<About
-          signedIn={signedIn}
+          user={user}
+
         />} />
         <Route path="/profile" element={<Profile
           handleLogOut={handleLogOut}
-          signedIn={signedIn}
-          setSignedIn={setSignedIn} l
-           />} />
+        />} />
         <Route path="/edit" element={<Edit
           user={user}
           setUser={setUser}
-          signedIn={signedIn}
         />} />
         <Route path="/logout" element={<LogOut
           user={user}
           setUser={setUser}
-          signedIn={signedIn}
           handleLogOut={handleLogOut}
         />} />
-        <Route path="/*" element={signedIn ? <Home /> : <Auth signedIn={signedIn} />} />
+        <Route path="/*" element={user.username ? <Home /> : <Auth user={user} />} />
       </Routes>
     </React.Fragment>
   );

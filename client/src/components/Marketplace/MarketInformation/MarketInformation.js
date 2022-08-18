@@ -5,7 +5,7 @@ import Graph from './Graph/Graph';
 import axios from 'axios';
 import Tilt from 'react-tilt'
 
-export default function MarketInformation({ selectedCard, setSelectedCard, showModal, setShowModal, user, setUser, users, userCards, setUserCards, marketCards, setMarketCards, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab, setMarketSearchTerm, setMarketSelectedRarity, listedByUser, setListedByUser }) {
+export default function MarketInformation({ selectedCard, setSelectedCard, showModal, setShowModal, user, setUser, users, marketCards, setMarketCards, numCardOwners, numOthercards, allCardTransactions, activeListings, selectedTab, setSelectedTab, setMarketSearchTerm, setMarketSelectedRarity, listedByUser, setListedByUser }) {
     let navigate = useNavigate();
     const charImages = require.context('../../../img/characters', true);
     let [clickedList, setClickedList] = useState(false);
@@ -235,12 +235,18 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
                     setSelectedCard(r.data)
                     setClickedList(false)
                     setListingPrice('')
-                    let filteredCards = userCards.filter(card => card.id != selectedCard.id)
-                    let updatedCards = [...filteredCards, r.data]
-                    setUserCards(updatedCards)
                     let filteredMarketCards = marketCards.filter(card => card.id != selectedCard.id)
                     let updatedMarketCards = [...filteredMarketCards, r.data]
                     setMarketCards(updatedMarketCards)
+                    fetch("/me")
+                    .then((r) => {
+                        if (r.ok) {
+                            r.json().then((user) => {
+                                setUser(user)
+                            })
+                        }
+                    })
+
                 })
         }
 
@@ -256,11 +262,17 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
                 setSelectedCard(r.data)
                 setClickedUnlist(false)
                 setListingPrice('')
-                let filteredCards = userCards.filter(card => card.id != selectedCard.id)
-                let updatedCards = [...filteredCards, r.data]
-                setUserCards(updatedCards)
                 let filteredMarketCards = marketCards.filter(card => card.id != selectedCard.id)
                 setMarketCards(filteredMarketCards)
+                fetch("/me")
+                .then((r) => {
+                    if (r.ok) {
+                        r.json().then((user) => {
+                            setUser(user)
+                        })
+                    }
+                })
+
             })
     }
 
@@ -290,9 +302,6 @@ export default function MarketInformation({ selectedCard, setSelectedCard, showM
                 setClickedBuy(false)
                 setListedByUser(true)
 
-                let filteredCards = userCards.filter(card => card.id != selectedCard.id)
-                let updatedCards = [...filteredCards, r.data]
-                setUserCards(updatedCards)
                 let filteredMarketCards = marketCards.filter(card => card.id != selectedCard.id)
                 setMarketCards(filteredMarketCards)
                 fetch("/me")

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
 
-export default function Profile({ signedIn }) {
+export default function Profile({ user }) {
   document.title = 'Pocket Pros - Profile';
 
   let navigate = useNavigate();
@@ -13,7 +13,7 @@ export default function Profile({ signedIn }) {
   }
 
   useEffect(() => {
-    if (signedIn == false) {
+    if (!user.username) {
       navigate('/');
     }
   }, [])

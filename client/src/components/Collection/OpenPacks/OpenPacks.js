@@ -5,22 +5,26 @@ import Modal from "./Modal/Modal";
 import Pack from '../../PackToOpen/PackToOpen';
 
 
-export default function OpenPacks({ userCredits, user, setUser, userPacks, setUserPacks, signedIn, openedCards, setOpenedCards, showModal, setShowModal, handleBuyPackClick, handleOpenPackClick }) {
+export default function OpenPacks({ user, setUser, openedCards, setOpenedCards, showModal, setShowModal, handleBuyPackClick, handleOpenPackClick }) {
     document.title = 'Pocket Pros - Open Packs';
 
     let packTypes = ["booster", "regular", "pro", "max", "ultra", "studio"]
     let navigate = useNavigate();
 
     useEffect(() => {
-        if (signedIn == false) {
+        if (!user.username) {
             navigate('/');
         }
     }, [])
 
     let packsToDisplay = packTypes.map(packType => {
-        return (
-            userPacks[packType] == 0 ? null : <Pack key={packType} userCredits={userCredits} buying={false} packType={packType} signedIn={signedIn} user={user} userPacks={userPacks} handleOpenPackClick={handleOpenPackClick} handleBuyPackClick={handleBuyPackClick} />
-        )
+        if (user.packs) {
+            return (
+                user.packs[packType] == 0 ? null : <Pack key={packType} buying={false} packType={packType} user={user} handleOpenPackClick={handleOpenPackClick} handleBuyPackClick={handleBuyPackClick} />
+            )
+        } else{
+            return null
+        }
     })
 
     function handleBuyPackClick() {

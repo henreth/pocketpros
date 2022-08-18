@@ -5,12 +5,12 @@ import me from '../../img/me.jpeg'
 import gitqr from '../../img/githubqr.png';
 import linkedinqr from '../../img/clearlinkedinqr.png';
 
-export default function About({ signedIn }) {
+export default function About({ user }) {
 
     let navigate = useNavigate();
 
     useEffect(() => {
-        if (signedIn == false) {
+        if (!user.username) {
             navigate('/');
         }
     }, [])

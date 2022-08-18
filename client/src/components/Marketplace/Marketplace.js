@@ -4,7 +4,7 @@ import MarketCard from './MarketCard/MarketCard';
 import MarketInformation from './MarketInformation/MarketInformation';
 
 
-export default function Marketplace({ user, setUser, users, userCards, setUserCards, marketCards, setMarketCards, signedIn, marketSelectedRarity, setMarketSelectedRarity, marketSearchTerm, setMarketSearchTerm }) {
+export default function Marketplace({ user, setUser, users, marketCards, setMarketCards, marketSelectedRarity, setMarketSelectedRarity, marketSearchTerm, setMarketSearchTerm }) {
   document.title = 'Pocket Pros - Marketplace';
 
   let [showModal, setShowModal] = useState(false);
@@ -54,7 +54,7 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
   let navigate = useNavigate();
 
   useEffect(() => {
-    if (signedIn == false) {
+    if (!user.username) {
       navigate('/');
     }
   }, [])
@@ -106,8 +106,6 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
     user={user}
     setUser={setUser}
     users={users}
-    userCards={userCards}
-    setUserCards={setUserCards}
     marketCards={marketCards}
     setMarketCards={setMarketCards}
     numCardOwners={numCardOwners}

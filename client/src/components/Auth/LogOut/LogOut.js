@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import { useNavigate } from "react-router-dom";
 
-export default function LogOut({ signedIn, handleLogOut }) {
+export default function LogOut({user, handleLogOut }) {
   document.title = 'Pocket Pros - Log Out';
   let navigate = useNavigate();
 
   useEffect(() => {
-    if (signedIn === false) {
+    if (!user.username) {
       navigate('/');
     }
   }, [])
