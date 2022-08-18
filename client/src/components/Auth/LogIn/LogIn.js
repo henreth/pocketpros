@@ -6,7 +6,7 @@ export default function LogIn({ user, username, setUsername, password, setPasswo
   let navigate = useNavigate();
 
   useEffect(() => {
-    if (!user.username) {
+    if (user.username) {
       navigate('/');
     }
   }, [])

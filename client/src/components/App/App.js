@@ -32,7 +32,6 @@ export default function App() {
 
   const [user, setUser] = useState({});
   const [users, setUsers] = useState([]);
-  const [userCards, setUserCards] = useState([]);
   const [userPacks, setUserPacks] = useState({});
 
   // Market
@@ -62,13 +61,11 @@ export default function App() {
       })
 
     let marketCardsReq = axios.get('/marketcards')
-    let userCardsReq = axios.get('/usercards')
     let usersReq = axios.get('/users')
-    axios.all([marketCardsReq, userCardsReq, usersReq])
-      .then(axios.spread((res1, res2, res3) => {
+    axios.all([marketCardsReq, usersReq])
+      .then(axios.spread((res1,res2) => {
         setMarketCards(res1.data)
-        setUserCards(res2.data)
-        setUsers(res3.data)
+        setUsers(res2.data)
       }))
 
   }, [])
@@ -128,19 +125,14 @@ export default function App() {
             if (r.ok) {
               r.json().then((user) => {
                 setUser(user)
-                setUserCards(user.cards)
                 setUserPacks(user.packs)
-  
-
 
                 let marketCardsReq = axios.get('/marketcards')
-                let userCardsReq = axios.get('/usercards')
                 let usersReq = axios.get('/users')
-                axios.all([marketCardsReq, userCardsReq, usersReq])
-                  .then(axios.spread((res1, res2, res3) => {
+                axios.all([marketCardsReq, usersReq])
+                  .then(axios.spread((res1,res2) => {
                     setMarketCards(res1.data)
-                    setUserCards(res2.data)
-                    setUsers(res3.data)
+                    setUsers(res2.data)
                   }))
 
               })
@@ -172,8 +164,6 @@ export default function App() {
         alert('You have now been logged out.')
         navigate('/');
         setUser({});
-        setUserCards(null);
-        setUserPacks(null);
         window.location.reload();
       })
       .catch(function (error) {
@@ -212,7 +202,7 @@ export default function App() {
                 r.json().then((user) => {
                   setUser(user)
                   setUserPacks(user.packs)
-    
+
                 })
               }
             })
@@ -251,7 +241,6 @@ export default function App() {
               if (r.ok) {
                 r.json().then((user) => {
                   setUser(user)
-                  setUserCards(user.cards)
                   setUserPacks(user.packs)
                 })
               }
@@ -277,8 +266,6 @@ export default function App() {
         <Route path="/cards" element={<YourCards
           user={user}
           setUser={setUser}
-          userCards={userCards}
-          setUserCards={setUserCards}
           marketCards={marketCards}
           setMarketCards={setMarketCards}
           users={users}
@@ -288,7 +275,6 @@ export default function App() {
         <Route path="/openpacks" element={<OpenPacks
           user={user}
           setUser={setUser}
-          setUserCards={setUserCards}
           userPacks={userPacks}
           setUserPacks={setUserPacks}
           handleOpenPackClick={handleOpenPackClick}
@@ -301,7 +287,6 @@ export default function App() {
         <Route path="/buypacks" element={<BuyPacks
           user={user}
           setUser={setUser}
-          setUserCards={setUserCards}
           userPacks={userPacks}
           setUserPacks={setUserPacks}
           handleOpenPackClick={handleOpenPackClick}
@@ -310,8 +295,6 @@ export default function App() {
         <Route path="/marketplace" element={<Marketplace
           user={user}
           setUser={setUser}
-          userCards={userCards}
-          setUserCards={setUserCards}
           marketCards={marketCards}
           setMarketCards={setMarketCards}
           handleClick={handleClick}

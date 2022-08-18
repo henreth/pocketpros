@@ -6,7 +6,7 @@ export default function SignUp({ user, username, setUsername, password, setPassw
   let navigate = useNavigate();
 
   useEffect(() => {
-    if (!user.username) {
+    if (user.username) {
       navigate('/');
     }
   }, [])

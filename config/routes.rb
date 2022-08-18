@@ -39,9 +39,5 @@ Rails.application.routes.draw do
 
   # User
   post "/buypack", to: "users#buy_pack"
-  get "/usercards", to: "cards#user_cards"
-
-
-
-
+  
 end
