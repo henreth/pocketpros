@@ -10,7 +10,7 @@ export default function BuyPacks({ user, setUser, setUserCards, userPacks, setUs
     let navigate = useNavigate();
 
     useEffect(() => {
-        if (signedIn === false || typeof user.credits === 'undefined') {
+        if (!user.username) {
             navigate('/');
         }
     }, [])

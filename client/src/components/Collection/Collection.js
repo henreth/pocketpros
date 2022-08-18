@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
-export default function Collection({ signedIn }) {
+export default function Collection({ user, signedIn }) {
   document.title = 'Pocket Pros - Collection';
 
   let navigate = useNavigate();
 
   useEffect(() => {
-    if (signedIn == false) {
+    if (!user.username) {
       navigate('/');
     }
   }, [])

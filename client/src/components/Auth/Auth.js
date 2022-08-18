@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
-export default function Auth({ signedIn }) {
+export default function Auth({ user, signedIn }) {
   document.title = 'Pocket Pros - Log In Required';
   let navigate = useNavigate();
 
   useEffect(() => {
-    if (signedIn === true) {
+    if (!user.username) {
       navigate('/');
     }
   }, [])

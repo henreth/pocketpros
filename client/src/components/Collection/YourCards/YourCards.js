@@ -47,7 +47,7 @@ export default function YourCards({ user, setUser, userCards, setUserCards, mark
   let navigate = useNavigate();
 
   useEffect(() => {
-    if (signedIn == false) {
+    if (!user.username) {
       navigate('/');
     }
   }, [])

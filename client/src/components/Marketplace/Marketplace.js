@@ -54,7 +54,7 @@ export default function Marketplace({ user, setUser, users, userCards, setUserCa
   let navigate = useNavigate();
 
   useEffect(() => {
-    if (signedIn == false) {
+    if (!user.username) {
       navigate('/');
     }
   }, [])

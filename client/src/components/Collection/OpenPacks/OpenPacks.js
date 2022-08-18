@@ -12,7 +12,7 @@ export default function OpenPacks({ userCredits, user, setUser, userPacks, setUs
     let navigate = useNavigate();
 
     useEffect(() => {
-        if (signedIn == false) {
+        if (!user.username) {
             navigate('/');
         }
     }, [])

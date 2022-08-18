@@ -279,8 +279,8 @@ export default function App() {
 
       {user.username ? <div className='user-id-bar'><div className='user-identification'>👤 {user.username} - 🟦 {user.packs['total']} - 🟥 {user.cards.length} - 🪙 {user.credits}</div></div> : null}
       <Routes>
-        <Route exact path="/" element={signedIn ? <Home /> : <Auth signedIn={signedIn} />} />
-        <Route path="/collection" element={<Collection signedIn={signedIn} />} />
+        <Route exact path="/" element={user.username ? <Home /> : <Auth user={user} signedIn={signedIn} />} />
+        <Route path="/collection" element={<Collection user={user} signedIn={signedIn} />} />
         <Route path="/cards" element={<YourCards
           user={user}
           setUser={setUser}
@@ -335,8 +335,9 @@ export default function App() {
           marketSelectedRarity={marketSelectedRarity}
           setMarketSelectedRarity={setMarketSelectedRarity}
         />} />
-        <Route path="/auth" element={<Auth setSignedIn={setSignedIn} />} />
+        <Route path="/auth" element={<Auth user={user} setSignedIn={setSignedIn} />} />
         <Route path="/logIn" element={<LogIn
+          user={user}
           signedIn={signedIn}
           username={username}
           setUsername={setUsername}
@@ -345,6 +346,7 @@ export default function App() {
           handleLogInSubmit={handleLogInSubmit}
         />} />
         <Route path="/signup" element={<SignUp
+          user={user}
           setSignedIn={setSignedIn}
           signedIn={signedIn}
           username={username}
@@ -379,7 +381,7 @@ export default function App() {
           signedIn={signedIn}
           handleLogOut={handleLogOut}
         />} />
-        <Route path="/*" element={signedIn ? <Home /> : <Auth signedIn={signedIn} />} />
+        <Route path="/*" element={signedIn ? <Home /> : <Auth user={user} signedIn={signedIn} />} />
       </Routes>
     </React.Fragment>
   );

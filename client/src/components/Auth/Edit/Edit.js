@@ -7,15 +7,15 @@ export default function Edit({ user, setUser, signedIn }) {
   let navigate = useNavigate();
 
   useEffect(() => {
-    if (signedIn === false) {
+    if (!user.username) {
       navigate('/');
     }
   }, [])
 
 
-  const [username, setUsername] = useState(signedIn ? user.username : null)
-  const [firstName, setFirstName] = useState(signedIn ? user.first_name : null)
-  const [lastName, setLastName] = useState(signedIn ? user.last_name : null)
+  const [username, setUsername] = useState(user.username ? user.username : null)
+  const [firstName, setFirstName] = useState(user.username ? user.first_name : null)
+  const [lastName, setLastName] = useState(user.username ? user.last_name : null)
 
 
   function handleSubmitChanges(e) {
