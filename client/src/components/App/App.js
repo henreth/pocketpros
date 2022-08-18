@@ -34,7 +34,6 @@ export default function App() {
   const [users, setUsers] = useState([]);
   const [userCards, setUserCards] = useState([]);
   const [userPacks, setUserPacks] = useState({});
-  const [userCredits, setUserCredits] = useState(0);
 
   // Market
   let [marketCards, setMarketCards] = useState([]);
@@ -55,8 +54,6 @@ export default function App() {
           r.json().then((user) => {
             setUser(user)
             setUserPacks(user.packs)
-            setUserCredits(user.credits)
-
           })
         }
         else {
@@ -133,7 +130,7 @@ export default function App() {
                 setUser(user)
                 setUserCards(user.cards)
                 setUserPacks(user.packs)
-                setUserCredits(user.credits)
+  
 
 
                 let marketCardsReq = axios.get('/marketcards')
@@ -177,7 +174,6 @@ export default function App() {
         setUser({});
         setUserCards(null);
         setUserPacks(null);
-        setUserCredits(null)
         window.location.reload();
       })
       .catch(function (error) {
@@ -216,7 +212,7 @@ export default function App() {
                 r.json().then((user) => {
                   setUser(user)
                   setUserPacks(user.packs)
-                  setUserCredits(user.credits)
+    
                 })
               }
             })
@@ -290,7 +286,6 @@ export default function App() {
           setMarketSelectedRarity={setMarketSelectedRarity}
         />} />
         <Route path="/openpacks" element={<OpenPacks
-          userCredits={userCredits}
           user={user}
           setUser={setUser}
           setUserCards={setUserCards}
@@ -305,8 +300,6 @@ export default function App() {
         />} />
         <Route path="/buypacks" element={<BuyPacks
           user={user}
-          userCredits={userCredits}
-          setUserCredits={setUserCredits}
           setUser={setUser}
           setUserCards={setUserCards}
           userPacks={userPacks}
