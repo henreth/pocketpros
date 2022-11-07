@@ -10,7 +10,6 @@ A digital trading card experience where users can open packs, unlock cards, and 
 * Track individual card transaction history 
 * Visualize market data associated with cards
 
-**Try it out here:** [Pocket Programmers](https://pocketprogrammers.herokuapp.com/)
 
 ### Developed By:
 
